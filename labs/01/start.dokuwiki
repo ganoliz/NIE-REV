@@ -9,6 +9,8 @@ Předmětem tohoto cvičení je seznámení s ladícím nástrojem OllyDbg.
     * **17.11.2016, 19:30** (paralelka 101)
     * **14.11.2016, 19:30** (paralelka 102)
 
-Cílem cvičení je provést zpětnou analýzu souboru {{:labs:01:crackme01-v3.zip|crackme01-v3.zip}} a přinutit ho odeslat slušný e-mail cvičícímu. Program přijímá jako vstup přiložený konfigurační soubor. Tento soubor má nesprávnou strukturu. Analýzou programu zjistěte, jak má struktura souboru vypadat, a upravte konfigurační soubor tak, aby ho program interpretovat správně a aby cvičícímu poslal **slušný** e-mail. Při špatném formátu souboru může být odeslán neslušný e-mail, který není považován za správnou odpověď ;-). Po správné interpretaci bude programem odeslán cvičícímu automaticky e-mail se slušným textem.
+Cílem úlohy je provést zpětnou analýzu souboru {{:labs:01:crackme01-v3.zip|crackme01-v3.zip}} a přinutit ho odeslat slušný e-mail cvičícímu. Program přijímá jako vstup přiložený konfigurační soubor. Tento soubor má nesprávnou strukturu. Analýzou programu zjistěte, jak má struktura souboru vypadat, a upravte konfigurační soubor tak, aby ho program interpretovat správně a aby cvičícímu poslal **slušný** e-mail. Při špatném formátu souboru může být odeslán neslušný e-mail, který není považován za správnou odpověď ;-). Po správné interpretaci bude programem odeslán cvičícímu automaticky e-mail se slušným textem.
 
 Až se vám podaří odeslat požadovaný e-mail, pošlete cvičícímu na školní adresu použitý konfigurační soubor (zabalený v ZIPu, aby určitě nedošlo k nepozorovanému pozměnění jeho struktury během přenosu mailem) spolu se stručným popisem vašeho postupu. Na základě těchto informací a případného zodpovězení doplňujících otázek vám budou připsány body za tuto úlohu.
+
+Poznámka: Samotný program ''CrackMe01.exe'' neměňte.
