@@ -1,22 +1,28 @@
 {{indexmenu_n>2000}}
 
-====== Classification ======
+====== Evaluation ======
 
-<note>
-Zde by měly být popsány složky hodnocení jako je např. docházka, testy v semestru, zkoušková písemka apod. Zejména by zde měly být uvedeny podmínky (bodové hodnocení) - maximální možný výsledek, výsledek nutný pro úspěšné absolvování a minimální možný výsledek (typicky 0, nic apod.).
+Evalution of the course consists of two parts - evaluation of homeworks (60 points) and evaluation of the exam (40 points). The course is successfully completed by earning the assessment and by successfully passing the exam.
 
-Tato poznámka by zde neměla být, až na stránky budou vpuštěni studenti!
-</note>
+==== Assessment ====
 
+Assessment is granted if the student gains at least 30 points from homeworks. There are 5 homeworks following the labs totaling 60 points (5+10+5+5+35). Homeworks are optional. If you want to submit a homework, it must be submitted at latest a week before the exam term which the student registered for. In case of homeworks 1-5 at latest 6 weeks from the end of the lab it was assigned. Homeworks submitted later will be evaluated with 0 points.
+
+  * [[labs:01:start|First task]]
+
+In case of an extraordinary solution to any homework the student can get extra points.
+
+==== Exam ====
+
+Exam is a mandatory part of course evaluation and students can gain up to 40 points. There is a minimum of 20 points for passing the exam. The exam verifies your knowledge from lectures, labs, and homeworks.  If student gains 50 or more points from his homeworks, the exam can be pardoned upon his request and the grade is earned only based on submitted tasks. Note it is possible to earn only (E or D in this manner).
 
 ===== Evaluation scale =====
-
 Evaluation scale is according to [[http://www.cvut.cz/pracoviste/pravni-odbor/documents/studyandexaminationcode.pdf|The Study and Examination Code for Students of CTU in Prague]].
 
 ^ Grade  ^ Points    ^ Evaluation in words ^
-| A      | more than    | excellent           |
-| B      |           | very good      |
-| C      |           | good           |
-| D      |           | satisfactory       |
-| E      |           | sufficient       |
-| F      | less than  | failed     |
+| A      | 90+       | excellent           |
+| B      | 80-89     | very good           |
+| C      | 70-79     | good                |
+| D      | 60-69     | satisfactory        |
+| E      | 50-59     | sufficient          |
+| F      | 0-49      | failed              |
