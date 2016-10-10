@@ -4,7 +4,7 @@ K ladění programu budeme v rámci hodiny používat program IDA v její free v
 
 Byl zkompilován následující ukázkový případ. Kompilace proběhla ve Visual Studio 2015, v release verzi, s vypnutým ASLR, optimalizací a nastavením multi-byte character set. {{:labs:02:cv2_1.zip|}}
 
-Všimněte si, že pro zjednodušení byla do main funkce přidána instrukce int 3 (breakpoint). Za normálních okolností program spadne, pokud ale bude připojen debugger, tak se na této instrukci zastaví. Nahraje program do IDA 5.0 a program spusťte (F9) Program se může zastavit na jiné než naší výjimce. Pokud se nacházíte v knihovně (adresa ''7xxxxxxx'') a ne v programu (adresa ''401357'') pokračujte v programu stiskem F9.
+Všimněte si, že pro zjednodušení byla do main funkce přidána instrukce int 3 (breakpoint). Za normálních okolností program spadne, pokud ale bude připojen debugger, tak se na této instrukci zastaví. Nahrajte program do IDA 5.0 a program spusťte (F9) Program se může zastavit na jiné než naší výjimce. Pokud se nacházíte v knihovně (adresa ''7xxxxxxx'') a ne v programu (adresa ''401357'') pokračujte v programu stiskem F9.
 
 Breakpoint v knihovně:
 
