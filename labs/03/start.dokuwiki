@@ -4,6 +4,10 @@
 
 Cílem tohoto cvičení je procvičit strukturu PE souboru, zejména tabulky importu symbolů (Import Table) a tabulky adres importovaných symbolů (Import Address Table, IAT). Jednotlivé struktury jsou popsány na [[https://msdn.microsoft.com/en-us/library/windows/desktop/ms680313(v=vs.85).aspx|MSDN]], pro lepší pochopení ale může být vhodnější využít některý z tutorialů pro psaní Windows programů v assembleru a/nebo pro crackování, např. [[http://win32assembly.programminghorizon.com/pe-tut1.html|Iczelion's PE Tutorial 1: Overview of PE File Format]] a [[http://win32assembly.programminghorizon.com/pe-tut6.html|Iczelion's PE Tutorial 6: Import Table]].
 
+Grafické znázornění objektů, se kterými budeme na tomto cvičení pracovat:
+
+{{:labs:03:iat.jpg|}}
+
 ==== Nalezení importní tabulky ====
 
 Pomocí funkce ''GetModuleHandle(NULL)'' získáme ''HMODULE'' k aktuálnímu procesu, který přetypujeme na datovou strukturu ''PIMAGE_DOS_HEADER'': 
