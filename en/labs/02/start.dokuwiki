@@ -166,7 +166,7 @@ If we look at the used string, we can think out that it looks like a ''printf'' 
   BYTE1 -> char height 
   BYTE2 -> unsigned char Xsize 
   DWORD2 -> unsigned int Ysize 
-<code>
+</code>
 
 Now we can create the structure:
 
@@ -184,5 +184,4 @@ struct MyStructure {
 If you look at source code carefully, we can discover that our analyses went wrong in few cases.
 
   - The structure has 4 additional parameters. These 4 integers were unreferenced in the program so we do not know about them at all. We can, however, note that the ''sub esp, imm'' calculates with proper length. Since this is a unoptimized build of the program, this information is worse visible. 
-
   - Compilation discards a lot of information (comments, structure boundaries, etc.). This makes analysis imprecise. Despite this we can obtain a similar (rarely the same) source code as the original source code.
