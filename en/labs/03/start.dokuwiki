@@ -1,4 +1,4 @@
-====== Import Address Table ======
+====== 3. Import Address Table ======
 
 ==== Introduction ====
 
@@ -10,10 +10,10 @@ Graphical representation of objects with which we will work on this exercise:
 
 ==== Finding the Import Address Table (IAT) ==== 
 
-The ''GetModuleHandle(NULL)'' gets us an ''HMODULE'' of the current process, which we cast into the ''PIMAGE_DOS_HEADER'' structure.
+The ''GetModuleHandle(nullptr)'' gets us an ''HMODULE'' of the current process, which we cast into the ''PIMAGE_DOS_HEADER'' structure.
 
 <code c>
-  HMODULE hPEFile = GetModuleHandle(NULL); // NULL means the current process
+  HMODULE hPEFile = GetModuleHandle(nullptr); // nullptr means the current process
   PIMAGE_DOS_HEADER pDosHeader = (PIMAGE_DOS_HEADER) hPEFile;
 </code>
 
@@ -57,7 +57,7 @@ There are as many ''IMAGE_IMPORT_DESCRIPTOR'' structures in memory following thi
   PIMAGE_IMPORT_DESCRIPTOR pImportDescriptorEnd = (PIMAGE_IMPORT_DESCRIPTOR) (((BYTE *) pImportDescriptor) + pNTHeaders-> OptionalHeader.DataDirectory [IMAGE_DIRECTORY_ENTRY_IMPORT].Size);
 </code>
 
-The end of field can be recognized also by the fact that the last valid element has the value of the variable ''Characteristics'' field set to ''NULL''. A question: What if these two ways of determining the length are in conflict? What test would help to determine which option takes priority (is it actually used by the operating system)?
+The end of field can be recognized also by the fact that the last valid element has the value of the variable ''Characteristics'' field set to ''nullptr''. A question: What if these two ways of determining the length are in conflict? What test would help to determine which option takes priority (is it actually used by the operating system)?
 
 The ''OriginalFirstThunk'' field contains an RVA beginning of the array of structures ''IMAGE_THUNK_DATA'' and ends with an empty ''IMAGE_THUNK_DATA'' structure. This structure (''PIMAGE_THUNK_DATA'') is automatically mapped to one of the following structures, depending on whether this is a 32-bit or a 64-bit PE file:
 
