@@ -50,7 +50,7 @@ Obsahem úplného řešení by měl být **velmi stručný** popis vašeho postu
 <note tip>
 **Nápověda**
 
-Ověřování sériového čísla i jeho generování jsou poměrně složité a zahrnují použití několika funkcí z knihovny BCRYPT.DLL CNG Cryptographic Primitive Functions. Analyzujte kód ze souborů Code64.exe a/nebo SerialNumber64.dll, další použité moduly jsou standardní a jejich dokumentaci snadno naleznete. Nelekněte se, až zjistíte, co se z knihovny používá a k čemu. Vstup do sériového čísla je kratší než na první pohled vypadá.
+Ověřování sériového čísla i jeho generování jsou poměrně složité a zahrnují použití několika funkcí z knihovny BCRYPT.DLL [[https://msdn.microsoft.com/en-us/library/windows/desktop/aa833130(v=vs.85).aspx|CNG Cryptographic Primitive Functions]]. Analyzujte kód ze souborů Code64.exe a/nebo SerialNumber64.dll, další použité moduly jsou standardní a jejich dokumentaci snadno naleznete. Nelekněte se, až zjistíte, co se z knihovny používá a k čemu. Vstup do sériového čísla je kratší než na první pohled vypadá.
 
 Knihovna SerialNumber64.dll obsahuje i funkci pro generování sériového čísla. Najděte ji, zjistěte co chybí, doplňte to a použijte ji pro vygenerování sériového čísla, které bude platné nejméně do konce semestru. Implementovat vlastní generátor by samozřejmě bylo možné, ale neúměrně složité.
 </note>
