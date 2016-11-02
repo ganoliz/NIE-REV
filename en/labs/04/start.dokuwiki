@@ -1,0 +1,53 @@
+===== 4. Tools Overview =====
+
+==== Recommendations ====
+
+==== Free Tools ====
+
+  * **API Monitor** - a tool for monitoring API calls in the program. It is possible to observe individual functions or their groups. [[http://www.rohitab.com]].
+  * **CFF Explorer** - a tool for PE file analysis and modification. [[http://www.ntcore.com/exsuite.php]].
+  * **Dependency Walker** - a tool for analysis of import and export tables, capable of performing both static and dynamic analysis. [[http://www.dependencywalker.com/]].
+  * **ExeInfoPE** - a compiler identification tool. [[http://www.exeinfo.xn.pl/]].
+  * **HxD** - A hex editor capable of editing RAM or a raw disk. [[http://mh-nexus.de/en/hxd/]].
+  * **IDA Pro 5.0 Free** - interactive disassembler for reverse engineering. This version **does not** contain any decompiler, nor it is able to disassemble 64-bit binaries. Free for non commercial purposes [[https://www.hex-rays.com/products/ida/support/download_freeware.shtml]].
+  * **Process Explorer** - a tool for detailed process monitoring. A significantly extended Task Manager version. [[https://technet.microsoft.com/cs-cz/sysinternals/bb896653.aspx]].
+  * **Process Monitor** - another process monitoring tool - tracks accesses to files, registry keys, etc. [[https://technet.microsoft.com/cs-cz/sysinternals/bb896645.aspx]].
+  * **Regshot** - a tool for making System Registry snaphots and their compare. [[http://sourceforge.net/projects/regshot/]].
+  * **Resource Hacker** - a tool for study and modification of the ''.rsrc'' section in PE files. [[http://www.angusj.com/resourcehacker/]].
+  * **Strings** - a tool for extraction of strings from a file. Good for initial analysis. [[https://technet.microsoft.com/en-us/sysinternals/bb897439.aspx]].
+  * **X64Dbg** - debugger for both 32 and 64-bit executables. [[http://x64dbg.com/]].
+
+==== Commercial Tools ====
+
+  * **Hiew** - a programmer's hex editor with a disassembler (including x64) and functionality for reverse engineering. [[http://www.hiew.ru/]]
+  * **IDA Pro** and **IDA Pro Advanced** - an interactive disassembler for reverse engineering. The Advanced version supports a wide range of architectures. There plenty of plug-ins, including decompilers from x86, x64, ARM, ARM64, and PowerPC into C. [[https://www.hex-rays.com]]
+
+==== Additional Sources ====
+
+  * **The Decompilation Wiki** - information about available decompilers. [[http://www.program-transformation.org/Transform/DeCompilation]].
+
+
+===== Second Exercise =====
+
+^ Points ^ Submission Date ^ Time  ^
+|   10    | 12.01.2017      | 24:00 |
+
+The purpose of this task is to reverse engineer a 64-bit binary and discover which serial number to enter so all criteria the program requires are met. This assignment is more complex than the previous ones because:
+
+  * symbols imported from the SerialNumber64.dll DLL, which is used by the Code64.exe application, are imported by their ordinal numbers (there are no symbol names); 
+  * contains a primitive anti-debugging protection;
+  * you cannot use IDA Freeware on it.
+
+Because of the ordinal numbers, you will not know names of the symbols in SerialNumber64.dll that are called in the library. In the third task we have, however, seen how to obtain addresses of all imported symbols and how to replace them with your own functions (or to set breakpoints to them).
+
+The assignment can be downloaded here: {{:labs:04:ukol2_v2.zip|}}.
+
+Your submission should contain **a brief** description of what you've done, a working serial number, and a description of how to generate a new serial number, including a program that does it.
+
+<note tip>
+**A Hint**
+
+Verification of the serial number is quite complex and uses few functions from the BCRYPT.DLL library [[https://msdn.microsoft.com/en-us/library/windows/desktop/aa833130(v=vs.85).aspx|CNG Cryptographic Primitive Functions]]. Analyze code from Code64.exe and/or SerialNumber64.dll. Other modules are standard and their functions are well documented. Don't panic when you discover what's used from BCRYPT.DLL and what is it used for. Not everything is as complex as it appears on the first sight.
+
+The SerialNumber64.dll library contains even a function for serial number generation. Find it and discover what's missing. Add the missing piece of puzzle and use it to generate a new serial number satisfying all requirements Code64.exe has. Don't try to implement your own generator, unless you have plenty of time and want to understand how generation works in detail.
+</note>
