@@ -1,0 +1,79 @@
+===== Semestrální práce =====
+
+  * Počet bodů: **35+**
+  * Termín odevzdání: **neomezeně** (s výhradou viz níže)
+
+==== Zadání ====
+
+Studentův úkol je zanalyzovat jemu přiřazený program a získat potřebná hesla pro průchod programem. Program obsahuje sadu 4 hesel, jejíž získání může a nemusí pustit studenta k získání hesel dalších. Některá z hesel jsou vygenerována přímo pro studenta. Program obsahuje postupně se zvyšující počet anti-reverzních metod, které zamezují rychlé analýze programu.
+
+Sestavte **stručnou** zprávu, která odpovídá na následující otázky:
+
+  * Jaká hesla program potřebuje?
+  * Jaké ochrany program v jednotlivých částech používá?
+  * Jak program skrývá některé své funkcionality?
+  * Jaký byl váš postup pro získání hesel?
+
+Protože je možné odevzdat i částečně vyřešenou úlohu, je nutné, aby zpráva obsahovala dostatečné množství informací pro rozhodnutí, zda student splnil zadání, a následně pro udělení bodů za postup v úloze. Na druhou stranu, není potřeba, aby práce byla napínavá, s originálními postavami a neotřelou zápletkou, naprosto vyhoví i nesouvislý bodový seznam. Podstatné jsou obsažené informace, ne jejich forma nebo množství.
+
+Řešení posílejte svému cvičícímu.
+
+==== Termín odevzdání ====
+
+Termín odevzdání práce není striktně omezen. Protože je však nutné zajistit, aby byl dostatek času na vyhodnocení práce a případná upřesnění, musí být práce odevzdána nejpozději týden (168 hodin) před začátkem termínu zkoušky, na který se student přihlásil.
+
+==== Bodování ====
+
+  * Heslo 1 - jednoduché fixní heslo. **5 bodů**
+  * Heslo 2 - generované random heslo, jednoduché obfuskace, vyžaduje rozbalení do paměti. **10 bodů**
+  * Heslo 3 - jednoduché heslo v novém zabaleném souboru, střední obtížnost. **10 bodů**
+  * Heslo 4 - generované random heslo, těžké obfuskace, potřebné k získání plného počtu bodů. **10 bodů**
+  * Heslo 5 - volitelné, náročně skryté heslo, slouží jako alternativa k luštění druhé úlohy. **10 bodů**
+  * Heslo 6 - nepovinné heslo za extrémními obfuskacemi (vlastní virtuální stroj), slouží hlavně jako ukázka, s čím se také můžete potkat; za vyluštění je automaticky známka A z předmětu a hlaste se Martinovi Jirkalovi o práci v ESETu.
+
+Bodované jsou i postupy mezi hesly. Výše uvedené jsou celkové počty bodů, které můžete za danou část úlohy získat.
+
+==== Zadané úlohy ====
+
+Řešte jenom "svoje" zadání, na řešení cizích prací nebude brán zřetel, s výjimkou opisování. Řešení by mělo být zejména vaší vlastní prací - konzultace jsou i v praxi možné, ale sotva najdete někoho, kdo by vaše pracovní úlohy řešil za vás.
+
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/andryma1.zip|Andrýsek Martin]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/beranj25.zip|Beran Jaroslav]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/brozjan5.zip|Brož Jan]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/cernama9.zip|Černáč Martin]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/dejmeto1.zip|Dejmek Tomáš]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/doupajak.zip|Doupal Jakub]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/drhovkla.zip|Drhová Klára]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/dvorato9.zip|Dvořáček Tomáš]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/hartmmi1.zip|Hartman Michael]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/hollmmat.zip|Hollmann Matyáš]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/holoumar.zip|Holoubek Martin]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/holubj11.zip|Holub Jakub]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/janskto1.zip|Jánský Tomáš]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/jilekma2.zip|Jílek Marek]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/kabelja5.zip|Kabela Jan]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/kadleji5.zip|Kadlec Jiří]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/kaplroma.zip|Kápl Roman]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/klugemar.zip|Kluger Martin]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/kulikjak.zip|Kulík Jakub]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/langmat1.zip|Lang Matěj]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/masekja7.zip|Mašek Jan]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/maskojan.zip|Mašková Jana]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/neuzija1.zip|Neužil Jan]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/olejnjak.zip|Olejník Jakub]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/oliyniva.zip|Oliynyk Ivan]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/opralond.zip|Oprala Ondrej]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/orsakalb.zip|Orsák Albert]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/polakm17.zip|Polák Matěj]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/poljape1.zip|Poljak Peter]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/rubinjan.zip|Rubín Jan]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/safondmy.zip|Safonov Dmytro]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/simaroma.zip|Šíma Roman]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/sixtaji1.zip|Sixta Jiří]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/slavojir.zip|Slavotínek Jiří]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/slechlib.zip|Šlechta Libor]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/soukudom.zip|Soukup Dominik]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/stejsle1.zip|Stejskalová Lenka]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/tlamijan.zip|Tlamicha Jan]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/trusijan.zip|Trusina Jan]]
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/turcagab.zip|Turcajová Gabriela]]
