@@ -121,7 +121,7 @@ _RTTIClassHierarchyDescriptor;
 ^ Points ^ Submission Date ^ Time  ^
 |   5    | 12.01.2017      | 24:00 |
 
-Analyze the ''Had.exe'' executable from here {{:labs:06:had2016.zip|had2016.zip}}. 
+Analyze the ''Had.exe'' executable from here {{:en:labs:06:had2016.zip|had2016.zip}}. 
   - Examine the program and find all object ctors and VMT assignments.
   - From VMTs discover which class has which amount of virtual methods.
   - Find those class names and their inheritance from the RTTI information.
@@ -136,5 +136,5 @@ Analyze the ''Had.exe'' executable from here {{:labs:06:had2016.zip|had2016.zip}
   - Passion wu128: rtti.h: Available online at [[http://m.blog.csdn.net/blog/passion_wu128/38511957|http://m.blog.csdn.net/blog/passion_wu128/38511957]], 2014.
 
 ===== Files =====
-{{:labs:06:cv6.zip|cv6.start}}
-{{:en:labs:06:cv6_classexample.rar|}}
+{{:en:labs:06:cv6.zip|Initial file}}
+{{:en:labs:06:cv6_classexample.rar|IDA Free IDB file}}
