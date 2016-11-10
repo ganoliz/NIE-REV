@@ -1,0 +1,11 @@
+===== 5. Analysis of an Obfuscated Binary =====
+
+The purpose of this seminar is to examine a simple obfuscated binary.
+
+Binaries for analysis are here: cv5.zip. In order to run them, you will need a 32-bit Microsoft Visual Studio 2012 Runtime.
+
+Your task is to find such an input which be accepted by the program (no modifications allowed). A situation may require to temporarily change a portion of the program, that is acceptable under condition the solution found will work with a non-modified version of the program. The used anti-debugging protection (naïve) can be circumvented even without patching the binary. The binary and its algorithms are simple enough so they can be understood even with static analysis.
+
+<note>**Tip**
+
+If you use IDA Free for this, remember you can use the ''c'' key to make portion of data code, the ''d'' key make portion of code data, or the ''u'' key to undefine currently selected code or data. The ''u'' key is useful when you screw something. Note these keys work also with blocks.</note>
