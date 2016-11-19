@@ -1,0 +1,36 @@
+===== Semestral Work =====
+
+Your assignment is to analyze a program crafted especially for you and obtain passwords enabling you to step from one level of the program to another. There are 4 passwords. Once you enter the correct password, you step to another level of the program. Each level is slightly more difficult than the previous one and includes slightly more anti-reversing techniques obstructing its quick analysis.
+
+Create **a brief report** answering the following questions:
+
+  * Which passwords the program accepts?
+  * Which anti-reversing techniques are used in each level?
+  * How the program hides some of its functionality?
+  * What approach did you take to obtain each password?
+
+==== Submission Date ====
+
+The submission date is not strictly limited. You need to submit the report at latest when you want to take the exam (bring your solution to the exam).
+
+==== Scoring ====
+
+^ Level ^ Comment                                                              ^ Points ^
+|   1   | A simple fixed password.                                             |   5    |
+|   2   | A generated password, basic obfuscations, extraction into memory.    |   10   |
+|   3   | A simple password in new packed file, intermediate difficulty.       |   10   |
+|   4   | A generated random password, challenging obfuscations.               |   10   |
+|   5   | Optional. An alternative to 2nd assignment. Hidden password.         |  (10)  |
+|   6   | Optional. Virtual machine (table interpretation). Difficult.         |  (55)  |
+
+Please know that points are not assigned as 0 or max. You can get something in between when you submit your comments of what you've tried.
+
+==== Downloads ====
+^ Student           ^ Semestral work                            ^
+| Graham Richard    | {{:en:labs:graharic.zip|graharic.zip}}    |
+| Jílek Marek       | {{:en:labs:jilekma2.zip|jilekma2.zip}}    |  
+| Pizzolotto Davide | {{:en:labs:pizzodav.zip|pizzodav.zip}}    |
+| Schalldach Thomas | {{:en:labs:schaltho.zip|schaltho.zip}}    |
+| Škařupa Jan       | {{:en:labs:skarujan.zip|skarujan.zip}}    |
+| Trusina Jan       | {{:en:labs:trusijan.zip|trusijan.zip}}    |
+  
