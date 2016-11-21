@@ -7,7 +7,7 @@ The purpose of this seminar is to get acquainted with the OllyDbg debugger.
 ^ Points ^ Submission Date ^ Time ^
 |   5    |  30.11.2016     | 24:00|
 
-The goal of this task is to perform reverse engineer of the crackme01-v3.zip file and force the program to send a polite e-mail to the teacher. The program accepts an attached configuration file on its input. This file has, however, an improper structure. Perform analysis of the program, discover the file's structure, and modify it so that it is properly interpreted by the program resulting in sending a polite e-mail to the teacher. A wrong format of the configuration file will send a vulgar e-mail to the teacher not motivating him to assign you points for the task ;-). After a proper interpretation of the configuration file the program will send a polite e-mail asking the teacher to assign you points for this task.
+The goal of this task is to perform reverse engineering of the {{:en:labs:01:crackme01-v3.zip|crackme01-v3.zip}} file and force the program to send a polite e-mail to the teacher. The program accepts an attached configuration file on its input. This file has, however, an improper structure. Perform analysis of the program, discover the file's structure, and modify it so that it is properly interpreted by the program resulting in sending a polite e-mail to the teacher. A wrong format of the configuration file will send a vulgar e-mail to the teacher not motivating him to assign you points for the task ;-). After a proper interpretation of the configuration file the program will send a polite e-mail asking the teacher to assign you points for this task.
 
 <note important>17.10.2016
 
