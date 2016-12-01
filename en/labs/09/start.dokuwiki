@@ -6,5 +6,9 @@ Your task is to discover how these protection mechanisms work and modify the pro
 {{:en:labs:09:cv9.zip|}}
 
 ==== Enabling the IDA Free Patch Menu ====
-The patch menu is hidden by default. It is possible to show it but you'll need to change the configuration file located in ''C:\Program Files (x86)\IDA Free\cfg\idagui.cfg''. Open the file as the Administrator and change the ''ENABLE_PATCH_SUBMENU=NO'' line into ''ENABLE_PATCH_SUBMENU=YES''. Save and (re)launch IDA Free.
+The patch menu is hidden by default. It is possible to show it but you'll need to change the configuration file located in ''C:\Program Files (x86)\IDA Free\cfg\idagui.cfg''. Open the file as the Administrator and change the ''DISPLAY_PATCH_SUBMENU=NO'' line into ''DISPLAY_PATCH_SUBMENU=YES''. Save and (re)launch IDA Free.
 
+
+==== Solutions ====
+{{:en:labs:09:cv9-comments.zip|}}
+{{:en:labs:09:cv9-patched.zip|}}
