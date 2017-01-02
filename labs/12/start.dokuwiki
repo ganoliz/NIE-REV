@@ -2,6 +2,10 @@
 
 Ing. Martin Jirkal předvede postupy pro analýzu dotnetového kódu.
 
+  * {{:labs:12:cv12.pdf|Prezentace}}
+  * {{:labs:12:cv12.zip|Soubory k analýze}}
+  * {{:labs:12:dnspy.zip|dnSpy}} - dekompilátor dotnet
+
 ====== Injekce ======
 
 Cílem cvičení je injektovat proces ''GUIToSteal.exe'' vlastním kódem tak, aby bylo možné z procesu zkopírovat hodnotu hesla v editačním poli.
