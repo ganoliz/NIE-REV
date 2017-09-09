@@ -1,36 +1,47 @@
-===== Semestral Work =====
+====== The Semestral Work ======
 
-Your assignment is to analyze a program crafted especially for you and obtain passwords enabling you to step from one level of the program to another. There are 4 passwords. Once you enter the correct password, you step to another level of the program. Each level is slightly more difficult than the previous one and includes slightly more anti-reversing techniques obstructing its quick analysis.
+  * Points: **35+**
+  * Deadline: **unlimited** (with a caveat noted below)
 
-Create **a brief report** answering the following questions:
+===== The Task =====
 
-  * Which passwords the program accepts?
-  * Which anti-reversing techniques are used in each level?
-  * How the program hides some of its functionality?
-  * What approach did you take to obtain each password?
+Your task is to analyze your assigned program and find the passwords necessary to reach its end. The program contains a set of four (resp. six) passwords, which may or may not lead you to the other passwords. Some of the passwords are generated for you specifically. The program is protected with a gradually growing set of anti-reversing methods which prevent a fast analysis of the program.
 
-==== Submission Date ====
+Write a **brief** report describing each stage of the program:
 
-The submission date is not strictly limited. You need to submit the report at latest when you want to take the exam (bring your solution to the exam).
+  * Which password is required to reach the next stage? (If specific steps are required to enter the password, describe them as well.)
+  * Which protections are used in this stage?
+  * How does the program hide its functionality?
+  * What was your approach to finding the password?
 
-==== Scoring ====
+Because you can turn in even an incomplete solution, it is necessary that the report contains sufficient information to determine the level of progress of the student and assign points for it. On the other hand, you don't need to write a gripping story with believable characters and exciting situations, it's perfectly OK to submit a report in a list form. We are interested in information, not its form.
 
-^ Level ^ Comment                                                              ^ Points ^
-|   1   | A simple fixed password.                                             |   5    |
-|   2   | A generated password, basic obfuscations, extraction into memory.    |   10   |
-|   3   | A simple password in new packed file, intermediate difficulty.       |   10   |
-|   4   | A generated random password, challenging obfuscations.               |   10   |
-|   5   | Optional. An alternative to 2nd assignment. Hidden password.         |  (10)  |
-|   6   | Optional. Virtual machine (table interpretation). Difficult.         |  (55)  |
+<note important>A solution which doesn't work with an unchanged program is not acceptable. You can modify the program to simplify its analysis, but your final solution must be applicable to the original program.</note>
 
-Please know that points are not assigned as 0 or max. You can get something in between when you submit your comments of what you've tried.
+Solutions must be submitted by an e-mail to your teacher.
 
-==== Downloads ====
-^ Student           ^ Semestral work                            ^
-| Graham Richard    | {{:en:labs:graharic.zip|graharic.zip}}    |
-| Jílek Marek       | {{:en:labs:jilekma2.zip|jilekma2.zip}}    |  
-| Pizzolotto Davide | {{:en:labs:pizzodav.zip|pizzodav.zip}}    |
-| Schalldach Thomas | {{:en:labs:schaltho.zip|schaltho.zip}}    |
-| Škařupa Jan       | {{:en:labs:skarujan.zip|skarujan.zip}}    |
-| Trusina Jan       | {{:en:labs:trusijan.zip|trusijan.zip}}    |
-  
+===== Deadline =====
+
+There is no fixed deadline. However, in order to provide sufficient time for the evaluation and possibly to request additional information, the solution must be submitted at least a week (168 hours) before the start of the exam term you want to register for.
+
+===== Points =====
+
+  * **Password 1** - a simple fixed password. **5 points**
+  * **Password 2** - a generated random password, simple obfuscation. **10 points**
+  * **Password 3** - a simple password in a packed binary, moderately difficult. **10 points**
+  * **Password 4** - a generated random password, difficult obfuscation. **10 points**
+  * Password 5 - optional, a very difficult password, can be used as an alternative to solving the 2nd homework. **10 points**
+  * Password 6 - optional, extreme obfuscation (a custom virtual machine), serves primarily as an example of what you can encounter in real life. **55 points**
+
+The analysis steps are also evaluated. The values listed above are the maximum points you can achieve for a given stage.
+
+===== Program assignment =====
+
+Solve only "your" assignment, a solution to another student's assignment will be ignored (except when used for cheating). The solution should be your own work - you can of course consult your progress even in real life, but you are unlike to find someone who would do **all** your work for you all the time.
+
+The assigments will be published in the 3rd week of the semester, then the student lists are definitively determined.
+
+/*
+  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/andryma1.zip|Andrýsek Martin]]
+*/
+
