@@ -13,5 +13,5 @@ Cílem úlohy je provést zpětnou analýzu souboru {{:labs:01:crackme01-v3.zip|
 
 Až se vám podaří odeslat požadovaný e-mail, pošlete cvičícímu na školní adresu použitý konfigurační soubor (zabalený v ZIPu, aby určitě nedošlo k nepozorovanému pozměnění jeho struktury během přenosu mailem) spolu se stručným popisem vašeho postupu. Na základě těchto informací a případného zodpovězení doplňujících otázek vám budou připsány body za tuto úlohu.
 
-Poznámka: Samotný program ''CrackMe01.exe'' neměňte.
+<note important>Samotný program ''CrackMe01.exe'' neměňte.</note>
 
