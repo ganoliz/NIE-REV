@@ -4,9 +4,9 @@
 
 Hodnocení předmětu se skládá ze dvou částí - hodnocení domácích úloh (60 bodů) a hodnocení zkoušky (40 bodů). Předmět je řádně ukončen získáním zápočtu a složením zkoušky.
 
-==== Zápočet ====
+===== Zápočet =====
 
-Zápočet student získá v případě, že dosáhne nejméně 30 bodů z domácích úloh. Domácí úlohy budou navazovat na laboratorní cvičení a budou tvořeny pěti úlohami v součtu za 60 bodů (5+10+5+5+35). Domácí úlohy musí být odevzdány nejpozději týden (168 hodin) před začátkem termínu zkoušky, na který se student přihlásil, v případě úloh 1-4 navíc nejpozději 6 týdnů (1008 hodin) od konce cvičení, na kterém byly zadány. Úlohy odevzdané po těchto termínech nemají nárok na bodové hodnocení, mohou však být využity pro rozhodnutí sporných případů.
+Zápočet student získá v případě, že dosáhne nejméně 30 bodů z domácích úloh. Domácí úlohy budou navazovat na laboratorní cvičení a budou tvořeny pěti úlohami v součtu za 60 bodů (5+10+5+5+35). Domácí úlohy musí být odevzdány nejpozději týden (168 hodin) před začátkem termínu zkoušky, na který se student přihlásil; úlohy 1-4 mají navíc každá omezený časový limit od okamžiku oficiálního zadání, tento limit naleznete v popisu jednotlivých úloh. Úlohy odevzdané po uplynutí těchto termínů **nemají nárok na bodové hodnocení**, mohou však být využity pro rozhodnutí sporných případů.
 
   * [[labs:01:start|Zadání první úlohy]]
   * [[labs:04:start|Zadání druhé úlohy]]
@@ -14,15 +14,15 @@ Zápočet student získá v případě, že dosáhne nejméně 30 bodů z domác
   * [[labs:08:start|Zadání čtvrté úlohy]]
   * [[labs:semprace|Semestrální práce]]
 
-V případě mimořádně kvalitního řešení může cvičící přiznat studentovi bonusové body nad rámec stanovených limitů, dle kvality řešení. Na tyto body není nárok.
+V případě mimořádně kvalitního řešení může cvičící přiznat studentovi bonusové body nad rámec stanovených limitů, dle kvality řešení. Na tyto body není nárok, jsou zcela v pravomoci cvičícího.
 
-==== Zkouška ====
+===== Zkouška =====
 
-Zkouška je povinnou součástí předmětu a lze z ní získat až 40 bodů. Minimum pro získání známky jiné než F je 20 bodů. Obsahově zkouška odpovídá látce z přednášek, cvičení i domácích úloh. Získá-li student z domácích úloh >= 50 bodů, může mu být na vlastní žádost zkouška z předmětu prominuta, pokud o to prokazatelně (školním e-mailem) požádá zkoušejícího nejpozději 24 hodin před prvním termínem zkoušky (včetně případných předtermínů). Prominutím zkoušky student získá známku odpovídající počtu bodů dosažených z domácích úloh.
+Zkouška je povinnou součástí předmětu a lze z ní získat až 40 bodů. Minimum pro získání známky jiné než F je 20 bodů. Obsahově zkouška odpovídá látce z přednášek, cvičení i domácích úloh. Získá-li student z domácích úloh 50 nebo více bodů, může mu být zkouška prominuta, pokud o to prokazatelně (školním e-mailem) požádá zkoušejícího nejpozději do konce 3. týdne zkouškového období (28.1.2018) a současně se žádného termínu nezúčastnil (účastí se rozumí i nedostavení se na zkoušku, na kterou byl student přihlášen). Prominutím zkoušky student získá známku odpovídající počtu bodů dosažených z domácích úloh.
 
 ===== Celkové hodnocení =====
 
-Hodnocení se řídí [[http://www.cvut.cz/pracoviste/pravni-odbor/dokumenty/studijni-predpisy/studijnirad.pdf|Studijním a zkušebním řádem ČVUT]].
+Hodnocení se řídí aktuálním [[https://www.cvut.cz/vnitrni-predpisy|Studijním a zkušebním řádem ČVUT]] ([[https://www.cvut.cz/sites/default/files/content/7e72349e-3ea5-4693-9853-5147f1238481/cs/20160901-studijni-a-zkusebni-rad-pro-studenty-cvut-ze-dne-8-7-2015.pdf|PDF]]).
 
 ^ Známka ^ Bodové \\ rozmezí ^ Slovní \\ hodnocení ^
 | A      | a více    | výborně          |
@@ -31,3 +31,4 @@ Hodnocení se řídí [[http://www.cvut.cz/pracoviste/pravni-odbor/dokumenty/stu
 | D      |           | uspokojivě       |
 | E      |           | dostatečně       |
 | F      | méně než  | nedostatečně     |
+
