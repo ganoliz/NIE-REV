@@ -1,18 +1,15 @@
-==== 1. Introduction to OllyDbg ====
+====== 1. Introduction to OllyDbg ======
 
-The purpose of this seminar is to get acquainted with the OllyDbg debugger.
+The purpose of this tutorial is to learn the basics of the OllyDbg application.
 
-=== 1st assignment ===
+===== 1st Homework Task =====
 
-^ Points ^ Submission Date ^ Time ^
-|   5    |  30.11.2016     | 24:00|
+  * Points: **5**
+  * Deadline: **31.10.2017, 17:45**
 
-The goal of this task is to perform reverse engineering of the {{:en:labs:01:crackme01-v3.zip|crackme01-v3.zip}} file and force the program to send a polite e-mail to the teacher. The program accepts an attached configuration file on its input. This file has, however, an improper structure. Perform analysis of the program, discover the file's structure, and modify it so that it is properly interpreted by the program resulting in sending a polite e-mail to the teacher. A wrong format of the configuration file will send a vulgar e-mail to the teacher not motivating him to assign you points for the task ;-). After a proper interpretation of the configuration file the program will send a polite e-mail asking the teacher to assign you points for this task.
+Your task is to perform a reverse analysis of the file {{:labs:01:crackme01-v3.zip|crackme01-v3.zip}} and demonstrate your understanding by making it send an e-mail to the teacher. The program accepts a configuration file, unfortunately the provided one is incorrect. By reverse engineering the application you'll learn what a correct configuration file looks like and then you can modify it so that a **polite** e-mail is sent. Note that an incorrect configuration file may lead to sending of an impolite e-mail which is not considered the correct solution ;-).
 
-<note important>17.10.2016
+After you manage to send the correct e-mail, send your configuration file (packed with ZIP, so that it can't be changed by the e-mail application or servers) along with a brief explanation of your solution to the teacher's school e-mail. The points will be awarded according to the level of completeness of this information.
 
-Please note you have to properly configure all 5 first bytes of the file.</note>
+<note important>Do not modify the ''CrackMe01.exe'' file.</note>
 
-Once you finish sending e-mail in the desired format, send your final configuration file at the teacher's address mailto:zahradt@fit.cvut.cz as a ZIP file so that the structure of the file gets preserved along with a brief description of what you have done. Based on these comments the points will (or will not) be assigned to you.
-
-Note: Do not patch CrackMe01.exe.
