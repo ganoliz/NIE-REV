@@ -1,42 +1,47 @@
-===== Semestrální práce =====
+====== Semestrální práce ======
 
   * Počet bodů: **35+**
   * Termín odevzdání: **neomezeně** (s výhradou viz níže)
 
-==== Zadání ====
+===== Zadání =====
 
-Studentův úkol je zanalyzovat jemu přiřazený program a získat potřebná hesla pro průchod programem. Program obsahuje sadu 4 hesel, jejíž získání může a nemusí pustit studenta k získání hesel dalších. Některá z hesel jsou vygenerována přímo pro studenta. Program obsahuje postupně se zvyšující počet anti-reverzních metod, které zamezují rychlé analýze programu.
+Studentovým úkolem je zanalyzovat jemu přiřazený program a získat potřebná hesla pro průchod programem. Program obsahuje sadu čtyř (resp. šesti) hesel, jejíž získání může a nemusí pustit studenta k získání hesel dalších. Některá z hesel jsou vygenerována přímo pro studenta. Program obsahuje postupně se zvyšující počet anti-reverzních metod, které zamezují rychlé analýze programu.
 
-Sestavte **stručnou** zprávu, která odpovídá na následující otázky:
+Sestavte **stručnou** zprávu, která pro každou úroveň programu odpovídá na následující otázky:
 
-  * Jaká hesla program potřebuje?
-  * Jaké ochrany program v jednotlivých částech používá?
+  * Jaké heslo je požadováno pro vstup do další části? (Pokud je pro vložení hesla požadován nějaký speciální postup, uveďte i ten.)
+  * Jaké ochrany program v této části používá?
   * Jak program skrývá některé své funkcionality?
-  * Jaký byl váš postup pro získání hesel?
+  * Jaký byl váš postup pro získání hesla?
 
-Protože je možné odevzdat i částečně vyřešenou úlohu, je nutné, aby zpráva obsahovala dostatečné množství informací pro rozhodnutí, zda student splnil zadání, a následně pro udělení bodů za postup v úloze. Na druhou stranu, není potřeba, aby práce byla napínavá, s originálními postavami a neotřelou zápletkou, naprosto vyhoví i nesouvislý bodový seznam. Podstatné jsou obsažené informace, ne jejich forma nebo množství.
+Protože je možné odevzdat i částečně vyřešenou úlohu, je nutné, aby zpráva obsahovala dostatečné množství informací pro rozhodnutí, jak velkou část zadání student splnil, a následně pro udělení bodů za postup v úloze. Na druhou stranu, není potřeba, aby práce byla napínavá, s originálními postavami a neotřelou zápletkou, naprosto vyhoví i nesouvislý bodový seznam. Podstatné jsou obsažené informace, ne jejich forma.
 
-Řešení posílejte svému cvičícímu.
+<note important>Řešení, které nelze použít s nezměněným programem, není přípustné! Pro účely analýzy program měnit můžete, ale správnost řešení je ověřována proti programu originálnímu!</note>
 
-==== Termín odevzdání ====
+Řešení posílejte svému cvičícímu e-mailem.
+
+===== Termín odevzdání =====
 
 Termín odevzdání práce není striktně omezen. Protože je však nutné zajistit, aby byl dostatek času na vyhodnocení práce a případná upřesnění, musí být práce odevzdána nejpozději týden (168 hodin) před začátkem termínu zkoušky, na který se student přihlásil.
 
-==== Bodování ====
+===== Bodování =====
 
-  * Heslo 1 - jednoduché fixní heslo. **5 bodů**
-  * Heslo 2 - generované random heslo, jednoduché obfuskace, vyžaduje rozbalení do paměti. **10 bodů**
-  * Heslo 3 - jednoduché heslo v novém zabaleném souboru, střední obtížnost. **10 bodů**
-  * Heslo 4 - generované random heslo, těžké obfuskace, potřebné k získání plného počtu bodů. **10 bodů**
+  * **Heslo 1** - jednoduché fixní heslo. **5 bodů**
+  * **Heslo 2** - generované náhodné heslo, jednoduché obfuskace, vyžaduje rozbalení do paměti. **10 bodů**
+  * **Heslo 3** - jednoduché heslo v novém zabaleném souboru, střední obtížnost. **10 bodů**
+  * **Heslo 4** - generované náhodné heslo, těžké obfuskace, potřebné k získání plného počtu bodů. **10 bodů**
   * Heslo 5 - volitelné, náročně skryté heslo, slouží jako alternativa k luštění druhé úlohy. **10 bodů**
-  * Heslo 6 - nepovinné heslo za extrémními obfuskacemi (vlastní virtuální stroj), slouží hlavně jako ukázka, s čím se také můžete potkat. **55 bodů**
+  * Heslo 6 - volitelné, extrémní obfuskace (vlastní virtuální stroj), slouží hlavně jako ukázka, s čím se také můžete potkat. **55 bodů**
 
 Bodované jsou i postupy mezi hesly. Výše uvedené jsou celkové počty bodů, které můžete za danou část úlohy získat.
 
-==== Zadané úlohy ====
+===== Přiřazení úloh studentům =====
 
-Řešte jenom "svoje" zadání, na řešení cizích prací nebude brán zřetel, s výjimkou opisování. Řešení by mělo být zejména vaší vlastní prací - konzultace jsou i v praxi možné, ale sotva najdete někoho, kdo by vaše pracovní úlohy řešil za vás.
+Řešte jenom "svoje" zadání, na řešení cizích prací nebude brán zřetel, s výjimkou opisování. Řešení by mělo být zejména vaší vlastní prací - konzultace jsou i v praxi možné, ale sotva najdete někoho, kdo by vaše pracovní úkoly řešil za vás.
 
+Zadání budou zveřejněna ve 3. týdnu semestru, až bude definitivně stanoven seznam studentů.
+
+/*
   * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/andryma1.zip|Andrýsek Martin]]
   * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/beranj25.zip|Beran Jaroslav]]
   * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/brozjan5.zip|Brož Jan]]
@@ -77,3 +82,5 @@ Bodované jsou i postupy mezi hesly. Výše uvedené jsou celkové počty bodů,
   * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/tlamijan.zip|Tlamicha Jan]]
   * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/trusijan.zip|Trusina Jan]]
   * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/turcagab.zip|Turcajová Gabriela]]
+*/
+
