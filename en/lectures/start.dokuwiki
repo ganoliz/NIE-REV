@@ -4,13 +4,13 @@
 
 /*{{indexmenu>.#1 | tsort msort}}*/
 
-^ Number ^ Date        ^ Lecture        ^
-|   1.  |  03.10.2017  | {{:lectures:rev-1e.pdf|Introduction into Reverse Engineering 1}} |
-|   2.  |  17.10.2017  | {{:lectures:rev-2e.pdf|Introduction into Reverse Engineering 2}} |
-|   3.  |  31.10.2017  | {{:lectures:rev-3e.pdf|Introduction into Reverse Engineering 3}} |
-|   4.  |  14.11.2017  | {{:lectures:rev-4e.pdf|Disassembling and Obfuscation}}           |
-|   5.  |  28.11.2017  | {{:lectures:rev-5e.pdf|Compiler Recognition}}                    |
-|   6.  |  12.12.2017  | {{:lectures:rev-6e.pdf|Debugging and Antidebugging}}             |
-|   7.  |  02.01.2018  | holiday                                                          |
-|   8.  |  ??.??.????  | {{:lectures:rev-7e.pdf|Malware}}                                 |
+^ Number ^ Date         ^ Lecture                               ^                                   ^
+|   1.   |  03.10.2017  | Introduction to reverse engineering 1 | {{:lectures:rev-1e.pdf|english}} |
+|   2.   |  17.10.2017  | Introduction to reverse engineering 2 | {{:lectures:rev-2e.pdf|english}} |
+|   3.   |  31.10.2017  | Introduction to reverse engineering 3 | {{:lectures:rev-3e.pdf|english}} |
+|   4.   |  14.11.2017  | Disassembling and obfuscation         | {{:lectures:rev-4e.pdf|english}} |
+|   5.   |  28.11.2017  | Compiler recognition                  | {{:lectures:rev-5e.pdf|english}} |
+|   6.   |  12.12.2017  | Debugging and antidebugging           | {{:lectures:rev-6e.pdf|english}} |
+|   7.   |  02.01.2018  | holiday, no lecture                   |                                  |
+|   8.   |  ??.??.????  | Malware                               | {{:lectures:rev-7e.pdf|english}} |
 
