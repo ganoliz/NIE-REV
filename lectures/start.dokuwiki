@@ -4,13 +4,13 @@
 
 /*{{indexmenu>.#1 | tsort msort}}*/
 
-^ číslo ^ Datum        ^ Přednáška        ^
-|   1.  |  03.10.2017  | {{:lectures:rev-1e.pdf|Úvod do reverzního inženýrství 1}} |
-|   2.  |  17.10.2017  | {{:lectures:rev-2e.pdf|Úvod do reverzního inženýrství 2}} |
-|   3.  |  31.10.2017  | {{:lectures:rev-3e.pdf|Úvod do reverzního inženýrství 3}} |
-|   4.  |  14.11.2017  | {{:lectures:rev-4e.pdf|Disassembling a obfuskace}}        |
-|   5.  |  28.11.2017  | {{:lectures:rev-5e.pdf|Rozpoznávání kompilátorů}}         |
-|   6.  |  12.12.2017  | {{:lectures:rev-6e.pdf|Debugging a antidebugging}}        |
-|   7.  |  02.01.2018  | odpadá                                                    |
-|   8.  |  ??.??.????  | {{:lectures:rev-7e.pdf|Malware}}                          |
+^ číslo  ^ Datum        ^ Přednáška                             ^                                   ^                               ^
+|   1.   |  03.10.2017  | Úvod do reverzního inženýrství 1      | {{:lectures:rev-1e.pdf|anglicky}} | {{:lectures:rev-1.pdf|česky}} |
+|   2.   |  17.10.2017  | Úvod do reverzního inženýrství 2      | {{:lectures:rev-2e.pdf|anglicky}} | {{:lectures:rev-2.pdf|česky}} |
+|   3.   |  31.10.2017  | Úvod do reverzního inženýrství 3      | {{:lectures:rev-3e.pdf|anglicky}} | {{:lectures:rev-3.pdf|česky}} |
+|   4.   |  14.11.2017  | Disassembling a obfuskace             | {{:lectures:rev-4e.pdf|anglicky}} | {{:lectures:rev-4.pdf|česky}} |
+|   5.   |  28.11.2017  | Rozpoznávání kompilátorů              | {{:lectures:rev-5e.pdf|anglicky}} | {{:lectures:rev-5.pdf|česky}} |
+|   6.   |  12.12.2017  | Debugging a antidebugging             | {{:lectures:rev-6e.pdf|anglicky}} | {{:lectures:rev-6.pdf|česky}} |
+|   7.   |  02.01.2018  | odpadá                                |                                   |                               |
+|   8.   |  ??.??.????  | Malware                               | {{:lectures:rev-7e.pdf|anglicky}} | {{:lectures:rev-7.pdf|česky}} |
 
