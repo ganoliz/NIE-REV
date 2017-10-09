@@ -1,10 +1,10 @@
 ====== 2. Program debugging, analysis of functions and stack frames ======
 
-We will be using IDA Free to debug our programs. You can download it here" [[https://www.hex-rays.com/products/ida/support/download_freeware.shtml]].
+We will be using IDA Free to debug our programs. You can download it here: [[https://www.hex-rays.com/products/ida/support/download_freeware.shtml]].
 
 We have compiled the following sample. The compilation took place in Visual Studio.NET 2015 Community Edition, in Release mode, with ASLR (''/DYNAMICBASE:OFF'') disabled, optimization disabled (''/Ob0'') and with a Multibyte character set. {{:labs:02:cv2_1.zip|}}.
 
-Note that the program contains a software breakpoint instruction (''int3'', opcode ''CC'') for your convenience. Under normal circumstances this instruction causes the program to crash, unless a debugger is present on your computer. If a debugger is present, it pops up, stopping the program at this instruction. Load this program into IDA Free and run it by pressing the F9 key. The program can stop on other than only this instruction (actually the ''int3'' instruction causes an exception which is passed to the debugger). If the program stops at address beginning with ''7xxxxxxx'' (an address in within a system library), continue with F9 until it stops in program code at address ''401357''.
+Note that the program contains a software breakpoint instruction (''INT3'', opcode ''CC'') for your convenience. Under normal circumstances this instruction causes the program to crash, unless a debugger is present on your computer. If a debugger is present, it pops up, stopping the program at this instruction. Load this program into IDA Free and run it by pressing the F9 key. The program can stop on other than only this instruction (actually the ''INT3'' instruction causes an exception which is passed to the debugger). If the program stops at address beginning with ''7xxxxxxx'' (an address in within a system library), continue with F9 until it stops in program code at address ''401357''.
 
 Breakpoint in the library:
 
@@ -20,11 +20,11 @@ First we examine the prologue of a common function. Switch IDA to IDA View-A (if
 
 {{:labs:02:cv2obr03.jpg|}}
 
-The function is called with 2 arguments. Under the function call we can see that the arguments are cleaned-up from the stack by the ''add esp, imm'' (''imm'' means the immediate value, and it is a number in this case). From the clean-up add instruction we can deduct that the function is using the ''%%__%%cdecl'' calling convention.
+The function is called with 2 arguments. Under the function call we can see that the arguments are cleaned-up from the stack by the ''ADD ESP, imm'' (''imm'' means the immediate value, and it is a number in this case). From the clean-up add instruction we can deduct that the function is using the ''%%__%%cdecl'' calling convention.
 
 {{:labs:02:cv2obr04.jpg|}}
 
-''call'' is an instruction which does 2 operations: (i) Pushes the address of the instruction following the call on the stack, and (ii) sets the ''EIP'' register to a value specified as its operand (this is typically an address in the program, library or register).
+''CALL'' is an instruction which does 2 operations: (i) Pushes the address of the instruction following the call on the stack, and (ii) sets the ''EIP'' register to a value specified as its operand (this is typically an address in the program, library or register).
 
 {{:labs:02:cv2obr05.jpg|}}
 
@@ -34,7 +34,7 @@ In prologue of the function the previous base pointer value (the ''EBP'' registe
 
 {{:labs:02:cv2obr07.jpg|}}
 
-Next, space is allocated for local variables by using the ''sub'' instruction. We must use the ''sub esp, imm'' instruction to allocate space, as stack grows toward zero. The lesser value (''ESP'') has , the more data is there. In our case space for 2 ''DWORD''s is allocated.
+Next, space is allocated for local variables by using the ''SUB'' instruction. We must use the ''SUB ESP, imm'' instruction to allocate space, as stack grows toward zero. The lesser value (''ESP'') has , the more data is there. In our case space for 2 ''DWORD''s is allocated.
 
 {{:labs:02:cv2obr08.jpg|}}
 
@@ -42,7 +42,7 @@ This is the basic prologue, a standard function introduction. Epilogue serves as
 
 {{:labs:02:cv2obr09.jpg|}}
 
-First, ''ESP'' is restored to its previous value, which also removes the local variables. The ''mov esp, ebp'' instruction reverses the ''sub esp, imm'' instruction in prologue. Then a ''pop ebp'' instruction is used to restore ''EBP''. Ultimately a ''RETN'' instruction is issued, which returns to the place stored by the ''call'' instruction and removes it from the stack (''pop eip'').
+First, ''ESP'' is restored to its previous value, which also removes the local variables. The ''MOV ESP, EBP'' instruction reverses the ''SUB ESP, imm'' instruction in prologue. Then a ''POP EBP'' instruction is used to restore ''EBP''. Ultimately a ''RETN'' instruction is issued, which returns to the place stored by the ''CALL'' instruction and removes it from the stack ("''POP EIP''").
 
 ==== Structured Exception Handling (SEH) ====
 
@@ -89,7 +89,7 @@ Note that exception implementation may be dependent on the compiler used to comp
 
 {{:labs:02:cv2obr15.jpg|}}
 
-In our case we see that the first two ''trylevel'' variables are empty and ''trylevel==0xFFFFFFFE'' (-2) means it is a C exception block (-1 means a C++ exception block). There is a an exception filter (''lpfnFilter'') at address ''401427'' and the **except** function at ''40142D''.
+In our case we see that the first two ''trylevel'' variables are empty and ''trylevel==0xFFFFFFFE'' (-2) means it is a C exception block (-1 means a C++ exception block). There is a an exception filter (''lpfnFilter'') at address ''401427'' and the ''except'' function at ''40142D''.
 
 The filter looks like this:
 
@@ -105,7 +105,7 @@ The function restores the stack, sets the ''trylevel'' and sets result into ''EA
 
 ==== Variables ====
 
-If we look at address ''401364'', we can note a section where local variables are assigned. Using the ''h'' key, you can change the representation from decimal into hexadecimal and vice versa. Using the ''k'' key you can switch in between IDA representation and the offset representation --- ''[ebp+arg_4]'' changes into ''[ebp+0ch]'', etc.
+If we look at address ''401364'', we can note a section where local variables are assigned. Using the ''h'' key, you can change the representation from decimal into hexadecimal and vice versa. Using the ''k'' key you can switch in between IDA representation and the offset representation --- ''[EBP+arg_4]'' changes into ''[EBP+0ch]'', etc.
 
 {{:labs:02:cv2obr18.jpg|}}
 
@@ -119,27 +119,27 @@ Since ''4013E7'' we can notice that these variables are used and their values ar
 
 {{:labs:02:cv2obr21.jpg|}}
 
-The address ''EBP-38'' is then used as an argument of the function at ''401240''.
+The address ''EBP-38h'' is then used as an argument of the function at ''401240''.
 
-If we look into this function (hit the ''Enter'' key on its address or double click), we can find that that the address in argument (i.e. ''EBP-38'' in the previous stack frame) is used as ''[REG]'', ''[REG+4]'', ''[REG+5]'' etc. We can deduct that that the argument of the fuction ''401240'' is a pointer to a structure, which is a local variable in the previous stack frame. Size of the structure is important only for the compiler and the compiled code does not contain this information, unless it is used e.g. for memory allocation by means of the ''sizeof(structure)''. Its size can be only guessed from the content of the ''401240'' function.
+If we look into this function (hit the ''Enter'' key on its address or double click), we can find that that the address in argument (i.e. ''EBP-38h'' in the previous stack frame) is used as ''[REG]'', ''[REG+4]'', ''[REG+5]'' etc. We can deduct that that the argument of the fuction ''401240'' is a pointer to a structure, which is a local variable in the previous stack frame. Size of the structure is important only for the compiler and the compiled code does not contain this information, unless it is used e.g. for memory allocation by means of the ''sizeof(structure)''. Its size can be only guessed from the content of the ''401240'' function.
 
 {{:labs:02:cv2obr22.jpg|}}
 
 {{:labs:02:cv2obr23.jpg|}}
 
-The code takes a value of the ''DWORD1'' variable and uses the compare (''cmp'') instruction. This instruction tells us that ''DWORD1'' is a 4-byte integer -- perhaps ''int'' or ''unsigned int'' in C -- we cannot tell for sure which one yet. The conditional jump instruction (''jge'') is used to compare **signed** values so now we can be sure that ''DWORD1'' is an ''int''. We can use similar approach to discover size and signedness of the other 3 variables.
+The code takes a value of the ''DWORD1'' variable and uses the compare (''CMP'') instruction. This instruction tells us that ''DWORD1'' is a 4-byte integer -- perhaps ''int'' or ''unsigned int'' in C -- we cannot tell for sure which one yet. The conditional jump instruction (''JGE'') is used to compare **signed** values so now we can be sure that ''DWORD1'' is an ''int''. We can use similar approach to discover size and signedness of the other 3 variables.
 
 {{:labs:02:cv2obr24.jpg|}}
 
-The next variable is a ''char''. We can also see that there's a ''jge'' instruction. Moreover the ''movsx'' instruction (sign extend) is used to extend a signed data type into 32 bits, while the ''movzx'' instruction (zero extend) would be used for an ''unsigned char''.
+The next variable is a ''char''. We can also see that there's a ''JGE'' instruction. Moreover the ''MOVSX'' instruction (sign extend) is used to extend a signed data type into 32 bits, while the ''MOVZX'' instruction (zero extend) would be used for an ''unsigned char''.
 
 {{:labs:02:cv2obr25.jpg|}}
 
-The next variable is also a ''char'', but ''movzx'' tells us that this one is an ''unsigned char''.
+The next variable is also a ''char'', but ''MOVZX'' tells us that this one is an ''unsigned char''.
 
 {{:labs:02:cv2obr26.jpg|}}
 
-The fourth variable is also an integer but the jump instruction ''jnb'' is typical for ''unsigned int''s.
+The fourth variable is also an integer but the jump instruction ''JNB'' is typical for ''unsigned int''s.
 
 ==== API ====
 
@@ -183,6 +183,6 @@ struct MyStructure {
 
 If you look at source code carefully, we can discover that our analyses went wrong in few cases.
 
-  - The structure has 4 additional parameters. These 4 integers were unreferenced in the program so we do not know about them at all. We can, however, note that the ''sub esp, imm'' calculates with proper length. Since this is a unoptimized build of the program, this (unnecessary) information still remains visible.
+  - The structure has 4 additional parameters. These 4 integers were unreferenced in the program so we do not know about them at all. We can, however, note that the ''SUB ESP, imm'' calculates with proper length. Since this is a unoptimized build of the program, this (unnecessary) information still remains visible.
   - Compilation discards a lot of information (comments, structure boundaries, etc.). This makes any analysis imprecise. Despite this we can obtain a similar (rarely the same) source code as the original source code.
 
