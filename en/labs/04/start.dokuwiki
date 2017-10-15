@@ -1,4 +1,4 @@
-====== 3. Import Address Table ======
+====== 4. Import Address Table ======
 
 ==== Introduction ====
 
@@ -6,7 +6,7 @@ The aim of this exercise is to practice the PE file structure, particularly symb
 
 Graphical representation of objects with which we will work on this exercise:
 
-{{: Labs: 03: iat.jpg |}}
+{{:labs:04:iat.jpg|}}
 
 ==== Finding the Import Address Table (IAT) ==== 
 
