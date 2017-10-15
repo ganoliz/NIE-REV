@@ -1,10 +1,10 @@
-===== 3. Doporučení pro reverzní analýzu, dostupné nástroje =====
+====== 3. Doporučení pro reverzní analýzu, dostupné nástroje ======
 
-==== Doporučení ====
+===== Doporučení =====
 
 Jsou živě demonstrována na cvičení.
 
-==== Nástroje dostupné zdarma ====
+===== Nástroje dostupné zdarma =====
 
   * **API Monitor** - nástroj pro sledování API volání programu. Lze sledovat i jednotlivé funkce nebo jejich logické skupiny. [[http://www.rohitab.com]].
   * **CFF Explorer** - nástroj pro analýzu a úpravu PE souborů. [[http://www.ntcore.com/exsuite.php]].
@@ -31,26 +31,24 @@ Jsou živě demonstrována na cvičení.
 ===== Zadání druhé úlohy =====
 
   * Počet bodů: **10**
-  * Termín odevzdání: 
-    * **8.12.2016, 19:30** (paralelka 101) 
-    * **5.12.2016, 19:30** (paralelka 102)
+  * Termín odevzdání: **30.12.2017, 23:55** (všechny paralelky)
 
-Cílem této úlohy je provést reverzní inženýrství na souboru v 64bitové architektuře a zjistit, jaké zadat programu sériové číslo tak, aby byly splněny podmínky, které na něj program má. Tato úloha je složitější než předešlé dvě. Především protože: 
+Cílem této úlohy je provést reverzní inženýrství na souboru v 64bitové architektuře a zjistit, jaké zadat programu sériové číslo tak, aby byly splněny podmínky, které na něj program má. Tato úloha je výrazně složitější než předchozí (i následující), především protože: 
 
-  * z DLL knihovny SerialNumber64.dll, kterou aplikace Code64.exe používá, jsou importovány symboly podle ordinálního čísla; 
+  * z DLL knihovny ''SerialNumber64.dll'', kterou aplikace ''Code64.exe'' používá, jsou importovány symboly podle ordinálního čísla; 
   * obsahuje triviální ochranu proti ladění;
   * pro 64bitovou architekturu jsou hůře dostupné nástroje pro analýzu.
 
-Díky ordinálním číslům u importů nebudete vědět jméno symbolů, které se z knihovny volají. Ve třetí úloze jsme však viděli, jakým způsobem lze získat adresy importovaných symbolů a nahradit je vlastními pro účely testování.
+Díky ordinálním číslům u importů nebudete vědět jména symbolů, které se z knihovny volají. V následující úloze ale uvidíme, jakým způsobem lze získat adresy importovaných symbolů a jak je můžeme nahradit vlastními funkcemi pro účely testování.
 
-Úloha ke stažení zde: {{:labs:03:ukol2_v2.zip|}}.
+Úlohu si stáhněte zde: {{:labs:03:ukol2_v2.zip|}}.
 
 Obsahem úplného řešení by měl být **velmi stručný** popis vašeho postupu, funkční sériové číslo, popis, jakým způsobem vzniká (tzn. jaké informace v něm jsou obsaženy a jak jsou zakódovány), a také zdrojový kód programu, který na základě uživatelem zadaných vstupů vygeneruje nové sériové číslo; program by měl být nastaven tak, aby implicitní hodnoty vygenerovaly číslo, které nijak neupravený kód z úlohy přijme.
 
 <note tip>
 **Nápověda**
 
-Ověřování sériového čísla i jeho generování jsou poměrně složité a zahrnují použití několika funkcí z knihovny BCRYPT.DLL [[https://msdn.microsoft.com/en-us/library/windows/desktop/aa833130(v=vs.85).aspx|CNG Cryptographic Primitive Functions]]. Analyzujte kód ze souborů Code64.exe a/nebo SerialNumber64.dll, další použité moduly jsou standardní a jejich dokumentaci snadno naleznete. Nelekněte se, až zjistíte, co se z knihovny používá a k čemu. Vstup do sériového čísla je kratší než na první pohled vypadá.
+Ověřování sériového čísla i jeho generování jsou poměrně složité a zahrnují použití několika funkcí z knihovny BCRYPT.DLL [[https://msdn.microsoft.com/en-us/library/windows/desktop/aa833130(v=vs.85).aspx|CNG Cryptographic Primitive Functions]]. Analyzujte kód ze souborů ''Code64.exe'' a/nebo ''SerialNumber64.dll'', další použité moduly jsou standardní a jejich dokumentaci snadno naleznete. Nelekněte se, až zjistíte, co se z knihovny používá a k čemu. Vstup do sériového čísla je kratší než na první pohled vypadá.
 
-Knihovna SerialNumber64.dll obsahuje i funkci pro generování sériového čísla. Najděte ji, zjistěte co chybí, doplňte to a použijte ji pro vygenerování sériového čísla, které bude platné nejméně do konce semestru. Implementovat vlastní generátor by samozřejmě bylo možné, ale neúměrně složité.
+Knihovna ''SerialNumber64.dll'' obsahuje i funkci pro generování sériového čísla. Najděte ji, zjistěte, co chybí, doplňte to a použijte ji pro vygenerování sériového čísla, které bude platné nejméně do konce semestru. Implementovat vlastní generátor by samozřejmě bylo možné, ale neúměrně složité.
 </note>
