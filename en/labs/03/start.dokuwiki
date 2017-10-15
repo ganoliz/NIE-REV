@@ -1,139 +1,54 @@
-====== 3. Import Address Table ======
+===== 4. Tools Overview =====
 
-==== Introduction ====
+==== Recommendations ====
 
-The aim of this exercise is to practice the PE file structure, particularly symbol import tables (Import Table) and a table of addresses of imported symbols (Import Address Table, IAT). The structures are described in [[https://msdn.microsoft.com/en-us/library/windows/desktop/ms680313(v=vs.85).aspx|MSDN]]. For a better understanding of it's better to use one of the tutorials for writing Windows programs in assembler and/or cracking, for example. [[http://win32assembly.programminghorizon.com/pe-tut1.html|Iczelion's PE Tutorial 1: Overview of PE File Format]] and [[ http://win32assembly.programminghorizon.com/pe-tut6.html|Iczelion's PE Tutorial 6: Import Table]].
+==== Free Tools ====
 
-Graphical representation of objects with which we will work on this exercise:
+  * **API Monitor** - a tool for monitoring API calls in the program. It is possible to observe individual functions or their groups. [[http://www.rohitab.com]].
+  * **CFF Explorer** - a tool for PE file analysis and modification. [[http://www.ntcore.com/exsuite.php]].
+  * **Dependency Walker** - a tool for analysis of import and export tables, capable of performing both static and dynamic analysis. [[http://www.dependencywalker.com/]].
+  * **ExeInfoPE** - a compiler identification tool. [[http://www.exeinfo.xn.pl/]].
+  * **HxD** - A hex editor capable of editing RAM or a raw disk. [[http://mh-nexus.de/en/hxd/]].
+  * **IDA Pro 5.0 Free** - interactive disassembler for reverse engineering. This version **does not** contain any decompiler, nor it is able to disassemble 64-bit binaries. Free for non commercial purposes [[https://www.hex-rays.com/products/ida/support/download_freeware.shtml]].
+  * **Process Explorer** - a tool for detailed process monitoring. A significantly extended Task Manager version. [[https://technet.microsoft.com/cs-cz/sysinternals/bb896653.aspx]].
+  * **Process Monitor** - another process monitoring tool - tracks accesses to files, registry keys, etc. [[https://technet.microsoft.com/cs-cz/sysinternals/bb896645.aspx]].
+  * **Regshot** - a tool for making System Registry snaphots and their compare. [[http://sourceforge.net/projects/regshot/]].
+  * **Resource Hacker** - a tool for study and modification of the ''.rsrc'' section in PE files. [[http://www.angusj.com/resourcehacker/]].
+  * **Strings** - a tool for extraction of strings from a file. Good for initial analysis. [[https://technet.microsoft.com/en-us/sysinternals/bb897439.aspx]].
+  * **X64Dbg** - debugger for both 32 and 64-bit executables. [[http://x64dbg.com/]].
 
-{{: Labs: 03: iat.jpg |}}
+==== Commercial Tools ====
 
-==== Finding the Import Address Table (IAT) ==== 
+  * **Hiew** - a programmer's hex editor with a disassembler (including x64) and functionality for reverse engineering. [[http://www.hiew.ru/]]
+  * **IDA Pro** and **IDA Pro Advanced** - an interactive disassembler for reverse engineering. The Advanced version supports a wide range of architectures. There plenty of plug-ins, including decompilers from x86, x64, ARM, ARM64, and PowerPC into C. [[https://www.hex-rays.com]]
 
-The ''GetModuleHandle(nullptr)'' gets us an ''HMODULE'' of the current process, which we cast into the ''PIMAGE_DOS_HEADER'' structure.
+==== Additional Sources ====
 
-<code c>
-  HMODULE hPEFile = GetModuleHandle(nullptr); // nullptr means the current process
-  PIMAGE_DOS_HEADER pDosHeader = (PIMAGE_DOS_HEADER) hPEFile;
-</code>
+  * **The Decompilation Wiki** - information about available decompilers. [[http://www.program-transformation.org/Transform/DeCompilation]].
 
-The ''pDosHeader->e_lfanew'' field contains the relative virtual address (RVA) showing the offset of the NT header ''PIMAGE_NT_HEADERS'' structure from the beginning of the PE file (i.e. the base address returned by ''GetModuleHandle''):
 
-<code c>
-  PIMAGE_NT_HEADERS pNTHeaders = (PIMAGE_NT_HEADERS) (((BYTE *)pDosHeader) +  pDosHeader->e_lfanew);
-</code>
+===== Second Exercise =====
 
-The ''IMAGE_NT_HEADERS'' structure includes a field ''pNTHeaders->OptionalHeader''. This field contains data directories ''DataDirectory'', each of which includes a field called ''VirtualAddress'' --- an RVA from ''pDosHeader'' and a field ''size'' carrying its size in bytes. Two of these directories are critical in this tutorial:
+  * Points: **10**
+  * Deadline:  **2017-01-12, 24:00**
 
-  * Import table - ''pNTHeaders -> OptionalHeader.DataDirectory[1]''
-  * Import Address Table - ''pNTHeaders -> OptionalHeader.DataDirectory[13]''
+The purpose of this task is to reverse engineer a 64-bit binary and discover which serial number to enter so all criteria the program requires are met. This assignment is more complex than the previous ones because:
 
-==== Import Table ====
+  * symbols imported from the SerialNumber64.dll DLL, which is used by the Code64.exe application, are imported by their ordinal numbers (there are no symbol names); 
+  * contains a primitive anti-debugging protection;
+  * you cannot use IDA Freeware on it.
 
-Import table points to the structure ''IMAGE_IMPORT_DESCRIPTOR''.
+Because of the ordinal numbers, you will not know names of the symbols in SerialNumber64.dll that are called in the library. In the third task we have, however, seen how to obtain addresses of all imported symbols and how to replace them with your own functions (or to set breakpoints to them).
 
-<code c>
-  typedef struct _IMAGE_IMPORT_DESCRIPTOR {
-    union {
-      DWORD Characteristics;    // 0 for terminating null import descriptor
-      DWORD OriginalFirstThunk; // RVA's original unbound IAT (PIMAGE_THUNK_DATA)
-    } DUMMYUNIONNAME;
-    DWORD TimeDateStamp;  // 0 if not bound,
-                          // -1 If bound, and real date \ time stamp
-                          // In IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT (new BIND)
-                          // O.W. date / time stamp of the DLL's bound (Old BIND)
-    DWORD ForwarderChain; // -1 If no forwarders
-    DWORD Name;
-    DWORD FirstThunk;     // RVA's IAT (if this bound IAT has actual addresses)
-  } IMAGE_IMPORT_DESCRIPTOR;
-</code>
+The assignment can be downloaded here: {{:labs:04:ukol2_v2.zip|}}.
 
-In the above structure, we are especially interested in field ''Name'', which contains an RVA to an ASCII string (i.e. the C ''char *'') with name of the DLL from which this descriptor imports symbols, and then field ''OriginalFirstThunk'' (and for homework the field ''FirstThunk'').
+Your submission should contain **a brief** description of what you've done, a working serial number, and a description of how to generate a new serial number, including a program that does it.
 
-There are as many ''IMAGE_IMPORT_DESCRIPTOR'' structures in memory following this one as there are DLLs this PE file links to. A pointer to the first (and the last - lying after the structures) can be obtained:
+<note tip>
+**A Hint**
 
-<code c>
-  PIMAGE_IMPORT_DESCRIPTOR pImportDescriptor = (PIMAGE_IMPORT_DESCRIPTOR) (((BYTE *) pDosHeader) + pNTHeaders-> OptionalHeader.DataDirectory [IMAGE_DIRECTORY_ENTRY_IMPORT].VirtualAddress);
-  PIMAGE_IMPORT_DESCRIPTOR pImportDescriptorEnd = (PIMAGE_IMPORT_DESCRIPTOR) (((BYTE *) pImportDescriptor) + pNTHeaders-> OptionalHeader.DataDirectory [IMAGE_DIRECTORY_ENTRY_IMPORT].Size);
-</code>
+Verification of the serial number is quite complex and uses few functions from the BCRYPT.DLL library [[https://msdn.microsoft.com/en-us/library/windows/desktop/aa833130(v=vs.85).aspx|CNG Cryptographic Primitive Functions]]. Analyze code from Code64.exe and/or SerialNumber64.dll. Other modules are standard and their functions are well documented. Don't panic when you discover what's used from BCRYPT.DLL and what is it used for. Not everything is as complex as it appears on the first sight.
 
-The end of field can be recognized also by the fact that the last valid element has the value of the variable ''Characteristics'' field set to ''nullptr''. A question: What if these two ways of determining the length are in conflict? What test would help to determine which option takes priority (is it actually used by the operating system)?
-
-The ''OriginalFirstThunk'' field contains an RVA beginning of the array of structures ''IMAGE_THUNK_DATA'' and ends with an empty ''IMAGE_THUNK_DATA'' structure. This structure (''PIMAGE_THUNK_DATA'') is automatically mapped to one of the following structures, depending on whether this is a 32-bit or a 64-bit PE file:
-
-<code c>
-  typedef struct {_IMAGE_THUNK_DATA64
-    union {
-      ULONGLONG ForwarderString; // PBYTE
-      ULONGLONG Function; // PDWORD
-      ULONGLONG Ordinal;
-      ULONGLONG AddressOfData; // PIMAGE_IMPORT_BY_NAME
-    } U 1;
-  } IMAGE_THUNK_DATA64;
-  typedef IMAGE_THUNK_DATA64 * PIMAGE_THUNK_DATA64;
-
-  #include "poppack.h" // Back to 4 byte packing
-  
-  typedef struct {_IMAGE_THUNK_DATA32
-    union {
-      DWORD ForwarderString; // PBYTE
-      DWORD Function; // PDWORD
-      DWORD Ordinal;
-      DWORD AddressOfData; // PIMAGE_IMPORT_BY_NAME
-    } U 1;
-  } IMAGE_THUNK_DATA32;
-  typedef IMAGE_THUNK_DATA32 * PIMAGE_THUNK_DATA32;
-</code>
-
-The field ''AddressOfData'' **usually** indicates an RVA structure ''IMAGE_IMPORT_BY_NAME'', which is defined as follows:
-
-<code c>
-  typedef struct {_IMAGE_IMPORT_BY_NAME
-    WORD Hint;
-    CHAR Name [1];
-  } IMAGE_IMPORT_BY_NAME * PIMAGE_IMPORT_BY_NAME;
-</code>
-
-The field ''Hint'' contains information for the loader, which position is likely to be found in the library in the Export Address Table (if the position does not agree, the symbol is looked up by its name). The field ''Name'' contains an ASCIIZ string with the name of the imported file.
-
-<note>The file ''Name'' is declared with a size of 1 CHAR. This is a way how to declare that there will be a string of indeterminate length. Do not be afraid to access beyond this structure. If you use ''strcpy_s'' with an appropriately sized buffer and you read from this field, everything will be fine. </note>
-
-<note> Why "normally"? Imported symbols may also be referred by their ordinal number. In this case, the ''AddressOfData'' is of type ''IMAGE_THUNK_DATA'' and the highest bit of the item is set to 1 (so this case is recognized), and the remaining bits determine the order of the symbol in the library. </note>
-
-==== Exercise for the Lab ==== 
-
-Write a program that prints a list of DLLs it links against, and for each DLL a list of imported symbols. You do not deal with extreme situations or UI, the aim of this task is to get acquainted with the structure of IAT. We will need it in the next exercise. Your program does not have to do anything besides printing out a list of DLLs and symbols. You can check your result with the output of the Dependency Walker tool.
-
-If you liked this assignment, find a relationship of the ''Hint'' field and the Export Address Table (Directory of no. 0) of another module such as (''kernel32.dll''). Use its ''HMODULE'' and ''PIMAGE_DOS_HEADER''. You can get an ''HMODULE'' for ''kernel32.dll'' by calling the ''GetModuleHandle(TEXT ("kernel32.dll"))''.
-
-===== Third Exercise =====
-
-^ Points ^ Submission Date ^ Time  ^
-|   5    | 30.11.2016      | 24:00 |
-  
-<note>This is not a mistake or you are not overlooked. The designation "third" refers to the points in the evaluation. The second task, which gives ratings of 10 points will be awarded for up to the next exercise.</note>
-
-Your program uses an external runtime libraries as ''MSVCRT12.DLL'' (in the name version may vary according to the compiler version, this name applies to Visual Studio 2013). This library contains functions ''malloc'', ''calloc'', ''realloc'', and ''free''. Write a program that will contains functions:
-
-  * ''MallocDebug_Initialize''
-  * ''MallocDebug_Terminate''
-  * ''MallocDebug_malloc''
-  * ''MallocDebug_calloc''
-  * ''MallocDebug_realloc''
-  * ''MallocDebug_free''
-
-The ''MallocDebug_Initialize'' finds the IAT position of the function ''malloc'', ''calloc'', ''realloc'', and ''free'' and change (= patch) their addresses in the IAT to function addresses ''MallocDebug_malloc'', ''MallocDebug_calloc'', ''MallocDebug_realloc'', and ''MallocDebug_free''. The patched functions will keep track of all allocations via ''malloc'', ''calloc'', ''realloc'', and ''free'' and will complain if you try to free an already-freed block, or if there are any non-freed blocks when ''MallocDebug_Terminate'' is called. It is not required that these functions are thread-safe. In the real world, you have to make them thread-safe, that is assume that each of the function could be called at any time concurrently and you'd have to synchronize access to your data structures.
-
-<note>**Writing into the IAT**
-
-IAT is write-protected. In order to be able to write into it, you must use eg. the [[https://msdn.microsoft.com/en-us/library/windows/desktop/aa366898(v=vs.85).aspx|VirtualProtect]] API and unlock the page for writing.
-
-<code c>
-  BOOL WINAPI VirtualProtect (
-    (LPVOID) lpAddress, // an address in a block to change memory protection for
-    (size_t) dwSize,    // size of the block
-    PAGE_READWRITE,     // memory protection flags
-    nullptr             // old protection, nullptr means we're not interested in this value
-  );
-</code>
+The SerialNumber64.dll library contains even a function for serial number generation. Find it and discover what's missing. Add the missing piece of puzzle and use it to generate a new serial number satisfying all requirements Code64.exe has. Don't try to implement your own generator, unless you have plenty of time and want to understand how generation works in detail.
 </note>
+
