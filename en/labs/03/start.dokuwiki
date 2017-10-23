@@ -32,7 +32,7 @@ Recommendations for reverse engineering will be demonstrated live.
 ===== Second Exercise =====
 
   * Points: **10**
-  * Deadline:  **2017-30-12, 23:55**
+  * Deadline:  **2017-12-30, 23:55**
 
 The purpose of this task is to reverse engineer a 64-bit binary and discover which serial number to enter so all criteria the program requires are met. This assignment is more complex than the previous one (and the following ones), because:
 
