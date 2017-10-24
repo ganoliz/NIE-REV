@@ -48,7 +48,7 @@ Importní tabulka ukazuje na pole struktur ''IMAGE_IMPORT_DESCRIPTOR''.
   } IMAGE_IMPORT_DESCRIPTOR;
 </code>
 
-V ní nás zajímá zejména pole ''Name'', které obsauje RVA na ASCIIZ string (tj. Cčkový ''char *'') s názvem DLL, ze které se tímto deskriptorem importují symboly, a dále pole ''OriginalFirstThunk'' (a pro domácí úlohu i pole ''FirstThunk'').
+V ní nás zajímá zejména pole ''Name'', které obsahuje RVA na ASCIIZ string (tj. Cčkový ''char *'') s názvem DLL, ze které se tímto deskriptorem importují symboly, a dále pole ''OriginalFirstThunk'' (a pro domácí úlohu i pole ''FirstThunk'').
 
 Struktur IMAGE_IMPORT_DESCRIPTOR následuje v paměti za sebou tolik, na kolik DLL knihoven PE soubor linkuje. Ukazatel na první (a na poslední, již neležící v tomto poli) z nich získáme: 
 
