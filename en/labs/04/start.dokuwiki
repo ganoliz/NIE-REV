@@ -23,10 +23,10 @@ The ''pDosHeader-''''>e_lfanew'' field contains the relative virtual address (RV
   PIMAGE_NT_HEADERS pNTHeaders = (PIMAGE_NT_HEADERS) (((BYTE *)pDosHeader) +  pDosHeader->e_lfanew);
 </code>
 
-The ''IMAGE_NT_HEADERS'' structure includes a field ''pNTHeaders->OptionalHeader''. This field contains an array of data directories ''DataDirectory''; each directory contains a field called ''VirtualAddress'' --- an RVA from ''pDosHeader'' and a field ''size'' carrying its size in bytes. Two of these directories are critical for this tutorial:
+The ''IMAGE_NT_HEADERS'' structure includes a field ''pNTHeaders-%%%%>OptionalHeader''. This field contains an array of data directories ''DataDirectory''; each directory contains a field called ''VirtualAddress'' --- an RVA from ''pDosHeader'' and a field ''size'' carrying its size in bytes. Two of these directories are critical for this tutorial:
 
-  * Import Table - ''pNTHeaders -> OptionalHeader.DataDirectory[1]''
-  * Import Address Table - ''pNTHeaders -> OptionalHeader.DataDirectory[13]''
+  * Import Table - ''pNTHeaders -%%%%> OptionalHeader.DataDirectory[1]''
+  * Import Address Table - ''pNTHeaders -%%%%> OptionalHeader.DataDirectory[13]''
 
 ===== The Import Table =====
 
@@ -132,10 +132,10 @@ IAT is write-protected. In order to be able to write into it, you must use e.g. 
 
 <code c>
   BOOL WINAPI VirtualProtect (
-    (LPVOID) lpAddress, // an address in a block to change memory protection for
-    (size_t) dwSize,    // size of the block
-    PAGE_READWRITE,     // memory protection flags
-    nullptr             // old protection, nullptr means we're not interested in this value
+    (LPVOID) lpAddress,   // an address in a block to change memory protection for
+    (size_t) dwSize,      // size of the block
+    PAGE_READWRITE,       // memory protection flags
+    (PDWORD)&dwOldProtect // old protection value
   );
 </code>
 </note>
