@@ -23,7 +23,7 @@ Pole ''pDosHeader-''''>e_lfanew'' pak obsahuje relativní virtuální adresu (RV
   PIMAGE_NT_HEADERS pNTHeaders = (PIMAGE_NT_HEADERS)( ((BYTE*)pDosHeader) + pDosHeader->e_lfanew );
 </code>
 
-Struktura ''IMAGE_NT_HEADERS'' obsahuje v poli ''pNTHeaders->OptionalHeader'' pole s datovými adresáři ''DataDirectory'', z nichž každý obsahuje pole ''VirtualAddress'' (RVA od ''pDosHeader'') a pole ''Size'' s jeho velikostí v bajtech. Z těchto adresářů jsou pro toto cvičení důležité: 
+Struktura ''IMAGE_NT_HEADERS'' obsahuje v poli ''pNTHeaders-%%%%>OptionalHeader'' pole s datovými adresáři ''DataDirectory'', z nichž každý obsahuje pole ''VirtualAddress'' (RVA od ''pDosHeader'') a pole ''Size'' s jeho velikostí v bajtech. Z těchto adresářů jsou pro toto cvičení důležité: 
 
   * Importní tabulka - ''pNTHeaders-''''>OptionalHeader.DataDirectory[1]''
   * Import Address Table - ''pNTHeaders-''''>OptionalHeader.DataDirectory[13]''
@@ -137,7 +137,7 @@ IAT je chráněna proti zápisu. Aby do ní bylo možné zapisovat, je nutné ne
     (LPVOID)lpAddress,
     (SIZE_T)dwSize,
     PAGE_READWRITE,
-    NULL
+    (PDWORD)&dwOldProtect
   );
 </code>
 </note>
