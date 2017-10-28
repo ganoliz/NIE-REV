@@ -61,7 +61,7 @@ void* pTypeInfo = ((void**)pVMT)[-1];
 
 Obsah typové informace je závislý na konkrétním překladači a jeho runtimu. Přednáškové materiály ukazují, jak zkoumat typovou informaci pro překladač MSVC. Základní typová informace ''pTypeInfo'' ukazuje v MSVC na strukturu:
 
-<code cpp>
+<code c>
 typedef struct _RTTICompleteObjectLocator
 {
   DWORD signature;
@@ -151,3 +151,4 @@ Analyzujte program ''Had.exe'' z archivu {{:labs:05:had2016.zip|had2016.zip}}.
 ]].
   - Passion wu128: rtti.h: Available online at [[http://m.blog.csdn.net/blog/passion_wu128/38511957|http://m.blog.csdn.net/blog/passion_wu128/38511957]], 2014.
   - Cyril Cattiaux, Kevin Szkudlapski: Visual C++ RTTI Inspection. Available online at [[http://blog.quarkslab.com/visual-c-rtti-inspection.html]], 2013.
+
