@@ -1,29 +1,4 @@
-====== 7. Injection ======
-The purpose of this lab is to understand how injection into another process' address space works. It will be demonstrated how to use injection into the ''GUIToSteal.exe'' process so it is possible to extract value of the password field. 
+====== 7. Consultations ======
 
-{{:en:labs:07:guitosteal.zip|}}
+We won't be dealing with any new material in this tutorial. It is intended for consultations of your homeworks or other reverse-engineering related topics.
 
-
-
-
-==== Hints ====
-
-Under normal circumstancs the password can be retriever with the following Win32 API functions:
-  * ''GetDlgItemText''.
-  * ''GetDlgItem'' a ''GetWindowText''.
-
-All these function take an ''HWND'' data type, which identifies the window (the term window is here not only restricted to physical windows on screen, but also buttons, password fields, pop-up menus, the task bar, the Desktop, etc. are all windows). The ''HWND'' data type is opaque so don't wonder what's behind it. Treat it as an identifier. In some cases, however, handle to something ''Hxxx'' may be a masked pointer to the refered object, as we have already seen with ''HINSTANCE'' or ''HMODULE''.
-
-If you try to use the above functions for getting values of normal edit fields, you succeed. If you try the same for a password field, the operating system will block this. To get value from the password field, the function must be called from the same process as the one owning the password field. In order to read the value from another process, it is necessary to use the ''ReadProcessMemory'' API together with injection of code getting the password and storing it into a block allocated with the ''VirtualAllocEx'' API. All this can be achieved with the following APIs:
-
-For debugging of the injected process:
-  * Stop the injector at the ''CreateRemoteThread'' function.
-  * Find the injected thread entry point address. This is typically contained in the ''lpStartAddress'' parameter.
-  * Open OllyDbg and attach to the process into which it is going to be injected.
-  * Set a breakpoint at the address found in step 3 and let the process continue.
-  * Run the injector.
-
-==== Solution ====
-
-{{:en:labs:07:priklad_reseni.rar|}}
-{{:en:labs:07:passwordgrabber.zip|}}
