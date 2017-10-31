@@ -1,4 +1,4 @@
-====== 5. Run Type Information Identification Analysis ======
+====== 5. Runtime Type Identification Analysis ======
 
 ===== Motivation =====
 If a program uses identification of types at runtime (Run Time Type Identification, RTTI), such as when it is using the ''typeid'' or ''dynamic_cast'' operator, the program needs to contain information about class relationships and other information which can be effectively used in during its reverse engineering. The purpose of this exercise is to demonstrate how virtual methods are called, how this relates to the virtual method tables, where and how are these tables stored, and how all of this corresponds to the type information in RTTI. We will extract a class name and inheritance information from RTTI metadata.
