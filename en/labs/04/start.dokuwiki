@@ -140,3 +140,8 @@ IAT is write-protected. In order to be able to write into it, you must use e.g. 
 </code>
 </note>
 
+
+<note>
+It is **not** the purpose of this task to write a new memory manager. Quite the opposite, in fact - we are modelling an attempt to monitor a program's behavior in a specific area, and it rather defeats the purpose if we drastically change the area. Your implementation should simply store the necessary logging data and then (or before that) call the original versions of the memory management functions.
+</note>
+
