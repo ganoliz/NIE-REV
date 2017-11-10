@@ -142,3 +142,7 @@ IAT je chráněna proti zápisu. Aby do ní bylo možné zapisovat, je nutné ne
 </code>
 </note>
 
+<note>
+Cílem této úlohy **není**, abyste si napsali vlastní paměťový manager. Naopak je to na škodu - simulujeme případ, že chceme monitorovat chování programu ve specifické situaci, a je tedy krajně nežádoucí do toho chování vnášet vlastní změny. Vaše implementace by měla zaznamenat údaje, které budete potřebovat, a potom (nebo před tím) zavolat originální verze paměťových funkcí.
+</note>
+
