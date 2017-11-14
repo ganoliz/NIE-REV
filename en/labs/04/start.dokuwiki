@@ -68,7 +68,7 @@ The ''OriginalFirstThunk'' field contains an RVA beginning of the array of struc
       ULONGLONG Function; // PDWORD
       ULONGLONG Ordinal;
       ULONGLONG AddressOfData; // PIMAGE_IMPORT_BY_NAME
-    } U 1;
+    } u1;
   } IMAGE_THUNK_DATA64;
   typedef IMAGE_THUNK_DATA64 * PIMAGE_THUNK_DATA64;
 
@@ -80,7 +80,7 @@ The ''OriginalFirstThunk'' field contains an RVA beginning of the array of struc
       DWORD Function; // PDWORD
       DWORD Ordinal;
       DWORD AddressOfData; // PIMAGE_IMPORT_BY_NAME
-    } U 1;
+    } u1;
   } IMAGE_THUNK_DATA32;
   typedef IMAGE_THUNK_DATA32 * PIMAGE_THUNK_DATA32;
 </code>
