@@ -1,0 +1,12 @@
+====== 11. Anti-debugging ======
+
+The students will analyze the attached program, which simply saves an image ''picture.jpg'' on the disk and then terminates.
+
+During the analysis, we will discover that the program contains several anti-debugging protections. Among other things, the structure of the program changes during runtime, making the static analysis ineffective. The goal of this exercise is to discover how the protections work and then modify the program in such as way as to save a different image from the resources section. To start with, it's OK to do it in the debuger, but eventually we should be able to modify the .exe file so that it always saves the alternative image.
+
+{{:labs:11:cv9.zip|cv9.zip}}
+
+===== Enabling the patch menu in IDA Free =====
+
+The patch menu is hidden by default. It is possible to show it but you'll need to change the configuration file located in ''C:\Program Files (x86)\IDA Free\cfg\idagui.cfg''. Open the file as the Administrator and change the ''DISPLAY_PATCH_SUBMENU=NO'' line into ''DISPLAY_PATCH_SUBMENU=YES''. Save and (re)launch IDA Free.
+
