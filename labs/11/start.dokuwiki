@@ -1,11 +1,12 @@
-====== 11. Pokročilá ochrana kódu ======
+====== 11. Anti-debugging ======
 
 Studenti analyzují přiložený program. Program po svém spuštění uloží na disk obrázek ''picure.jpg'' a následně se ukončí.
 
-Při analýze programu narazíme na to, že program obsahuje několik ochran proti debugování. Mimo jiné se jeho struktura mění za běhu, takže je nečitelný při statické analýze. Úkolem je zjistit, jak ochrany programu fungují, a následně program upravit tak, aby na disk uložil jiný obrázek z resource sekce programu. V první fázi to můžeme provést v debuggeru, cílové řešení by ale mělo tento obrázek ukládat vždy.
+Při analýze programu narazíme na to, že program obsahuje několik ochran proti debugování. Mimo jiné se jeho struktura mění za běhu, takže je nečitelný při statické analýze. Úkolem je zjistit, jak ochrany programu fungují, a následně program upravit tak, aby na disk uložil jiný obrázek z resource sekce programu. V první fázi to můžeme provést v debuggeru, cílové řešení by ale mělo zahrnovat takovou úpravu programu, aby se alternativní obrázek ukládal vždy.
 
 {{:labs:11:cv9.zip|cv9.zip}}
 
 ===== Zapnutí patch menu v IDA Free =====
 
 V souboru ''C:\Program Files (x86)\IDA Free\cfg\idagui.cfg'' změňte ''ENABLE_PATCH_SUBMENU=NO'' na ''ENABLE_PATCH_SUBMENU=YES''.
+
