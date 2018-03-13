@@ -1,8 +1,9 @@
-====== 12. Martin Jirkal (ESET): Analýza dotnet ======
+= 12. Martin Jirkal (ESET): Analýza dotnet 
+:imagesdir: ../../media/labs/12
 
-Ing. Martin Jirkal předvede postupy pro analýzu dotnetového kódu.
 
-  * {{:labs:12:cv12.pdf|Prezentace}}
-  * {{:labs:12:cv12.zip|Soubory k analýze}}
-  * {{:labs:12:dnspy.zip|dnSpy}} - dekompilátor dotnet
+​Ing. Martin Jirkal předvede postupy pro analýzu dotnetového kódu.
 
+* link:{imagesdir}/cv12.pdf[Prezentace]
+* link:{imagesdir}/cv12.zip[Soubory k analýze]
+* link:{imagesdir}/dnspy.zip[dnSpy] - dekompilátor dotnet

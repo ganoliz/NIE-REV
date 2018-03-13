@@ -1,16 +1,16 @@
-~~NOTOC~~
+= MIE-REV.16 - Reverse engineering 
+:imagesdir: ../media/en
 
-====== MIE-REV.16 - Reverse engineering ======
 
-//**Oficiální stránka předmětu**//
+_**Oficiální stránka předmětu**_
 
-  * teacher: [[:teacher:start]]
+* teacher: xref:../teacher/index#[]
 
-===== News =====
 
-{{blog>:news?10}}
+== News
 
-===== Access to the materials =====
 
-  * **You need to be logged in to access the materials!**
-   
+== Access to the materials
+
+
+* *You need to be logged in to access the materials!*

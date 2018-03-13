@@ -1,11 +1,9 @@
-{{indexmenu_n>9000}}
+= Učitelé 
+:imagesdir: ../media/teacher
 
-====== Učitelé ======
 
-{{indexmenu>.#1}}
+*Josef Kokeš*
 
-**Josef Kokeš**
-
-  * E-mail: [[mailto:josef.kokes@fit.cvut.cz|josef.kokes@fit.cvut.cz]]
-  * Kancelář: TH:A-1137
-  * Konzultace: Podle potřeby, dohoda na termínu e-mailem nebo osobně na přednášce/cvičení.
+* E-mail: mailto:josef.kokes@fit.cvut.cz[josef.kokes@fit.cvut.cz]
+* Kancelář: TH:A-1137
+* Konzultace: Podle potřeby, dohoda na termínu e-mailem nebo osobně na přednášce/cvičení.

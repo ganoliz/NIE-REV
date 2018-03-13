@@ -1,21 +1,32 @@
-====== 5. Analýza typové informace ======
+= 5. Analýza typové informace 
+:imagesdir: ../../media/labs/05
+:toc:
 
-===== Motivace =====
 
-Využívá-li program pro svoji činnost identifikaci typů za běhu (Run Time Type Identification, RTTI), což je v případě, že používá operátory ''typeid'' anebo ''dynamic_cast'', obsahuje informace, které mohou dobře posloužit reverznímu inženýrství. Cílem tohoto cvičení je ukázat si, jakým způsobem se volají virtuální funkce, jak s tím souvisí tabulka virtuálních metod, kde je uložena, a jak souvisí tato informace s informací o typech pro RTTI. Z typové informace budeme extrahovat název třídy a dále informaci o dědičnosti.
+== Motivace
 
-===== Tabulka virtuálních metod =====
 
-Tabulka virtuálních metod (Virtual Method Table, VMT) je přítomna u všech objektů, které mají virtuální metody. Každý řádek této tabulky obsahuje ukazatel na metodu, která se bude volat, anebo na funkci ''_purecall'' (MSVC) v případě, že metoda není implementována a jde o abstraktní třídu. Ukazatel na VMT je u jednoduchých objektů uložen vždy jako první položka za ukazatelem instance objektu ''this''. Adresu VMT bychom mohli získat např. takto:
+Využívá-li program pro svoji činnost identifikaci typů za běhu (Run Time Type Identification, RTTI), což je v případě, že používá operátory `typeid` anebo `dynamic_cast`, obsahuje informace, které mohou dobře posloužit reverznímu inženýrství. Cílem tohoto cvičení je ukázat si, jakým způsobem se volají virtuální funkce, jak s tím souvisí tabulka virtuálních metod, kde je uložena, a jak souvisí tato informace s informací o typech pro RTTI. Z typové informace budeme extrahovat název třídy a dále informaci o dědičnosti.
 
-<code c>
+
+== Tabulka virtuálních metod
+
+
+Tabulka virtuálních metod (Virtual Method Table, VMT) je přítomna u všech objektů, které mají virtuální metody. Každý řádek této tabulky obsahuje ukazatel na metodu, která se bude volat, anebo na funkci `_purecall` (MSVC) v případě, že metoda není implementována a jde o abstraktní třídu. Ukazatel na VMT je u jednoduchých objektů uložen vždy jako první položka za ukazatelem instance objektu `this`. Adresu VMT bychom mohli získat např. takto:
+
+
+[source,c]
+----
 pVMT = *(void**)this;
-</code>
+----
 
-**Poznámka:** Objekt musí být polymorfní. Pokud není, nemá vůbec VMT a na první pozici je první datová položka objektu.
 
-VMT je přiřazována v konstruktoru objektu. Pokud konstruktor neposkytneme, použije se konstruktor implicitní. Obvykle jde o jednu z posledních věcí, kterou konstruktor provádí. 
-<code asm>
+*Poznámka:* Objekt musí být polymorfní. Pokud není, nemá vůbec VMT a na první pozici je první datová položka objektu.
+
+VMT je přiřazována v konstruktoru objektu. Pokud konstruktor neposkytneme, použije se konstruktor implicitní. Obvykle jde o jednu z posledních věcí, kterou konstruktor provádí.
+
+[source,asm]
+----
 (gdb) x/20i 'IUnknown::IUnknown()'
    0x400ac6 <IUnknown::IUnknown()>:     push   %rbp
    0x400ac7 <IUnknown::IUnknown()+1>:   mov    %rsp,%rbp
@@ -24,44 +35,58 @@ VMT je přiřazována v konstruktoru objektu. Pokud konstruktor neposkytneme, po
    0x400ad2 <IUnknown::IUnknown()+12>:  movq   $0x400fd0,(%rax) ; Přiřazení VMT
    0x400ad9 <IUnknown::IUnknown()+19>:  pop    %rbp
    0x400ada <IUnknown::IUnknown()+20>:  retq
-</code>
+----
+
 
 Vypíšeme-li VMT:
 
-<code asm>
+
+[source,asm]
+----
 (gdb) x/4a 0x400fd0
 0x400fd0 <_ZTV8IUnknown+16>:	
   0x4007d0 <__cxa_pure_virtual@plt>
   0x4007d0 <__cxa_pure_virtual@plt>
   0x4007d0 <__cxa_pure_virtual@plt>
   0x0
-</code>
+----
 
-dostaneme informaci, že jde o abstraktní třídu. Ano, třída ''IUnknown'' je skutečně abstraktní. Vypíšeme-li VMT pro jinou třídu, která dědí od ''IUnknown'', naší implementaci třídy ''CUnknown'':
 
-<code asm>
+dostaneme informaci, že jde o abstraktní třídu. Ano, třída `IUnknown` je skutečně abstraktní. Vypíšeme-li VMT pro jinou třídu, která dědí od `IUnknown`, naší implementaci třídy `CUnknown`:
+
+
+[source,asm]
+----
 (gdb) x/4a 0x400f70
 0x400f70 <_ZTV8CUnknown+16>:	
   0x4007d0 <__cxa_pure_virtual@plt>	
   0x4008f6 <CUnknown::AddRef()>
   0x400914 <CUnknown::Release()>	
   0x0
-</code>
+----
 
-zjišťujeme, že třída ''CUnknown'', která je rovněž abstraktní, přetěžuje metody ''AddRef'' a ''Release''. Metodu ''QueryInterface'' ponechává neimplementovanou. Co jsme tímto zjistili? Zjistili jsme, že funkce na adrese 4008f6 a 400914 patří k této třídě. Podle VMT můžeme také identifikovat třídu objektu. Jméno zatím neznáme. V případě polymorfní třídy ho zjistíme z typové informace.
 
-===== Typová informace =====
+zjišťujeme, že třída `CUnknown`, která je rovněž abstraktní, přetěžuje metody `AddRef` a `Release`. Metodu `QueryInterface` ponechává neimplementovanou. Co jsme tímto zjistili? Zjistili jsme, že funkce na adrese 4008f6 a 400914 patří k této třídě. Podle VMT můžeme také identifikovat třídu objektu. Jméno zatím neznáme. V případě polymorfní třídy ho zjistíme z typové informace.
 
-RTTI uchovává informace o typech a o dědičnosti. Bez nich by nebylo možné implementovat operátor ''dynamic_cast''. Typová informace je uložena jako -1. položka VMT.
 
-<code c>
+== Typová informace
+
+
+RTTI uchovává informace o typech a o dědičnosti. Bez nich by nebylo možné implementovat operátor `dynamic_cast`. Typová informace je uložena jako -1. položka VMT.
+
+
+[source,c]
+----
 pVMT = *(void**)this;
 void* pTypeInfo = ((void**)pVMT)[-1];
-</code>
+----
 
-Obsah typové informace je závislý na konkrétním překladači a jeho runtimu. Přednáškové materiály ukazují, jak zkoumat typovou informaci pro překladač MSVC. Základní typová informace ''pTypeInfo'' ukazuje v MSVC na strukturu:
 
-<code c>
+Obsah typové informace je závislý na konkrétním překladači a jeho runtimu. Přednáškové materiály ukazují, jak zkoumat typovou informaci pro překladač MSVC. Základní typová informace `pTypeInfo` ukazuje v MSVC na strukturu:
+
+
+[source,c]
+----
 typedef struct _RTTICompleteObjectLocator
 {
   DWORD signature;
@@ -71,11 +96,14 @@ typedef struct _RTTICompleteObjectLocator
   _RTTIClassHierarchyDescriptor * pClassHierarchyDescriptor;
 }
 _RTTICompleteObjectLocator;
-</code>
+----
 
-Její pole ''pTypeDescriptor'' nám umožní dohledat jméno třídy:
 
-<code c>
+Její pole `pTypeDescriptor` nám umožní dohledat jméno třídy:
+
+
+[source,c]
+----
 typedef struct _RTTITypeDescriptor
 {
   void* __vftbl;
@@ -83,11 +111,14 @@ typedef struct _RTTITypeDescriptor
   char d_name[1]; // Mangled data type name
 }
 _RTTITypeDescriptor, TypeDescriptor;
-</code>
+----
+
 
 Další struktury ukazují na hierarchii tříd:
 
-<code c>
+
+[source,c]
+----
 typedef struct PMD
 {
   ptrdiff_t mdisp; //vftable offset
@@ -117,38 +148,50 @@ typedef const struct _s_RTTIClassHierarchyDescriptor
   _RTTIBaseClassArray *pBaseClassArray;
 }
 _RTTIClassHierarchyDescriptor;
-</code>
+----
 
-=== Přehled struktury typové informace [4] ===
 
-{{:labs:05:rtti-layout.png|}}
+==== Přehled struktury typové informace ++[++4++]++
 
-===== Praktické cvičení =====
+
+image::rtti-layout.png[]
+
+
+== Praktické cvičení
+
 
 Nalezněte v přiloženém programu použití tříd. Identifikujte jejich virtuální metody a s využitím zakompilované typové informace jim přiřaďte názvy a zařaďte je do hierarchie.
 
-{{:labs:05:cv6.zip|Zadání pro cvičení}}
+link:{imagesdir}/cv6.zip[Zadání pro cvičení]
 
-===== Zadání čtvrté domácí úlohy =====
 
-  * Počet bodů: **5**
-  * Termín odevzdání: 
-    * **12.12.2017, 16:00** (paralelka 101) 
-    * **12.12.2017, 19:30** (paralelka 102)
+== Zadání čtvrté domácí úlohy
 
-Analyzujte program ''Had.exe'' z archivu {{:labs:05:had2016.zip|had2016.zip}}. 
-  - Prozkoumejte program a nalezněte v něm konstruktory objektů a přiřazování VMT.
-  - Z VMT zjistěte, kolik která třída má virtuálních metod.
-  - Z RTTI zjistěte, jak se třídy jmenují a která VMT náleží které třídě.
-  - Popište hierarchii tříd.
-  - Bonus: Upravte program tak, abyste měli 1000 životů.
 
-===== Literatura =====
+* Počet bodů: *5*
+* Termín odevzdání:
+** *12.12.2017, 16:00* (paralelka 101)
+** *12.12.2017, 19:30* (paralelka 102)
 
-  - Igorsk: Reversing Microsoft Visual C++ Part II: Classes, Methods and RTTI. Available online at [[http://www.openrce.org/articles/full_view/23|http://www.openrce.org/articles/full_view/23]], 2006.
-  - Microsoft Corp.: rttidata.h: Available online at [[http://read.pudn.com/downloads10/sourcecode/os/41823/WINCEOS/COREOS/CORE/CORELIBC/CRTW32/RTTI/rttidata.h__.htm
-|http://read.pudn.com/downloads10/sourcecode/os/41823/WINCEOS/COREOS/CORE/CORELIBC/CRTW32/RTTI/rttidata.h__.htm
+Analyzujte program `Had.exe` z archivu link:{imagesdir}/had2016.zip[had2016.zip].
+. Prozkoumejte program a nalezněte v něm konstruktory objektů a přiřazování VMT.
+. Z VMT zjistěte, kolik která třída má virtuálních metod.
+. Z RTTI zjistěte, jak se třídy jmenují a která VMT náleží které třídě.
+. Popište hierarchii tříd.
+. Bonus: Upravte program tak, abyste měli 1000 životů.
+
+
+== Literatura
+
+
+. Igorsk: Reversing Microsoft Visual C++ Part II: Classes, Methods and RTTI. Available online at http://www.openrce.org/articles/full_view/23[http://www.openrce.org/articles/full_view/23], 2006.
+. Microsoft Corp.: rttidata.h: Available online at [[http://read.pudn.com/downloads10/sourcecode/os/41823/WINCEOS/COREOS/CORE/CORELIBC/CRTW32/RTTI/rttidata.h__.htm
+
+[options="autowidth"]
+|====
+|http://read.pudn.com/downloads10/sourcecode/os/41823/WINCEOS/COREOS/CORE/CORELIBC/CRTW32/RTTI/rttidata.h__.ht
+|====
 ]].
-  - Passion wu128: rtti.h: Available online at [[http://m.blog.csdn.net/blog/passion_wu128/38511957|http://m.blog.csdn.net/blog/passion_wu128/38511957]], 2014.
-  - Cyril Cattiaux, Kevin Szkudlapski: Visual C++ RTTI Inspection. Available online at [[http://blog.quarkslab.com/visual-c-rtti-inspection.html]], 2013.
 
+. Passion wu128: rtti.h: Available online at http://m.blog.csdn.net/blog/passion_wu128/38511957[http://m.blog.csdn.net/blog/passion_wu128/38511957], 2014.
+. Cyril Cattiaux, Kevin Szkudlapski: Visual C++ RTTI Inspection. Available online at http://blog.quarkslab.com/visual-c-rtti-inspection.html, 2013.

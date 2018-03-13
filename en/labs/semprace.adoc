@@ -1,49 +1,57 @@
-====== The Semestral Work ======
+= The Semestral Work 
+:imagesdir: ../../media/en/labs
 
-  * Points: **35+**
-  * Deadline: **unlimited** (with a caveat noted below)
 
-===== The Task =====
+* Points: *35+*
+* Deadline: *unlimited* (with a caveat noted below)
+
+
+== The Task
+
 
 Your task is to analyze your assigned program and find the passwords necessary to reach its end. The program contains a set of four (resp. six) passwords, which may or may not lead you to the other passwords. Some of the passwords are generated for you specifically. The program is protected with a gradually growing set of anti-reversing methods which prevent a fast analysis of the program.
 
-Write a **brief** report describing each stage of the program:
+Write a *brief* report describing each stage of the program:
 
-  * Which password is required to reach the next stage? (If specific steps are required to enter the password, describe them as well.)
-  * Which protections are used in this stage?
-  * How does the program hide its functionality?
-  * What was your approach to finding the password?
+* Which password is required to reach the next stage? (If specific steps are required to enter the password, describe them as well.)
+* Which protections are used in this stage?
+* How does the program hide its functionality?
+* What was your approach to finding the password?
 
 Because you can turn in even an incomplete solution, it is necessary that the report contains sufficient information to determine the level of progress of the student and assign points for it. On the other hand, you don't need to write a gripping story with believable characters and exciting situations, it's perfectly OK to submit a report in a list form. We are interested in information, not its form.
 
-<note important>A solution which doesn't work with an unchanged program is not acceptable. You can modify the program to simplify its analysis, but your final solution must be applicable to the original program.</note>
+IMPORTANT: A solution which doesn't work with an unchanged program is not acceptable. You can modify the program to simplify its analysis, but your final solution must be applicable to the original program.
+
 
 Solutions must be submitted by an e-mail to your teacher.
 
-===== Deadline =====
+
+== Deadline
+
 
 There is no fixed deadline. However, in order to provide sufficient time for the evaluation and possibly to request additional information, the solution must be submitted at least a week (168 hours) before the start of the exam term you want to register for.
 
-===== Points =====
 
-  * **Password 1** - a simple fixed password. **5 points**
-  * **Password 2** - a generated random password, simple obfuscation. **10 points**
-  * **Password 3** - a simple password in a packed binary, moderately difficult. **10 points**
-  * **Password 4** - a generated random password, difficult obfuscation. **10 points**
-  * Password 5 - optional, a very difficult password, can be used as an alternative to solving the 2nd homework. **10 points**
-  * Password 6 - optional, extreme obfuscation (a custom virtual machine), serves primarily as an example of what you can encounter in real life. **55 points**
+== Points
+
+
+* *Password 1* - a simple fixed password. *5 points*
+* *Password 2* - a generated random password, simple obfuscation. *10 points*
+* *Password 3* - a simple password in a packed binary, moderately difficult. *10 points*
+* *Password 4* - a generated random password, difficult obfuscation. *10 points*
+* Password 5 - optional, a very difficult password, can be used as an alternative to solving the 2nd homework. *10 points*
+* Password 6 - optional, extreme obfuscation (a custom virtual machine), serves primarily as an example of what you can encounter in real life. *55 points*
 
 The analysis steps are also evaluated. The values listed above are the maximum points you can achieve for a given stage.
 
-===== Program assignment =====
 
-Solve only "your" assignment, a solution to another student's assignment will be ignored (except when used for cheating). The solution should be your own work - you can of course consult your progress even in real life, but you are unlike to find someone who would do **all** your work for you all the time.
+== Program assignment
 
-/*
-The assigments will be published in the 3rd week of the semester, then the student lists are definitively determined.
-*/
 
-  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/benitrau.zip|Benitez Netto Raúl Carmelo]]
-  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/graharic.zip|Graham Richard]]
-  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/rodriman.zip|Rodriguez Manolo]]
-  * [[http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/vanhecle.zip|Van Hecke]]
+Solve only “your” assignment, a solution to another student's assignment will be ignored (except when used for cheating). The solution should be your own work - you can of course consult your progress even in real life, but you are unlike to find someone who would do *all* your work for you all the time.
+
+
+* http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/benitrau.zip[Benitez Netto Raúl Carmelo]
+* http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/graharic.zip[Graham Richard]
+* http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/rodriman.zip[Rodriguez Manolo]
+* http://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/vanhecle.zip[Van Hecke]

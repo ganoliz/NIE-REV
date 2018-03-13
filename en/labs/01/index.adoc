@@ -1,15 +1,18 @@
-====== 1. Introduction to OllyDbg ======
+= 1. Introduction to OllyDbg 
+:imagesdir: ../../../media/en/labs/01
+
 
 The purpose of this tutorial is to learn the basics of the OllyDbg application.
 
-===== 1st Homework Task =====
 
-  * Points: **5**
-  * Deadline: **2017-10-31, 17:45**
+== 1st Homework Task
 
-Your task is to perform a reverse analysis of the file {{:labs:01:crackme01-v3.zip|crackme01-v3.zip}} and demonstrate your understanding by making it send an e-mail to the teacher. The program accepts a configuration file, unfortunately the provided one is incorrect. By reverse engineering the application you'll learn what a correct configuration file looks like and then you can modify it so that a **polite** e-mail is sent. Note that an incorrect configuration file may lead to sending of an impolite e-mail which is not considered the correct solution ;-).
+
+* Points: *5*
+* Deadline: *2017-10-31, 17:45*
+
+Your task is to perform a reverse analysis of the file link:{imagesdir}/../../../labs/01/crackme01-v3.zip[crackme01-v3.zip] and demonstrate your understanding by making it send an e-mail to the teacher. The program accepts a configuration file, unfortunately the provided one is incorrect. By reverse engineering the application you'll learn what a correct configuration file looks like and then you can modify it so that a *polite* e-mail is sent. Note that an incorrect configuration file may lead to sending of an impolite e-mail which is not considered the correct solution ;-).
 
 After you manage to send the correct e-mail, send your configuration file (packed with ZIP, so that it can't be changed by the e-mail application or servers) along with a brief explanation of your solution to the teacher's school e-mail. The points will be awarded according to the level of completeness of this information.
 
-<note important>Do not modify the ''CrackMe01.exe'' file.</note>
-
+IMPORTANT: Do not modify the `CrackMe01.exe` file.
