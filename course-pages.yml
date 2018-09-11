@@ -1,11 +1,12 @@
 course:
-  code: MI-REV.16
+  code: MI-REV
+  altCodes: [ MI-REV.16 ]
   name: Reverzní inženýrství
-semester: B171
+semester: B181
 language: cs
 navigation:
   hiddenFiles:
     - media/*
     - README.*
 repository:
-  gitlabPath: /edux-export/MI-REV.16
+  gitlabPath: /MI-REV/mi-rev
