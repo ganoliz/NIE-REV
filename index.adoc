@@ -1,0 +1,4 @@
+= POZOR!!!
+
+Materiály předmětu naleznete na https://moodle.fit.cvut.cz/course/view.php?id=106[Moodle FIT]. Zde je pouze ne zcela aktuální záloha. Rozdíly jsou zejména v sekci Hodnocení.
+
