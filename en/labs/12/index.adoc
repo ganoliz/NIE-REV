@@ -1,9 +1,0 @@
-= 12. Martin Jirkal (ESET): Dotnet analysis 
-:imagesdir: ../../../media/en/labs/12
-
-
-​Ing. Martin Jirkal will demonstrate techniques used for dotnet analysis.
-
-* link:{imagesdir}/../../../labs/12/cv12.pdf[Slides]
-* link:{imagesdir}/../../../labs/12/cv12.zip[Files to be analyzed]
-* link:{imagesdir}/../../../labs/12/dnspy.zip[dnSpy] - a dotnet decompiler

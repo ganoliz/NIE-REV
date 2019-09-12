@@ -1,0 +1,6 @@
+﻿
+= 7. Consultations
+:imagesdir: ../../media/labs/07
+:toc:
+
+We won't be dealing with any new material in this tutorial. It is intended for consultations of your homeworks or other reverse-engineering related topics.

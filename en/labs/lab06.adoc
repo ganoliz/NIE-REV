@@ -1,0 +1,6 @@
+﻿
+= 6. Martin Jirkal (ESET): Malware
+:imagesdir: ../../media/labs/06
+:toc:
+
+Martin Jirkal from ESET will discuss current information regarding malware.

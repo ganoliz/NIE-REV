@@ -1,0 +1,53 @@
+﻿
+= 3. Doporučení pro reverzní analýzu, dostupné nástroje
+:imagesdir: ../media/labs/03
+:toc:
+
+== Doporučení
+
+Jsou živě demonstrována na cvičení.
+
+== Nástroje dostupné zdarma
+
+* *API Monitor* -- nástroj pro sledování API volání programu. Lze sledovat i jednotlivé funkce nebo jejich logické skupiny. https://www.rohitab.com[Homepage].
+* *CFF Explorer* -- nástroj pro analýzu a úpravu PE souborů. https://www.ntcore.com/exsuite.php[Homepage].
+* *Dependency Walker* -- nástroj pro analýzu především importních a exportních tabulek PE souborů. Podporuje jak statickou, tak dynamickou analýzu. http://www.dependencywalker.com/[Homepage].
+* *ExeInfoPE* -- nástroj pro identifikaci kompilátoru použitého pro vytvoření PE souboru. http://exeinfo.web44.net/[Homepage].
+* *HxD* -- Hex editor s možností úpravy RAM a disku po sektorech. https://mh-nexus.de/en/hxd/[Homepage].
+* *IDA Free* -- interaktivní disassembler pro reverzní inženýrství. Tato verze neobsahuje dekompilátor, ale je zdarma! https://www.hex-rays.com/products/ida/support/download_freeware.shtml[Homepage].
+* *Process Explorer* -- nástroj pro detailní monitorování procesů. Značně rozšířená verze Windows Task Manageru. https://technet.microsoft.com/cs-cz/sysinternals/bb896653.aspx[Homepage].
+* *Process Monitor* -- nástroj pro monitorování chování procesu -- přístupu k registrům, souborovému systému, atd. https://technet.microsoft.com/cs-cz/sysinternals/bb896645.aspx[Homepage].
+* *Regshot* -- nástroj pro monitorování změn registrů. https://sourceforge.net/projects/regshot/[Homepage].
+* *Resource Hacker* -- nástroj pro zkoumání a úpravy obsahu `.rsrc` sekce PE souborů. http://www.angusj.com/resourcehacker/[Homepage].
+* *Strings* -- nástroj pro extrakci všeho, co se tváří jako textový řetězec. Vhodné pro prvotní analýzu. https://technet.microsoft.com/en-us/sysinternals/bb897439.aspx[Homepage].
+* *X64Dbg* -- debugger pro 32 i 64bitové programy. https://x64dbg.com/[Homepage].
+
+== Komerční nástroje
+
+* *Hiew* -- programátorský hex editor s disassemblerem (i x64) a funkcemi pro reverzní inženýrství. http://www.hiew.ru/[Homepage].
+* *IDA Pro* -- interaktivní disassembler pro reverzní inženýrství. Rozsáhlá podpora architektur, pluginy atd. Dostupný je též dekompilační plugin Hexrays Decompiler pro převod kódu do C. Velmi drahý, ale velmi účinný. https://www.hex-rays.com[Homepage].
+
+== Další užitečné zdroje
+
+* *The Decompilation Wiki* -- informace o dostupných dekompilátorech. http://www.program-transformation.org/Transform/DeCompilation[Homepage].
+
+== Zadání 1. domácí úlohy
+
+* Počet bodů: *5*
+* Termín odevzdání:
+** *24.10.2019, 16:00* (paralelka 101)
+** *24.10.2019, 17:45* (paralelka 102)
+** *25.10.2019, 17:45* (paralelka 103)
+
+Cílem úlohy je provést zpětnou analýzu souboru link:{imagesdir}/du1.zip[du1.zip] a přimět ho odeslat slušný e-mail cvičícímu. Program přijímá jako vstup konfigurační soubor, ten přiložený má ovšem nesprávnou strukturu i obsah. Analýzou programu zjistíte, jak má struktura souboru vypadat. Upravte konfigurační soubor tak, aby ho program interpretovat správně a aby cvičícímu poslal *slušný* e-mail. Při špatném formátu souboru může být odeslán neslušný e-mail, který není považován za správnou odpověď ;-).
+
+Až se vám podaří odeslat požadovaný e-mail, pošlete cvičícímu na školní adresu použitý konfigurační soubor (zabalený v ZIPu, aby určitě nedošlo k nepozorovanému pozměnění jeho struktury během přenosu mailem) spolu se stručným popisem vašeho postupu. Jen samotné odeslání slušného e-mailu není hodnoceno jako splnění úlohy.
+
+[IMPORTANT]
+====
+Samotný program `CrackMe01.exe` neměňte.
+====
+
+== Zadání semestrálních prací
+
+Přiřazení prací naleznete xref:../semprace.adoc[zde].

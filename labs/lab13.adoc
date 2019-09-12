@@ -1,0 +1,48 @@
+﻿
+= 13. Injekce
+:imagesdir: ../media/labs/13
+:toc:
+
+Cílem cvičení je injektovat proces `GUIToSteal.exe` vlastním kódem tak, aby bylo možné z procesu zkopírovat hodnotu hesla v editačním poli.
+
+* link:{imagesdir}/cv13.zip[Download]
+
+== Nápověda
+
+K získání textu z editačního pole můžete použít například funkce:
+
+* `GetDlgItemText`, nebo
+* `GetDlgItem` a `GetWindowText`.
+
+Musíte je ovšem zavolat přímo z procesu, který okno spravuje. K tomu využijeme postup nazývaný injekce (Injection).
+
+[NOTE]
+====
+Všechny tyto funkce pracují s datovým typem `HWND`, který identifikuje okno (pojem okna není omezen pouze na fyzické okno, jak ho zná uživatel; i například tlačítko nebo políčko s heslem jsou okna). Datový typ `HWND` je `HANDLE` a jde obecně o identifikátor objektu. V některých případech může `Hxxx` být "maskovaným" ukazatelem (např. `HMODULE` je ukazatel `PIMAGE_DOS_HEADER`) -- obecně to ale neplatí.
+====
+
+=== Postup krádeže hesla
+
+. Nalezneme okno aplikace pomocí funkce `FindWindow` a funkcí `GetWindowThreadProcessId` zjistíme ID procesu, kterému patří.
+. Získáme handle procesu pomocí `OpenProcess`.
+. Pomocí funkce `VirtualAllocEx` můžeme v tomto procesu alokovat paměť, funkcí `WriteProcessMemory` můžeme do takto alokované paměti zapsat naše data. Zapíšeme tedy kód, který zavolá některou z funkcí pro přečtení hesla a nějakým způsobem ho předá útočníkovi (může např. zapsat do dat, která si útočník alokoval a později je přečte pomocí `ReadProcessMemory`, nebo můžeme pomocí `WriteProcessMemory` zapsat přímo do paměti útočníka; další možností je např. uložení hesla do souboru nebo využití pojmenované roury).
+. Když je vše připraveno, spustíme vytvořený kód pomocí funkce `CreateRemoteThread`.
+. Počkáme, až náš kód doběhne, pomocí funkce `WaitForSingleObject`, která dostane jako jeden z parametrů handle našeho vlákna.
+
+[TIP]
+====
+Nebude patrně stačit jen injektovat kód, budete mu také muset předat některá data. `CreateRemoteThread` umí předat spouštěnému vláknu jeden parametr -- může to tedy být ukazatel na nějakou vaši strukturu.
+====
+
+[IMPORTANT]
+====
+Pozor! Nevíte, jakou adresu vám `VirtualAllocEx` vrátí. Znamená to tedy buď napsat kód, který poběží na libovolné adrese, nebo se o úpravu jeho adres postarat vlastními silami. Asi nejjednodušší i z hlediska ladění je umístit vlastní výkonný kód do samostatného DLL a do procesu injektovat jen kratičký kód, který zavolá `LoadLibrary` s potřebnými parametry: vaše knihovna bude načtena do paměti procesu, spustí se její funkce `DllMain`, kde můžete provést veškeré útočné činnosti, a potom vlákno ukončíte. Celé vlákno se tak bude skládat jen z několika málo strojových instrukcí, které lze snadno napsat tak, aby fungovaly vždy stejně bez ohledu na umístění v paměti.
+====
+
+=== Ladění injektovaného procesu
+
+. Zastavte váš injektor před funkcí `CreateRemoteThread`.
+. Zjistěte adresu, kde se bude pouštět injektovaný thread (`lpStartAddress`).
+. Otevřete OllyDbg a připojte se na injektovaný proces.
+. Nastavte breakpoint na zjištěnou adresu injektovaného kódu a spusťte proces.
+. Spusťte váš injektor.

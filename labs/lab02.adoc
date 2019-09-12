@@ -1,0 +1,198 @@
+﻿
+= 2. Ladění programu, základní rozbor funkce a rámce zásobníku
+:imagesdir: ../media/labs/02
+:toc:
+
+K ladění programu budeme v rámci hodiny používat program IDA v její free verzi, kterou si můžete stáhnout na adrese https://www.hex-rays.com/products/ida/support/download_freeware.shtml[https://www.hex-rays.com/products/ida/support/download_freeware.shtml].
+
+Byl zkompilován následující ukázkový případ. Kompilace proběhla ve Visual Studio 2015, v release verzi, s vypnutým ASLR (`/DYNAMICBASE:OFF`), optimalizací (`/Ob0`) a nastavením multi-byte character set.
+
+* link:{imagesdir}/cv02.zip[Download]
+
+Všimněte si, že pro zjednodušení byla do main funkce přidána instrukce `INT3` (breakpoint, opcode `CCh`). Za normálních okolností program na této instrukci spadne, nebo přesněji, dojde k vyvoláni speciálního druhu výjimky, pokud ale bude připojen debugger, tak se na této instrukci zastaví a dovolí nám pokračovat. Nahrajte program do IDA nebo do debuggeru a spusťte (F9). Program se může ovšem zastavit i na jiné než naší výjimce. Pokud se nacházíte v knihovně (adresa `7xxxxxxx`) a ne v programu (adresa `401357`), pokračujte v programu stiskem F9.
+
+Breakpoint v knihovně:
+
+image::cv2obr01.png[]
+
+Breakpoint v programu:
+
+image::cv2obr02a.png[]
+
+== Prolog, Epilog
+
+Nejdříve se podíváme na prolog běžné funkce. Přepněte IDU do textového zobrazení (IDA View-A, pro přepnutí mezi code-flow grafem a kódem použijte mezerník) a podívejte se na adresu `401259` (můžete použít klávesu `g`). Všimněte si volání funkce na adrese `401040`:
+
+image::cv2obr03.jpg[]
+
+Funkce je volána se dvěma argumenty. Pod funkcí vidíme instrukci `ADD ESP, imm` (kde `imm` značí přímou hodnotu, v tomto případě konkrétní číslo), která posunutím vrcholu zásobníku čistí tyto argumenty. Volání je tedy pravděpodobně v `__cdecl` konvenci.
+
+image::cv2obr04.jpg[]
+
+`CALL` je instrukce, která udělá 2 operace: Uloží adresu instrukce následující bezprostředně za CALL na zásobník a skočí na novou adresu určenou parametrem instrukce.
+
+image::cv2obr05.jpg[]
+
+image::cv2obr06.jpg[]
+
+V prologu funkce se na zásobník uloží ukazatel na předchozí rámec zásobníku (registr `EBP`) a vytvoří se nový rámec na adrese `ESP` tím, že hodnotu `ESP` zkopírujeme do registru `EBP`.
+
+image::cv2obr07.jpg[]
+
+Dále se vytvoří místo pro lokální proměnné, v tomto případě 2x `DWORD`, tím, že od vrcholu zásobníku instrukcí `SUB ESP, imm` odečteme potřebný počet bajtů (odečítáme, protože zásobník roste směrem k nižším adresám).
+
+image::cv2obr08.jpg[]
+
+Tím je hotov základní prolog. Epilog má opačnou funkci, ruší změny provedené prologem.
+
+image::cv2obr09.jpg[]
+
+Jako první krok obnovíme původní hodnotu `ESP` (a tím zároveň odstraníme lokální proměnné) pomocí instrukce `MOV ESP, EBP`. Instrukce `POP EBP` obnoví původní hodnotu `EBP`, kterou jsme v prologu uložili na zásobník, a následně instrukce `RETN` přesune ukazatel na instrukce na adresu přečtenou ze zásobníku (kam `CALL` uložil adresu instrukce následující za `CALL`) a odstraní tuto adresu ze zásobníku ("`POP EIP`").
+
+== Strukturovaná obsluha výjimek (SEH)
+
+Vraťme se k main funkci na adrese `401320`.
+
+image::cv2obr10.jpg[]
+
+Nejdříve začne standardní prolog.
+
+image::cv2obr11.jpg[]
+
+Poté se na stack vloží struktura `_EXCEPTION_REGISTRATION`:
+
+[source,cpp]
+----
+struct _EXCEPTION_REGISTRATION {
+  struct _EXCEPTION_REGISTRATION *prev;
+  void (*handler)(PEXCEPTION_RECORD, PEXCEPTION_REGISTRATION, PCONTEXT, PEXCEPTION_RECORD);
+  struct scopetable_entry *scopetable;
+  int trylevel;
+};
+----
+
+image::cv2obr12.jpg[]
+
+Tato struktura nahradí starou tím, že její adresu zapíšeme do `FS:[0]`. Původní obsluhu uchováme tak, že její adresu (původní obsah `FS:[0]`) uložíme do položky `prev`.
+
+Nakonec tedy zásobník vypadá takto:
+
+image::cv2obr13.jpg[]
+
+Epilog je daleko jednodušší, protože je vše potřebné uložené na známých místech:
+
+image::cv2obr14.jpg[]
+
+Prolog a epilog obsahuje operace potřebné pro funkčnost kódu, ale neobsahuje informace o programu a není tudíž obvykle potřebné ho analyzovat -- až na jednu výjimku. Bloky `__except` a `__finally`, resp. `catch` v C++, mohou obsahovat kód, který je pro analýzu důležitý.
+
+Kód prováděný při výjimkách je závislý na použitém kompilátoru. Z tohoto důvodu se často setkáváme s tím, že výjimky vyvolané v knihovně nejsou kompatibilní s obsluhou výjimek ve volajícím programu, leda že by pro obě komponenty byl použit stejný kompilátor. Jakmile dojde k výjimce, ukazatel na `EXCEPTION_REGISTRATION` je načten z `FS:[0]`, a nyní velmi záleží na tom, jestli je řízení předáno programu nebo knihovně --- adresu obslužné rutiny najdeme v poli `lpfnFilter` struktury `EXCEPTION_REGISTRATION`. V případě SEH3 (verze 3) nebo SEH4 se musíme podívat do příslušné proměnné `scopetable` typu `SCOPETABLE`.
+
+[source,cpp]
+----
+typedef struct _SCOPETABLE {
+  DWORD previousTryLevel;
+  DWORD lpfnFilter
+  DWORD lpfnHandler
+} SCOPETABLE, *PSCOPETABLE;
+----
+
+image::cv2obr15.jpg[]
+
+V našem případě vidíme, že první dvě `trylevel` proměnné jsou prázdné a `trylevel==0xFFFFFFFE` (-2) značí, že jde o výjimku v C (C++ by mělo hodnotu -1). Na adrese `401427` je filtrovací funkce (`lpfnFilter`), `except` funkci nalezneme na adrese `40142D`.
+
+Filtrovací funkce vypadá takto:
+
+image::cv2obr16.jpg[]
+
+Číslo `C0000094` je definovaná konstanta `EXCEPTION_INT_DIVIDE_BY_ZERO`.
+
+Funkce `except(EXCEPTION_INT_DIVIDE_BY_ZERO)` tedy vypadá takto:
+
+image::cv2obr17.jpg[]
+
+Funkce obnoví zásobník, nastaví `trylevel` a nastaví jako výsledek (v registru `EAX`) hodnotu 1.
+
+== Proměnné
+
+Podíváme-li se na adresu `401364`, všimneme si sekce, kde se přiřazují proměnné. Pomocí tlačítka `h` si můžeme prohlédnout proměnou v decimální/hexadecimální podobě, pomocí tlačítka `k` přepínáme pohled mezi notací odpovídající assemblerovému kódu a notací IDY, která v sobě zahrnuje informace známé z analýzy proměnných funkce -- např. `[EBP+arg_4]` se změní na `[EBP+0ch]`.
+
+image::cv2obr18.jpg[]
+
+Dvě proměnné jsou typu `DWORD` a dvě typu `BYTE`. Proměnné si pomocí tlačítka `n` přejmenujeme z výchozího `var_8` např. na `DWORD1`.
+
+image::cv2obr19.jpg[]
+
+Od adresy `4013E7` si můžeme všimnout, že se s našimi proměnnými pracuje -- konkrétně se přiřazují do registrů.
+
+image::cv2obr20.jpg[]
+
+image::cv2obr21.jpg[]
+
+Adresa `EBP-38h` je následně použita jako argument funkce `401240`.
+
+Když se do této funkce podíváme (tlačítkem `Enter` na její adrese), zjistíme, že s adresou v argumentu (tj. `EBP-38h` v minulém rámci) se postupně několikrát pracuje ve variantách `[REG]`, `[REG+4]`, `[REG+5]` atd. Z toho můžeme usoudit, že argumentem funkce `401240` je ukazatel na strukturu, která je lokální proměnnou rámce předchozího. (Pozn.: Proměnná je na zásobníku nalevo od `EBP`). Bohužel velikost struktury je v tomto případě důležitá pouze pro kompilátor a ve finálním kódu se tato informace o ní ztrácí, není-li ovšem využita např. pro alokaci paměti. Můžeme tedy velikost jen odhadnout z vnitřku funkce `401240`, ale neznáme ji jistě.
+
+image::cv2obr22.jpg[]
+
+image::cv2obr23.jpg[]
+
+Kód bere hodnotu, která odpovídá proměnné `DWORD1`, a provádí na ní porovnání (`CMP`). To nám prozrazuje, že `DWORD1` je celé číslo o velikosti 4B, což je v 32-bit C++ nejspíše (`unsigned`) `int`. Skok pro porovnání (`JGE`) používá podmínku pro hodnoty se znaménkem. Tudíž můžeme odvodit, že `DWORD1` je `int`. Obdobným postupem odvodíme typy ostatních tří proměnných.
+
+image::cv2obr24.jpg[]
+
+Druhá proměnná je typu `char`. Také ke skoku také používá instrukci `JGE`, navíc instrukce `MOVSX` se používá, pokud je proměnná se znaménkem (jde o instrukci "MOVe with Sign Extension").
+
+image::cv2obr25.jpg[]
+
+Třetí proměnná je taktéž `char`, ale `MOVZX` ("MOVe with Zero Extension") signalizuje práci s `unsigned` variantou.
+
+image::cv2obr26.jpg[]
+
+Čtvrtá proměnná je celé číslo, ale použitý skok (`JNB`) používá příznaky obvyklé pro `unsigned` porovnání. Lze ji tedy označit jako `unsigned int`.
+
+== API
+
+Podívejme se teď do funkce `401140`. Nejdříve si všimněme, že funkce přijímá jako argument stejnou strukturu, jakou jsme analyzovali v předchozí funkci. Ve funkci nás na první pohled zaujmou odkazy na dvě Windows API funkce, `CreateFileA` a `WriteFile`. Zaměřme se nejprve na funkci `CreateFileA`. Přečtěte si dokumentaci na https://msdn.microsoft.com/en-us/library/windows/desktop/aa363858%28v=vs.85%29.aspx[MSDN] a potom budeme pokračovat v analýze kódu.
+
+image::cv2obr27.jpg[]
+
+Dle dokumentace můžeme vyhodnotit obsah jednotlivých argumentů funkce a určit, že soubor se otvírá za účelem zápisu. Vždy se vytváří soubor nový a má normální atributy. Pozor, název `CreateFile` je poněkud zavádějící, funkce je běžně používána také pro otevírání souborů -- nebo i zcela jiných objektů -- pro čtení.
+
+IDA je natolik inteligentní, že nám dokáže kód okomentovat. My jí v tom můžeme dále pomoci výběrem konstant (enums) ze seznamu. Klikněte na hodnotu 40000000h v řádku dwDesiredAccess a stiskněte klávesu `m`. Měli byste v seznamu najít konstantu `GENERIC_WRITE`. Totéž pak můžete udělat s atributy souboru (`FILE_ATTRIBUTES_NORMAL`) a režimem pro otevření souboru (`CREATE_ALWAYS`).
+
+image::cv2obr28.jpg[]
+
+Výsledkem funkce `CreateFileA` je `HANDLE`, který je uložen do proměnné `hFile` (pojmenované IDou).
+
+Prohlédněme si nyní následující kus kódu:
+
+image::cv2obr29.jpg[]
+
+Podíváme-li se na použitý řetězec, můžeme si domyslet, že jde o formát některé z variant funkce `printf`. A skutečně, prozkoumáme-li hlouběji funkci `401100` a jí volané funkce, tak se tento odhad potvrdí v podobě volání funkce `__stdio_common_vsprintf` na adrese `4010A9`. Dokumentace funkce `printf` nám prozradí, jaké jsou typy použitých proměnných. První proměnná je signed decimal integer, další dvě jsou char a poslední je unsigned integer. Zároveň si z obsahu vytvářeného řetězce můžeme odvodit i názvy těchto proměnných. Pokud nyní porovnáme předchozí kus kódu s námi odvozenou strukturou, získáme toto:
+
+[listing]
+----
+DWORD1 -> int width
+BYTE1 -> char height
+BYTE2 -> unsigned char Xsize
+DWORD2 -> unsigned int Ysize
+----
+
+Tuto informaci můžeme nyní propsat do struktury a použít pro další analýzu.
+
+[source,cpp]
+----
+struct MyStructure {
+  int width;
+  char height;
+  unsigned char Xsize;
+  unsigned int Ysize;
+};
+----
+
+== Pozor
+
+Pokud se nyní podíváte na původní zdrojový kód, zjistíte, že několik informací jsme zanalyzovali chybně.
+
+. Struktura měla další 4 integer proměnné, které ale nikde v programu nebyly použité. Při alokaci lokálních proměnných s nimi ovšem bylo počítáno. Můžeme si ale všimnout, že instrukce `SUB ESP, imm` pracuje se správnou délkou -- to je důsledek použití neoptimizovaného buildu, ve kterém některé nadbytečné informace zůstávají viditelné.
+. Bohužel při kompilaci dochází k velké ztrátě informací, což způsobuje nepřesnosti při analýze. To nám ale nebrání analýzu provádět a i přes dílčí nepřesnosti bychom měli být schopní vytvořit funkční ekvivalent původního zdrojového kódu. Kód jako celek nebude identický s originálem, ale jeho relevantní funkčnost by měla být zachována.

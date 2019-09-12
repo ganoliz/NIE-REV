@@ -1,0 +1,48 @@
+﻿
+= Lectures
+:imagesdir: ../media/lectures
+
+
+[options="autowidth", cols=4*]
+|====
+<h| nr.
+<h| Date
+<h| Topic
+^h| Download
+
+| 1.
+| 2019-09-26
+| Introduction to reverse engineering, stack analysis
+| link:{imagesdir}/rev01en.pdf[download]
+
+| 2.
+| 2019-10-10
+| Analysis of a program's flow
+| link:{imagesdir}/rev02en.pdf[download]
+
+| 3.
+| 2019-10-24
+| Analysis of C++ classes
+| link:{imagesdir}/rev03en.pdf[download]
+
+| 4.
+| 2019-11-07
+| Disassembling and obfuscation
+| link:{imagesdir}/rev04en.pdf[download]
+
+| 5.
+| 2019-11-21
+| Compiler recognition
+| link:{imagesdir}/rev05en.pdf[download]
+
+| 6.
+| 2019-12-05
+| Debugging and anti-debugging
+| link:{imagesdir}/rev06en.pdf[download]
+
+| 7.
+| 2019-12-19
+| Malware
+| link:{imagesdir}/rev07en.pdf[download]
+
+|====

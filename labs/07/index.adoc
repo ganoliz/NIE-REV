@@ -1,5 +1,0 @@
-= 7. Konzultace 
-:imagesdir: ../../media/labs/07
-
-
-Na tomto cvičení není probírána žádná nová látka. Cvičení je určeno pro konzultace vašich řešení domácích úloh, případně dalších témat týkajících se reverzního inženýrství.

@@ -1,0 +1,165 @@
+﻿
+= 4. Import Address Table
+:imagesdir: ../../media/labs/04
+:toc:
+
+== Introduction
+
+The aim of this exercise is to practice the PE file structure, particularly the symbol import tables (Import Table) and the table of addresses of imported symbols (Import Address Table, IAT). The structures are described in https://msdn.microsoft.com/en-us/library/windows/desktop/ms680313(v=vs.85).aspx[MSDN]. For a better understanding of them, it might be better to refer to one of the tutorials for writing Windows programs in assembler and/or cracking, for example http://web.archive.org/web/20190517161709/http://win32assembly.programminghorizon.com/pe-tut1.html[Iczelion's PE Tutorial 1: Overview of PE File Format] and http://web.archive.org/web/20190517161709/http://win32assembly.programminghorizon.com/pe-tut6.html[Iczelion's PE Tutorial 6: Import Table].
+
+A graphical representation of objects with which we will be working throughout this exercise:
+
+image::iat.jpg[]
+
+== Finding the Import Address Table (IAT)
+
+The `GetModuleHandle(NULL)` returns an `HMODULE` of the current process, which we can cast to the `PIMAGE_DOS_HEADER` structure.
+
+[source,cpp]
+----
+HMODULE hPEFile = GetModuleHandle(NULL); // NULL means the current process
+PIMAGE_DOS_HEADER pDosHeader = (PIMAGE_DOS_HEADER) hPEFile;
+----
+
+The `+pDosHeader->e_lfanew+` field contains the relative virtual address (RVA) of the NT header `PIMAGE_NT_HEADERS` structure relative to the beginning of the PE file (i.e. the base address returned by `GetModuleHandle`):
+
+[source,cpp]
+----
+PIMAGE_NT_HEADERS pNTHeaders = (PIMAGE_NT_HEADERS)( ((BYTE*)pDosHeader) + pDosHeader->e_lfanew );
+----
+
+The `IMAGE_NT_HEADERS` structure includes a field `+pNTHeaders->OptionalHeader+`. This field contains an array of data directories `DataDirectory`; each directory contains a field called `VirtualAddress` (an RVA from `pDosHeader`) and a field `Size` carrying its size in bytes. Two of these directories are critical for this tutorial:
+
+* Import Table -- `+pNTHeaders->OptionalHeader.DataDirectory[1]+`
+* Import Address Table -- `+pNTHeaders->OptionalHeader.DataDirectory[13]+`
+
+== The Import Table
+
+The Import Table points to an array of `IMAGE_IMPORT_DESCRIPTOR` structures.
+
+[source,cpp]
+----
+typedef struct _IMAGE_IMPORT_DESCRIPTOR {
+  union {
+    DWORD Characteristics;            // 0 for terminating null import descriptor
+    DWORD OriginalFirstThunk;         // RVA to original unbound IAT (PIMAGE_THUNK_DATA)
+  } DUMMYUNIONNAME;
+  DWORD TimeDateStamp;                // 0 if not bound,
+                                      // -1 if bound, and real date\time stamp
+                                      //     in IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT (new BIND)
+                                      // O.W. date/time stamp of DLL bound to (Old BIND)
+  DWORD ForwarderChain;               // -1 if no forwarders
+  DWORD Name;
+  DWORD FirstThunk;                   // RVA to IAT (if bound this IAT has actual addresses)
+} IMAGE_IMPORT_DESCRIPTOR;
+----
+
+In the above structure, we are particularly interested in the `Name` field, which contains an RVA to an ASCII string (i.e. the C `char *`) with name of the DLL from which this descriptor imports symbols, and then the `OriginalFirstThunk` field (and for the homework the `FirstThunk` field).
+
+There are as many `IMAGE_IMPORT_DESCRIPTOR` structures in memory as there are DLLs this PE file links to. A pointer to the first (and the last -- lying after the structures) can be obtained:
+
+[source,cpp]
+----
+PIMAGE_IMPORT_DESCRIPTOR pImportDescriptor = (PIMAGE_IMPORT_DESCRIPTOR)(((BYTE*)pDosHeader) + pNTHeaders->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT].VirtualAddress);
+PIMAGE_IMPORT_DESCRIPTOR pImportDescriptorEnd = (PIMAGE_IMPORT_DESCRIPTOR)(((BYTE*)pImportDescriptor) + pNTHeaders->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT].Size);
+----
+
+The end of the array can also be recognized by the fact that the last valid element has the value of the `Characteristics` field set to `NULL`. A question: What if these two ways of determining the length are in conflict? Which test would let us determine which option takes priority (i.e., what the operating system does)?
+
+The `OriginalFirstThunk` field contains an RVA of the beginning of the array of structures `IMAGE_THUNK_DATA`; the array ends with an empty `IMAGE_THUNK_DATA` structure. This structure (`PIMAGE_THUNK_DATA`) is automatically mapped to one of the following structures, depending on whether this is a 32-bit or a 64-bit PE file:
+
+[source,cpp]
+----
+typedef struct _IMAGE_THUNK_DATA64 {
+  union {
+    ULONGLONG ForwarderString;  // PBYTE
+    ULONGLONG Function;         // PDWORD
+    ULONGLONG Ordinal;
+    ULONGLONG AddressOfData;    // PIMAGE_IMPORT_BY_NAME
+  } u1;
+} IMAGE_THUNK_DATA64;
+typedef IMAGE_THUNK_DATA64 * PIMAGE_THUNK_DATA64;
+
+#include "poppack.h"                        // Back to 4 byte packing
+
+typedef struct _IMAGE_THUNK_DATA32 {
+  union {
+    DWORD ForwarderString;      // PBYTE
+    DWORD Function;             // PDWORD
+    DWORD Ordinal;
+    DWORD AddressOfData;        // PIMAGE_IMPORT_BY_NAME
+  } u1;
+} IMAGE_THUNK_DATA32;
+typedef IMAGE_THUNK_DATA32 * PIMAGE_THUNK_DATA32;
+----
+
+The `AddressOfData` field *usually* indicates the RVA of the `IMAGE_IMPORT_BY_NAME` structure, which is defined as follows:
+
+[source,cpp]
+----
+typedef struct _IMAGE_IMPORT_BY_NAME {
+  WORD    Hint;
+  CHAR   Name[1];
+} IMAGE_IMPORT_BY_NAME, *PIMAGE_IMPORT_BY_NAME;
+----
+
+The `Hint` field contains information for the loader, the position where the symbol is likely to be found in the library in the Export Address Table (if the position does not match, the symbol is looked up by its name). The `Name` field contains an ASCIIZ string with the name of the imported symbol.
+
+[TIP]
+====
+The `Name` field is declared with a size of 1 CHAR. This is a way of declaring that there will be a string of indeterminate length. Do not be afraid to access beyond the bounds of this structure. If you use `strcpy_s` with an appropriately sized buffer and you read from this field, everything will be fine.
+====
+
+[NOTE]
+====
+Why "usually"? Imported symbols may also be referred to by their ordinal number. In this case, the `AddressOfData` is of type `IMAGE_THUNK_DATA` and the highest bit of the item is set to 1 (which is how we can recognize this situation), and the remaining bits determine the order of the symbol in the library.
+====
+
+== Exercise for the Lab
+
+Write a program that prints a list of DLLs it is linked against, and for each DLL a list of imported symbols. You do not need to deal with extreme conditions or UI, the purpose of this task is to get acquainted with the structure of IAT. We will need it in the following exercises. Your program does not have to do anything besides printing out a list of DLLs and symbols, but it would be wise to explicitly use API calls such as `CreateFileA` or `MessageBoxA` to ensure that some symbols are actually being imported. You can also check your result with the output of the Dependency Walker tool.
+
+If you liked this assignment, find a relationship of the `Hint` field and the Export Address Table (Directory no. 0) of another module such as (`kernel32.dll`). You can get its `HMODULE` and `PIMAGE_DOS_HEADER` by calling e.g. `GetModuleHandle(TEXT("kernel32.dll"))`.
+
+== Second homework
+
+* Points: *5*
+* Deadline: *2019-11-15, 19:30*
+
+Your program compiled with MS Visual Studio typically depends on an external runtime library `MSVCRT12.DLL` (the version in the name may vary according to the compiler version, this name applies to Visual Studio 2013). This library contains functions `malloc`, `calloc`, `realloc`, and `free`. Write a program which will contains functions:
+
+* `MallocDebug_Init`
+* `MallocDebug_Done`
+* `MallocDebug_malloc`
+* `MallocDebug_calloc`
+* `MallocDebug_realloc`
+* `MallocDebug_free`
+
+The `MallocDebug_Init` function will find the IAT position of the `malloc`, `calloc`, `realloc`, and `free` functions and change (= patch) their addresses in the IAT to the addresses of `MallocDebug_malloc`, `MallocDebug_calloc`, `MallocDebug_realloc`, and `MallocDebug_free` respectively. These patched functions will create a record of the operation and its parameters (use a global fixed array, don't worry about multithreading support) on allocation and look up and remove (and complain if this failed) the record on deallocation. Then they will call the original function to actually perform the requested operation; note that you can't use e.g. `malloc` directly, you need to call a function pointer which you saved during `MallocDebug_Init`. This will provide us with an ability of logging memory allocation/deallocation operations. The `MallocDebug_Done` function will reset the IAT to its original state and report any non-freed memory blocks. Make sure to verify that these leaked blocks are reported correctly (e.g. by creating an intentional memory leak).
+
+[TIP]
+====
+*Writing into the IAT*
+
+IAT is usually write-protected. In order to be able to write into it, you must use e.g. the https://msdn.microsoft.com/en-us/library/windows/desktop/aa366898(v=vs.85).aspx[VirtualProtect] API to unlock the page for writing.
+
+[source,cpp]
+----
+BOOL WINAPI VirtualProtect (
+  (LPVOID) lpAddress,   // an address in a block to change memory protection for
+  (size_t) dwSize,      // size of the block
+  PAGE_READWRITE,       // memory protection flags
+  (PDWORD)&dwOldProtect // old protection value
+);
+----
+====
+
+[IMPORTANT]
+====
+It is *not* the purpose of this task to write a new memory manager. Quite the opposite, in fact -- we are modelling an attempt to monitor a program's behavior in a specific area, and it rather defeats the purpose if we drastically change the area. Your implementation should simply store the necessary logging data and then (or before that) call the original versions of the memory management functions.
+====
+
+[IMPORTANT]
+====
+Your implementation should adhere to the specification of the substituted functions. Study their documentation and make sure your solution works correctly for all boundary cases (and all use cases) the memory functions can reach.
+====

@@ -1,8 +1,8 @@
 course:
   code: MI-REV
-  altCodes: [ MI-REV.16 ]
+  altCodes: [ MI-REV.16, MIE-REV, MIE-REV.16 ]
   name: Reverzní inženýrství
-semester: B181
+semester: B191
 language: cs
 navigation:
   hiddenFiles:

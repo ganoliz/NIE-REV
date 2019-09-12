@@ -1,0 +1,49 @@
+﻿
+= Přiřazení semestrálních prací
+:toc:
+:imagesdir: ./media
+
+* Počet bodů: *35+*
+* Termín odevzdání: *neomezeně* (s výhradou viz níže)
+
+== Zadání
+
+Vaším úkolem je analyzovat vám přiřazený program a získat potřebná hesla pro průchod programem. Program obsahuje sadu čtyř (resp. šesti) hesel, jejíž získání vám umožní postoupit k dalším heslům. Některá z hesel jsou vygenerována přímo pro každého jednotlivého studenta. Program obsahuje postupně se zvyšující počet anti-reverzních metod, které zamezují rychlé analýze programu.
+
+Sestavte *stručnou* zprávu, která pro každou úroveň programu odpoví na následující otázky:
+
+* Jaké heslo je požadováno pro vstup do další části?
+* Jakým způsobem se má uživatel dostat do další části programu?
+* Jaké ochrany program v této části používá? Používají-li se standardní algoritmy, pojmenujte je!
+* Jak program skrývá své funkcionality?
+* Jaký byl váš postup pro získání hesla?
+
+Protože je možné odevzdat i částečně vyřešenou úlohu, je nutné, aby zpráva obsahovala dostatečné množství informací pro rozhodnutí, jak velkou část zadání student splnil, a následně pro udělení bodů za postup v úloze. Na druhou stranu, není potřeba, aby práce byla napínavá, s originálními postavami a neotřelou zápletkou, naprosto vyhoví i nesouvislý bodový seznam. Podstatné jsou obsažené informace, ne jejich forma.
+
+[IMPORTANT]
+====
+Řešení, které nelze použít s nezměněným programem, není přípustné! Pro účely analýzy program měnit můžete, ale správnost řešení je ověřována proti programu originálnímu!
+====
+
+Řešení posílejte svému cvičícímu e-mailem.
+
+== Termín odevzdání
+
+Termín odevzdání práce je omezen koncem zkouškového období. Počítejte však s tím, že vyhodnocení práce nějakou dobu trvá a naplánujte si tedy tak, aby po odevzdání zbyla dostatečná časová rezerva před deadlinem pro přihlášení na zkoušku. Pokud odevzdáte aspoň týden (168 hodin) před začátkem termínu zkoušky, je zaručeno, že se zkoušky budete moci zúčastnit.
+
+== Bodování
+
+* *Heslo 1* -- jednoduché fixní heslo. *5 bodů*
+* *Heslo 2* -- generované náhodné heslo, jednoduché obfuskace, rozbalení do paměti. *10 bodů*
+* *Heslo 3* -- jednoduché heslo v novém zabaleném souboru, střední obtížnost. *10 bodů*
+* *Heslo 4* -- generované náhodné heslo, těžké obfuskace, potřebné k získání plného počtu bodů. *10 bodů*
+* Heslo 5 -- bonusové, náročně skryté heslo, slouží jako částečná alternativa k luštění práce "Keygen". *10 bodů*
+* Heslo 6 -- bonusové heslo za extrémními obfuskacemi (vlastní virtuální stroj), slouží hlavně jako ukázka, s čím se také můžete potkat. *100 bodů*
+
+Bodované jsou i postupy mezi hesly. Výše uvedené jsou celkové počty bodů, které můžete za danou část úlohy získat.
+
+== Přiřazení úloh studentům
+
+Řešte jenom "svoje" zadání, na řešení cizích prací nebude brán zřetel, s výjimkou opisování. Řešení by mělo být zejména vaší vlastní prací -- konzultace jsou i v praxi možné, ale sotva najdete někoho, kdo by vaše pracovní úkoly řešil za vás.
+
+Úlohy budou přiřazeny během třetího výukového týdne.

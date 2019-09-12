@@ -1,0 +1,154 @@
+﻿
+= Evaluation
+:toc:
+:imagesdir: ../media
+
+The evalution of the course consists of three parts -- evaluation of the homeworks (15 points), evaluation of the semestral works (20 and 35 points) and evaluation of the exam (30 points). The course is successfully completed by earning the assessment and by passing the exam.
+
+== Assessment
+
+The assessment is granted if the student gains a total of 30 or more points for homeworks and semestral works.
+
+=== Homeworks
+
+The homeworks are assigned during the tutorials. They consist of three tasks worth 5 points each, 15 points in total. The homeworks ask the student to explore important topics discussed during lectures and tutorials -- the understanding of the assembler code and basic control structures, the work with Import Address Table and the use of type information. The solutions are to be submitted exclusively through e-mail. It is permitted to submit multiple solutions for each task (e.g. in order to add missing parts or fix errors in the earlier submissions). A deadline has been set for each task, usually X weeks since the end of the tutorial where the task has been assigned (where X depends on the task); the submission e-mail must reach the teacher's mailbox by the deadline. Tasks submitted after the deadline *are not eligible for any points*, even if the task had been completed and the student only failed to deliver it. They may, however, be used to resolve borderline cases. A deadline may be individually delayed if serious reasons are proven.
+
+In case of exceptional solutions the teacher may award bonus points in excess of standard values, depending on the quality of the solution. There points are solely in the province of the teacher, the student may not request them.
+
+==== List of homeworks and their deadlines
+
+[options="autowidth", cols=4*]
+|====
+<h| Task
+<h| Points
+<h| Assigned
+<h| Deadline
+
+| xref:labs/lab03.adoc[E-mail]
+| 5
+| 3rd week
+| October 25, 19:30
+
+| xref:labs/lab04.adoc[IAT]
+| 5
+| 4th week
+| November 15, 19:30
+
+| xref:labs/lab05.adoc[Snake]
+| 5
+| 5th week
+| November 29, 19:30
+|====
+
+=== Semestral works
+
+The semestral works are focused on the actual reverse engineering of sample applications. Similar rules as for the homeworks apply, except that the deadline of each task is equal to the end of the exam period. Additionally, each solution must be functional with an unmodified application -- if a modification is required, the solution is not complete. It is perfectly fine to modify the application while studying it to facilitate the analysis, the "unmodified" requirement only applies to the ultimate solution.
+
+The solution of the semestral work should include a *very brief* description of the student's approach, the description of the structure of the application and its main principles, the description of the defense mechanisms used by the application, including the explanation of methods used by the student to overcome them. Note that the student must give suitable names to algorithms used by the application to hide key information -- in all cases the algorithms are well known and commonly used and the students should be familiar with them from their studies.
+
+There are two semestral works:
+
+==== Keygen
+
+The first semestral work is the same for all students. The goal of the work is to reverse engineer a 64bit application and determine a serial number which will be accepted by the application as valid. This is then followed by creating a generator for such serial numbers, which is greatly simplified by the fact that much of the generator has already been created (the developer forgot to remove the generator from the application), it just needs to be activated and provided with certain information necessary for this activation.
+
+In addition to requirements listed above, the full solution should show a functional serial number, description of its structure (i.e. what and how is stored in it), if necessary, a description of how to enter the serial number, and a source code of a program which will generate a valid serial number based on the user's input; the program should be set up so that even without any input it will generate a serial number that is accepted by the application.
+
+This task is worth 20 points.
+
+The file to be analyzed can be downloaded here: link:{imagesdir}/sp1.zip[sp1.zip]
+
+[NOTE]
+====
+This task is significantly more difficult than the previous ones (or the succeeding ones), mostly because:
+
+* the application is rather long and contains a number of interlinked parts which need to be understood as a whole;
+* a 64bit code is less common and thus may seem difficult to read to the analyst;
+* there are significantly fewer tools for analyzing 64bit applications than for 32bit ones;
+* the library `SerialNumber64.dll`, used by the `Code64.exe` application, only exports symbols using their ordinal number, not a name; the meaning of each function must be recognized from the code, not guessed from the name.
+====
+
+[NOTE]
+====
+The application contains a trivial anti-debugging protection. It's likely you will need to remove it.
+====
+
+[TIP]
+====
+The process of verification as well as generation of the serial number is rather complex and involves several functions from the BCRYPT.DLL library (https://msdn.microsoft.com/en-us/library/windows/desktop/aa833130(v=vs.85).aspx[CNG Cryptographic Primitive Functions]). Analyze only the code of the `Code64.exe` and/or `SerialNumber64.dll` files, the other modules used are standard and their documentation is available. Don't get scared when you find out which functions are being used -- the input into the serial number is much shorter than it appears at a first glance.
+====
+
+[TIP]
+====
+The `SerialNumber64.dll` library contains the code for serial number generation. Find the function, discover what's needed to enable its full functionality, add it and use the function to generate a serial number valid at least until the end of the semester. You could also implement your own generator, but that would be significantly more difficult.
+====
+
+==== Crackme
+
+The second semestral work will be different for each student and will be assigned during the third week of the semester. Your goal is to analyze your assigned program and find a series of passwords required to pass through the application. There are four (resp. six) passwords, each giving you access to further passwords. Some passwords are generated differently for each student. The program uses a steadily increasing number of anti-reversing techniques which prevent a fast analysis.
+
+Write a *brief* report which will cover these questions for each stage of the application:
+
+* Which password will let us move to the next stage?
+* How do we enter this password?
+* Which protections are used by the application? If standard algorithms are used, name them!
+* How does the application hide its functionality?
+* What was your approach to finding the password?
+
+*Grading scheme:*
+
+* *Password 1* -- a simple fixed password. *5 points*
+* *Password 2* -- a generated random password, simple obfuscations, requires extraction into memory. *10 points*
+* *Password 3* -- a simple password in a new packed executable, moderate difficulty. *10 points*
+* *Password 4* -- a generated random password, strong obfuscations, needed for a full score. *10 points*
+* Password 5 -- a bonus password, well hidden, serves as a partial alternative to the "Keygen" work. *10 points*
+* Password 6 -- a bonus password, extreme obfuscations (a dedicated virtual machine), not expected to be solved -- serves as an example of what you could encounter in the real world. *100 points*
+
+Because partial submissions are permitted, it's necessary that the report contains sufficient information to allow the teacher to determine how far did you progress and to award you respective points. On the other hand, you don't need to create interesting characters and a gripping plot, it's perfectly fine to submit a bullet list. We are much more interested in the information found than the presentation.
+
+The assignment of the programs to the individual students can be found at xref:semprace.adoc[Assignment of semestral works] page during the third week of the semester.
+
+== The Exam
+
+The course is concluded with a written exam 75 minutes long, which may be supplemented with an oral examination in case of a suspicion of an unethical behavior. Only a student who has already been granted an assessment may take part in the exam.
+
+During the exam, only writing utensils and a paper (provided by the teacher) may be used. No other tools are permitted. *It is expressly forbidden to use any kind of an electronic device at any time when the student is present in the exam room.*
+
+The exam is worth 30 points. The minimum number of points required to get a grade better than "failed" is 15. The content of the exam follows the information learned from lectures, tutorials and homeworks. There are 6 open questions in the exam, focused mostly (but not exclusively) on the theory. Each question is worth 5 points.
+
+If a student achieves 50 or more points from the homeworks and the semestral works, he or she may opt to be excused from the exam, provided that he/she provably (using the school e-mail) requests so by the end of the third exam week (January 28th, 2020) and hasn't taken part in any of the previous exam terms ("taking part" includes subscribing for an exam and then not coming). If the student is excused, he/she gets the grade given by the number of points from the homeworks and the semestral works.
+
+== Evaluation scale
+
+Evaluation scale is according to the current https://www.cvut.cz/en/internal-ctu-regulations[Study and Examination Code for Students of CTU in Prague] (https://www.cvut.cz/sites/default/files/content/74c76d2e-7f4d-4cb1-ac28-b0765c7f88f2/en/20190830-study-and-examination-rules-for-students-of-ctu.pdf[PDF]).
+
+[options="autowidth", cols=3*]
+|====
+<h| Grade
+<h| Points
+<h| Evaluation in words
+
+| A
+| 90 or more
+| excellent
+
+| B
+| 80 to 89.999
+| very good
+
+| C
+| 70 to 79.999
+| good
+
+| D
+| 60 to 69.999
+| satisfactory
+
+| E
+| 50 to 59.999
+| sufficient
+
+| F
+| less than 50
+| failed
+|====

@@ -1,0 +1,237 @@
+﻿
+= 1. Seznámení s nástrojem OllyDbg
+:imagesdir: ../media/labs/01
+:toc:
+
+Cílem tohoto cvičení je seznámit se s ladícím nástrojem http://www.ollydbg.de/[OllyDbg], který bude dále používán při cvičeních, a seznámit se se strukturou zásobníku. Alternativně můžete použít nástroj https://developer.microsoft.com/en-us/windows/hardware/windows-driver-kit[WinDbg], který je silnější než OllyDbg, avšak na naučení je komplikovanější. Další možností je https://x64dbg.com/[x64dbg]. Pokud pracujete na platformách GNU/Linux anebo OS X, můžete použít gdb anebo lldb.
+
+== Stažení a instalace OllyDbg
+
+Stažení nástroje OllyDbg probíhá zdarma z webové stránky http://www.ollydbg.de/[http://www.ollydbg.de/]. K dispozici jsou verze 1.10 a 2.01. Doporučujeme stáhnout si 32bitovou verzi 2.01, protože jazyk symbolických instrukcí IA-32 je jednodušší než 64bitový x86_64. Instalace není třeba. Stačí ZIP soubor rozbalit.
+
+== První spuštění
+
+Po spuštění nástroje OllyDbg.exe by se mělo zobrazit okno viz níže. Připomeňme, že OllyDbg je nástroj pro ladění v jazyce symbolických instrukcí (v assembleru). Zdrojový kód v C tedy neuvidíte.
+
+Základní okno nástroje OllyDbg:
+
+image::cv01-obr01.png[]
+
+== Načtení programu a seznámení se s obsahem okna
+
+Klikněte na první ikonu (složky) nebo zvolte z nabídky *File* položku *Open*. Vyberte program `bek1.exe` z link:{imagesdir}/debugging.zip[debugging.zip].
+
+Okno nástroje OllyDbg po načtení program `bek1.exe`. Okno je rozděleno na 4 části, aktivní část je černě orámována. Pro lepší viditelnost bylo orámování zvýrazněno dalším zeleným rámem okolo nepříliš výrazného standardního černého rámu:
+
+image::cv01-obr02.png[]
+
+== Popis nástroje OllyDbg
+
+Podokno *Registers* obsahuje informace o registrech procesoru. Zobrazeny jsou základní registry procesoru, registr příznaků, registry FPU jednotky a registry SSE jednotky.
+
+image::cv01-obr03.png[]
+
+Základní registry. Architektura IA-32 má celkem 9 základních 32bitových registrů označených jako `EAX`, `EBX`, `ECX`, `EDX`, `ESI`, `EDI`, `EBP`, `ESP` a `EIP`, a 6 segmentových registrů o délce 16 bitů (v dalším obrázku).
+
+image::cv01-obr04.png[]
+
+Registr příznaků, segmentové registry a chyba LastError. Registr příznaků EFL obsahuje příznaky `C` (Carry), `P` (Parity), `A` (Half-Carry), `Z` (Zero), `S` (Sign), `T` (Trace), `D` (Direction) a `O` (Overflow). Ač je hodnota registru viditelná i jako celek, jednotlivé příznaky jsou "vytaženy" pro přehlednost. Dále vidíme 6 segmentových registrů `CS`, `DS`, `ES`, `FS`, `GS` a `SS`. V 32bitovém lineárním adresovacím módu jsou segmentové registry konstantní po celou dobu běhu programu. Nakonec vidíme kód chyby `LastErr`, což je per-vlákno globální kód poslední chyby; nejde o registr, `LastErr` je hodnota, kterou vrací funkce https://msdn.microsoft.com/en-us/library/windows/desktop/ms679360(v=vs.85).aspx[GetLastError()] z Win32 API; jde o obdobu proměnné `errno` z C.
+
+image::cv01-obr05.png[]
+
+Další částí jsou 80bitové registry `ST0` až `ST7`, které patří jednotce FPU a fungují jako její zásobník. Z FPU jednotky jsou zobrazeny další dva registry, registr `FST` -- status poslední operace, a dále registr `FCW` -- registr control word obsahující nastavení toho, jak se má jednotka chovat (tj. jak má zaokrouhlovat, s jakou přesností počítat, jaké chybové kódy budou maskovány a kdy bude generováno přerušení). Standardní nastavení `027F` znamená "zaokrouhluj k nejbližšímu (Near), počítej s 53bitovou mantisou (double) a maskuj vybrané chyby".
+
+image::cv01-obr06.png[]
+
+Další částí jsou 128bitové registry jednotky SSE označené jako `XMM0` až `XMM7`. Registr `MXCSR` je obdobou registru `FCW`. Standardní nastavení `00001F80` znamená "zaokrouhluj k nejbližšímu (Near) a maskuj vybrané chyby".
+
+image::cv01-obr07.png[]
+
+Druhou částí je podokno kódu. Žlutý (první) sloupec obsahuje virtuální adresu instrukce. V zeleném (druhém) sloupci je obsažen opkód instrukce (strojový kód dané instrukce; na obrázku je vidět opkód `E9 xxxxxxxx`, což je opkód (operační znak) instrukce `JMP`). Instrukce v lidsky čitelné podobě, v assembleru, která náleží tomuto opkódu, je pak uvedena ve fialovém (třetím sloupečku). Poslední sloupec obsahuje komentáře nástroje k dané instrukci.
+
+image::cv01-obr08.png[]
+
+Třetí částí je okno paměti. To zobrazuje výpis RAM od zadané virtuální adresy v hexadecimálním a ASCII výpisu. Adresu lze změnit po kliknutí do podokna a následném stisku kláves `Ctrl+G`, nebo výběrem položky *Go to -> Expression...* z kontextové nabídky na pravém tlačítku myši.
+
+image::cv01-obr09.png[]
+
+Poslední částí je okno zásobníku. Adresu vrcholu zásobníku obsahuje registr `ESP` (přesněji dvojice `SS` a `ESP`). Červená šipka v okně zásobníku ukazuje již zaplněná data a také směr, kterým budou hodnoty klesat při použití instrukce `PUSH`. Bude-li použita instrukce `PUSH` (ulož operand na zásobník), hodnota registru `ESP` klesne o velikost operandu a obsah okna se posune ve směru šipky dolů tak, že vložená hodnota bude první v pořadí na zásobníku. Při použití instrukce `POP` bude odebrán ze zásobníku první operand a hodnota registru `ESP` se zvýší o jeho velikost. Obsah okna se pak posune při šipce nahoru.
+
+image::cv01-obr10.png[]
+
+== Orientace v programu
+
+Než náš program spustíme, všimněme si, kde se nástroj OllyDbg zastavil, na adrese `0041112C`. Na příštím cvičení budeme pracovat s nástrojem `dumpbin`, který nám umožní zjistit, jak OllyDbg tuto adresu určil: na virtuální adrese (VA) `00400000` začíná obraz našeho EXE souboru a relativně k němu na adrese `1112C`, dohromady tedy na adrese `0041112C`, je hlavní vstupní bod programu (Main Entry Point). Jde o funkci `_start`, nikoliv `main`.
+
+[listing]
+----
+C:\BEK\> dumpbin /HEADERS bek1.exe
+Microsoft (R) COFF/PE Dumper Version 12.00.40629.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file bek1.exe
+
+PE signature found
+
+File Type: EXECUTABLE IMAGE
+
+FILE HEADER VALUES
+...
+
+OPTIONAL HEADER VALUES
+...
+              0 size of uninitialized data
+           1112C entry point (0041112C) @ILT+295(_mainCRTStartup)
+            1000 base of code
+            1000 base of data
+          400000 image base (00400000 to 0041BFFF)
+----
+
+Na řádku `JMP mainCRTStartup` (na řádek klikněte kurzorem myši nebo na něj přesuňte výběr pomocí kláves šipek) stiskněte klávesu `Enter`. Tím zobrazení změníte na cíl skoku, tj. dovnitř do funkce `_mainCRTStartup`:
+
+[listing]
+----
+004124F0  /$  55            PUSH EBP
+004124F1  |.  8BEC          MOV EBP,ESP
+004124F3  |.  E8 6CEBFFFF   CALL 00411064   ; [__security_init_cookie]
+004124F8  |.  E8 73FCFFFF   CALL __tmainCRTStartup
+004124FD  |.  5D            POP EBP
+004124FE  \.  C3            RETN
+----
+
+Vrátit se lze zpět pomocí stisku klávesy mínus na numerické klávesnici.
+
+== Prolog, tělo a epilog
+
+Funkci `_mainCRTstartup` můžeme rozdělit na 3 části:
+
+Prolog:
+
+[listing]
+----
+004124F0  /$  55            PUSH EBP
+004124F1  |.  8BEC          MOV EBP,ESP
+----
+
+Tělo:
+
+[listing]
+----
+004124F3  |.  E8 6CEBFFFF   CALL 00411064 ; [__security_init_cookie]
+004124F8  |.  E8 73FCFFFF   CALL __tmainCRTStartup
+----
+
+Epilog:
+
+[listing]
+----
+004124FD  |.  5D            POP EBP
+004124FE  \.  C3            RETN
+----
+
+Prolog funkce je "standardní úvod" do funkce. Vytvoří na zásobníku místo o velikosti lokálních proměnných, uchová registry tak, aby je funkce volajícímu nenarušila, a připraví pevný bod, vůči kterému se budeme na položky na zásobníku odkazovat (bázi). Struktuře na zásobníku, do které se budeme odkazovat pomocí báze, říkáme rámec zásobníku (stack-frame). Ukazatel do rámce se pak uloží typicky do registru `EBP`. Instrukce `PUSH EBP` tedy zálohuje původní hodnotu registru `EBP` na zásobník a instrukce `MOV EBP, ESP` hodnotu `EBP` přepíše adresou, kam ukazuje zásobník. Registr `ESP` (ukazatel na vrchol zásobníku) se bude měnit s každou `PUSH`/`POP` instrukcí, zatímco hodnota v `EBP` zůstane pevná.
+
+Tělo funkce obsahuje uživatelem vytvořené jádro funkce. To již předpokládá založený rámec zásobníku.
+
+Epilog funkce je "standardní konec" funkce. Nejdříve zruší rámec zásobníku (obvykle instrukcí `MOV ESP, EBP`), pak provede obnovu registrů do původního stavu (instr. `POP EBP`) a nakonec zajistí návrat z funkce (instr. `RET`, případně `RET n`).
+
+Vstupme nyní do druhé funkce, tj. funkce `__tmainCRTStartup`. Toto je funkce poskytnutá runtimem MSVC. Nalezneme v ní kus kódu:
+
+[listing]
+----
+004122F0  |.  A1 4C914100   MOV EAX,DWORD PTR DS:[envp]
+004122F5  |.  50            PUSH EAX
+004122F6  |.  8B0D 48914100 MOV ECX,DWORD PTR DS:[argv]
+004122FC  |.  51            PUSH ECX     ; /argv => [419148] = NULL
+004122FD  |.  8B15 44914100 MOV EDX,DWORD PTR DS:[argc]
+00412303  |.  52            PUSH EDX       ; |argc => [419144] = 0
+00412304  |.  E8 5AEEFFFF   CALL 00411163  ; \main
+00412309  |.  83C4 0C       ADD ESP,0C
+----
+
+Na zásobník je nedříve uložena hodnota proměnné `envp`, pak `argv`, pak `argc`, a nakonec je zavolána funkce `main`. Naše C funkce `main` tedy začíná na adrese `00411163` a dostane 3 parametry, přestože ve zdrojovém kódu vidíme jen 2. Třetí parametr, `envp`, je ukazatelem na proměnné prostředí a má strukturu podobnou jako parametr `argv[]`.
+
+Po dokončení funkce `main` následuje instrukce `ADD ESP, 0C`. Tato instrukce přičte k vrcholu zásobníku 12, čímž z něj odstraní 12 B dat, které zabíraly parametry, které jsme předtím na zásobník uložili pomocí tří instrukcí `PUSH` (3x4 B argumentů). Instrukce `ADD ESP, 0C` tedy odstraňuje ze zásobníku parametry. Obdobná instrukce `ADD` bude za každou funkcí s volací konvencí `__cdecl` (implicitní volací konvence v C, která říká, že parametry uklízí ten, kdo je na zásobník vložil, tzn. volající).
+
+== Nastavení bodu přerušení
+
+Nastavme bod přerušení na tomto místě. Vyberte řádek `00412304` a stiskněte klávesu `F2`, nebo na tomto řádku vyberte z kontextové nabídky položku *Breakpoint -> Toggle*. Adresa zčervená. Nyní je načase spustit náš program.
+
+== Spuštění programu
+
+S nastaveným bodem přerušení spustíme program klávesou `F9`, případně výběrem příkazu *Run* z nabídky *Debug*; chceme-li programu nastavit argumenty pro příkazovou řádku, můžeme to udělat z nabídky *File -> Set new arguments...*. Program se zastaví na instrukci `CALL`. Povšimněme si okna zásobníku:
+
+[listing]
+----
+0018FF30  |00000001       ; |argc = 1
+0018FF34  |004BE5A0       ; \argv = 004BE5A0
+0018FF38  |004BC008
+----
+
+Na vrcholu zásobníku přibyly 3 hodnoty -- `argc`, `argv` a `envp`. Hodnoty jsou ve stejném pořadí, v jakém jsou zapsány v deklaraci funkce `main`:
+
+[source,cpp]
+----
+int main( int argc, char** argv, char** envp);
+----
+
+Datový typ int má 4 B, stejně tak ukazatel.
+
+[IMPORTANT]
+====
+*Úkol č. 1.* Zobrazte v okně výpisu paměti hodnotu příkazové řádky (`argv[0]`). Přestože jsme programu žádný argument nepředali, hodnota `argv[0]` bude existovat. Hodnotu `argv` vidíme na zásobníku. Zobrazíme-li ji v okně výpisu RAM, co uvidíme uvnitř okna paměti? Jak zjistíme adresu, na které je `argv[0]`? (Nezapomeňte, že procesory Intel pracují v módu little-endian, tj. 4 B adresy budou zapsány pozpátku a musíte je z okna výpisu paměti přepsat po bytech pozpátku).
+====
+
+[IMPORTANT]
+====
+*Úkol č. 2.* Vstupte do funkce `main`. Jaký má tato funkce prolog? Zkopírujte ho.
+====
+
+[IMPORTANT]
+====
+*Úkol č. 3.* Nalezněte epilog ve funkci `main`, ignorujte přitom volání funkcí `_RTC_CheckESP` a dalších. Zkopírujte jen rušení rámce zásobníku, obnovu registrů a návrat z funkce.
+====
+
+== Trasování
+
+Nyní můžeme začít vykonávat program instrukci po instrukci a po každé instrukci zkoumat stav registrů procesoru, paměti na haldě i na zásobníku. Trasovat můžeme několika různými způsoby: (a) Step into, (b) Step over, a (c) Step out (Execute till return).
+
+*Step into* (klávesa `F7`) je způsob trasování takový, který provede právě jednu instrukci a následně běh programu opět pozastaví. Je-li prováděnou instrukcí instrukce `CALL`, běh vlákna bude zastaven na první instrukci volané funkce.
+
+*Step over* (klávesa `F8`) je podobné trasování *Step into*, s tím rozdílem, že běh programu se zastaví na instrukci následující za instrukcí, na které jsme zvolili trasování *Step over*. Je-li prováděnou instrukcí instrukce `CALL`, je celý její vnitřek proveden a teprve poté se běh programu zastaví.
+
+*Step out* (klávesa `Ctrl+F9`) pokračuje ve vykonávání instrukcí až do doby, než program narazí na instrukci `RET`. Tento trasovací mód používáme, když se chceme vrátit z právě vykonávané funkce.
+
+== Struktura rámce zásobníku
+
+Na zásobník se ukládají lokální proměnné funkce, návratová adresa, funkcí měněné hodnoty registrů procesoru i její parametry. Toto vše se ukládá do struktury označené jako rámec zásobníku, o které jsme mluvili již dříve. Nyní do této struktury nahlédneme blíže. Rámec zásobníku konstruuje prolog funkce a jeho položky adresujeme pomocí registru `EBP`, který ukazuje dovnitř do struktury (tzn. ani na začátek, ani na konec). Vidíme-li ve funkci odkaz na adresu `EBP+něco`, obvykle se jedná o odkaz na argument funce, zatímco `EBP-něco` odkazuje na lokální proměnnou, uloženou v prostoru, který vytvořila instrukce `SUB ESP, hodnota`.
+
+[IMPORTANT]
+====
+*Úkol č. 4.* V předvolbách aplikace v nabídce *Options* zvolte položku *Options...* a podle následujícího obrázku proveďte nastavení:
+
+image::cv01-obr11.png[]
+
+Vstupte dovnitř do funkce `main` a zastavte se na její první instrukci. Poznamenejte si adresu vrcholu zásobníku. Co se na něm nachází (viz okno zásobníku)? Na jaké pozici (konkrétní kladná čísla) oproti vrcholu zásobníku jsou parametry `argc` a `argv` v tuto chvíli?
+====
+
+[IMPORTANT]
+====
+*Úkol č. 5.* Projděte pozorně prolog funkce a dotrasujte až na instrukci `LEA EDI, [EBP-1DC]`. Rozkreslete strukturu zásobníku od jeho vrcholu až k parametru `argv`. Mezeru, kterou vytvořila instrukce `SUB ESP, 1DC`, ponechte zatím nevyplněnou.
+====
+
+[IMPORTANT]
+====
+*Úkol č. 6.* Kam do struktury ukazuje registr `EBP`? Vyznačte to ve vašem nákresu z předchozího bodu.
+====
+
+[IMPORTANT]
+====
+*Úkol č. 7.* Na jaké pozici vůči registru `EBP` jsou parametry `argc` a `argv`?
+====
+
+[IMPORTANT]
+====
+*Úkol č. 8.* Dotrasujte až za instrukci `REP STOS DWORD PTR ES:[EDI]`. Alokovaná mezera instrukcí `SUB ESP, 1DC` je nyní vyplněna hodnotami `CC`. Na jaké pozici vzhledem k registru `EBP` je uložen na zásobníku buffer, který se předává instrukci `scanf`? Zkontrolujte svoji odpověď tím, že si prohlédnete zásobník po skončení funkce scanf (použijte "step over").
+====

@@ -1,0 +1,75 @@
+﻿
+= 10. Reconstruction of packed binaries
+:imagesdir: ../../media/labs/10
+:toc:
+
+In this tutorial we will understand the methods and tools for dumping a computer memory and then reconstructing the dump in such a way as to make it runnable (and analyzable).
+
+== A general process for manual unpacking
+
+Note: This guide may require modifications for specific packers. In some cases it may be grossly inadequate! (Themida packer, etc.)
+
+. Open the packed application in a debugger. Unlike the original unpacked file, this one's Entry Point (EP) is a decompression routine. Try to locate the Original Entry Point (OEP) -- the place where the program would start execution if it weren't packed --, and stop the debugger there.
+. Create the process's dump. You can do it manually by saving blocks of RAM, but it's far easier to use one of the many tools for creating dumps. Traditionally, Lord PE is used for this task, but you can use one of the newer ones, too -- Scylla (also a part of x64dbg), InjDmp, etc.
+. It may happen that the dumped file's data won't match the expected addresses (address `40162b` should contain a call, but we see something else there!). The reason is usually the virtual address mismatching the physical address. Either use an image reconstruction tool (Scylla, PE Tools, Lord PE) or change each section's physical address to match the virtual one, and the same with sections' sizes.
+. The dump contains an incorrect EP and its IAT is wrong. Both issues can be corrected using IAT reconstruction tools: ImpRec is a common one, we will be using the Scylla plugin integrated into x64dbg. The tools generally expect the IAT of a running process as its input, and they use this valid IAT to create a new Import Directory within the dumped file.
+
+=== Some personal recommendations from Martin Jirkal
+
+* Sume dumpers produce output which is not quite suitable for analysis. It's rather rare, but it does happen. If you are doing everything right but still can't get an import reconstructor to work, try to change the dumper application.
+* A vast majority of tools can't create a dump of a SUSPENDED process. For example, Lord PE won't work well with our second task (the injection application). It can be used for dumping the file before injection, though.
+* If you are having trouble with ASLR, change the `DllCharacteristics` attribute of the file's `IMAGE_OPTIONAL_HEADER` to not contain the `IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE` (sometimes called "DLL can move") flag.
+
+=== Guidelines for x64dbg
+
+* In x64dbg's menu, choose *Plugins -> Scylla*.
+* Set the *OEP* field to the Original Entry Point address you found.
+* Press *IAT AutoSearch* to locate the IAT. If the autosearch fails, enter its virtual address (VA) and length (Size) manually.
+* Press *Get Imports* to read the imports for this IAT. Invalid records, if any, can be edited or deleted.
+* Press *Dump* to save the memory of the process to disk. Note that the result is not a runnable file yet!
+* Press *Fix Dump* to inject the reconstructed imports into this dump file.
+
+=== Guidelines for OllyDbg + OllyDumpEx
+
+We can use the OllyDbg debugger with the OllyDumpEx script.
+
+* Note that some OllyDbg versions are able to detect UPX and will start at OEP. The file is not really unpacked, but it looks like it is in the disassembler.
+* Use the dump plugin/script OllyDumpEx.
+* We have tested that Scylla Import Reconstructor works even with Windows 10.
+
+== Tasks
+
+Download link:{imagesdir}/cv10.zip[cv10.zip].
+
+=== CV11-packed.exe
+
+The purpose of this task is to learn the tools and processes for reconstructing a packed file. We start with an UPX-packed file which we want to analyze. To be able to do that, we need to unpack the file first, otherwise we can only see the unpacking code, not the core of the application. Your goal is to create a new file which only contains the core, without the decompression wrapper.
+
+[NOTE]
+====
+By far the simplest approach involves using UPX itself to unpack the file, as UPX does support this feature. But that is not always applicable, so we will try to create the dump manually. To simplify the analysis, we can notice that the first instruction of the decompression code is `PUSHAD`, which saves (most of) the registers on the stack; we can expect that immediately before calling the OEP, these registers will be restored using `POPAD`; we can verify this expectation by checking the first instructions of the presumed-OEP for a structure typical for a `start` function.
+====
+
+=== CV11-injector.exe
+
+We want to study a program which uses a special injection technique called hollowing to mask its behavior: The program loads a completely innocent and preferably inconspicuous application (e.g. svchost.exe or iexplore.exe), but before this application even starts, it removes all original code and injects its own code. Then it starts the application. The user will see the metadata for the original (hollowed) application, but inside the malicious code is running.
+
+You can read more about this technique at https://www.trustwave.com/Resources/SpiderLabs-Blog/Analyzing-Malware-Hollow-Processes/[Analyzing Malware Hollow Processes] (link:{imagesdir}/hollow.mht[local copy]).
+
+In our tutorial, the application is split into two parts: `CV11-injector.exe` is a tool for performing the injection into another process and `data.bin` is the payload to be injected. An analysis of this application would be trivial, because we already have a runnable executable on disk and can load it into a debugger directly. We will, however, simulate a situation when this is not the case -- the data may be compressed and encrypted inside the injection application, which decrypts and unpacks it in memory and then injects it into the victim process. We, of course, need the runnable version.
+
+The simplest approach is to find the program code in memory and save it as one large data block to disk. That's easy in our application, because after all, that's how the block got into memory in the first place -- the application read it from the executable file. But that may not always be the case, and then an alternative technique can be used: Let the injector run the victim process and inject the code, but before actually starting it (e.g. using `ResumeThread`), dump the result. If this approach fails (see the note about SUSPENDED processes above), you can replace the first instruction of the injected process with `INT3` (opcode `0xCC`) and let the process run. The operating system will handle the breakpoint by either terminating the application or, if a Just-in-Time Debugger is registered, by offering to run the debugger. That gives us an opportunity to run a debugger before the analyzed program actually starts, but *after the dynamic linking was performed*. We can dump the process in the usual fashion then. Of course, it's a good idea to replace the `INT3` with the original instruction first.
+
+[NOTE]
+====
+In Windows 10 the just-in-time debugger behavior got changed. In the previous versions of Windows, if a processriased an unhandled exception, a window would be shown, giving the user a choice of what to do with the application, including running a debugger. In Windows 10, the application gets terminated automatically. I don't know how to return the original behavior, but we can enable the automatic activation of the just-in-time debugger: In the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug` (resp. `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug` for 32bit applications on 64bit Windows) change the value of `Auto` from `0` to `1`.
+====
+
+== Useful tools
+
+* http://woodmann.com/collaborative/tools/images/Bin_LordPE_2010-6-29_3.9_LordPE_1.41_Deluxe_b.zip[LordPE] -- a popular tool for PE file manipulation and for memory dumping.
+* https://tuts4you.com/download.php?view.3503[Scylla Imports Reconstructor] -- a tool for IAT reconstruction.
+* https://www.aldeid.com/wiki/PEiD[PEiD] -- a tool for packer detection.
+* http://processhacker.sourceforge.net/[Process Hacker] -- an alternative for Process Explorer.
+* https://hooked-on-mnemonics.blogspot.com/p/injdmp.html[InjDmp] -- a very nice dumping tool.
+* https://x64dbg.com[x64dbg] -- an excellent debugger; includes the Scylla Imports Reconstruction plugin.

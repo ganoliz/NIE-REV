@@ -1,4 +1,24 @@
-= POZOR!!!
+﻿
+= MI-REV Reverzní inženýrství
+:toc:
+:imagesdir: ./media
 
-Materiály předmětu naleznete na https://moodle.fit.cvut.cz/course/view.php?id=106[Moodle FIT]. Zde je pouze ne zcela aktuální záloha. Rozdíly jsou zejména v sekci Hodnocení.
+== Anotace
 
+Studenti budou v rámci předmětu seznámeni se základy reverzního inženýrství počítačového softwaru. Dále studenti získají znalosti o tom, jakým způsobem probíhá spouštění a inicializace programu, co se odehrává před a po volání funkce main. Studenti také pochopí, jakým způsobem je organizován spustitelný soubor, jak se propojuje s Knihovnami třetích stran. Další část předmětu bude věnována reverznímu inženýrství aplikací napsaných v C++. Studenti se také seznámi s principy disassemblerů a obfuskačními metodami. Dále se předmět bude věnovat nástrojům pro ladění (debuggerům): jak ladící nástroje pracují, jak probíhá ladění a také se seznámí s metodami, které mohou být použity k detekci ladících nástrojů. Jedna z přednášek pohovoří o aktuální scéně počítačového škodlivého kódu. Důraz předmětu je kladen na cvičení, na kterých budou studenti řešit prakticky orientované úlohy z reálného světa.
+
+== Učitelé
+
+*Josef Kokeš*
+
+* E-mail: mailto:josef.kokes@fit.cvut.cz[josef.kokes@fit.cvut.cz]
+* Kancelář: TH:A-1137
+* Konzultace: Podle potřeby, dohoda na termínu e-mailem nebo osobně na přednášce/cvičení.
+
+== Hodnocení
+
+* xref:hodnoceni.adoc[Podmínky absolvování předmětu]
+//* xref:semprace.adoc[Přiřazení semestrálních prací]
+* Přiřazení semestrálních prací
+** Semestrální práce budou studentům přiřazeny během třetího výukového týdne.
+* Průběžný stav bodů je uveden na webu https://grades.fit.cvut.cz[FIT klasifikace]. Ve vašem vlastním zájmu si kontrolujte hodnoty, které jsou tam uvedeny, a v případě zjištěných rozdílů mě kontaktujte, abych je opravil z "master" seznamu. Body na Klasifikaci jsou pouze orientační!

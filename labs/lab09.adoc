@@ -1,0 +1,34 @@
+﻿
+= 9. Analýza programu se složitější obfuskací
+:imagesdir: ../media/labs/09
+:toc:
+
+== Materiály
+
+=== Kolaborativní weby sdružující nástroje a skripty na reverzování chráněných souborů
+
+* https://tuts4you.com/[www.tuts4you.com]
+* http://www.woodmann.com/collaborative/tools/index.php/Category:RCE_Tools[www.woodmann.com]
+
+=== Dokument popisující různé anti-debug techniky
+
+* link:{imagesdir}/the_ultimate_anti-debugging_reference.pdf[The Ultimate Anti-debugging reference]
+
+== Úkol 1
+
+Zanalyzujte přiložený program, popište různé použité obfuskace a upravte databázi programu IDA Pro tak, aby byla čitelná člověkem. K dispozici máte i původní zdrojový kód (bez použitých obfuskací), který můžete použít pro kontrolu dosažených výsledků. Doporučuji však aplikaci napřed prozkoumat bez této pomůcky.
+
+* link:{imagesdir}/cv09a.zip[Download]
+
+== Úkol 2
+
+Spusťte přiložený program v debuggeru a dostaňte se na konec programu -- myšleno přes všechny obfuskace, ne tím, že program ukončíte hned na jeho začátku :-). Alternativně můžete program prozkoumat v IDA Pro a obdobně jako u minulého programu zdokumentovat všechny obfuskace -- to pro vás může být výhodné, pokud nechcete shánět Windows XP resp. Vista v té správné verzi.
+
+* link:{imagesdir}/cv09b.zip[Download -- Win XP]
+* link:{imagesdir}/cv09b.vista.zip[Download -- Win Vista]
+
+== Tipy pro použití programu IDA
+
+Klávesou `c` můžete říci analyzátoru, aby se k dané oblasti dat choval jako ke kódu. Naopak klávesou `d` můžete z kódu udělat data. Klávesou `u` můžete zrušit přiřazení kód/data a vrátit implicitní chování -- to se hodí zejména v případě, kdy něco v programu rozhodíte.
+
+V programu IDA můžete přímo měnit analyzovaný program nástroji v menu Patch. Pokud používáte verzi 5.0 Free, je toto menu standardně skryté, ale můžete ho zobrazit, pokud změníte konfigurační soubor `C:\Program Files (x86)\IDA Free\cfg\idagui.cfg`: otevřete soubor v editoru jako Administrátor a změňte řádek `ENABLE_PATCH_SUBMENU=NO` na `ENABLE_PATCH_SUBMENU=YES`. Po restartu IDA Free naleznete nové submenu Patch v menu Edit.

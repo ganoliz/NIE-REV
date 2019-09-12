@@ -1,0 +1,56 @@
+﻿
+= Přednášky
+:imagesdir: ./media/lectures
+
+
+[options="autowidth", cols=5*]
+|====
+<h| číslo
+<h| Datum
+<h| Téma
+^h| Download (EN)
+^h| Download (CZ)
+
+| 1.
+| 26.09.2019
+| Úvod do reverzního inženýrství, analýza zásobníku
+| link:{imagesdir}/rev01en.pdf[anglicky]
+| link:{imagesdir}/rev01cz.pdf[česky]
+
+| 2.
+| 10.10.2019
+| Analýza toku kódu
+| link:{imagesdir}/rev02en.pdf[anglicky]
+| link:{imagesdir}/rev02cz.pdf[česky]
+
+| 3.
+| 24.10.2019
+| Analýza tříd v C++
+| link:{imagesdir}/rev03en.pdf[anglicky]
+| link:{imagesdir}/rev03cz.pdf[česky]
+
+| 4.
+| 07.11.2019
+| Disassembling a obfuskace
+| link:{imagesdir}/rev04en.pdf[anglicky]
+| link:{imagesdir}/rev04cz.pdf[česky]
+
+| 5.
+| 21.11.2019
+| Rozpoznávání kompilátorů
+| link:{imagesdir}/rev05en.pdf[anglicky]
+| link:{imagesdir}/rev05cz.pdf[česky]
+
+| 6.
+| 05.12.2019
+| Debugging a anti-debugging
+| link:{imagesdir}/rev06en.pdf[anglicky]
+| link:{imagesdir}/rev06cz.pdf[česky]
+
+| 7.
+| 19.12.2019
+| Malware
+| link:{imagesdir}/rev07en.pdf[anglicky]
+| --
+
+|====

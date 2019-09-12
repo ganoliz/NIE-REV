@@ -1,0 +1,167 @@
+﻿
+= Hodnocení
+:toc:
+:imagesdir: ./media
+
+Hodnocení předmětu se skládá ze tří částí -- hodnocení domácích úloh (15 bodů), hodnocení semestrálních prací (20 a 35 bodů) a hodnocení zkoušky (30 bodů). Předmět je řádně ukončen získáním zápočtu a složením zkoušky.
+
+== Zápočet
+
+Zápočet student získá v případě, že dosáhne nejméně 30 bodů z domácích úloh a semestrálních prací.
+
+=== Domácí úlohy
+
+Domácí úlohy jsou zadávány na cvičeních a jsou tvořeny třemi úlohami po 5 bodech, celkem tedy až 15 bodů. Úlohy se zabývají dílčími oblastmi probíranými na přednáškách a cvičeních -- porozumění assemblerovému kódu a základních řídících struktur, práce s Import Address Table a využití typové informace. Úlohy se odevzdávají zásadně e-mailem cvičícímu a je přípustné i několikanásobné odevzdání (např. pro doplnění chybějících částí nebo opravu chyb). Pro každou domácí úlohu je stanoven samostatný termín, ve kterém musí být odevzdána, standardně X týdnů od konce cvičení, na kterém byla úloha zadána (X se liší podle úlohy); rozhodným okamžikem je čas doručení zprávy do e-mailové schránky cvičícího. Úlohy odevzdané po uplynutí termínu *budou hodnoceny 0 body*, a to i v případě, že úloha vypracována byla a jen se ji nepodařilo včas doručit. Mohou však být využity pro rozhodnutí sporných případů. V případě doložených vážných důvodů může být termín stanoven individuálně.
+
+V případě mimořádně kvalitního řešení může cvičící přiznat studentovi bonusové body nad rámec stanovených limitů, dle kvality řešení. Na tyto body není nárok, jsou zcela v pravomoci cvičícího.
+
+==== Seznam úloh a jejich deadline
+
+[options="autowidth", cols=6*]
+|====
+<h| Úloha
+<h| Body
+<h| Zadáno
+<h| Deadline +
+Par.101
+<h| Deadline +
+Par.102
+<h| Deadline +
+Par. 103
+
+| xref:labs/lab03.adoc[E-mail]
+| 5
+| 3. týden
+| 24.10. 16:00
+| 24.10. 17:45
+| 25.10. 17:45
+
+| xref:labs/lab04.adoc[IAT]
+| 5
+| 4. týden
+| 14.11. 16:00
+| 14.11. 17:45
+| 15.11. 17:45
+
+| xref:labs/lab05.adoc[Had]
+| 5
+| 5. týden
+| 28.11. 16:00
+| 28.11. 17:45
+| 29.11. 17:45
+|====
+
+=== Semestrální práce
+
+Semestrální práce se zabývají reverzním inženýrstvím existujících programů. Platí pro ně obdobná pravidla jako pro domácí úlohy s tím rozdílem, že termínem pro odevzdání je konec zkouškového období. Dále je doplněno pravidlo, že výsledné řešení musí fungovat nad nijak neupravenou aplikací -- vyžaduje-li aplikace úpravy, není řešení úplné. V průběhu analýzy můžete ovšem zkoumaný program libovolně měnit, abyste si analýzu usnadnili, požadavek na nezměněný soubor se týká pouze finálního výstupu semestrální práce.
+
+Výsledkem semestrální práce by měl být *velmi stručný* popis vašeho postupu, popis hrubé struktury analyzovaného programu a jeho základních principů, popis obranných mechanismů, které program používá, včetně vysvětlení, jak jste je překonával(a). Velmi důležité je také pojmenování algoritmů, které program používá pro skrytí klíčových informací -- ve všech případech jde o známé a běžně používané algoritmy, které byste určitě měli z dřívějšího studia znát.
+
+Semestrální práce jsou celkem dvě:
+
+==== Keygen
+
+První semestrální práce je společná pro všechny studenty. Cílem této práce je provést reverzní inženýrství souboru v 64bitové architektuře a zjistit, jaké zadat programu sériové číslo tak, aby byly splněny podmínky, které na něj program má. Druhou částí pak je vytvoření generátoru těchto sériových čísel, což je umožněno tím, že ve zkoumané aplikaci už stěžejní část generátoru existuje (programátor ji zapomněl kompletně odstranit), jen není aktivovaná a postrádá určité informace nutné pro její zprovoznění.
+
+Obsahem úplného řešení by kromě požadavků uvedených výše mělo být funkční sériové číslo, popis, jakým způsobem vzniká (tzn. jaké informace v něm jsou obsaženy a jak jsou zakódovány), je-li to nutné, pak popis, jak číslo do programu vložit, a také zdrojový kód programu, který na základě uživatelem zadaných vstupů vygeneruje nové sériové číslo; program by měl být nastaven tak, aby implicitní hodnoty vygenerovaly číslo, které nijak neupravený kód z úlohy přijme.
+
+Tato úloha je hodnocena 20 body.
+
+Soubor na zanalyzování si stáhněte zde: link:{imagesdir}/sp1.zip[sp1.zip]
+
+[NOTE]
+====
+Tato úloha je výrazně složitější než ostatní, především protože:
+
+* aplikace je poměrně rozsáhlá a obsahuje řadu propojených částí, které je potřeba pochopit jako celek;
+* 64bitový kód je méně obvyklý, proto na čtenáře působí cize;
+* pro 64bitovou architekturu jsou hůře dostupné nástroje pro analýzu;
+* z DLL knihovny `SerialNumber64.dll`, kterou aplikace `Code64.exe` používá, jsou importovány symboly podle ordinálního čísla a ne názvem, význam symbolů tedy musíte rozpoznat podle kódu, ne odhadnout z názvu.
+====
+
+[NOTE]
+====
+Aplikace obsahuje triviální ochranu proti ladění, kterou nejspíš budete muset odstranit.
+====
+
+[TIP]
+====
+Ověřování sériového čísla i jeho generování jsou poměrně složité a zahrnují použití několika funkcí z knihovny `BCRYPT.DLL` https://msdn.microsoft.com/en-us/library/windows/desktop/aa833130(v=vs.85).aspx[CNG Cryptographic Primitive Functions]. Analyzujte jen kód ze souborů `Code64.exe` a/nebo `SerialNumber64.dll`, další použité moduly jsou standardní a jejich dokumentaci snadno naleznete. Nelekněte se, až zjistíte, co se z knihovny používá a k čemu. Vstup do sériového čísla je kratší než na první pohled vypadá.
+====
+
+[TIP]
+====
+Knihovna `SerialNumber64.dll` obsahuje i funkci pro generování sériového čísla. Najděte ji, zjistěte, co chybí, doplňte to a použijte ji pro vygenerování sériového čísla, které bude platné nejméně do konce semestru. Implementovat vlastní generátor by samozřejmě bylo možné, ale neúměrně složité.
+====
+
+==== Crackme
+
+Druhá semestrální práce bude pro každého studenta odlišná a bude zadána ve třetím výukovém týdnu. Vaším úkolem je analyzovat vám přiřazený program a získat potřebná hesla pro průchod programem. Program obsahuje sadu čtyř (resp. šesti) hesel, jejíž získání vám umožní postoupit k dalším heslům. Některá z hesel jsou vygenerována přímo pro každého jednotlivého studenta. Program obsahuje postupně se zvyšující počet anti-reverzních metod, které zamezují rychlé analýze programu.
+
+Sestavte *stručnou* zprávu, která pro každou úroveň programu odpoví na následující otázky:
+
+* Jaké heslo je požadováno pro vstup do další části?
+* Jakým způsobem se má uživatel dostat do další části programu?
+* Jaké ochrany program v této části používá? Používají-li se standardní algoritmy, pojmenujte je!
+* Jak program skrývá své funkcionality?
+* Jaký byl váš postup pro získání hesla?
+
+*Bodovací schéma:*
+
+* *Heslo 1* -- jednoduché fixní heslo. *5 bodů*
+* *Heslo 2* -- generované náhodné heslo, jednoduché obfuskace, rozbalení do paměti. *10 bodů*
+* *Heslo 3* -- jednoduché heslo v novém zabaleném souboru, střední obtížnost. *10 bodů*
+* *Heslo 4* -- generované náhodné heslo, těžké obfuskace, potřebné k získání plného počtu bodů. *10 bodů*
+* Heslo 5 -- bonusové, náročně skryté heslo, slouží jako částečná alternativa k luštění práce "Keygen". *10 bodů*
+* Heslo 6 -- bonusové heslo za extrémními obfuskacemi (vlastní virtuální stroj), slouží hlavně jako ukázka, s čím se také můžete potkat. *100 bodů*
+
+Protože je možné odevzdat i částečně vyřešenou úlohu, je nutné, aby zpráva obsahovala dostatečné množství informací pro rozhodnutí, jak velkou část zadání student splnil, a následně pro udělení bodů za postup v úloze. Na druhou stranu, není potřeba, aby práce byla napínavá, s originálními postavami a neotřelou zápletkou, naprosto vyhoví i nesouvislý bodový seznam. Podstatné jsou obsažené informace, ne jejich forma.
+
+Přiřazení úloh jednotlivým studentům naleznete na stránce xref:semprace.adoc[Přiřazení semestrálních prací] od třetího týdne semestru.
+
+== Zkouška
+
+Předmět je standardně zakončen zkouškou. Ta je písemná, v délce 75 minut, v případě podezření z neetického chování může být doplněna ústním dozkoušením. Zúčastnit zkoušky se může pouze student, který už má zapsaný zápočet.
+
+Při zkoušce je povoleno používat pouze psací potřeby a dále papír přidělený zkoušejícím. Žádné jiné pomůcky nejsou povoleny. *Výslovně je zakázáno použití jakýchkoliv elektronických zařízení, a to po celou dobu pobytu studenta ve zkouškové místnosti.*
+
+Ze zkoušky lze získat až 30 bodů. Minimum pro získání známky jiné než "nedostatečně" je 15 bodů. Obsahově zkouška odpovídá látce z přednášek, cvičení i domácích úloh. Je tvořena šesti otevřenými otázkami zaměřenými zejména (ale ne výhradně) na teorii. Každá otázka je hodnocena 5 body.
+
+Získá-li student z domácích úloh a semestrálních prací celkem 50 nebo více bodů, může mu být zkouška prominuta, pokud o to prokazatelně (školním e-mailem) požádá zkoušejícího nejpozději do konce 3. týdne zkouškového období (28.1.2020) a současně se žádného zkouškového termínu nezúčastnil (účastí se rozumí i nedostavení se na zkoušku, na kterou byl student přihlášen). Prominutím zkoušky student získá známku odpovídající počtu bodů dosažených z domácích úloh a semestrálních prací.
+
+== Celkové hodnocení
+
+Hodnocení se řídí aktuálním https://www.cvut.cz/vnitrni-predpisy[Studijním a zkušebním řádem ČVUT] ( https://www.cvut.cz/sites/default/files/content/74c76d2e-7f4d-4cb1-ac28-b0765c7f88f2/cs/20190905-studijni-a-zkusebni-rad-pro-studenty-cvut-v-praze-ii-uplne-zneni-ucinnost-od-29-11-2018_0.pdf[PDF] ).
+
+[options="autowidth", cols=3*]
+|====
+<h| Známka
+<h| Bodové +
+rozmezí
+<h| Slovní +
+hodnocení
+
+| A
+| 90 a více
+| výborně
+
+| B
+| 80 až 89.999
+| velmi dobře
+
+| C
+| 70 až 79.999
+| dobře
+
+| D
+| 60 až 69.999
+| uspokojivě
+
+| E
+| 50 až 59.999
+| dostatečně
+
+| F
+| méně než 50
+| nedostatečně
+|====

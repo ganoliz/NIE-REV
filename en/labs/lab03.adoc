@@ -1,0 +1,50 @@
+﻿
+= 3. Recommendations for reverse analysis, useful tools
+:imagesdir: ../../media/labs/03
+:toc:
+
+== Recommendations
+
+Recommendations for reverse engineering will be demonstrated live.
+
+== Free tools
+
+* *API Monitor* -- a tool for monitoring API calls in a program. It is possible to observe individual functions or their groups. https://www.rohitab.com[Homepage].
+* *CFF Explorer* -- a tool for PE file analysis and modification. https://www.ntcore.com/exsuite.php[Homepage].
+* *Dependency Walker* -- a tool for analysis of import and export tables, capable of performing both static and dynamic analysis. http://www.dependencywalker.com[Homepage].
+* *ExeInfoPE* -- a compiler identification tool. http://exeinfo.web44.net/[Homepage].
+* *HxD* -- A hex editor capable of editing RAM or a raw disk. https://mh-nexus.de/en/hxd/[Homepage].
+* *IDA Free* -- an interactive disassembler for reverse engineering. This version *does not* contain any decompiler, but is free for non-commercial purposes https://www.hex-rays.com/products/ida/support/download_freeware.shtml[Homepage].
+* *Process Explorer* -- a tool for detailed process monitoring. A significantly extended replacement for Windows' Task Manager. https://technet.microsoft.com/cs-cz/sysinternals/bb896653.aspx[Homepage].
+* *Process Monitor* -- another process monitoring tool -- tracks accesses to files, registry keys, etc. https://technet.microsoft.com/cs-cz/sysinternals/bb896645.aspx[Homepage].
+* *Regshot* -- a tool for making System Registry snapshots and comparing them. https://sourceforge.net/projects/regshot/[Homepage].
+* *Resource Hacker* -- a tool for study and modification of the `.rsrc` section in PE files. http://www.angusj.com/resourcehacker/[Homepage].
+* *Strings* -- a tool for extraction of strings from a file. Good for the initial analysis. https://technet.microsoft.com/en-us/sysinternals/bb897439.aspx[Homepage].
+* *X64Dbg* -- a debugger for both 32 and 64-bit executables. https://x64dbg.com/[Homepage].
+
+== Commercial tools
+
+* *Hiew* -- a programmer's hex editor with a disassembler (including x64) and various functionality useful for reverse engineering. http://www.hiew.ru/[Homepage].
+* *IDA Pro* -- an interactive disassembler for reverse engineering. Supports a wide range of architectures. There are plenty of plug-ins, including decompilers from x86, x64, ARM, ARM64, and PowerPC into C. Very expensive, but very powerful. https://www.hex-rays.com[Homepage].
+
+== Additional resources
+
+* *The Decompilation Wiki* -- information about available decompilers. http://www.program-transformation.org/Transform/DeCompilation[Homepage].
+
+== First homework
+
+* Points: *5*
+* Deadline: *2019-10-25, 19:30*
+
+The goal of this homework is to reverse engineer file link:{imagesdir}/du1.zip[du1.zip] and convince it to send an e-mail to the teacher. The program uses a configuration file, but the provided one is incorrect. By the time you finish analyzing the application, you will learn the correct structure and content of the configuration. Then create a file that will cause sending of a *polite* e-mail. If you make an error, an impolite e-mail might get sent -- but that is not considered a correct solution ;-).
+
+After you've managed to send the correct e-mail, send the teacher your config file (packed into ZIP, so that any modification by e-mail servers or clients can be detected) along with a brief description of your work (how you got this file). The polite e-mail itself is not a solution of the homework, it's just a notification for you that you got it right.
+
+[IMPORTANT]
+====
+Do not modify the `CrackMe01.exe` application.
+====
+
+== Semestral works assignment
+
+The assignment of the works can be found xref:../semprace.adoc[here].

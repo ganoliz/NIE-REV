@@ -1,0 +1,198 @@
+﻿
+= 2. Debugging, analysis of a function, stack frame
+:imagesdir: ../../media/labs/02
+:toc:
+
+We will be using IDA Free to debug our programs. You can download it here: https://www.hex-rays.com/products/ida/support/download_freeware.shtml[https://www.hex-rays.com/products/ida/support/download_freeware.shtml].
+
+We have compiled the following sample. The compilation took place in Visual Studio 2015, in Release mode, with ASLR disabled (`/DYNAMICBASE:OFF`), optimization disabled (`/Ob0`) and with a Multibyte character set.
+
+* link:{imagesdir}/cv02.zip[Download]
+
+Note that the beginning of the main function contains a software breakpoint instruction (`INT3`, opcode `CC`) for your convenience. Under normal circumstances this instruction causes the program to crash, or more accurately, an exception to be raised; but if a debugger is attached, it pops up, stopping the program at this instruction and allowing us to continue with debugging. Load the program into IDA Free and run it by pressing the F9 key. The program may stop in various places, not just this instruction. If the program stops at address beginning with `7xxxxxxx` (an address within a system library), continue with F9 until it stops in program code at address `401357`.
+
+Breakpoint in the library:
+
+image::cv2obr01.png[]
+
+Breakpoint in the program:
+
+image::cv2obr02a.png[]
+
+== Prologue, Epilogue
+
+First we examine the prologue of a common function. Switch IDA to IDA View-A (if you see a diagram with code blocks, press spacebar to switch to a list of code). Type `g` and enter `401259` to jump to that address or scroll in the window until you see it. Notice a function call at address `401040`:
+
+image::cv2obr03.jpg[]
+
+The function is called with 2 arguments. Under the function call we can see that the arguments are cleaned up from the stack with the `ADD ESP, imm` instruction (`imm` stands for the immediate value, and in this case it is a number). From the clean-up add instruction we can deduct that the function is using the `__cdecl` calling convention.
+
+image::cv2obr04.jpg[]
+
+`CALL` is an instruction which performs 2 operations: (i) It pushes the address of the instruction following the call on the stack, and (ii) sets the `EIP` register to a value specified as its operand (this is typically an address in the program, library or register).
+
+image::cv2obr05.jpg[]
+
+image::cv2obr06.jpg[]
+
+In prologue of the function the previous base pointer value (the `EBP` register) is pushed on the stack and a new stack frame is established by copying the current `ESP` register value into `EBP`.
+
+image::cv2obr07.jpg[]
+
+Next, space for local variables is allocated by moving the stack pointer. We can use the `SUB ESP, imm` instruction to allocate space, as stack grows toward zero. The lesser the value of `ESP`, the bigger the stack. In our case space for 2 `DWORD`s is allocated.
+
+image::cv2obr08.jpg[]
+
+This concludes the basic prologue, a standard function introduction. Epilogue serves as a standard function termination and reverses whatever the prologue did.
+
+image::cv2obr09.jpg[]
+
+First, `ESP` is restored to its value at the start of the function; this also removes the local variables. The `MOV ESP, EBP` instruction reverses the `SUB ESP, imm` instruction from the prologue. Then a `POP EBP` instruction is used to restore the original value of `EBP`. Ultimately a `RETN` instruction is issued, which returns to the place stored by the `CALL` instruction and removes its address from the stack ("`POP EIP`").
+
+== Structured Exception Handling (SEH)
+
+Let's return to address `401320`.
+
+image::cv2obr10.jpg[]
+
+A standard prologue begins.
+
+image::cv2obr11.jpg[]
+
+Then an `_EXCEPTION_REGISTRATION` structure is pushed on the stack:
+
+[source,cpp]
+----
+struct _EXCEPTION_REGISTRATION {
+  struct _EXCEPTION_REGISTRATION *prev;
+  void (*handler)(PEXCEPTION_RECORD, PEXCEPTION_REGISTRATION, PCONTEXT, PEXCEPTION_RECORD);
+  struct scopetable_entry *scopetable;
+  int trylevel;
+};
+----
+
+image::cv2obr12.jpg[]
+
+The address of this structures is placed into `FS:[0]` and is linked via the `prev` field to the previous one. When an exception occurs, the `FS:[0]` value is examined.
+
+The stack now looks like this:
+
+image::cv2obr13.jpg[]
+
+The Epilogue is much simpler:
+
+image::cv2obr14.jpg[]
+
+Prologue and Epilogue code is important for the function's proper execution, but is mostly irrelevant for analysis, except for one exception: The `__except` and `__finally` blocks in C, or `catch` in C++, may contain a code which is relevant.
+
+Note that the exception implementation may be dependent on the compiler used to compile the software. For this reason exceptions thrown from libraries are often incompatible with the ones used in the program, unless the same compiler was used. Once an exception occurs, an `EXCEPTION_REGISTRATION` pointer is read from `FS:[0]` and now it depends whether the control is passed directly to the program or to the library -- we can find the address of the filter routine in the `lpfnFilter` field of the `EXCEPTION_REGISTRATION` structure. In case of SEH3 (version 3) or SEH4, we have to examine the `scopetable` field, which is of type `SCOPETABLE`.
+
+[source,cpp]
+----
+typedef struct _SCOPETABLE {
+  DWORD previousTryLevel;
+  DWORD lpfnFilter
+  DWORD lpfnHandler
+} SCOPETABLE, *PSCOPETABLE;
+----
+
+image::cv2obr15.jpg[]
+
+In our case we can see that the first two `trylevel` variables are empty and `trylevel==0xFFFFFFFE` (-2) means it is a C exception block (-1 means a C++ exception block). There is a an exception filter (`lpfnFilter`) at address `401427` and the `except` handler function can be found at `40142D`.
+
+The filter looks like this:
+
+image::cv2obr16.jpg[]
+
+The number `C0000094` is an enumerated constant `EXCEPTION_INT_DIVIDE_BY_ZERO`.
+
+The function `except(EXCEPTION_INT_DIVIDE_BY_ZERO)` looks like this:
+
+image::cv2obr17.jpg[]
+
+The function restores the stack, sets the `trylevel` and sets the result (in the `EAX` register) to 1.
+
+== Variables
+
+If we look at address `401364`, we can find a section where local variables are assigned. Using the `h` key, you can change the representation from decimal into hexadecimal and vice versa. Using the `k` key you can switch between the IDA representation and the offset representation -- `[EBP+arg_4]` changes into `[EBP+0ch]`, etc.
+
+image::cv2obr18.jpg[]
+
+There are two `DWORD` variables and two `BYTE` variables. We can rename them from `var_8` to, e.g., `DWORD1` by using the `n` key.
+
+image::cv2obr19.jpg[]
+
+Starting at `4013E7`, we can see that these variables are being used, their values copied into registers.
+
+image::cv2obr20.jpg[]
+
+image::cv2obr21.jpg[]
+
+The address `EBP-38h` is then used as an argument of the function at `401240`.
+
+If we look into this function (hit the `Enter` key on its address, or double click on it), we can find that that the address in argument (i.e. `EBP-38h` in the previous stack frame) is used as `[REG]`, `[REG+4]`, `[REG+5]`, etc. We can deduct from that that the argument of the fuction `401240` is a pointer to a structure, which is a local variable in the previous stack frame. The size of the structure is important only for the compiler and the compiled code does not contain this information, unless it is used e.g. for memory allocation by means of the `sizeof(structure)`. Its size can only be guessed from the content of the `401240` function, but we can't be certain that we got it right.
+
+image::cv2obr22.jpg[]
+
+image::cv2obr23.jpg[]
+
+The code takes a value of the `DWORD1` variable and uses the compare (`CMP`) instruction. This instruction tells us that `DWORD1` is a 4-byte integer -- perhaps `int` or `unsigned int` in C -- we cannot tell for sure which one yet. But the conditional jump instruction (`JGE`) is used to compare *signed* values so now we can be sure that `DWORD1` is actually an `int`. We can use similar approach to discover the size and signedness of the other 3 variables.
+
+image::cv2obr24.jpg[]
+
+The next variable is a `char`. We can also see that there's a `JGE` instruction. Moreover the `MOVSX` instruction (sign extend) is used to extend a signed data type to 32 bits, while the `MOVZX` instruction (zero extend) would be used for an unsigned value.
+
+image::cv2obr25.jpg[]
+
+The next variable is also a `char`, but `MOVZX` tells us that this one is an `unsigned char`.
+
+image::cv2obr26.jpg[]
+
+The fourth variable is also an integer but the jump instruction `JNB` is typical for `unsigned int`s.
+
+== API
+
+Let's look at function `401140`. Note that this function takes as argument the structure we have just analyzed. We can see that there are several calls to the Windows API, namely to `CreateFileA` and `WriteFile`. Let's start with the `CreateFileA` function first. You can look up its documentation in MSDN https://msdn.microsoft.com/en-us/library/windows/desktop/aa363858%28v=vs.85%29.aspx[here].
+
+image::cv2obr27.jpg[]
+
+Now we can see the meaning of all parameters that are passed to the `CreateFileA` function. We can deduce that this function creates a file. But beware that the `CreateFile` name is a little bit misleading, since the function is commonly used to open a file -- or even a completely different type of object -- for reading.
+
+IDA is clever enough to annotate the code for us and we can further help it by choosing constants (enums) from a list. Click at the 40000000h value in the dwDesiredAccess line and hit the `m` key. You should be able to select `GENERIC_WRITE` from the list. You can do the same thing for file attributes (`FILE_ATTRIBUTES_NORMAL`) and for the create mode (`CREATE_ALWAYS`).
+
+image::cv2obr28.jpg[]
+
+The result of the `CreateFileA` function is a `HANDLE`. This `HANDLE` is stored in a variable named `hFile` (the name was selected by IDA).
+
+Examine the following piece of code:
+
+image::cv2obr29.jpg[]
+
+If we look at the string used, we can make a guess that it looks like a `printf` formatting string. Indeed, if we examine the function at `401100` and functions this function calls more thoroughly, we can find a call to `__stdio_common_vsprintf` at `4010A9`. The documentation tells us what are the expected types of variables (the conversion specifiers in the printf string such as %d is an `int`, %u `unsigned int`, etc.) and we can use this information to rectify signedness and type information for our local variables. The string also provides us with an idea of how we could rename (via the `n` key) our local variables. Ultimately we obtain:
+
+[listing]
+----
+DWORD1 -> int width
+BYTE1 -> char height
+BYTE2 -> unsigned char Xsize
+DWORD2 -> unsigned int Ysize
+----
+
+Now we can create the structure:
+
+[source,cpp]
+----
+struct MyStructure {
+  int width;
+  char height;
+  unsigned char Xsize;
+  unsigned int Ysize;
+};
+----
+
+== Caution
+
+If you now look at source code carefully, you can discover that our analysis went wrong in a few cases.
+
+. The structure has 4 additional elements. These 4 integers were never referenced in the program, so they don't appear in the binary code and we do not know about them at all. We can, however, note that the `SUB ESP, imm` calculates with a proper length. Since this is a unoptimized build of the program, this (unnecessary) information still remains visible.
+. Compilation discards a lot of information (comments, structure boundaries, etc.). This makes any analysis imprecise. Despite this we can obtain a similar (rarely the same) source code as was found in the original, with the same relevant functionality.

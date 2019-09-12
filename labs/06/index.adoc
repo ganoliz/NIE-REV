@@ -1,5 +1,0 @@
-= 6. Martin Jirkal (ESET): Malware 
-:imagesdir: ../../media/labs/06
-
-
-Martin Jirkal z firmy ESET povede cvičení na téma malware.

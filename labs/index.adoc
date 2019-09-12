@@ -1,0 +1,16 @@
+﻿
+= Laboratoře
+
+. xref:lab01.adoc[Úvod, seznámení s ladícími nástroji]
+. xref:lab02.adoc[Základní rozbor aplikace]
+. xref:lab03.adoc[Doporučení a nástroje pro analýzu]
+. xref:lab04.adoc[Import address table]
+. xref:lab05.adoc[Analýza typové informace]
+. xref:lab06.adoc[Jirkal -- Malware]
+. xref:lab07.adoc[Konzultace]
+. xref:lab08.adoc[Jednoduché obfuskace]
+. xref:lab09.adoc[Pokročilé obfuskace]
+. xref:lab10.adoc[Rekonstrukce zabalených souborů]
+. xref:lab11.adoc[Anti-debugging]
+. xref:lab12.adoc[Jirkal -- analýza .NET]
+. xref:lab13.adoc[Injekce kódu]

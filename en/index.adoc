@@ -1,16 +1,24 @@
-= MIE-REV.16 - Reverse engineering 
-:imagesdir: ../media/en
+﻿
+= MIE-REV Reverse Engineering
+:toc:
+:imagesdir: ../media
 
+== Annotation
 
-_**Oficiální stránka předmětu**_
+Students will get acquainted with the essentials of reverse engineering of computer software. They will learn how processes start and what happens before and after the main function is called. Students will understand how executable files are organized and how they interact with 3rd party libraries. Another part of the course is dedicated to reverse engineering of applications written in C++. Students will also understand principles of disassemblers and obfuscation techniques. A part of the course will also be dedicated to debuggers: how debuggers and debugging work and which methods can be used to detect it. One of the lectures will be dedicated to the latest trends on the computer malware scene. The focus of the course is on the seminars, where students will solve practically oriented tasks from the real world.
 
-* teacher: xref:../teacher/index#[]
+== Teachers
 
+*Josef Kokeš*
 
-== News
+* E-mail: mailto:josef.kokes@fit.cvut.cz[josef.kokes@fit.cvut.cz]
+* Office: TH:A-1137
+* Consultations: As required, exact date and time to be determined through e-mail or personally at a lecture/tutorial.
 
+== Evaluation
 
-== Access to the materials
-
-
-* *You need to be logged in to access the materials!*
+* xref:hodnoceni.adoc[Requirements for passing the course]
+//* xref:semprace.adoc[Assignment of the semestral works]
+* Assignment of the semestral works
+** Semestral works will be assigned to the students during the third week of the semester.
+* The points awarded will be recorded at the https://grades.fit.cvut.cz[FIT grades] website. In your own interest, verify that you got the correct amount of points every time you get an e-mail from me. The points shown at Grades are just "for your information", the definitive value is in my private "master" list.

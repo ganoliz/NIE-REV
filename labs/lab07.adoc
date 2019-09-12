@@ -1,0 +1,6 @@
+﻿
+= 7. Konzultace
+:imagesdir: ../media/labs/07
+:toc:
+
+Cvičení je určeno pro konzultace vašich řešení domácích úloh, případně dalších témat týkajících se reverzního inženýrství. Není plánována žádná nová látka, ale může na ni dojít v závislosti na položených dotazech.

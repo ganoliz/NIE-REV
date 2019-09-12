@@ -1,0 +1,236 @@
+﻿
+= 1. Introduction to OllyDbg
+:imagesdir: ../../media/labs/01
+:toc:
+
+The goal of this tutorial is to get to know the debugging tool http://www.ollydbg.de/[OllyDbg], which will be used in future tutorials, and understand the structure of the stack. You may also use the https://developer.microsoft.com/en-us/windows/hardware/windows-driver-kit[WinDbg] tool, which is more powerful than OllyDbg but also more difficult to learn. Another option is https://x64dbg.com/[x64dbg]. If you prefer GNU/Linux or OS X, you can use gdb or lldb.
+
+== Download and installation of OllyDbg
+
+You can download OllyDbg for free from http://www.ollydbg.de/[http://www.ollydbg.de/]. You can choose between versions 1.10 or 2.01. We recommend that you use version 2.01 in its 32-bit variant, because the IA-32 assembler is easier to understand than the 64bit x86_64. Installation is not needed, simply unpack the downloaded ZIP file.
+
+== First run
+
+When you start OllyDbg.exe, you should see the window shown below. Note that OllyDbg is a debugging tool for the language of symbolic instructions (assembler). You won't see a C source code.
+
+Main window of OllyDbg:
+
+image::cv01-obr01.png[]
+
+== Loading a program and understanding the window contents
+
+Click on the first icon (a folder) or choose *Open* from the *File* menu. Select program `bek1.exe` from link:{imagesdir}/debugging.zip[here].
+
+OllyDbg window after loading `bek1.exe`. The window is split into four sections, the active section has a thicker black frame. In order to emphasise the rather indistinct frame, we've drawn an additional green frame around it.
+
+image::cv01-obr02.png[]
+
+== Understanding OllyDbg
+
+The *Registers* subwindow contains information about the processor's registers. Basic registers, the flag register, the FPU registers and SSE registers are shown here.
+
+image::cv01-obr03.png[]
+
+Basic registers. The IA-32 architecture provides 9 basic 32bit registers called `EAX`, `EBX`, `ECX`, `EDX`, `ESI`, `EDI`, `EBP`, `ESP` and `EIP`, and 6 16bit segment registers (shown in the next figure).
+
+image::cv01-obr04.png[]
+
+The flags register, segment registers and the LastError result. The flags register EFL contains bit flags `C` (Carry), `P` (Parity), `A` (Half-Carry), `Z` (Zero), `S` (Sign), `T` (Trace), `D` (Direction) and `O` (Overflow). Even though the register's full value is visible, the individual registers are "extracted" for better readability. Next we see 6 segment registers `CS`, `DS`, `ES`, `FS`, `GS` and `SS`. In the flat 32bit addressing mode, these segment registers remain constant throughout the execution of the program. Finally, we can see the error code `LastErr`, which is a per-thread global code of the last WinAPI error - it's not a CPU register! Instead, it's a value returned by the Win32 API function https://msdn.microsoft.com/en-us/library/windows/desktop/ms679360(v=vs.85).aspx"[GetLastError()], and it's similar to the C variable `errno`.
+
+image::cv01-obr05.png[]
+
+The next section displays 80bit registers `ST0` to `ST7`, which are used by the FPU and implement its stack. Two more FPU registers are shown: the register `FST` - status of the last operation, and the register `FCW` - control word register which defines the FPU's behavior (e.g. the rounding method, the precision, masked error codes, conditions for raising an interrupt). The default value of `027F` means "round to the nearest value (Near), use a 53bit mantisa (double) and mask certain errors".
+
+image::cv01-obr06.png[]
+
+The next sections displays SSE unit's 128bit registers `XMM0` to `XMM7`. The register `MXCSR` is similar to `FCW`. Its default value of `00001F80` means "round to the nearest value (Near) and mask certain errors".
+
+image::cv01-obr07.png[]
+
+The second subwindow displays the code. The first (yellow) column shows the virtual address of an instruction. The second (green) column contains the instruction's opcode (the machine code of that instruction; in the figure, we can see the opcode `E9 xxxxxxxx`, which denotes a `JMP` instruction). Human-readable instruction for this opcode is shown in the third (purple) column. The last column contains debugger comments for that instruction, if any.
+
+image::cv01-obr08.png[]
+
+The third subwindow is the memory display. It shows RAM contents starting at a given address, in both hexadecimal and ASCII form. The address can be changed by activating the subwindow and pressing `Ctrl+G`, or by choosing *Go to -> Expression...* from the context menu (right mouse button).
+
+image::cv01-obr09.png[]
+
+The last subwindow displays the stack. The top of the stack is pointed to by register `ESP` (more exactly, by the pair `SS` and `ESP`). The red arrow shows data already put on the stack and also the direction these values will move if we use a `PUSH` instruction: Whenever `PUSH` (store an operand on the stack) is executed, the `ESP` value is decreased by the size of the operand and the subwindow's content will shift down so that the newly stored value will be at the top of the stack. When a `POP` instruction is executed, the first value of the stack is extracted and the `ESP` value is increased by its size. The subwindow content will then scroll up.
+
+image::cv01-obr10.png[]
+
+== Moving around the program
+
+Before we start our program, notice where OllyDbg stopped: at address `0041112C`. In the next tutorial, we will learn about the `dumpbin` tool and see where this address came from: our EXE file's image is stored at virtual address (VA) `00400000`, and the entry point (Main Entry Point) starts at address `1112C` relative to that, that is, at `0041112C`. It's the `_start` function, not `main` we might expect.
+[listing]
+----
+C:\BEK\> dumpbin /HEADERS bek1.exe
+Microsoft (R) COFF/PE Dumper Version 12.00.40629.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file bek1.exe
+
+PE signature found
+
+File Type: EXECUTABLE IMAGE
+
+FILE HEADER VALUES
+...
+
+OPTIONAL HEADER VALUES
+...
+              0 size of uninitialized data
+           1112C entry point (0041112C) @ILT+295(_mainCRTStartup)
+            1000 base of code
+            1000 base of data
+          400000 image base (00400000 to 0041BFFF)
+----
+
+Press `Enter` on the `JMP mainCRTStartup` line (either mouse click that line, or move the cursor to it using the arrow keys). That will display the jump target, i.e. the inside of the `_mainCRTStartup` function:
+
+[listing]
+----
+004124F0  /$  55            PUSH EBP
+004124F1  |.  8BEC          MOV EBP,ESP
+004124F3  |.  E8 6CEBFFFF   CALL 00411064   ; [__security_init_cookie]
+004124F8  |.  E8 73FCFFFF   CALL __tmainCRTStartup
+004124FD  |.  5D            POP EBP
+004124FE  \.  C3            RETN
+----
+
+We can return by pressing the numeric-keyboard's minus key.
+
+== Prologue, body and epilogue
+
+We can split the `_mainCRTstartup` function into three parts:
+
+Prologue:
+
+[listing]
+----
+004124F0  /$  55            PUSH EBP
+004124F1  |.  8BEC          MOV EBP,ESP
+----
+
+Body:
+
+[listing]
+----
+004124F3  |.  E8 6CEBFFFF   CALL 00411064 ; [__security_init_cookie]
+004124F8  |.  E8 73FCFFFF   CALL __tmainCRTStartup
+----
+
+Epilogue:
+
+[listing]
+----
+004124FD  |.  5D            POP EBP
+004124FE  \.  C3            RETN
+----
+
+A function's prologue is the standard "beginning" of that function. It creates such space on the stack that will contain all the local variables, stores register contents so that they can be restored before returning to the caller, and prepares a fixed point (a so-called base) which will be used to refer to all of these values. The stack structure accessed through the base is called the stack-frame. The base is then stored in a register, usually `EBP`. The `PUSH EBP` instruction saves the original value of `EBP` on the stack and the `MOV EBP, ESP` overwrites the old `EBP` value with the address of the top of the stack. The reason is, the `ESP` register (the stack pointer) will change with each `PUSH`/`POP` instruction while the `EBP` register will remain constant throughout the execution of the function.
+
+The body of a function contains the core functionality of the function, provided by the developer. It expects a valid stack frame.
+
+The function's epilogue is its "standard ending". It will destroy the stack frame (usually with `MOV ESP, EBP`), restore the registers to their original state (instr. `POP EBP`), and return from the function (instr. `RET` or `RET n`).
+
+Let's enter the second function, that is, the function `__tmainCRTStartup`. This function is supplied by MSVC's runtime. Locate the following code:
+
+[listing]
+----
+004122F0  |.  A1 4C914100   MOV EAX,DWORD PTR DS:[envp]
+004122F5  |.  50            PUSH EAX
+004122F6  |.  8B0D 48914100 MOV ECX,DWORD PTR DS:[argv]
+004122FC  |.  51            PUSH ECX     ; /argv => [419148] = NULL
+004122FD  |.  8B15 44914100 MOV EDX,DWORD PTR DS:[argc]
+00412303  |.  52            PUSH EDX       ; |argc => [419144] = 0
+00412304  |.  E8 5AEEFFFF   CALL 00411163  ; \main
+00412309  |.  83C4 0C       ADD ESP,0C
+----
+
+First the `envp` variable's content is stored on the stack, then `argv`, then `argc`, and finally the `main` function is called. We can see that our C function `main` starts at address `00411163` and receives three arguments, even though our source code only shows two. The third argument, `envp`, is the pointer to environment variables and has a structure similar to the `argv[]` argument.
+
+After the call to `main`, we see the `ADD ESP, 0C` instruction. This instruction will add 12 to the stack pointer, which will remove 12 B of data - the data taken up by the function's arguments we stored on the stack using three `PUSH` instructions (3x4 B of arguments). The `ADD ESP, 0C` is used to delete the arguments from the stack. We will find a similar `ADD` instruction after every function called using the `__cdecl` calling convention (this is the implicit calling convention in C, and requires that the arguments must be deleted by whoever put them on the stack - i.e., the caller).
+
+== Setting breakpoints
+
+Let's place a breakpoint at the call to the `main` function. Select the line `00412304` and press the `F2` key, or use the *Breakpoint -> Toggle* function from the context menu. The address will turn red. Now we can start our program.
+
+== Running a program
+
+After you've set up the breakpoint, run the program by pressing the `F9` key or by choosing *Run* from the *Debug* menu; if you want to set up command line arguments first, you can do it from the *File -> Set new arguments...* menu. The program will stop at the `CALL` instruction. Note the content of the stack window:
+
+[listing]
+----
+0018FF30  |00000001       ; |argc = 1
+0018FF34  |004BE5A0       ; \argv = 004BE5A0
+0018FF38  |004BC008
+----
+
+We can see the 3 new values at the top of the stack - `argc`, `argv` and `envp`. The values are stored in the same order as they are written in the `main` function's declaration:
+
+[source,cpp]
+----
+int main( int argc, char** argv, char** envp);
+----
+
+Data type int is 4 B long, same as a pointer.
+
+[IMPORTANT]
+====
+*Task 1.* In the memory view subwindow, display the content of the command line (`argv[0]`). Even if we didn't supply any argument to our program, the value `argv[0]` will exist. We can see the value of `argv` on the stack. If we display its content in memory view, what do we see? How do we find the address of `argv[0]`? (Remember that the Intel CPUs work in a little-endian mode, that is, the 4 B of the address will be stored in the memory "backwards" and you will need to take that into account when calculating the final address).
+====
+
+[IMPORTANT]
+====
+*Task 2.* Enter into the `main` function. What's the prologue of this function? Copy it.
+====
+
+[IMPORTANT]
+====
+*Task 3.* Find the `main` function's epilogue, ignoring calls to functions such as `_RTC_CheckESP` or similar. Copy just the deletion of the stack frame, restoration of the registers and the return from the function.
+====
+
+== Tracing
+
+Now we can start executing the program one instruction at a time and check the contents of the registers, heap memory or the stack after each instruction. There are several different trace methods: (a) Step into, (b) Step over, and (c) Step out (Execute till return).
+
+*Step into* (key: `F7`) will start the program's thread in such a way that only one instruction will be executed and then the program will stop again. If that instruction is a `CALL`, the execution will stop at the first instruction of the called function.
+
+*Step over* (key: `F8`) is similar to *Step into*, except that the program will stop at the next instruction below the current one. If that instruction is a `CALL`, the whole called function will execute and only when the function ends will the program stop.
+
+*Step out* (key: `Ctrl+F9`) will continue in execution until the `RET` instruction for the current function is reached. This mode is useful when we want to return from inside of a function.
+
+== Stack frame structure
+
+The stack is used for storage of function's local variables, the return address, the registers that the function changes, and the function's arguments. All this is stored into the already-mentioned stack frame structure. Now we will study this structure in more detail. The stack frame is created by the function's prologue and its content is accessed through the `EBP` register, which points inside this structure (not to its beginning or end). If we see `EBP+something` inside a function, it usually references an argument of the function, while `EBP-something` usually references a local variable, stored in the space created by the `SUB ESP, value` instruction.
+
+[IMPORTANT]
+====
+*Task 4.* In OllyDbg's configuration in the *Options* menu choose *Options...* and change the settings according to this image:
+
+image::cv01-obr11.png[]
+
+Enter the `main` function and stop at its first instruction. Note down the address of the stack's top. What is stored here (see the stack subwindow)? At which offset (relative position) from the top of the stack are the `argc` and `argv` arguments at this moment?
+====
+
+[IMPORTANT]
+====
+*Task 5.* Carefully trace through the function's prologue until you locate the `LEA EDI, [EBP-1DC]` instruction. Draw the stack structure from its top to the `argv` argument. Leave the space created by the `SUB ESP, 1DC` instruction empty for now.
+====
+
+[IMPORTANT]
+====
+*Task 6.* Where inside the structure does the `EBP` register point? Add it to your picture from the previous question.
+====
+
+[IMPORTANT]
+====
+*Task 7.* At which offset relative to the `EBP` register are the `argc` and `argv` arguments stored?
+====
+
+[IMPORTANT]
+====
+*Task 8.* Trace through the function until after the `REP STOS DWORD PTR ES:[EDI]` instruction. The space allocated by the `SUB ESP, 1DC` instruction is now filled with `CC` values. Where in the stack frame, relative to `EBP`, is the buffer provided for the `scanf` function located? Check your answer by verifying the stack content after `scanf` finishes (use the "step over" tracing).
+====
