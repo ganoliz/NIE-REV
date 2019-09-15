@@ -13,12 +13,14 @@ Recommendations for reverse engineering will be demonstrated live.
 * *CFF Explorer* -- a tool for PE file analysis and modification. https://www.ntcore.com/exsuite.php[Homepage].
 * *Dependency Walker* -- a tool for analysis of import and export tables, capable of performing both static and dynamic analysis. http://www.dependencywalker.com[Homepage].
 * *ExeInfoPE* -- a compiler identification tool. http://exeinfo.web44.net/[Homepage].
+* *Ghidra* -- a disassembler and decompiler by NSA. https://www.nsa.gov/resources/everyone/ghidra/[Homepage].
 * *HxD* -- A hex editor capable of editing RAM or a raw disk. https://mh-nexus.de/en/hxd/[Homepage].
 * *IDA Free* -- an interactive disassembler for reverse engineering. This version *does not* contain any decompiler, but is free for non-commercial purposes https://www.hex-rays.com/products/ida/support/download_freeware.shtml[Homepage].
 * *Process Explorer* -- a tool for detailed process monitoring. A significantly extended replacement for Windows' Task Manager. https://technet.microsoft.com/cs-cz/sysinternals/bb896653.aspx[Homepage].
 * *Process Monitor* -- another process monitoring tool -- tracks accesses to files, registry keys, etc. https://technet.microsoft.com/cs-cz/sysinternals/bb896645.aspx[Homepage].
 * *Regshot* -- a tool for making System Registry snapshots and comparing them. https://sourceforge.net/projects/regshot/[Homepage].
 * *Resource Hacker* -- a tool for study and modification of the `.rsrc` section in PE files. http://www.angusj.com/resourcehacker/[Homepage].
+* *RetDec* -- a disassembler and decompiler by Avast. https://github.com/avast/retdec/releases[Homepage].
 * *Strings* -- a tool for extraction of strings from a file. Good for the initial analysis. https://technet.microsoft.com/en-us/sysinternals/bb897439.aspx[Homepage].
 * *X64Dbg* -- a debugger for both 32 and 64-bit executables. https://x64dbg.com/[Homepage].
 

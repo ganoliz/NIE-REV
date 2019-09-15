@@ -11,6 +11,17 @@ Vaším úkolem je najít pro každý z programů vstup, který bude neupravený
 
 == Tipy pro použití programu IDA
 
-Klávesou `c` můžete říci analyzátoru, aby se k dané oblasti dat choval jako ke kódu. Naopak klávesou `d` můžete z kódu udělat data. Klávesou `u` můžete zrušit přiřazení kód/data a vrátit implicitní chování -- to se hodí zejména v případě, kdy něco v programu rozhodíte.
+K základnímu pohybu po kódu slouží klávesy `ENTER` a `ESCAPE`. Pomocí `ENTER` můžete skočit na místo identifikované argumentem instrukce, pomocí `ESCAPE` se vrátíte na místo, odkud jste naposledy skočili klávesou `ENTER`. Klávesy lze používat i opakovaně, IDA si udržuje jejich historii.
 
-V programu IDA můžete přímo měnit analyzovaný program nástroji v menu Patch. Pokud používáte verzi 5.0 Free, je toto menu standardně skryté, ale můžete ho zobrazit, pokud změníte konfigurační soubor `C:\Program Files (x86)\IDA Free\cfg\idagui.cfg`: otevřete soubor v editoru jako Administrátor a změňte řádek `ENABLE_PATCH_SUBMENU=NO` na `ENABLE_PATCH_SUBMENU=YES`. Po restartu IDA Free naleznete nové submenu Patch v menu Edit.
+Několika klávesami můžete přepínat mezi různými způsoby zobrazení čísel v argumentech instrukcí. Ve všech případech najeďte kurzorem na číslo, které chccete zobrazit v jiném tvaru, a potom stiskněte klávesu:
+
+* `H` -- přepíná mezi desítkovým a šestnáctkovým (hexadecimálním) vyjádřením čísla, tedy např. mezi `65` a `41h`.
+* `R` -- přepíná mezi číselným vyjádřením a odpovídajícím ASCII znakem, tedy např. mezi `41h` a `'A'`.
+* `M` -- přepíná mezi číslem a známou konstantou. Můžete si sami vytvořit vlastní konstanty v okně Enumerations (`SHIFT+F10`), kde napřed klávesou `INSERT` založíte výčet a následně do něj klávesou `N` přidáte konkrétní konstanty. Můžete také využít známých hodnot konstant z Windows API výběrem konstanty `<NEW>`, po jejímž použití IDA zobrazí seznam známých konstant s danou hodnotou.
+* `K` -- přepíná mezi symbolickým a číselným vyjádřením proměnných, tedy např. mezi `[EBP+hFile]` a `[EBP-4]`.
+
+Pomocí klávesy `dvojtečka` resp. `středník` můžete do kódu vkládat komentáře. Komentář se vždy týká objektu, u kterého byl použit, přičemž středníkový komentář ("repeatable comment") se dále kopíruje do všech míst, které s okomentovaným objektem pracují (tzn. pokud nastavíte středníkový komentář k návěští, zobrazí se nejen u samotného návěští, ale i u všech skoků na toto návěští).
+
+Klávesou `N` můžete pojmenovat symbol, na kterém je zrovna kurzor. Typicky se tato funkce používá pro pojmenování funkcí (např. z `sub_4011b0` tak uděláte `inicializace` s tím, že se tak nahradí všechny výskyty), návěští nebo proměnných (jsou-li vyjádřené symbolicky, tedy ve tvaru `[EBP+hFile]`).
+
+Velmi užitečná klávesa `X` vám umožňuje zobrazit cross-reference, tedy seznam míst, která se odkazují na právě vybraný symbol.

@@ -20,7 +20,6 @@ Write a *brief* report which will cover these questions for each stage of the ap
 
 Because partial submissions are permitted, it's necessary that the report contains sufficient information to allow the teacher to determine how far did you progress and to award you respective points. On the other hand, you don't need to create interesting characters and a gripping plot, it's perfectly fine to submit a bullet list. We are much more interested in the information found than the presentation.
 
-
 [IMPORTANT]
 ====
 A solution which does not work with the original unchanged application will not be accepted! You may modify the program to facilitate your analysis, but the correctness of the solution will be verified using the original program!
@@ -34,12 +33,12 @@ Solutions may be submitted until the end of the exam period. However, make allow
 
 == Grading scheme
 
-* *Password 1* -- a simple fixed password. *5 points*
-* *Password 2* -- a generated random password, simple obfuscations, requires extraction into memory. *10 points*
-* *Password 3* -- a simple password in a new packed executable, moderate difficulty. *10 points*
-* *Password 4* -- a generated random password, strong obfuscations, needed for a full score. *10 points*
-* Password 5 -- a bonus password, well hidden, serves as a partial alternative to the "Keygen" work. *10 points*
-* Password 6 -- a bonus password, extreme obfuscations (a dedicated virtual machine), not expected to be solved -- serves as an example of what you could encounter in the real world. *100 points*
+* *Password 1* -- a simple fixed password. Can be solved with a basic understanding of how are Windows GUI applications constructed (see the tutorial on simple obfuscation). *5 points*
+* *Password 2* -- a generated random password, simple obfuscations, requires extraction into memory. Builds upon the techniques from the tutorial on advanced obfuscation. *10 points*
+* *Password 3* -- a simple password in a new packed executable, moderate difficulty. To extract the executable you will need to make use of the tutorial on packed file reconstruction. *10 points*
+* *Password 4* -- a generated random password, strong obfuscations, needed for a full score. Adds some anti-debugging techniques from the AD tutorial to the mix. *10 points*
+* *Password 5* -- a bonus password, well hidden, serves as a partial alternative to the "Keygen" work. The main difficulty here is actually finding where the password manipulation occurs. You will need to search deeper in the program and look-up more complex Win32 APIs. *10 points*
+* *Password 6* -- a bonus password, extreme obfuscations (a dedicated virtual machine), not expected to be solved -- serves as an example of what you could encounter in the real world. *100 points*
 
 Partial solutions are possible. The points shown above denote the maximum amount of points you can get for that part of the work.
 

@@ -29,6 +29,22 @@ Open the attached application in a debugger and try to reach the end -- meaning 
 
 == Tips for using IDA Free
 
-If you use IDA Free for this, remember that you can use the `c` key to make a portion of data code, the `d` key to make a portion of code data, or the `u` key to undefine currently selected code or data. The `u` key is useful when you mess something up. Note that these keys work also with blocks.
+=== Useful keyboard shortcuts
+
+When removing obfuscations, you may find the following keyboard shortcuts useful:
+
+* `D` -- makes IDA interpret the selected line or block as data rather than code.
+* `C` -- makes IDA interpret the selected line or block as code rather than data.
+* `U` -- makes IDA forget what you said before and treat the selected line or block as it would without your interventions.
+* `P` -- tells IDA that the block should be considered a separate procedure.
+** This is very useful in case of obfuscated function -- then IDA usually only recognizes a prt of the function, up until the first obfuscation. After you've removed the obfuscation (e.g. by converting it to data or patching it out) you can ask IDA to regenerate the function.
+** Sometimes `P` alone won't be sufficient. In that case undefine (`U`) the function's first label (i.e. its name) and then use `P` on this label.
+
+[IMPORTANT]
+====
+Until version 7.3 IDA had no support for undo. By using the keys above (and many others) you can seriously damage your work. Save often, preferably to different files, so that you have something to return to!
+====
+
+=== Changing the executable in IDA
 
 You can perform changes to the program directly inside IDA Free. The patch menu is hidden by default in version 5.0. It is possible to show it but you'll need to change the configuration file located in `C:\Program Files (x86)\IDA Free\cfg\idagui.cfg`. Open the file as the Administrator and change the `ENABLE_PATCH_SUBMENU=NO` line into `ENABLE_PATCH_SUBMENU=YES`. Save and (re)launch IDA Free. Then you will find the Patch submenu in the Edit menu.

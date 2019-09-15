@@ -108,12 +108,12 @@ Sestavte *stručnou* zprávu, která pro každou úroveň programu odpoví na n�
 
 *Bodovací schéma:*
 
-* *Heslo 1* -- jednoduché fixní heslo. *5 bodů*
-* *Heslo 2* -- generované náhodné heslo, jednoduché obfuskace, rozbalení do paměti. *10 bodů*
-* *Heslo 3* -- jednoduché heslo v novém zabaleném souboru, střední obtížnost. *10 bodů*
-* *Heslo 4* -- generované náhodné heslo, těžké obfuskace, potřebné k získání plného počtu bodů. *10 bodů*
-* Heslo 5 -- bonusové, náročně skryté heslo, slouží jako částečná alternativa k luštění práce "Keygen". *10 bodů*
-* Heslo 6 -- bonusové heslo za extrémními obfuskacemi (vlastní virtuální stroj), slouží hlavně jako ukázka, s čím se také můžete potkat. *100 bodů*
+* *Heslo 1* -- jednoduché fixní heslo. Vyžaduje základní porozumění toho, jak fungují GUI programy ve Windows (cvičení na jednoduchou obfuskaci). *5 bodů*
+* *Heslo 2* -- generované náhodné heslo, jednoduché obfuskace, rozbalení do paměti. Navazuje na obfuskace z cvičení na pokročilou obfuskaci. *10 bodů*
+* *Heslo 3* -- jednoduché heslo v novém zabaleném souboru, střední obtížnost. Rozbalení souboru využívá znalosti získané na cvičení na rekonstrukci zabalených binárních souborů. *10 bodů*
+* *Heslo 4* -- generované náhodné heslo, těžké obfuskace, potřebné k získání plného počtu bodů. Používá technicky z cvičení na anti-debugging. *10 bodů*
+* *Heslo 5* -- bonusové, náročně skryté heslo, slouží jako částečná alternativa k luštění práce "Keygen". Hlavní složitost spočívá v nalezení místa, kde se vůbec s heslem pracuje, vyžaduje detailnější zkoumání programu a porozumění Win32 API. *10 bodů*
+* *Heslo 6* -- bonusové heslo za extrémními obfuskacemi (vlastní virtuální stroj), slouží hlavně jako ukázka, s čím se také můžete potkat. *100 bodů*
 
 Protože je možné odevzdat i částečně vyřešenou úlohu, je nutné, aby zpráva obsahovala dostatečné množství informací pro rozhodnutí, jak velkou část zadání student splnil, a následně pro udělení bodů za postup v úloze. Na druhou stranu, není potřeba, aby práce byla napínavá, s originálními postavami a neotřelou zápletkou, naprosto vyhoví i nesouvislý bodový seznam. Podstatné jsou obsažené informace, ne jejich forma.
 
