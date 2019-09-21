@@ -3,6 +3,8 @@
 :toc:
 :imagesdir: ./media
 
+* xref:en/index.adoc[English version]
+
 == Anotace
 
 Studenti budou v rámci předmětu seznámeni se základy reverzního inženýrství počítačového softwaru. Dále studenti získají znalosti o tom, jakým způsobem probíhá spouštění a inicializace programu, co se odehrává před a po volání funkce main. Studenti také pochopí, jakým způsobem je organizován spustitelný soubor, jak se propojuje s Knihovnami třetích stran. Další část předmětu bude věnována reverznímu inženýrství aplikací napsaných v C++. Studenti se také seznámi s principy disassemblerů a obfuskačními metodami. Dále se předmět bude věnovat nástrojům pro ladění (debuggerům): jak ladící nástroje pracují, jak probíhá ladění a také se seznámí s metodami, které mohou být použity k detekci ladících nástrojů. Jedna z přednášek pohovoří o aktuální scéně počítačového škodlivého kódu. Důraz předmětu je kladen na cvičení, na kterých budou studenti řešit prakticky orientované úlohy z reálného světa.
