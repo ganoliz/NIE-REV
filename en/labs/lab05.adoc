@@ -147,7 +147,7 @@ link:{imagesdir}/cv05.zip[cv05.zip]
 == Third Homework
 
 * Points: *5*
-* Deadline: *2019-11-29, 19:30*
+* Deadline: *2019-12-05, 16:00*
 
 Analyze the `Had.exe` ("Snake.exe") executable from archive link:{imagesdir}/du3.zip[du3.zip].
 

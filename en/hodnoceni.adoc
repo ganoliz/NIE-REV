@@ -27,17 +27,17 @@ In case of exceptional solutions the teacher may award bonus points in excess of
 | xref:labs/lab03.adoc[E-mail]
 | 5
 | 3rd week
-| October 25, 19:30
+| October 24, 16:00
 
 | xref:labs/lab04.adoc[IAT]
 | 5
 | 4th week
-| November 15, 19:30
+| November 14, 16:00
 
 | xref:labs/lab05.adoc[Snake]
 | 5
 | 5th week
-| November 29, 19:30
+| December 5, 16:00
 |====
 
 === Semestral works

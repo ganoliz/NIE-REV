@@ -36,7 +36,7 @@ Recommendations for reverse engineering will be demonstrated live.
 == First homework
 
 * Points: *5*
-* Deadline: *2019-10-25, 19:30*
+* Deadline: *2019-10-24, 16:00*
 
 The goal of this homework is to reverse engineer file link:{imagesdir}/du1.zip[du1.zip] and convince it to send an e-mail to the teacher. The program uses a configuration file, but the provided one is incorrect. By the time you finish analyzing the application, you will learn the correct structure and content of the configuration. Then create a file that will cause sending of a *polite* e-mail. If you make an error, an impolite e-mail might get sent -- but that is not considered a correct solution ;-).
 

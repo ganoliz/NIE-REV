@@ -124,7 +124,7 @@ If you liked this assignment, find a relationship of the `Hint` field and the Ex
 == Second homework
 
 * Points: *5*
-* Deadline: *2019-11-15, 19:30*
+* Deadline: *2019-11-14, 16:00*
 
 Your program compiled with MS Visual Studio typically depends on an external runtime library `MSVCRT12.DLL` (the version in the name may vary according to the compiler version, this name applies to Visual Studio 2013). This library contains functions `malloc`, `calloc`, `realloc`, and `free`. Write a program which will contains functions:
 
