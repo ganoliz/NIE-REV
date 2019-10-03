@@ -85,7 +85,7 @@ image::cv2obr14.jpg[]
 
 Prolog a epilog obsahuje operace potřebné pro funkčnost kódu, ale neobsahuje informace o programu a není tudíž obvykle potřebné ho analyzovat -- až na jednu výjimku. Bloky `__except` a `__finally`, resp. `catch` v C++, mohou obsahovat kód, který je pro analýzu důležitý.
 
-Kód prováděný při výjimkách je závislý na použitém kompilátoru. Z tohoto důvodu se často setkáváme s tím, že výjimky vyvolané v knihovně nejsou kompatibilní s obsluhou výjimek ve volajícím programu, leda že by pro obě komponenty byl použit stejný kompilátor. Jakmile dojde k výjimce, ukazatel na `EXCEPTION_REGISTRATION` je načten z `FS:[0]`, a nyní velmi záleží na tom, jestli je řízení předáno programu nebo knihovně --- adresu obslužné rutiny najdeme v poli `lpfnFilter` struktury `EXCEPTION_REGISTRATION`. V případě SEH3 (verze 3) nebo SEH4 se musíme podívat do příslušné proměnné `scopetable` typu `SCOPETABLE`.
+Kód prováděný při výjimkách je závislý na použitém kompilátoru. Z tohoto důvodu se často setkáváme s tím, že výjimky vyvolané v knihovně nejsou kompatibilní s obsluhou výjimek ve volajícím programu, leda že by pro obě komponenty byl použit stejný kompilátor. Jakmile dojde k výjimce, ukazatel na `EXCEPTION_REGISTRATION` je načten z `FS:[0]`, a nyní velmi záleží na tom, jestli je řízení předáno programu nebo knihovně -- adresu obslužné rutiny najdeme v poli `lpfnFilter` struktury `EXCEPTION_REGISTRATION`. V případě SEH3 (verze 3) nebo SEH4 se musíme podívat do příslušné proměnné `scopetable` typu `SCOPETABLE`.
 
 [source,cpp]
 ----
