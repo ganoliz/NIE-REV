@@ -7,7 +7,7 @@
 . xref:lab04.adoc[Import address table]
 . xref:lab05.adoc[Type information analysis]
 . xref:lab06.adoc[Jirkal -- Malware]
-. xref:lab07.adoc[Consultations]
+. xref:lab07.adoc[Consultations, 64bit code]
 . xref:lab08.adoc[Simple obfuscation]
 . xref:lab09.adoc[Advanced obfuscation]
 . xref:lab10.adoc[Packed file reconstruction]

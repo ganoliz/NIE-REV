@@ -1,5 +1,5 @@
 ﻿
-= 7. Konzultace
+= 7. Konzultace, 64bitový kód
 :imagesdir: ../media/labs/07
 :toc:
 
