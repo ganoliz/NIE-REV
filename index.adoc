@@ -24,3 +24,11 @@ Studenti budou v rámci předmětu seznámeni se základy reverzního inženýrs
 * Přiřazení semestrálních prací
 ** Semestrální práce budou studentům přiřazeny během třetího výukového týdne.
 * Průběžný stav bodů je uveden na webu https://grades.fit.cvut.cz[FIT klasifikace]. Ve vašem vlastním zájmu si kontrolujte hodnoty, které jsou tam uvedeny, a v případě zjištěných rozdílů mě kontaktujte, abych je opravil z "master" seznamu. Body na Klasifikaci jsou pouze orientační!
+
+== Změny v programu
+
+* *7.-8.11.2019 (7. týden)*:
+** Místo přednášky na *disassembling a obfuskace* bude mít Ing. Martin Jirkal z firmy ESET přednášku o *malware* (dle programu přednáška 7).
+** Na cvičení bude místo přednášky na *malware* cvičení na *konzultace a 64bitový kód* (dle programu cvičení 7).
+* *14.-15.11.2019 (8. týden)*:
+** Na cvičení bude místo cvičení na *konzultace a 64bitový kód* přednáška na *disassembling a obfuskace* (dle programu přednáška 4).

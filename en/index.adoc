@@ -24,3 +24,11 @@ Students will get acquainted with the essentials of reverse engineering of compu
 * Assignment of the semestral works
 ** Semestral works will be assigned to the students during the third week of the semester.
 * The points awarded will be recorded at the https://grades.fit.cvut.cz[FIT grades] website. In your own interest, verify that you got the correct amount of points every time you get an e-mail from me. The points shown at Grades are just "for your information", the definitive value is in my private "master" list.
+
+== Changes to the schedule
+
+* *2019-11-07 (week 7)*:
+** In place of the *disassembling and obfuscation* lecture Ing. Martin Jirkal from ESET will present a lecture on *malware* (regularly lecture no.7).
+** In place of the *malware* tutorial we will have the *consultations and 64bit code* tutorial (regularly tutorial no.7).
+* *2019-11-14 (week 8)*:
+** In place of the *consultations and 64bit code* tutorial we will have a lecture on *disassembling and obfuscation* (regularly lecture no.4).
