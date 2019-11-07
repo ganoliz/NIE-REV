@@ -30,8 +30,8 @@ PIMAGE_NT_HEADERS pNTHeaders = (PIMAGE_NT_HEADERS)( ((BYTE*)pDosHeader) + pDosHe
 
 Struktura `IMAGE_NT_HEADERS` obsahuje v poli `+pNTHeaders->OptionalHeader+` pole s datovými adresáři `DataDirectory`, z nichž každý obsahuje pole `VirtualAddress` (RVA od `pDosHeader`) a pole `Size` s jeho velikostí v bajtech. Z těchto adresářů jsou pro toto cvičení důležité:
 
-* Importní tabulka -- `+pNTHeaders->OptionalHeader.DataDirectory[1]+`
-* Import Address Table -- `+pNTHeaders->OptionalHeader.DataDirectory[13]+`
+* Importní tabulka -- `+pNTHeaders->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT]+`
+* Import Address Table -- `+pNTHeaders->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IAT]+`
 
 == Importní tabulka
 

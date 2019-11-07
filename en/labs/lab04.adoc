@@ -30,8 +30,8 @@ PIMAGE_NT_HEADERS pNTHeaders = (PIMAGE_NT_HEADERS)( ((BYTE*)pDosHeader) + pDosHe
 
 The `IMAGE_NT_HEADERS` structure includes a field `+pNTHeaders->OptionalHeader+`. This field contains an array of data directories `DataDirectory`; each directory contains a field called `VirtualAddress` (an RVA from `pDosHeader`) and a field `Size` carrying its size in bytes. Two of these directories are critical for this tutorial:
 
-* Import Table -- `+pNTHeaders->OptionalHeader.DataDirectory[1]+`
-* Import Address Table -- `+pNTHeaders->OptionalHeader.DataDirectory[13]+`
+* Import Table -- `+pNTHeaders->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT]+`
+* Import Address Table -- `+pNTHeaders->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IAT]+`
 
 == The Import Table
 
