@@ -32,3 +32,7 @@ Students will get acquainted with the essentials of reverse engineering of compu
 ** In place of the *malware* tutorial we will have the *consultations and 64bit code* tutorial (regularly tutorial no.7).
 * *2019-11-14 (week 8)*:
 ** In place of the *consultations and 64bit code* tutorial we will have a lecture on *disassembling and obfuscation* (regularly lecture no.4).
+* *2019-12-12 (week 12)*:
+** Ing. Martin Jirkal will present a tutorial on *dotnet analysis* (in Czech).
+* *2019-12-19 (week 13)*:
+** Ing. Jan Rubín from Avast will present a lecture on *malware analysis* (in Czech).

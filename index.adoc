@@ -32,3 +32,7 @@ Studenti budou v rámci předmětu seznámeni se základy reverzního inženýrs
 ** Na cvičení bude místo přednášky na *malware* cvičení na *konzultace a 64bitový kód* (dle programu cvičení 7).
 * *14.-15.11.2019 (8. týden)*:
 ** Na cvičení bude místo cvičení na *konzultace a 64bitový kód* přednáška na *disassembling a obfuskace* (dle programu přednáška 4).
+* *12.-13.12.2019 (12. týden)*:
+** Ing. Martin Jirkal povede cvičení na téma *analýza kódů v dotnetu*.
+* *19.12.2019 (13. týden)*:
+** Přednášku na téma *analýza malware* povede Ing. Jan Rubín z firmy Avast.

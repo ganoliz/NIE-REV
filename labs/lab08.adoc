@@ -13,7 +13,7 @@ Vaším úkolem je najít pro každý z programů vstup, který bude neupravený
 
 K základnímu pohybu po kódu slouží klávesy `ENTER` a `ESCAPE`. Pomocí `ENTER` můžete skočit na místo identifikované argumentem instrukce, pomocí `ESCAPE` se vrátíte na místo, odkud jste naposledy skočili klávesou `ENTER`. Klávesy lze používat i opakovaně, IDA si udržuje jejich historii.
 
-Několika klávesami můžete přepínat mezi různými způsoby zobrazení čísel v argumentech instrukcí. Ve všech případech najeďte kurzorem na číslo, které chccete zobrazit v jiném tvaru, a potom stiskněte klávesu:
+Několika klávesami můžete přepínat mezi různými způsoby zobrazení čísel v argumentech instrukcí. Ve všech případech najeďte kurzorem na číslo, které chcete zobrazit v jiném tvaru, a potom stiskněte klávesu:
 
 * `H` -- přepíná mezi desítkovým a šestnáctkovým (hexadecimálním) vyjádřením čísla, tedy např. mezi `65` a `41h`.
 * `R` -- přepíná mezi číselným vyjádřením a odpovídajícím ASCII znakem, tedy např. mezi `41h` a `'A'`.
