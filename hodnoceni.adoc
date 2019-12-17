@@ -94,6 +94,11 @@ Ověřování sériového čísla i jeho generování jsou poměrně složité a
 Knihovna `SerialNumber64.dll` obsahuje i funkci pro generování sériového čísla. Najděte ji, zjistěte, co chybí, doplňte to a použijte ji pro vygenerování sériového čísla, které bude platné nejméně do konce semestru. Implementovat vlastní generátor by samozřejmě bylo možné, ale neúměrně složité.
 ====
 
+[NOTE]
+====
+Zdá se, že do Windows 10 verze 1903 byla zavlečena chyba, která způsobuje nefunkčnost některých částí Keygenu. Pro analýzu doporučuji používat starší verze Windows, tedy cokoliv až do Windows 10 verze 1809 včetně -- tam se problém neprojevuje. https://github.com/libssh2/libssh2/issues/388#issuecomment-516918145[Další informace.]
+====
+
 ==== Crackme
 
 Druhá semestrální práce bude pro každého studenta odlišná a bude zadána ve třetím výukovém týdnu. Vaším úkolem je analyzovat vám přiřazený program a získat potřebná hesla pro průchod programem. Program obsahuje sadu čtyř (resp. šesti) hesel, jejíž získání vám umožní postoupit k dalším heslům. Některá z hesel jsou vygenerována přímo pro každého jednotlivého studenta. Program obsahuje postupně se zvyšující počet anti-reverzních metod, které zamezují rychlé analýze programu.

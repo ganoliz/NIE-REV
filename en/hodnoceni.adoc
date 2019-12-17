@@ -83,6 +83,11 @@ The process of verification as well as generation of the serial number is rather
 The `SerialNumber64.dll` library contains the code for serial number generation. Find the function, discover what's needed to enable its full functionality, add it and use the function to generate a serial number valid at least until the end of the semester. You could also implement your own generator, but that would be significantly more difficult.
 ====
 
+[NOTE]
+====
+It seems that Windows 10 version 1903 introduced an error which causes a failure in some parts of the Keygen. I recommend using an older version of Windows for analysis, up to and including Windows 10 version 1809 -- these versions are unaffected by the bug. https://github.com/libssh2/libssh2/issues/388#issuecomment-516918145[More information.]
+====
+
 ==== Crackme
 
 The second semestral work will be different for each student and will be assigned during the third week of the semester. Your goal is to analyze your assigned program and find a series of passwords required to pass through the application. There are four (resp. six) passwords, each giving you access to further passwords. Some passwords are generated differently for each student. The program uses a steadily increasing number of anti-reversing techniques which prevent a fast analysis.
