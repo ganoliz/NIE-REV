@@ -36,4 +36,5 @@ Studenti budou v rámci předmětu seznámeni se základy reverzního inženýrs
 ** Ing. Martin Jirkal povede cvičení na téma *analýza kódů v dotnetu*.
 * *19.12.2019 (13. týden)*:
 ** Přednášku na téma *analýza malware* povede Ing. Jan Rubín z firmy Avast.
+** link:{imagesdir}/lectures/rev08en.pdf[Přednáška].
 ** link:{imagesdir}/itsaunixsystem.zip[Crackme na vyzkoušení].

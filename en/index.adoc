@@ -36,4 +36,5 @@ Students will get acquainted with the essentials of reverse engineering of compu
 ** Ing. Martin Jirkal will present a tutorial on *dotnet analysis* (in Czech).
 * *2019-12-19 (week 13)*:
 ** Ing. Jan Rubín from Avast will present a lecture on *malware analysis* (in Czech).
+** link:{imagesdir}/lectures/rev08en.pdf[Slides].
 ** link:{imagesdir}/itsaunixsystem.zip[Crackme to try out].
