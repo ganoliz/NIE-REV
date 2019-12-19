@@ -11,8 +11,8 @@ Cílem cvičení je injektovat proces `GUIToSteal.exe` vlastním kódem tak, aby
 
 K získání textu z editačního pole můžete použít například funkce:
 
-* `GetDlgItemText`, nebo
-* `GetDlgItem` a `GetWindowText`.
+* https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getdlgitemtexta[GetDlgItemText], nebo
+* https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getdlgitem[GetDlgItem] a https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowtexta[GetWindowText].
 
 Musíte je ovšem zavolat přímo z procesu, který okno spravuje. K tomu využijeme postup nazývaný injekce (Injection).
 
@@ -23,11 +23,11 @@ Všechny tyto funkce pracují s datovým typem `HWND`, který identifikuje okno 
 
 === Postup krádeže hesla
 
-. Nalezneme okno aplikace pomocí funkce `FindWindow` a funkcí `GetWindowThreadProcessId` zjistíme ID procesu, kterému patří.
-. Získáme handle procesu pomocí `OpenProcess`.
-. Pomocí funkce `VirtualAllocEx` můžeme v tomto procesu alokovat paměť, funkcí `WriteProcessMemory` můžeme do takto alokované paměti zapsat naše data. Zapíšeme tedy kód, který zavolá některou z funkcí pro přečtení hesla a nějakým způsobem ho předá útočníkovi (může např. zapsat do dat, která si útočník alokoval a později je přečte pomocí `ReadProcessMemory`, nebo můžeme pomocí `WriteProcessMemory` zapsat přímo do paměti útočníka; další možností je např. uložení hesla do souboru nebo využití pojmenované roury).
-. Když je vše připraveno, spustíme vytvořený kód pomocí funkce `CreateRemoteThread`.
-. Počkáme, až náš kód doběhne, pomocí funkce `WaitForSingleObject`, která dostane jako jeden z parametrů handle našeho vlákna.
+. Nalezneme okno aplikace pomocí funkce https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-findwindowa[FindWindow] a funkcí https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid[GetWindowThreadProcessId] zjistíme ID procesu, kterému patří.
+. Získáme handle procesu pomocí https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess[OpenProcess].
+. Pomocí funkce https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualallocex[VirtualAllocEx] můžeme v tomto procesu alokovat paměť, funkcí https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-writeprocessmemory[WriteProcessMemory] můžeme do takto alokované paměti zapsat naše data. Zapíšeme tedy kód, který zavolá některou z funkcí pro přečtení hesla a nějakým způsobem ho předá útočníkovi (může např. zapsat do dat, která si útočník alokoval a později je přečte pomocí https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory[ReadProcessMemory], nebo můžeme pomocí `WriteProcessMemory` zapsat přímo do paměti útočníka; další možností je např. uložení hesla do souboru nebo využití pojmenované roury).
+. Když je vše připraveno, spustíme vytvořený kód pomocí funkce https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread[CreateRemoteThread].
+. Počkáme, až náš kód doběhne, pomocí funkce https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject[WaitForSingleObject], která dostane jako jeden z parametrů handle našeho vlákna.
 
 [TIP]
 ====
@@ -36,7 +36,7 @@ Nebude patrně stačit jen injektovat kód, budete mu také muset předat někte
 
 [IMPORTANT]
 ====
-Pozor! Nevíte, jakou adresu vám `VirtualAllocEx` vrátí. Znamená to tedy buď napsat kód, který poběží na libovolné adrese, nebo se o úpravu jeho adres postarat vlastními silami. Asi nejjednodušší i z hlediska ladění je umístit vlastní výkonný kód do samostatného DLL a do procesu injektovat jen kratičký kód, který zavolá `LoadLibrary` s potřebnými parametry: vaše knihovna bude načtena do paměti procesu, spustí se její funkce `DllMain`, kde můžete provést veškeré útočné činnosti, a potom vlákno ukončíte. Celé vlákno se tak bude skládat jen z několika málo strojových instrukcí, které lze snadno napsat tak, aby fungovaly vždy stejně bez ohledu na umístění v paměti.
+Pozor! Nevíte, jakou adresu vám `VirtualAllocEx` vrátí. Znamená to tedy buď napsat kód, který poběží na libovolné adrese, nebo se o úpravu jeho adres postarat vlastními silami. Asi nejjednodušší i z hlediska ladění je umístit vlastní výkonný kód do samostatného DLL a do procesu injektovat jen kratičký kód, který zavolá https://docs.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya[LoadLibrary] s potřebnými parametry: vaše knihovna bude načtena do paměti procesu, spustí se její funkce `DllMain`, kde můžete provést veškeré útočné činnosti, a potom vlákno ukončíte. Celé vlákno se tak bude skládat jen z několika málo strojových instrukcí, které lze snadno napsat tak, aby fungovaly vždy stejně bez ohledu na umístění v paměti.
 ====
 
 === Ladění injektovaného procesu
