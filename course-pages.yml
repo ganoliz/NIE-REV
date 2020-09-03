@@ -1,12 +1,11 @@
 course:
-  code: MI-REV
-  altCodes: [ MI-REV.16, MIE-REV, MIE-REV.16 ]
+  code: NI-REV
+  altCodes: [ MI-REV, MI-REV.16, MIE-REV, MIE-REV.16 ]
   name: Reverzní inženýrství
-semester: B191
 language: cs
 navigation:
   hiddenFiles:
     - media/*
     - README.*
 repository:
-  gitlabPath: /MI-REV/mi-rev
+  gitlabPath: /NI-REV/ni-rev
