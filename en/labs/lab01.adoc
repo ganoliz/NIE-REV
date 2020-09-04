@@ -35,11 +35,11 @@ Basic registers. The IA-32 architecture provides 9 basic 32bit registers called 
 
 image::cv01-obr04.png[]
 
-The flags register, segment registers and the LastError result. The flags register EFL contains bit flags `C` (Carry), `P` (Parity), `A` (Half-Carry), `Z` (Zero), `S` (Sign), `T` (Trace), `D` (Direction) and `O` (Overflow). Even though the register's full value is visible, the individual registers are "extracted" for better readability. Next we see 6 segment registers `CS`, `DS`, `ES`, `FS`, `GS` and `SS`. In the flat 32bit addressing mode, these segment registers remain constant throughout the execution of the program. Finally, we can see the error code `LastErr`, which is a per-thread global code of the last WinAPI error - it's not a CPU register! Instead, it's a value returned by the Win32 API function https://msdn.microsoft.com/en-us/library/windows/desktop/ms679360(v=vs.85).aspx"[GetLastError()], and it's similar to the C variable `errno`.
+The flags register, segment registers and the LastError result. The flags register EFL contains bit flags `C` (Carry), `P` (Parity), `A` (Half-Carry), `Z` (Zero), `S` (Sign), `T` (Trace), `D` (Direction) and `O` (Overflow). Even though the register's full value is visible, the individual registers are "extracted" for better readability. Next we see 6 segment registers `CS`, `DS`, `ES`, `FS`, `GS` and `SS`. In the flat 32bit addressing mode, these segment registers remain constant throughout the execution of the program. Finally, we can see the error code `LastErr`, which is a per-thread global code of the last WinAPI error -- it's not a CPU register! Instead, it's a value returned by the Win32 API function https://msdn.microsoft.com/en-us/library/windows/desktop/ms679360(v=vs.85).aspx"[GetLastError()], and it's similar to the C variable `errno`.
 
 image::cv01-obr05.png[]
 
-The next section displays 80bit registers `ST0` to `ST7`, which are used by the FPU and implement its stack. Two more FPU registers are shown: the register `FST` - status of the last operation, and the register `FCW` - control word register which defines the FPU's behavior (e.g. the rounding method, the precision, masked error codes, conditions for raising an interrupt). The default value of `027F` means "round to the nearest value (Near), use a 53bit mantisa (double) and mask certain errors".
+The next section displays 80bit registers `ST0` to `ST7`, which are used by the FPU and implement its stack. Two more FPU registers are shown: the register `FST` -- status of the last operation, and the register `FCW` -- control word register which defines the FPU's behavior (e.g. the rounding method, the precision, masked error codes, conditions for raising an interrupt). The default value of `027F` means "round to the nearest value (Near), use a 53bit mantisa (double) and mask certain errors".
 
 image::cv01-obr06.png[]
 
@@ -51,7 +51,7 @@ The second subwindow displays the code. The first (yellow) column shows the virt
 
 image::cv01-obr08.png[]
 
-The third subwindow is the memory display. It shows RAM contents starting at a given address, in both hexadecimal and ASCII form. The address can be changed by activating the subwindow and pressing `Ctrl+G`, or by choosing *Go to -> Expression...* from the context menu (right mouse button).
+The third subwindow is the memory display. It shows RAM contents starting at a given address, in both hexadecimal and ASCII form. The address can be changed by activating the subwindow and pressing kbd:[Ctrl+G], or by choosing *Go to -> Expression...* from the context menu (right mouse button).
 
 image::cv01-obr09.png[]
 
@@ -87,7 +87,7 @@ OPTIONAL HEADER VALUES
           400000 image base (00400000 to 0041BFFF)
 ----
 
-Press `Enter` on the `JMP mainCRTStartup` line (either mouse click that line, or move the cursor to it using the arrow keys). That will display the jump target, i.e. the inside of the `_mainCRTStartup` function:
+Press kbd:[Enter] on the `JMP mainCRTStartup` line (either mouse click that line, or move the cursor to it using the arrow keys). That will display the jump target, i.e. the inside of the `_mainCRTStartup` function:
 
 [listing]
 ----
@@ -99,7 +99,7 @@ Press `Enter` on the `JMP mainCRTStartup` line (either mouse click that line, or
 004124FE  \.  C3            RETN
 ----
 
-We can return by pressing the numeric-keyboard's minus key.
+We can return by pressing the numeric-keyboard's kbd:[Minus] key.
 
 == Prologue, body and epilogue
 
@@ -151,15 +151,15 @@ Let's enter the second function, that is, the function `__tmainCRTStartup`. This
 
 First the `envp` variable's content is stored on the stack, then `argv`, then `argc`, and finally the `main` function is called. We can see that our C function `main` starts at address `00411163` and receives three arguments, even though our source code only shows two. The third argument, `envp`, is the pointer to environment variables and has a structure similar to the `argv[]` argument.
 
-After the call to `main`, we see the `ADD ESP, 0C` instruction. This instruction will add 12 to the stack pointer, which will remove 12 B of data - the data taken up by the function's arguments we stored on the stack using three `PUSH` instructions (3x4 B of arguments). The `ADD ESP, 0C` is used to delete the arguments from the stack. We will find a similar `ADD` instruction after every function called using the `__cdecl` calling convention (this is the implicit calling convention in C, and requires that the arguments must be deleted by whoever put them on the stack - i.e., the caller).
+After the call to `main`, we see the `ADD ESP, 0C` instruction. This instruction will add 12 to the stack pointer, which will remove 12 B of data -- the data taken up by the function's arguments we stored on the stack using three `PUSH` instructions (3x4 B of arguments). The `ADD ESP, 0C` is used to delete the arguments from the stack. We will find a similar `ADD` instruction after every function called using the `__cdecl` calling convention (this is the implicit calling convention in C, and requires that the arguments must be deleted by whoever put them on the stack -- i.e., the caller).
 
 == Setting breakpoints
 
-Let's place a breakpoint at the call to the `main` function. Select the line `00412304` and press the `F2` key, or use the *Breakpoint -> Toggle* function from the context menu. The address will turn red. Now we can start our program.
+Let's place a breakpoint at the call to the `main` function. Select the line `00412304` and press the kbd:[F2] key, or use the *Breakpoint -> Toggle* function from the context menu. The address will turn red. Now we can start our program.
 
 == Running a program
 
-After you've set up the breakpoint, run the program by pressing the `F9` key or by choosing *Run* from the *Debug* menu; if you want to set up command line arguments first, you can do it from the *File -> Set new arguments...* menu. The program will stop at the `CALL` instruction. Note the content of the stack window:
+After you've set up the breakpoint, run the program by pressing the kbd:[F9] key or by choosing *Run* from the *Debug* menu; if you want to set up command line arguments first, you can do it from the *File -> Set new arguments...* menu. The program will stop at the `CALL` instruction. Note the content of the stack window:
 
 [listing]
 ----
@@ -168,7 +168,7 @@ After you've set up the breakpoint, run the program by pressing the `F9` key or 
 0018FF38  |004BC008
 ----
 
-We can see the 3 new values at the top of the stack - `argc`, `argv` and `envp`. The values are stored in the same order as they are written in the `main` function's declaration:
+We can see the 3 new values at the top of the stack -- `argc`, `argv` and `envp`. The values are stored in the same order as they are written in the `main` function's declaration:
 
 [source,cpp]
 ----
@@ -196,11 +196,11 @@ Data type int is 4 B long, same as a pointer.
 
 Now we can start executing the program one instruction at a time and check the contents of the registers, heap memory or the stack after each instruction. There are several different trace methods: (a) Step into, (b) Step over, and (c) Step out (Execute till return).
 
-*Step into* (key: `F7`) will start the program's thread in such a way that only one instruction will be executed and then the program will stop again. If that instruction is a `CALL`, the execution will stop at the first instruction of the called function.
+*Step into* (key: kbd:[F7]) will start the program's thread in such a way that only one instruction will be executed and then the program will stop again. If that instruction is a `CALL`, the execution will stop at the first instruction of the called function.
 
-*Step over* (key: `F8`) is similar to *Step into*, except that the program will stop at the next instruction below the current one. If that instruction is a `CALL`, the whole called function will execute and only when the function ends will the program stop.
+*Step over* (key: kbd:[F8]) is similar to *Step into*, except that the program will stop at the next instruction below the current one. If that instruction is a `CALL`, the whole called function will execute and only when the function ends will the program stop.
 
-*Step out* (key: `Ctrl+F9`) will continue in execution until the `RET` instruction for the current function is reached. This mode is useful when we want to return from inside of a function.
+*Step out* (key: kbd:[Ctrl+F9]) will continue in execution until the `RET` instruction for the current function is reached. This mode is useful when we want to return from inside of a function.
 
 == Stack frame structure
 

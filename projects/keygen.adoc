@@ -1,0 +1,76 @@
+﻿
+= Keygen
+:toc:
+:imagesdir: ../media
+
+Cílem této semestrální práce je, abyste si vyzkoušeli analýzu komplexnějšího programu. Program samotný je pouze minimálně chráněn proti analýze, hlavní složitost je skryta v tom, že je nutné program pochopit jako celek.
+
+Aplikace pro analýzu je společná pro všechny studenty. Cílem této práce je provést reverzní inženýrství souboru v 64bitové architektuře a zjistit, jaké zadat programu sériové číslo tak, aby byly splněny podmínky, které na něj program má. Druhou částí pak je vytvoření generátoru těchto sériových čísel, což je umožněno tím, že ve zkoumané aplikaci už stěžejní část generátoru existuje (programátor ji zapomněl kompletně odstranit), jen není aktivovaná a postrádá určité informace nutné pro její zprovoznění.
+
+* link:{imagesdir}/sp1.zip[Download]
+
+Řešení je možné odevzdávat až do konce semestru, a to i po složení zkoušky.
+
+[IMPORTANT]
+====
+Pozor, pro ohodnocení vašeho řešení budu potřebovat určitý čas, zohledňujte jak tento fakt, tak deadliny pro přihlášení na zkoušku!
+====
+
+== Požadavky na správné řešení
+
+Obsahem úplného řešení by kromě obecných požadavků uvedených na stránce hodnocení mělo být:
+
+* Funkční sériové číslo.
+* Popis, jakým způsobem sériové číslo vzniká (tzn. jaké informace v něm jsou obsaženy a jak jsou zakódovány).
+* Popis, jak číslo do programu vložit (vizte poznámky níže).
+* Zdrojový kód programu, který na základě uživatelem zadaných vstupů vygeneruje nové sériové číslo; program by měl být nastaven tak, aby implicitní hodnoty vygenerovaly číslo, které nijak neupravený kód z úlohy přijme.
+* Spustitelný kód programu z přechozího bodu.
+
+== Bodové hodnocení
+
+[IMPORTANT]
+====
+*20 bodů*
+====
+
+== Poznámky
+
+=== Náročnost úlohy
+
+Tato úloha je složitější než ostatní, a to především z následujících důvodů:
+
+* Aplikace je poměrně rozsáhlá a obsahuje řadu propojených částí, které je potřeba pochopit jako celek. Ostatní úlohy se zaměřují na dílčí části, které stačí pochopit samostatně, a další postup už se pak jen opakuje. Navíc je skoro vždy možné najít zkratky, které celou práci výrazně ulehčí. Naproti tomu Keygen je obtížné vyřešit, dokud ho neprozkoumáte celý.
+* Všechny ostatní úlohy používají 32bitový kód. Ne že by reverzní analýza v 64 bitech byla nějak zásadně odlišná, ale přece jenom se některé konstrukce poněkud liší. Kód tak vypadá cize a nezvykle, což analytika zdržuje.
+* Pro 64bitový kód jsou hůře dostupné nástroje pro analýzu a nebývají tak dobře odladěné.
+* Z DLL knihovny `SerialNumber64.dll`, kterou aplikace `Code64.exe` používá, jsou symboly importovány podle jejich ordinálního čísla a ne podle názvu. Význam symbolů tedy musíte rozpoznat podle kódu, nemáte možnost jej odhadnout z názvu.
+* Aplikace obsahuje nejméně jednu chybu, kvůli které nefunguje správně ve standardním prostředí. Příčinu chyby i způsob jejího odstranění z kódu snadno rozpoznáte; v tomto případě jde o povolenou úpravu programu.
+
+Přesto se dá úspěšně vyřešit, dokonce to ani není tak obtížné. Počítejte ale s tím, že začátek půjde z uvedených důvodů pomalu, a nenechte se odradit tím, že se zdánlivě nemůžete nikam dostat -- tato úloha poměrně dobře modeluje reálné aplikace v tom, že se zdánlivě dlouho nemůžete hnout z místa a pak se to najednou celé zlomí a velmi rychle se dostanete k cíli.
+
+=== Kompatibilita
+
+Aby byla úloha řešitelná, je její použití kryptografie záměrně oslabeno. Bohužel v novějších verzích knihovny `BCRYPT.DLL` Microsoft provedl úpravu, která takto oslabenou kryptografii hodnotí jako chybu a skutečně pouze vrátí chybový kód, místo aby byla operace provedena. V důsledku toho není úloha kompatibilní s aktuálními verzemi operačních systémů, je potřeba použít starší verze.
+
+Které verze fungují není přesně známo. Víme, že ve Windows 10 verze 1910 už úloha funkční není, a zrovna tak není funkční verze 1903 s aktualizacemi z jara 2019 (jde o podobný problém, jako je popsaný link:https://github.com/libssh2/libssh2/issues/388#issuecomment-516918145[zde]). Starší verze Windows snad fungují, ale je možné, že některá z novějších aktualizací pro ně Keygen také zablokuje. Obecně doporučujeme pro spouštění Keygenu použít neaktualizované Windows 7 nebo 8 ve virtuálním prostředí, případně Windows 10 ve verzi, jak je nainstalována v diskových obrazech používaných na cvičeních.
+
+=== Nápověda
+
+[NOTE]
+====
+Aplikace obsahuje triviální ochranu proti ladění, kterou nejspíš budete muset odstranit. Jinak ale neobsahuje žádné explicitní obfuskace.
+====
+
+[TIP]
+====
+Ověřování sériového čísla i jeho generování jsou poměrně složité a zahrnují použití několika funkcí z knihovny `BCRYPT.DLL` https://msdn.microsoft.com/en-us/library/windows/desktop/aa833130(v=vs.85).aspx[CNG Cryptographic Primitive Functions]. Analyzujte jen kód ze souborů `Code64.exe` a/nebo `SerialNumber64.dll`, další použité moduly jsou standardní a jejich dokumentaci snadno naleznete. Nelekněte se, až zjistíte, co se z knihovny používá a k čemu. Vstup do sériového čísla je kratší než na první pohled vypadá.
+====
+
+[TIP]
+====
+Knihovna `SerialNumber64.dll` obsahuje i funkci pro generování sériového čísla. Najděte ji, zjistěte, co chybí, doplňte to a použijte ji pro vygenerování sériového čísla, které bude platné nejméně do konce semestru. Implementovat vlastní generátor by samozřejmě bylo možné, ale neúměrně složité.
+====
+
+[TIP]
+====
+Postup pro nalezení správného řešení je na vás, ale může být vhodné začít podobně jako na cvičeních s tím, že v určité fázi zjistíte, že se nemůžete dostat dál. V tu chvíli se zaměřte na část sloužící jako generátor klíčů, zprovozněte ji, vygenerujte si nějaké sériové číslo a vraťte se s ním do místa, kde jste se předtím zastavili.
+====

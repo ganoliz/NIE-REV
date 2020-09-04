@@ -9,14 +9,15 @@ Jsou živě demonstrována na cvičení.
 
 == Nástroje dostupné zdarma
 
-* *API Monitor* -- nástroj pro sledování API volání programu. Lze sledovat i jednotlivé funkce nebo jejich logické skupiny. https://www.rohitab.com[Homepage].
+* *API Monitor* -- nástroj pro sledování API volání programu. Lze sledovat i jednotlivé funkce nebo jejich logické skupiny. http://www.rohitab.com[Homepage].
 * *CFF Explorer* -- nástroj pro analýzu a úpravu PE souborů. https://www.ntcore.com/exsuite.php[Homepage].
-* *Dependency Walker* -- nástroj pro analýzu především importních a exportních tabulek PE souborů. Podporuje jak statickou, tak dynamickou analýzu. http://www.dependencywalker.com/[Homepage].
-* *ExeInfoPE* -- nástroj pro identifikaci kompilátoru použitého pro vytvoření PE souboru. http://exeinfo.web44.net/[Homepage].
+* *Dependency Walker* -- nástroj pro analýzu především importních a exportních tabulek PE souborů. Podporuje jak statickou, tak dynamickou analýzu. https://www.dependencywalker.com/[Homepage].
+* *ExeInfoPE* -- nástroj pro identifikaci kompilátoru použitého pro vytvoření PE souboru. http://www.exeinfo.xn.pl[Homepage].
 * *Ghidra* -- disassembler a dekompilátor od NSA. https://www.nsa.gov/resources/everyone/ghidra/[Homepage].
 * *HxD* -- Hex editor s možností úpravy RAM a disku po sektorech. https://mh-nexus.de/en/hxd/[Homepage].
 * *IDA Free* -- interaktivní disassembler pro reverzní inženýrství. Tato verze neobsahuje dekompilátor, ale je zdarma! https://www.hex-rays.com/products/ida/support/download_freeware.shtml[Homepage].
 * *Process Explorer* -- nástroj pro detailní monitorování procesů. Značně rozšířená verze Windows Task Manageru. https://technet.microsoft.com/cs-cz/sysinternals/bb896653.aspx[Homepage].
+* *Process Hacker* -- další nástroj pro detailní monitorování procesů podobný Process Exploreru, ale s některými pěknými možnostmi navíc. https://processhacker.sourceforge.io/[Homepage]
 * *Process Monitor* -- nástroj pro monitorování chování procesu -- přístupu k registrům, souborovému systému, atd. https://technet.microsoft.com/cs-cz/sysinternals/bb896645.aspx[Homepage].
 * *Regshot* -- nástroj pro monitorování změn registrů. https://sourceforge.net/projects/regshot/[Homepage].
 * *Resource Hacker* -- nástroj pro zkoumání a úpravy obsahu `.rsrc` sekce PE souborů. http://www.angusj.com/resourcehacker/[Homepage].
@@ -37,9 +38,9 @@ Jsou živě demonstrována na cvičení.
 
 * Počet bodů: *5*
 * Termín odevzdání:
-** *24.10.2019, 16:00* (paralelka 101)
-** *24.10.2019, 17:45* (paralelka 102)
-** *25.10.2019, 17:45* (paralelka 103)
+** *TBA* (paralelka 101)
+** *TBA* (paralelka 102)
+** *TBA* (paralelka 103)
 
 Cílem úlohy je provést zpětnou analýzu souboru link:{imagesdir}/du1.zip[du1.zip] a přimět ho odeslat slušný e-mail cvičícímu. Program přijímá jako vstup konfigurační soubor, ten přiložený má ovšem nesprávnou strukturu i obsah. Analýzou programu zjistíte, jak má struktura souboru vypadat. Upravte konfigurační soubor tak, aby ho program interpretovat správně a aby cvičícímu poslal *slušný* e-mail. Při špatném formátu souboru může být odeslán neslušný e-mail, který není považován za správnou odpověď ;-).
 
@@ -52,4 +53,4 @@ Samotný program `CrackMe01.exe` neměňte.
 
 == Zadání semestrálních prací
 
-Přiřazení prací naleznete xref:../semprace.adoc[zde].
+Přiřazení prací naleznete xref:../projects/crackme.adoc[zde].

@@ -9,14 +9,15 @@ Recommendations for reverse engineering will be demonstrated live.
 
 == Free tools
 
-* *API Monitor* -- a tool for monitoring API calls in a program. It is possible to observe individual functions or their groups. https://www.rohitab.com[Homepage].
+* *API Monitor* -- a tool for monitoring API calls in a program. It is possible to observe individual functions or their groups. http://www.rohitab.com[Homepage].
 * *CFF Explorer* -- a tool for PE file analysis and modification. https://www.ntcore.com/exsuite.php[Homepage].
-* *Dependency Walker* -- a tool for analysis of import and export tables, capable of performing both static and dynamic analysis. http://www.dependencywalker.com[Homepage].
-* *ExeInfoPE* -- a compiler identification tool. http://exeinfo.web44.net/[Homepage].
+* *Dependency Walker* -- a tool for analysis of import and export tables, capable of performing both static and dynamic analysis. https://www.dependencywalker.com[Homepage].
+* *ExeInfoPE* -- a compiler identification tool. http://www.exeinfo.xn.pl[Homepage].
 * *Ghidra* -- a disassembler and decompiler by NSA. https://www.nsa.gov/resources/everyone/ghidra/[Homepage].
 * *HxD* -- A hex editor capable of editing RAM or a raw disk. https://mh-nexus.de/en/hxd/[Homepage].
-* *IDA Free* -- an interactive disassembler for reverse engineering. This version *does not* contain any decompiler, but is free for non-commercial purposes https://www.hex-rays.com/products/ida/support/download_freeware.shtml[Homepage].
+* *IDA Free* -- an interactive disassembler for reverse engineering. This version *does not* contain any decompiler, but is free for non-commercial purposes. https://www.hex-rays.com/products/ida/support/download_freeware.shtml[Homepage].
 * *Process Explorer* -- a tool for detailed process monitoring. A significantly extended replacement for Windows' Task Manager. https://technet.microsoft.com/cs-cz/sysinternals/bb896653.aspx[Homepage].
+* *Process Hacker* -- another tool for detailed process monitoring. Similar to Process Explorer, but adds some nice extra features. https://processhacker.sourceforge.io/[Homepage]
 * *Process Monitor* -- another process monitoring tool -- tracks accesses to files, registry keys, etc. https://technet.microsoft.com/cs-cz/sysinternals/bb896645.aspx[Homepage].
 * *Regshot* -- a tool for making System Registry snapshots and comparing them. https://sourceforge.net/projects/regshot/[Homepage].
 * *Resource Hacker* -- a tool for study and modification of the `.rsrc` section in PE files. http://www.angusj.com/resourcehacker/[Homepage].
@@ -31,12 +32,12 @@ Recommendations for reverse engineering will be demonstrated live.
 
 == Additional resources
 
-* *The Decompilation Wiki* -- information about available decompilers. http://www.program-transformation.org/Transform/DeCompilation[Homepage].
+* *The Decompilation Wiki* -- information about available decompilers. https://www.program-transformation.org/Transform/DeCompilation[Homepage].
 
 == First homework
 
 * Points: *5*
-* Deadline: *2019-10-24, 16:00*
+* Deadline: *TBA*
 
 The goal of this homework is to reverse engineer file link:{imagesdir}/du1.zip[du1.zip] and convince it to send an e-mail to the teacher. The program uses a configuration file, but the provided one is incorrect. By the time you finish analyzing the application, you will learn the correct structure and content of the configuration. Then create a file that will cause sending of a *polite* e-mail. If you make an error, an impolite e-mail might get sent -- but that is not considered a correct solution ;-).
 
@@ -49,4 +50,4 @@ Do not modify the `CrackMe01.exe` application.
 
 == Semestral works assignment
 
-The assignment of the works can be found xref:../semprace.adoc[here].
+The assignment of the works can be found xref:../projects/crackme.adoc[here].

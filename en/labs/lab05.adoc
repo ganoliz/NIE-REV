@@ -18,9 +18,7 @@ pVMT = *(void**)this;
 
 [NOTE]
 ====
-*Note*
-
-In order for an object to have a VMT, it must be polymorphic (i.e. have virtual methods), otherwise the first item in the class contains the first data.
+Of course, if an object is to have a VMT, it must be polymorphic (i.e. it must have virtual methods), otherwise the first item in the class contains the first data.
 ====
 
 VMT is assigned in the constructor (ctor). If there's no constructor, a compiler provides an implicit constructor. The VMT is usually assigned as one of the last things a ctor does:
@@ -42,7 +40,7 @@ If we list the VMT:
 [listing]
 ----
 (gdb) x/4a 0x400fd0
-0x400fd0 <_ZTV8IUnknown+16>:	
+0x400fd0 <_ZTV8IUnknown+16>:
   0x4007d0 <__cxa_pure_virtual@plt>
   0x4007d0 <__cxa_pure_virtual@plt>
   0x4007d0 <__cxa_pure_virtual@plt>
@@ -54,10 +52,10 @@ we obtain information that the studied class is an abstract class. That's correc
 [listing]
 ----
 (gdb) x/4a 0x400f70
-0x400f70 <_ZTV8CUnknown+16>:	
-  0x4007d0 <__cxa_pure_virtual@plt>	
+0x400f70 <_ZTV8CUnknown+16>:
+  0x4007d0 <__cxa_pure_virtual@plt>
   0x4008f6 <CUnknown::AddRef()>
-  0x400914 <CUnknown::Release()>	
+  0x400914 <CUnknown::Release()>
   0x0
 ----
 
@@ -147,7 +145,7 @@ link:{imagesdir}/cv05.zip[cv05.zip]
 == Third Homework
 
 * Points: *5*
-* Deadline: *2019-12-05, 16:00*
+* Deadline: *TBA*
 
 Analyze the `Had.exe` ("Snake.exe") executable from archive link:{imagesdir}/du3.zip[du3.zip].
 

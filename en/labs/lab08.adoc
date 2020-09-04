@@ -11,17 +11,17 @@ Your task is to find such an input that will be accepted by the unmodified progr
 
 == Tips for using IDA Free
 
-For a basic movement around the code you can use keys `ENTER` and `ESCAPE`. The `ENTER` key will follow the argument of an instruction and jump to its address. The `ESCAPE` key will return to the place from which you jumped using `ENTER`. Since IDA maintains a list of these jumps, you can use these keys repeatedly to explore the code.
+For a basic movement around the code you can use keys kbd:[Enter] and kbd:[Esc]. The kbd:[Enter] key will follow the argument of an instruction and jump to its address. The kbd:[Esc] key will return to the place from which you jumped using kbd:[Enter]. Since IDA maintains a list of these jumps, you can use these keys repeatedly to explore the code.
 
 Several keys allow you to change the way numbers in the instruction's arguments are displayed. Move the cursor to the number and press:
 
-* `H` -- switch between a decimal and hexadecimal representation, e.g. `65` and `41h`.
-* `R` -- switch between a number and the respective ASCII character, e.g. `41h` and `'A'`.
-* `M` -- switch between a literal value and a known constant. You can define your own constants in the Enumerations window (`SHIFT+F10`), where you first create a new enumeration using `INSERT` and then add a constant value to it using `N`. You can also make use of the known constants from Windows API by selecting the `<NEW>` enum; IDA will display a list of known constants with the same value.
-* `K` -- switch between a symbolic and literal expression of variable pointers, e.g. `[EBP+hFile]` and `[EBP-4]`.
+* kbd:[H] -- switch between a decimal and hexadecimal representation, e.g. `65` and `41h`.
+* kbd:[R] -- switch between a number and the respective ASCII character, e.g. `41h` and `'A'`.
+* kbd:[M] -- switch between a literal value and a known constant. You can define your own constants in the Enumerations window (`SHIFT+F10`), where you first create a new enumeration using `INSERT` and then add a constant value to it using `N`. You can also make use of the known constants from Windows API by selecting the `<NEW>` enum; IDA will display a list of known constants with the same value.
+* kbd:[K] -- switch between a symbolic and literal expression of variable pointers, e.g. `[EBP+hFile]` and `[EBP-4]`.
 
-The `colon` and `semicolon` keys enable you to add your comments to the code. The comment is always tied to the object that was selected when pressing the key. The difference is that the semicolon-comment ("repeatable comment") is further shown everywhere the linked object is used (i.e. if you add a repeatable comment to a label, you will see that comment not only at that label, but also at all jumps to the label).
+The kbd:[:] and kbd:[;] keys enable you to add your comments to the code. The comment is always tied to the object that was selected when pressing the key. The difference is that the semicolon-comment ("repeatable comment") is further shown everywhere the linked object is used (i.e. if you add a repeatable comment to a label, you will see that comment not only at that label, but also at all jumps to the label).
 
-You can use the `N` key to name the selected symbol. This is usually used to name functions (e.g. change `sub_4011b0` to `initFn`, replacing all occurrences of the former), labels or variables (provided that they are expressed symbolically, as in `[EBP+hFile]`).
+You can use the kbd:[N] key to name the selected symbol. This is usually used to name functions (e.g. change `sub_4011b0` to `initFn`, replacing all occurrences of the former), labels or variables (provided that they are expressed symbolically, as in `[EBP+hFile]`).
 
-A very useful key `X will display a list of cross-references, that is the list of places where the selected symbol is used.
+A very useful key kbd:[X] will display a list of cross-references, that is the list of places where the selected symbol is used.

@@ -5,11 +5,13 @@
 
 == Úvod
 
-Cílem tohoto cvičení je procvičit strukturu PE souboru, zejména tabulky importu symbolů (Import Table) a tabulky adres importovaných symbolů (Import Address Table, IAT). Jednotlivé struktury jsou popsány na https://msdn.microsoft.com/en-us/library/windows/desktop/ms680313(v=vs.85).aspx[MSDN], pro lepší pochopení ale může být vhodnější využít některý z tutorialů pro psaní Windows programů v assembleru a/nebo pro crackování, např. http://web.archive.org/web/20190517161709/http://win32assembly.programminghorizon.com/pe-tut1.html[Iczelion's PE Tutorial 1: Overview of PE File Format] a http://web.archive.org/web/20190517161709/http://win32assembly.programminghorizon.com/pe-tut6.html[Iczelion's PE Tutorial 6: Import Table].
+Cílem tohoto cvičení je procvičit strukturu PE souboru, zejména tabulky importu symbolů (Import Table) a tabulky adres importovaných symbolů (Import Address Table, IAT). Jednotlivé struktury jsou popsány na https://msdn.microsoft.com/en-us/library/windows/desktop/ms680313(v=vs.85).aspx[MSDN], pro lepší pochopení ale může být vhodnější využít některý z tutorialů pro psaní Windows programů v assembleru a/nebo pro crackování, např. https://web.archive.org/web/20190517161709/http://win32assembly.programminghorizon.com/pe-tut1.html[Iczelion's PE Tutorial 1: Overview of PE File Format] a https://web.archive.org/web/20190517161709/http://win32assembly.programminghorizon.com/pe-tut6.html[Iczelion's PE Tutorial 6: Import Table]. Detailní informace o formátu PE souboru si můžete přečíst také ve velmi pěkném http://www.pelib.com/resources/luevel.txt[popisu Bernda Luevelsmeyera].
 
 Grafické znázornění objektů, se kterými budeme na tomto cvičení pracovat:
 
 image::iat.jpg[]
+
+Všechny popisované struktury naleznete v hlavičkovém souboru `windows.h`.
 
 == Nalezení importní tabulky
 
@@ -21,14 +23,14 @@ HMODULE hPEFile = GetModuleHandle(NULL); // NULL znamená aktuální proces
 PIMAGE_DOS_HEADER pDosHeader = (PIMAGE_DOS_HEADER) hPEFile;
 ----
 
-Pole `+pDosHeader->e_lfanew+` pak obsahuje relativní virtuální adresu (RVA) NT hlavičky `PIMAGE_NT_HEADERS` vzhledem k začátku PE souboru (tj. od bázové adresy vrácené funkcí `GetModuleHandle`):
+Položka `+pDosHeader->e_lfanew+` pak obsahuje relativní virtuální adresu (RVA) NT hlavičky `PIMAGE_NT_HEADERS` vzhledem k začátku PE souboru (tj. od bázové adresy vrácené funkcí `GetModuleHandle`):
 
 [source,cpp]
 ----
 PIMAGE_NT_HEADERS pNTHeaders = (PIMAGE_NT_HEADERS)( ((BYTE*)pDosHeader) + pDosHeader->e_lfanew );
 ----
 
-Struktura `IMAGE_NT_HEADERS` obsahuje v poli `+pNTHeaders->OptionalHeader+` pole s datovými adresáři `DataDirectory`, z nichž každý obsahuje pole `VirtualAddress` (RVA od `pDosHeader`) a pole `Size` s jeho velikostí v bajtech. Z těchto adresářů jsou pro toto cvičení důležité:
+Struktura `IMAGE_NT_HEADERS` obsahuje v struktuře `+pNTHeaders->OptionalHeader+` pole s datovými adresáři `DataDirectory`, z nichž každý obsahuje položku `VirtualAddress` (RVA od `pDosHeader`) a položku `Size` s velikostí adresáře v bajtech. Z těchto adresářů jsou pro toto cvičení důležité:
 
 * Importní tabulka -- `+pNTHeaders->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT]+`
 * Import Address Table -- `+pNTHeaders->OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IAT]+`
@@ -54,7 +56,7 @@ typedef struct _IMAGE_IMPORT_DESCRIPTOR {
 } IMAGE_IMPORT_DESCRIPTOR;
 ----
 
-V ní nás zajímá zejména pole `Name`, které obsahuje RVA na ASCIIZ string (tj. Cčkový `char *`) s názvem DLL, ze které se tímto deskriptorem importují symboly, a dále pole `OriginalFirstThunk` (a pro domácí úlohu i pole `FirstThunk`).
+V ní nás zajímá zejména položka `Name`, které obsahuje RVA na ASCIIZ string (tj. Cčkový `char *`) s názvem DLL, ze které se tímto deskriptorem importují symboly, a dále položka `OriginalFirstThunk` (a pro domácí úlohu i položka `FirstThunk`).
 
 Struktur IMAGE_IMPORT_DESCRIPTOR následuje v paměti za sebou tolik, na kolik DLL knihoven PE soubor linkuje. Ukazatel na první (a na poslední, již neležící v tomto poli) z nich získáme:
 
@@ -66,7 +68,7 @@ PIMAGE_IMPORT_DESCRIPTOR pImportDescriptorEnd = (PIMAGE_IMPORT_DESCRIPTOR)(((BYT
 
 Konec pole můžeme rozpoznat také podle toho, že poslední validní prvek má v proměnné `Characteristics` hodnotu `NULL`. Otázka do diskuse: Co když jsou tyto dva způsoby určení délky v rozporu? Jaký test by pomohl určit, která z možností má přednost (je skutečně používána operačním systémem)?
 
-Pole `OriginalFirstThunk` obsahuje RVA začátku pole struktur `IMAGE_THUNK_DATA`; pole končí prázdnou strukturou `IMAGE_THUNK_DATA`. Tato struktura (`PIMAGE_THUNK_DATA`) se automaticky mapuje na jednu z následujících struktur podle toho, jde-li o 32bitový anebo 64bitový PE soubor (v kódu stačí použít pouze `IMAGE_THUNK_DATA`):
+Položka `OriginalFirstThunk` obsahuje RVA začátku pole struktur `IMAGE_THUNK_DATA`; velikost pole poznáme tak, že pole končí prázdnou strukturou `IMAGE_THUNK_DATA`. Tato struktura (`PIMAGE_THUNK_DATA`) se automaticky mapuje na jednu z následujících struktur podle toho, jde-li o 32bitový anebo 64bitový PE soubor (v kódu stačí použít pouze `IMAGE_THUNK_DATA`):
 
 [source,cpp]
 ----
@@ -93,7 +95,7 @@ typedef struct _IMAGE_THUNK_DATA32 {
 typedef IMAGE_THUNK_DATA32 * PIMAGE_THUNK_DATA32;
 ----
 
-Obsah pole `AddressOfData` pak *obvykle* udává RVA struktury `IMAGE_IMPORT_BY_NAME`, která je definována takto:
+Obsah položky `AddressOfData` pak *obvykle* udává RVA struktury `IMAGE_IMPORT_BY_NAME`, která je definována takto:
 
 [source,cpp]
 ----
@@ -103,11 +105,11 @@ typedef struct _IMAGE_IMPORT_BY_NAME {
 } IMAGE_IMPORT_BY_NAME, *PIMAGE_IMPORT_BY_NAME;
 ----
 
-Pole `Hint` obsahuje informaci pro loader, na které pozici se pravděpodobně nachází import v dané knihovně v její Export Address Table (pokud pozice nesouhlasí, hledá se podle jména). Pole `Name` obsahuje ASCIIZ string s názvem importovaného symbolu.
+Položka `Hint` obsahuje informaci pro loader, na které pozici se pravděpodobně nachází import v dané knihovně v její Export Address Table (pokud pozice nesouhlasí, hledá se podle jména). Položka `Name` obsahuje ASCIIZ string s názvem importovaného symbolu.
 
 [TIP]
 ====
-Pole `Name` je deklarováno s kapacitou 1 položky typu CHAR. Toto je způsob, jak deklarovat, že zde bude string neurčité délky, což Cčko jinak neumí. Nebojte se tedy přistupovat za hranici této struktury. Použijete-li funkci `strcpy_s` s vhodnou velikostí bufferu a budete z tohoto pole číst, bude vše v pořádku.
+Pole `Name` je deklarováno s kapacitou 1 položky typu CHAR. Toto je způsob, jak nadeklarovat strukturu s textem neurčité délky, což Cčko jinak neumí. Nebojte se tedy přistupovat za hranici této struktury. Použijete-li funkci `strcpy_s` s vhodnou velikostí bufferu a budete z tohoto pole číst, bude vše v pořádku.
 ====
 
 [NOTE]
@@ -119,15 +121,15 @@ Proč "obvykle"? Na importované symboly lze odkazovat také pořadovým čísle
 
 Napište program, který vypíše seznam DLL knihoven, které sám staticky linkuje, a u každého DLL seznam linkovaných symbolů. Nemusíte řešit mezní situace ani UI, cílem této úlohy je seznámit se se strukturou IAT, kterou budeme potřebovat v dalších cvičeních. Váš program ani nemusí dělat nic rozumného vedle výpisu IAT -- zajistěte si ale, např. použitím vhodných API funkcí jako `CreateFileA`, `MessageBoxA` atd., aby určitě bylo co vypisovat, a změnami zde si ověřte, že váš výpis je správně. Kontrolu můžete provést také programem Dependency Walker.
 
-Pokud by vás téma bavilo, zjistěte vztah pole `Hint` k Export Address Table (direktorář č. 0), ovšem jiného modulu -- jeho `HMODULE` a `PIMAGE_DOS_HEADER` můžete získat pomocí volání funkce `GetModuleHandle(TEXT("kernel32.dll"))`.
+Pokud by vás téma bavilo, zjistěte vztah položky `Hint` k Export Address Table (direktorář č. 0), ovšem jiného modulu -- jeho `HMODULE` a `PIMAGE_DOS_HEADER` můžete získat pomocí volání funkce `GetModuleHandle(TEXT("kernel32.dll"))`.
 
 == Zadání 2. domácí úlohy
 
 * Počet bodů: *5*
 * Termín odevzdání:
-** *14.11.2019, 16:00* (paralelka 101)
-** *14.11.2019, 17:45* (paralelka 102)
-** *15.11.2019, 17:45* (paralelka 103)
+** *TBA* (paralelka 101)
+** *TBA* (paralelka 102)
+** *TBA* (paralelka 103)
 
 Váš program, zkompilovaný pomocí MS Visual Studio, typicky používá externí runtime ve formě knihovny `MSVCRT12.DLL` (verze ve jménu se může lišit podle verze kompilátoru, tento název platí pro Visual Studio 2013). Tato knihovna obsahuje funkce `malloc`, `calloc`, `realloc` a `free`. Napište program, který bude obsahovat funkce:
 
@@ -140,9 +142,14 @@ Váš program, zkompilovaný pomocí MS Visual Studio, typicky používá extern
 
 Funkce `MallocDebug_Init` najde v IAT pozici funkcí `malloc`, `calloc`, `realloc` a `free` a změní jejich adresu na adresy funkcí `MallocDebug_malloc`, `MallocDebug_calloc`, `MallocDebug_realloc` a `MallocDebug_free` (tzv. substituční funkce).
 
-Substituční funkce napište tak, aby si v okamžiku volání uložily záznam (stačí globální pole -- neřešíme konkurenční přístup více vláken) o tom, že se alokovala paměť, a o její velikosti. Uvolňující substituční funkce budou tento záznam opět rušit (a stěžovat si, pokud by měly zrušit neznámou nebo uz dříve zrušenou alokaci). Následně substituční funkce zavolají původní funkci, kterou substituují; pozor, nemůžete použít `malloc` -- využijte ukazatele uložené v rámci `MallocDebug_Init`. Získáme tedy schopnost logování paměťových alokačních/dealokačních operací.
+Substituční funkce napište tak, aby si v okamžiku volání uložily záznam (stačí statické globální pole -- neřešíme konkurenční přístup více vláken ani podporu neomezeného množství alokací, stačí nám pevně dané maixmum) o tom, že se alokovala paměť, a o její velikosti. Uvolňující substituční funkce budou tento záznam opět rušit (a stěžovat si, pokud by měly zrušit neznámou nebo uz dříve zrušenou alokaci). Následně substituční funkce zavolají původní funkci, kterou substituují; pozor, nemůžete použít `malloc` -- využijte ukazatele uložené v rámci `MallocDebug_Init`. Získáme tedy schopnost logování paměťových alokačních/dealokačních operací.
 
 Funkce `MallocDebug_Done` vrátí IAT do původního stavu a vypíše případné zbytky tabulky, které budou považovány za memory leaky :). Nezapomeňte vhodně otestovat, že vrácené údaje odpovídají skutečnosti.
+
+[IMPORTANT]
+====
+Pokud vámi zkompilovaný program nepoužívá externí runtime knihovnu, ale knihovnu staticky zakompilovanou přímo do spustitelného souboru, nebude úloha řešitelná. Můžete ale použít parametr `/MD`, kterým přimějete kompilátor k použití sdílené knihovny. Ověřte si v CFF Exploreru, že váš program importuje paměťové funkce!
+====
 
 [TIP]
 ====
@@ -163,10 +170,25 @@ BOOL WINAPI VirtualProtect (
 
 [IMPORTANT]
 ====
+Při zpracování importního adresáře nemusíte řešit jiný obsah importního thunku než odkaz na `IMAGE_IMPORT_BY_NAME`, ale jinak musíte zpracovat libovolný, i poškozený importní adresář. Upozornit, že adresář je vadný, a ukončit program je legitimní, spadnout na neplatný přístup do paměti tam, kde jste to mohli zpracováním dle specifikace ošetřit, nikoliv.
+====
+
+[NOTE]
+====
+Je naprosto přípustné, aby program importoval stejnou knihovnu -- a klidně i stejnou funkci z ní -- několikrát.
+====
+
+[IMPORTANT]
+====
 Cílem této úlohy *není*, abyste si napsali vlastní paměťový manager. Naopak by to bylo na škodu -- simulujeme případ, že chceme monitorovat chování programu ve specifické situaci, a je tedy krajně nežádoucí do toho chování vnášet vlastní změny. Vaše implementace by měla zaznamenat údaje, které budete potřebovat, a potom (nebo před tím) zavolat originální verze paměťových funkcí.
 ====
 
 [IMPORTANT]
 ====
-Vaše implementace by měla odpovídat specifikaci zaměňovaných funkcí. Nastudujte si dokumentaci a ujistěte se, že vaše řešení bude fungovat pro všechny možné mezní stavy, do kterých se paměťové funkce mohou dostat!
+Vaše implementace by měla odpovídat specifikaci zaměňovaných funkcí. Nastudujte si dokumentaci a ujistěte se, že vaše řešení bude fungovat pro všechny možné mezní stavy, do kterých se paměťové funkce mohou dostat! Velmi častá chyba i u jinak perfektních řešení je, že student nedokázal pokrýt všechna použití paměťových funkcí -- zejména `realloc` má velmi široké možnosti využití!
+====
+
+[IMPORTANT]
+====
+Počítejte s možností, že funkce `MallocDebug_Init` a `MallocDebug_Done` mohou být volány opakovaně a v libovolném pořadí.
 ====

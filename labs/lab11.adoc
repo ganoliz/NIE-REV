@@ -9,6 +9,10 @@ Při analýze programu narazíme na to, že program obsahuje několik ochran pro
 
 * link:{imagesdir}/cv11.zip[Download]
 
+== Další anti-debuggingové techniky
+
+Vraťte se k druhé úloze z xref:lab09.adoc[cvičení na pokročilé obfuskace]. Deobfuskujte jeho kód a identifikujte jednotlivé anti-debuggingové techniky, které používá.
+
 == Zapnutí patch menu v IDA Free
 
 V programu IDA můžete přímo měnit analyzovaný program nástroji v menu Patch. Pokud používáte verzi 5.0 Free, je toto menu standardně skryté, ale můžete ho zobrazit, pokud změníte konfigurační soubor `C:\Program Files (x86)\IDA Free\cfg\idagui.cfg`: otevřete soubor v editoru jako Administrátor a změňte řádek `ENABLE_PATCH_SUBMENU=NO` na `ENABLE_PATCH_SUBMENU=YES`. Po restartu IDA Free naleznete nové submenu Patch v menu Edit.

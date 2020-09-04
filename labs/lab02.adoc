@@ -9,7 +9,7 @@ Byl zkompilován následující ukázkový případ. Kompilace proběhla ve Visu
 
 * link:{imagesdir}/cv02.zip[Download]
 
-Všimněte si, že pro zjednodušení byla do main funkce přidána instrukce `INT3` (breakpoint, opcode `CCh`). Za normálních okolností program na této instrukci spadne, nebo přesněji, dojde k vyvoláni speciálního druhu výjimky, pokud ale bude připojen debugger, tak se na této instrukci zastaví a dovolí nám pokračovat. Nahrajte program do IDA nebo do debuggeru a spusťte (F9). Program se může ovšem zastavit i na jiné než naší výjimce. Pokud se nacházíte v knihovně (adresa `7xxxxxxx`) a ne v programu (adresa `401357`), pokračujte v programu stiskem F9.
+Všimněte si, že pro zjednodušení byla do main funkce přidána instrukce `INT3` (breakpoint, opcode `CCh`). Za normálních okolností program na této instrukci spadne, nebo přesněji, dojde k vyvoláni speciálního druhu výjimky, pokud ale bude připojen debugger, tak se na této instrukci zastaví a dovolí nám pokračovat. Nahrajte program do IDA nebo do debuggeru a spusťte (kbd:[F9]). Program se může ovšem zastavit i na jiné než naší výjimce. Pokud se nacházíte v knihovně (adresa `7xxxxxxx`) a ne v programu (adresa `401357`), pokračujte v programu stiskem kbd:[F9].
 
 Breakpoint v knihovně:
 
@@ -21,7 +21,7 @@ image::cv2obr02a.png[]
 
 == Prolog, Epilog
 
-Nejdříve se podíváme na prolog běžné funkce. Přepněte IDU do textového zobrazení (IDA View-A, pro přepnutí mezi code-flow grafem a kódem použijte mezerník) a podívejte se na adresu `401259` (můžete použít klávesu `g`). Všimněte si volání funkce na adrese `401040`:
+Nejdříve se podíváme na prolog běžné funkce. Přepněte IDU do textového zobrazení (IDA View-A, pro přepnutí mezi code-flow grafem a kódem použijte mezerník) a podívejte se na adresu `401259` (můžete použít klávesu kbd:[G]). Všimněte si volání funkce na adrese `401040`:
 
 image::cv2obr03.jpg[]
 
@@ -114,11 +114,11 @@ Funkce obnoví zásobník, nastaví `trylevel` a nastaví jako výsledek (v regi
 
 == Proměnné
 
-Podíváme-li se na adresu `401364`, všimneme si sekce, kde se přiřazují proměnné. Pomocí tlačítka `h` si můžeme prohlédnout proměnou v decimální/hexadecimální podobě, pomocí tlačítka `k` přepínáme pohled mezi notací odpovídající assemblerovému kódu a notací IDY, která v sobě zahrnuje informace známé z analýzy proměnných funkce -- např. `[EBP+arg_4]` se změní na `[EBP+0ch]`.
+Podíváme-li se na adresu `401364`, všimneme si sekce, kde se přiřazují proměnné. Pomocí tlačítka kbd:[H] si můžeme prohlédnout proměnou v decimální/hexadecimální podobě, pomocí tlačítka kbd:[K] přepínáme pohled mezi notací odpovídající assemblerovému kódu a notací IDY, která v sobě zahrnuje informace známé z analýzy proměnných funkce -- např. `[EBP+arg_4]` se změní na `[EBP+0ch]`.
 
 image::cv2obr18.jpg[]
 
-Dvě proměnné jsou typu `DWORD` a dvě typu `BYTE`. Proměnné si pomocí tlačítka `n` přejmenujeme z výchozího `var_8` např. na `DWORD1`.
+Dvě proměnné jsou typu `DWORD` a dvě typu `BYTE`. Proměnné si pomocí tlačítka kbd:[N] přejmenujeme z výchozího `var_8` např. na `DWORD1`.
 
 image::cv2obr19.jpg[]
 
@@ -130,7 +130,7 @@ image::cv2obr21.jpg[]
 
 Adresa `EBP-38h` je následně použita jako argument funkce `401240`.
 
-Když se do této funkce podíváme (tlačítkem `Enter` na její adrese), zjistíme, že s adresou v argumentu (tj. `EBP-38h` v minulém rámci) se postupně několikrát pracuje ve variantách `[REG]`, `[REG+4]`, `[REG+5]` atd. Z toho můžeme usoudit, že argumentem funkce `401240` je ukazatel na strukturu, která je lokální proměnnou rámce předchozího. (Pozn.: Proměnná je na zásobníku nalevo od `EBP`). Bohužel velikost struktury je v tomto případě důležitá pouze pro kompilátor a ve finálním kódu se tato informace o ní ztrácí, není-li ovšem využita např. pro alokaci paměti. Můžeme tedy velikost jen odhadnout z vnitřku funkce `401240`, ale neznáme ji jistě.
+Když se do této funkce podíváme (tlačítkem kbd:[Enter] na její adrese), zjistíme, že s adresou v argumentu (tj. `EBP-38h` v minulém rámci) se postupně několikrát pracuje ve variantách `[REG]`, `[REG+4]`, `[REG+5]` atd. Z toho můžeme usoudit, že argumentem funkce `401240` je ukazatel na strukturu, která je lokální proměnnou rámce předchozího. (Pozn.: Proměnná je na zásobníku nalevo od `EBP`). Bohužel velikost struktury je v tomto případě důležitá pouze pro kompilátor a ve finálním kódu se tato informace o ní ztrácí, není-li ovšem využita např. pro alokaci paměti. Můžeme tedy velikost jen odhadnout z vnitřku funkce `401240`, ale neznáme ji jistě.
 
 image::cv2obr22.jpg[]
 
@@ -158,7 +158,7 @@ image::cv2obr27.jpg[]
 
 Dle dokumentace můžeme vyhodnotit obsah jednotlivých argumentů funkce a určit, že soubor se otvírá za účelem zápisu. Vždy se vytváří soubor nový a má normální atributy. Pozor, název `CreateFile` je poněkud zavádějící, funkce je běžně používána také pro otevírání souborů -- nebo i zcela jiných objektů -- pro čtení.
 
-IDA je natolik inteligentní, že nám dokáže kód okomentovat. My jí v tom můžeme dále pomoci výběrem konstant (enums) ze seznamu. Klikněte na hodnotu 40000000h v řádku dwDesiredAccess a stiskněte klávesu `m`. Měli byste v seznamu najít konstantu `GENERIC_WRITE`. Totéž pak můžete udělat s atributy souboru (`FILE_ATTRIBUTES_NORMAL`) a režimem pro otevření souboru (`CREATE_ALWAYS`).
+IDA je natolik inteligentní, že nám dokáže kód okomentovat. My jí v tom můžeme dále pomoci výběrem konstant (enums) ze seznamu. Klikněte na hodnotu 40000000h v řádku dwDesiredAccess a stiskněte klávesu kbd:[M]. Měli byste v seznamu najít konstantu `GENERIC_WRITE`. Totéž pak můžete udělat s atributy souboru (`FILE_ATTRIBUTES_NORMAL`) a režimem pro otevření souboru (`CREATE_ALWAYS`).
 
 image::cv2obr28.jpg[]
 
@@ -194,5 +194,5 @@ struct MyStructure {
 
 Pokud se nyní podíváte na původní zdrojový kód, zjistíte, že několik informací jsme zanalyzovali chybně.
 
-. Struktura měla další 4 integer proměnné, které ale nikde v programu nebyly použité. Při alokaci lokálních proměnných s nimi ovšem bylo počítáno. Můžeme si ale všimnout, že instrukce `SUB ESP, imm` pracuje se správnou délkou -- to je důsledek použití neoptimizovaného buildu, ve kterém některé nadbytečné informace zůstávají viditelné.
+. Struktura měla další 4 `int` proměnné, které ale nikde v programu nebyly použité. Při alokaci lokálních proměnných s nimi ovšem bylo počítáno. Můžeme si ale všimnout, že instrukce `SUB ESP, imm` pracuje se správnou délkou -- to je důsledek použití neoptimizovaného buildu, ve kterém některé nadbytečné informace zůstávají viditelné.
 . Bohužel při kompilaci dochází k velké ztrátě informací, což způsobuje nepřesnosti při analýze. To nám ale nebrání analýzu provádět a i přes dílčí nepřesnosti bychom měli být schopní vytvořit funkční ekvivalent původního zdrojového kódu. Kód jako celek nebude identický s originálem, ale jeho relevantní funkčnost by měla být zachována.

@@ -22,7 +22,7 @@ Zanalyzujte přiložený program, popište různé použité obfuskace a upravte
 
 == Úkol 2
 
-Spusťte přiložený program v debuggeru a dostaňte se na konec programu -- myšleno přes všechny obfuskace, ne tím, že program ukončíte hned na jeho začátku :-). Alternativně můžete program prozkoumat v IDA Pro a obdobně jako u minulého programu zdokumentovat všechny obfuskace -- to pro vás může být výhodné, pokud nechcete shánět Windows XP resp. Vista v té správné verzi.
+Proveďte statickou analýzu programu v IDA Pro. Popište použité obfuskace a upravte databázi IDY tak, aby byl kód čitelný člověkem. V této podobě využijeme databázi za dva týdny, kdy nám čitelný kód umožní rozpoznat použité antidebugovací techniky a stanovit podmínky, za kterých program proběhne až na konec. (Skutečné spuštění programu patrně nedokážeme dokončit, protože je v některých částech silně systémově závislý.)
 
 * link:{imagesdir}/cv09b.zip[Download -- Win XP]
 * link:{imagesdir}/cv09b.vista.zip[Download -- Win Vista]
@@ -33,12 +33,12 @@ Spusťte přiložený program v debuggeru a dostaňte se na konec programu -- my
 
 Při odstraňování obfuskací se vám mohou hodit následující klávesové zkratky pro program IDA.
 
-* `D` -- způsobí, že bude IDA vybraný řádek nebo blok považovat za data a ne za kód.
-* `C` -- způsobí, že bude IDA vybraný řádek nebo blok považovat za kód a ne za data.
-* `U` -- způsobí, že IDA zapomene dosavadní definice řádku/bloku a vrátí se k implicitnímu chování.
-* `P` -- informuje IDU, že má daný blok chápat jako samostatnou proceduru.
+* kbd:[D] -- způsobí, že bude IDA vybraný řádek nebo blok považovat za data a ne za kód.
+* kbd:[C] -- způsobí, že bude IDA vybraný řádek nebo blok považovat za kód a ne za data.
+* kbd:[U] -- způsobí, že IDA zapomene dosavadní definice řádku/bloku a vrátí se k implicitnímu chování.
+* kbd:[P] -- informuje IDU, že má daný blok chápat jako samostatnou proceduru.
 ** Toto se velmi hodí v případě, že máme obfuskovanou funkci, ze které IDA rozpozná jenom část až do první obfuskace. Po odstranění obfuskace (např. převodem na data nebo patchováním) můžeme nechat funkci vygenerovat znovu.
-** Pokud samotné `P` nezabere, je vhodným postupem provést undefine (`U`) na prvním návěští procedury (tzn. na jejím jménu) a následně použít `P` znovu na toto návěští.
+** Pokud samotné kbd:[P] nezabere, je vhodným postupem provést undefine (kbd:[U]) na prvním návěští procedury (tzn. na jejím jménu) a následně použít kbd:[P] znovu na toto návěští.
 
 [IMPORTANT]
 ====

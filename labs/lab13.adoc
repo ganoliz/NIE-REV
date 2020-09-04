@@ -39,6 +39,11 @@ Nebude patrně stačit jen injektovat kód, budete mu také muset předat někte
 Pozor! Nevíte, jakou adresu vám `VirtualAllocEx` vrátí. Znamená to tedy buď napsat kód, který poběží na libovolné adrese, nebo se o úpravu jeho adres postarat vlastními silami. Asi nejjednodušší i z hlediska ladění je umístit vlastní výkonný kód do samostatného DLL a do procesu injektovat jen kratičký kód, který zavolá https://docs.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya[LoadLibrary] s potřebnými parametry: vaše knihovna bude načtena do paměti procesu, spustí se její funkce `DllMain`, kde můžete provést veškeré útočné činnosti, a potom vlákno ukončíte. Celé vlákno se tak bude skládat jen z několika málo strojových instrukcí, které lze snadno napsat tak, aby fungovaly vždy stejně bez ohledu na umístění v paměti.
 ====
 
+[TIP]
+====
+Pro využití `LoadLibrary` triku výše dokonce nemusíte napsat vůbec žádný kód v assembleru, pokud si dobře prohlédnete specifikace funkcí `CreateRemoteThread` a `LoadLibrary`.
+====
+
 === Ladění injektovaného procesu
 
 . Zastavte váš injektor před funkcí `CreateRemoteThread`.
@@ -46,3 +51,21 @@ Pozor! Nevíte, jakou adresu vám `VirtualAllocEx` vrátí. Znamená to tedy bu�
 . Otevřete OllyDbg a připojte se na injektovaný proces.
 . Nastavte breakpoint na zjištěnou adresu injektovaného kódu a spusťte proces.
 . Spusťte váš injektor.
+
+== Zadání bonusové úlohy
+
+* Počet bodů: *3*
+* Termín odevzdání:
+** *TBA* (paralelka 101)
+** *TBA* (paralelka 102)
+** *TBA* (paralelka 103)
+
+Vraťte se ke xref:lab04.adoc[druhé domácí úloze]. V ní jsme řešili, jak pomocí úpravy IAT změnit volání paměťových funkcí tak, aby se napřed zavolal náš logovací kód a teprve potom bylo řízení předáno původním funkcím. To nám umožnilo jednoduše sledovat alokace, ale bohužel jenom přímo v našem programu. S technikou injekce ovšem dokážeme úlohu snadno adaptovat tak, aby byla použitelná i pro cizí programy.
+
+=== Základní postup
+
+. Přesuňte kód řešící implementaci `MallocDebug` funkcí do samostatného zdrojového souboru.
+. Doplňte `DllMain` funkci, která zavolá `MallocDebug_init` při připojení k procesu a `MallocDebug_done` při odpojení od něj. https://docs.microsoft.com/en-us/windows/win32/dlls/dllmain[Dokumentace na MSDN] to má přehledně popsané.
+. Sestavte z tohoto souboru DLL knihovnu použitím parametru `/DLL` při linkování. Příklad je uveden v https://courses.fit.cvut.cz/BI-BEK/labs/lab02.html[druhém cvičení BI-BEK].
+. Vytvořte jednoduchý injektor, který na příkazové řádce přijme cestu k DLL souboru a ID procesu (PID). Pomocí API funkce `OpenProcess` získáte k PID handle procesu a následně provedete injekci obdobně, jako bylo popsáno výše.
+. Upravte svůj kód pro testování paměťových funkcí tak, aby po spuštění programu počkal na potvrzení uživatele a teprve potom začal pracovat. Spusťte upravený program, ve Správci procesů zjistěte jeho PID a zavolejte injektor se správnými parametry. Profit!

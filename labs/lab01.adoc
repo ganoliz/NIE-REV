@@ -51,7 +51,7 @@ Druhou částí je podokno kódu. Žlutý (první) sloupec obsahuje virtuální 
 
 image::cv01-obr08.png[]
 
-Třetí částí je okno paměti. To zobrazuje výpis RAM od zadané virtuální adresy v hexadecimálním a ASCII výpisu. Adresu lze změnit po kliknutí do podokna a následném stisku kláves `Ctrl+G`, nebo výběrem položky *Go to -> Expression...* z kontextové nabídky na pravém tlačítku myši.
+Třetí částí je okno paměti. To zobrazuje výpis RAM od zadané virtuální adresy v hexadecimálním a ASCII výpisu. Adresu lze změnit po kliknutí do podokna a následném stisku kláves kbd:[Ctrl+G], nebo výběrem položky *Go to -> Expression...* z kontextové nabídky na pravém tlačítku myši.
 
 image::cv01-obr09.png[]
 
@@ -88,7 +88,7 @@ OPTIONAL HEADER VALUES
           400000 image base (00400000 to 0041BFFF)
 ----
 
-Na řádku `JMP mainCRTStartup` (na řádek klikněte kurzorem myši nebo na něj přesuňte výběr pomocí kláves šipek) stiskněte klávesu `Enter`. Tím zobrazení změníte na cíl skoku, tj. dovnitř do funkce `_mainCRTStartup`:
+Na řádku `JMP mainCRTStartup` (na řádek klikněte kurzorem myši nebo na něj přesuňte výběr pomocí kláves šipek) stiskněte klávesu kbd:[Enter]. Tím zobrazení změníte na cíl skoku, tj. dovnitř do funkce `_mainCRTStartup`:
 
 [listing]
 ----
@@ -100,7 +100,7 @@ Na řádku `JMP mainCRTStartup` (na řádek klikněte kurzorem myši nebo na ně
 004124FE  \.  C3            RETN
 ----
 
-Vrátit se lze zpět pomocí stisku klávesy mínus na numerické klávesnici.
+Vrátit se lze zpět pomocí stisku klávesy kbd:[Mínus] na numerické klávesnici.
 
 == Prolog, tělo a epilog
 
@@ -156,11 +156,11 @@ Po dokončení funkce `main` následuje instrukce `ADD ESP, 0C`. Tato instrukce 
 
 == Nastavení bodu přerušení
 
-Nastavme bod přerušení na tomto místě. Vyberte řádek `00412304` a stiskněte klávesu `F2`, nebo na tomto řádku vyberte z kontextové nabídky položku *Breakpoint -> Toggle*. Adresa zčervená. Nyní je načase spustit náš program.
+Nastavme bod přerušení na tomto místě. Vyberte řádek `00412304` a stiskněte klávesu kbd:[F2], nebo na tomto řádku vyberte z kontextové nabídky položku *Breakpoint -> Toggle*. Adresa zčervená. Nyní je načase spustit náš program.
 
 == Spuštění programu
 
-S nastaveným bodem přerušení spustíme program klávesou `F9`, případně výběrem příkazu *Run* z nabídky *Debug*; chceme-li programu nastavit argumenty pro příkazovou řádku, můžeme to udělat z nabídky *File -> Set new arguments...*. Program se zastaví na instrukci `CALL`. Povšimněme si okna zásobníku:
+S nastaveným bodem přerušení spustíme program klávesou kbd:[F9], případně výběrem příkazu *Run* z nabídky *Debug*; chceme-li programu nastavit argumenty pro příkazovou řádku, můžeme to udělat z nabídky *File -> Set new arguments...*. Program se zastaví na instrukci `CALL`. Povšimněme si okna zásobníku:
 
 [listing]
 ----
@@ -197,11 +197,11 @@ Datový typ int má 4 B, stejně tak ukazatel.
 
 Nyní můžeme začít vykonávat program instrukci po instrukci a po každé instrukci zkoumat stav registrů procesoru, paměti na haldě i na zásobníku. Trasovat můžeme několika různými způsoby: (a) Step into, (b) Step over, a (c) Step out (Execute till return).
 
-*Step into* (klávesa `F7`) je způsob trasování takový, který provede právě jednu instrukci a následně běh programu opět pozastaví. Je-li prováděnou instrukcí instrukce `CALL`, běh vlákna bude zastaven na první instrukci volané funkce.
+*Step into* (klávesa kbd:[F7]) je způsob trasování takový, který provede právě jednu instrukci a následně běh programu opět pozastaví. Je-li prováděnou instrukcí instrukce `CALL`, běh vlákna bude zastaven na první instrukci volané funkce.
 
-*Step over* (klávesa `F8`) je podobné trasování *Step into*, s tím rozdílem, že běh programu se zastaví na instrukci následující za instrukcí, na které jsme zvolili trasování *Step over*. Je-li prováděnou instrukcí instrukce `CALL`, je celý její vnitřek proveden a teprve poté se běh programu zastaví.
+*Step over* (klávesa kbd:[F8]) je podobné trasování *Step into*, s tím rozdílem, že běh programu se zastaví na instrukci následující za instrukcí, na které jsme zvolili trasování *Step over*. Je-li prováděnou instrukcí instrukce `CALL`, je celý její vnitřek proveden a teprve poté se běh programu zastaví.
 
-*Step out* (klávesa `Ctrl+F9`) pokračuje ve vykonávání instrukcí až do doby, než program narazí na instrukci `RET`. Tento trasovací mód používáme, když se chceme vrátit z právě vykonávané funkce.
+*Step out* (klávesa kbd:[Ctrl+F9]) pokračuje ve vykonávání instrukcí až do doby, než program narazí na instrukci `RET`. Tento trasovací mód používáme, když se chceme vrátit z právě vykonávané funkce.
 
 == Struktura rámce zásobníku
 

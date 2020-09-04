@@ -39,6 +39,11 @@ Obviously, you can't inject just the code -- you also need to pass it some data.
 Beware! You don't know which address you will get from `VirtualAllocEx`. That means that your code must either be location-independent, or you need to perform relocation manually. Probably the simplest solution to this problem, also considering the debugging needs you will probably have, is to write the actual code as a part of a standalone DLL, and inject only a tiny piece of code which will call https://docs.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya[LoadLibrary] with the name of your library: The library will be loaded into memory and relocated by the operating system. Its `DllMain` function will be called. You can perform all the necessary attack functionality there, then you can terminate the thread. Overall, that means the thread will only contain a handful of instructions which are easy to write in a position-independent way.
 ====
 
+[TIP]
+====
+When making use of the `LoadLibrary` trick above you can avoid writing assembler code completely if you carefully study the specifications of the `CreateRemoteThread` and `LoadLibrary` functions.
+====
+
 === Debugging the injected process:
 
 . Stop the injector before the `CreateRemoteThread` call.
@@ -46,3 +51,18 @@ Beware! You don't know which address you will get from `VirtualAllocEx`. That me
 . Open OllyDbg and attach it to the process into which the thread is going to be injected.
 . Set a breakpoint at the address found in step 2 and let the process continue.
 . Run the injector.
+
+== Bonus homework
+
+* Points: *3*
+* Deadline: *TBA*
+
+Return to the xref:lab04.adoc[second homework]. We were trying to hack the IAT so that instead of calling memory functions, the application would call our replacement functions which would log the data and then call the original memory functions. That allowed us to simply monitor memory allocations, but unfortunately only directly within the program. Using the injection technique, however, we can modify the code so that it will work even with other applications.
+
+=== How to do it
+
+. Move the code which implements the `MallocDebug` functions into a new source file.
+. Add a `DllMain` function. It should call `MallocDebug_init` when attaching to a process and `MallocDebug_done` when detaching. The https://docs.microsoft.com/en-us/windows/win32/dlls/dllmain[MSDN documentation] shows how it can be done.
+. Compile this modified source code into a DLL library by using the linker parameter `/DLL`. You can find an example of doing that in the https://courses.fit.cvut.cz/BI-BEK/en/labs/lab02.html[second tutorial of BIE-BEK].
+. Create a simple injector. It will accept a path to a DLL file and a process ID (PID) as command line arguments. Using the `OpenProcess` API function, get a handle to the target process and then inject the library into it as described above.
+. Modify your memory function testing code so that the application waits for user confirmation before doing anything. Run the application, find its PID in Task manager and call the injector with the right arguments. You should now see that your logging code is working even though it's no longer a part of the monitored application itself.

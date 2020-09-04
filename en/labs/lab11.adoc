@@ -9,6 +9,10 @@ During the analysis, we will discover that the program contains several anti-deb
 
 * link:{imagesdir}/cv11.zip[Download]
 
+== More anti-debugging techniques
+
+Return to the second task of the xref:lab09.adoc[Advanced obfuscations tutorial]. Deobfuscate the code and identify the different anti-debugging techniques used.
+
 == Enabling the patch menu in IDA Free
 
 You can perform changes to the program directly inside IDA Free. The patch menu is hidden by default in version 5.0. It is possible to show it but you'll need to change the configuration file located in `C:\Program Files (x86)\IDA Free\cfg\idagui.cfg`. Open the file as the Administrator and change the `ENABLE_PATCH_SUBMENU=NO` line into `ENABLE_PATCH_SUBMENU=YES`. Save and (re)launch IDA Free. Then you will find the Patch submenu in the Edit menu.

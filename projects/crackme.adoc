@@ -1,0 +1,143 @@
+﻿
+= Crackme
+:toc:
+:imagesdir: ../../media
+
+Cílem této semestrální práce je, abyste se prakticky seznámili s nejběžnějšími obfuskačními a antidebugovacími technikami. Je tvořena sérií jednoduchých prográmků s postupně rostoucí složitostí obrany proti analýze. Vaším úkolem je v každém z nich najít heslo, které vám umožní dostat se do další části. Každá část je chráněna jedním heslem, i když v některých případech nemusí nutně být každé heslo v samostatném programu.
+
+Aplikace na prozkoumání je pro každého studenta odlišná a bude mu přiřazena ve třetím výukovém týdnu. Zabývejte se pouze svojí aplikací, na řešení cizích prací nebude brán zřetel, s výjimkou opisování. Řešení by mělo být zejména vaší vlastní prací -- konzultace jsou i v praxi možné, ale sotva najdete někoho, kdo by vaše pracovní úkoly dlouhodobě řešil za vás.
+
+Řešení je možné odevzdávat až do konce semestru, a to i po složení zkoušky, a je možné odevzdávat řešení po částech. Doporučuji vyřešit rychle tolik úloh, abyste dostali zápočet, pak složit zkoušku a pak si případně vylepšovat známku luštěním dalších hesel.
+
+[IMPORTANT]
+====
+Pozor, pro ohodnocení vašeho řešení budu potřebovat určitý čas, zohledňujte jak tento fakt, tak deadliny pro přihlášení na zkoušku!
+====
+
+== Požadavky na správné řešení
+
+Pro každé heslo popište:
+
+* Jaké heslo je požadováno pro vstup do další části?
+* Jak a kam má uživatel heslo do programu vložit, aby se dostal do další části programu?
+* V jaké podobě je heslo v programu uloženo? Používá-li program pro ukrytí hesla nějaké standardní algoritmy, pojmenujte je.
+* Jaké obfuskace program v dané části používá a jak se jim můžeme vyhnout?
+* Jaké antidebugovací techniky program v dané části používá a jak se jim můžeme vyhnout?
+* Jaký byl váš postup pro získání hesla?
+
+Popis stačí velmi stručný, klidně jen jako bodový seznam, ale měl by být úplný. Určitě byste měli vyjmenovat všechny nalezené obfuskace a všechny nalezené antidebugovací techniky a pojmenovat všechny standardní algoritmy, které program používá pro ukrytí hesla.
+
+[NOTE]
+====
+Je možné odevzdat i částečně vyřešenou úlohu. Aby však mohla být vyhodnocena, je nutné, aby váš popis obsahoval dostatečné množství informací pro rozhodnutí, jak velkou část zadání student splnil, a následně pro udělení bodů za postup v úloze. Na druhou stranu, není potřeba, aby práce byla napínavá, s originálními postavami a neotřelou zápletkou, naprosto vyhoví i nesouvislý bodový seznam. Podstatné jsou obsažené informace, ne jejich forma.
+====
+
+[IMPORTANT]
+====
+Výsledné řešení musí fungovat nad nijak neupravenou aplikací -- vyžaduje-li aplikace úpravy, není řešení úplné a pokud bude vůbec přijato, bude silně penalizováno. V průběhu analýzy můžete ovšem zkoumaný program libovolně měnit, abyste si analýzu usnadnili, požadavek na nezměněný soubor se týká pouze finálního výstupu semestrální práce.
+====
+
+[TIP]
+====
+Všechna hesla jsou řetězce skládající se z běžných ASCII znaků. Nacházíte-li řetězce tvořené jinými znaky, máte ve své analýze chybu.
+====
+
+== Bodové hodnocení
+
+=== Heslo 1
+
+Pro postup do další části programu je potřeba jednoduché fixní heslo. Jeho nalezení vyžaduje pouze základní porozumění tomu, jak fungují GUI programy ve Windows (cvičení na xref:../labs/lab08.adoc[jednoduchou obfuskaci]), a schopnost základní analýzy funkce (cvičení na xref:../labs/lab02.adoc[analýzu funkce]).
+
+[IMPORTANT]
+====
+*5 bodů*
+====
+
+[NOTE]
+====
+Častou chybou v této části semestrální práce je, že odevzdané řešení vyžaduje úpravu v programu. To značí, že student přerušil analýzu příliš brzy -- pokud by pokračoval dále, zjistil by, že ve skutečnosti žádná úprava programu nutná není.
+====
+
+=== Heslo 2
+
+Pro postup do další části programu je potřeba generované náhodné heslo, které je skryté za obfuskacemi. Jeho nalezení vyžaduje schopnost odstranit obfuskace z cvičení na xref:../labs/lab09.adoc[složitější obfuskace].
+
+[IMPORTANT]
+====
+*10 bodů*
+====
+
+[NOTE]
+====
+I když to tak na první pohled nevypadá, *není potřeba*, abyste uměli pokročilé techniky, jako je rekonstrukce zabalených souborů.
+====
+
+[NOTE]
+====
+Častou chybou v této části programu je, že nepopíšete nalezené obfuskace. Měli byste uvést všechny čtyři základní obfuskace, které jste nalezli, i způsob, jak je odstranit. U odstranění je důležité i vysvětlit, proč je toto odstranění v pořádku -- tedy jak je možné, že obfuskace zmizí a přesto program zůstane funkční.
+
+Druhou častou chybou je nepojmenování algoritmu pro skrytí hesla. Algoritmus znáte a když si ho rozepíšete do podoby Cčkového pseudokódu, jistě si na jeho jméno vzpomenete.
+====
+
+=== Heslo 3
+
+Toto heslo je opět spíše jednoduché, ale je skryté za použitým packerem. Budete se tedy muset vypořádat s touto ochranou, neboli program rozbalit podobně jako ve cvičení na xref:../labs/lab10.adoc[rekonstrukci zabalených souborů].
+
+[IMPORTANT]
+====
+*10 bodů*
+====
+
+[NOTE]
+====
+Pokud použijete ruční rozbalení podle cvičení, budu od vás chtít postup, který by dokázal reprodukovat i uživatel, který s reverzním inženýrstvím teprve začíná. Pravděpodobně také narazíte na jeden zádrhel, který jsme ve cvičení neviděli; ve vašem řešení byste na něj měli upozornit a vysvětlit, proč nám nevadí.
+
+Použití existujícího programu pro rozbalení je možné a svým způsobem vítané (proč dělat ručně něco, co za nás může udělat stroj?), ale bude penalizováno, protože se tak připravujete o zkušenost s tím, jak to dělat. Co kdyby byla úloha zabalena programem, ke kterému rozbalovací nástroj neexistuje? Taková situace určitě dříve nebo později nastane, měli byste vědět, co dělat v takovém případě.
+====
+
+[TIP]
+====
+Po rozbalení je heslo skryté pomocí algoritmu, který možná neznáte přímo ze školy, ale skoro jistě už jste na něj někdy narazili. Byl zmíněn, i když velmi okrajově, i v předmětu link:https://courses.fit.cvut.cz/BI-BEK[Bezpečný kód], který je prerekvizitou tohoto předmětu.
+====
+
+=== Heslo 4
+
+Druhý editbox v programu očekává generované náhodné heslo, které je skryté za pokročilejšími obfuskacemi. Využijete v něm také znalosti získané ve cvičení na xref:../labs/lab11.adoc[antidebugging].
+
+[IMPORTANT]
+====
+*10 bodů*
+====
+
+[NOTE]
+====
+Algoritmus použitý pro skrytí tohoto hesla je adaptací algoritmu, který znáte. Kromě jména původního algoritmu byste měli popsat i to, jakým způsobem byl modifikován.
+====
+
+=== Heslo 5
+
+Toto je nepovinné heslo, které není nezbytné pro získání plného počtu bodů z předmětu. Je určeno jako bonus pro zájemce, případně jako částečná kompenzace za body, které jste mnohli získat v rámci úlohy xref:keygen.adoc[Keygen], pokud byste se rozhodli tuto úlohu vynechat.
+
+Heslo se nachází ve stejné binárce jako předchozí dvě hesla, ale je velmi náročně skryté. Nepoužívá žádné nové techniky, jeho hlavní složitost spočívá v nalezení místa, kde se s heslem pracuje. K jeho odhalení je potřeba detailnější zkoumání programu a lepší porozumění Win32 API (nad rámec toho, co děláme v tomto předmětu), případně větší pozornost a představivost (schopnost myslet mimo vyjeté koleje).
+
+[IMPORTANT]
+====
+*10 bodů*
+====
+
+=== Heslo 6
+
+Toto heslo se nachází v nové binárce, kterou dostanete, pokud vyluštíte páté heslo. Je extrémním způsobem maskované za tabulkovými obfuskacemi a neočekává se, že ho budete luštit -- slouží hlavně jako ukázka, s čím se také můžete v praxi potkat. Pokud ale máte s reverzováním dřívější zkušenosti, je možné ho vyluštit a může jít o efektivnější využití vašeho času, protože vám to umožní vynechat všechny ostatní úlohy i zkoušku. Navíc nebudete muset psát podrobné reporty, u tohoto hesla stačí popsat heslo samotné a velmi stručně váš postup.
+
+[IMPORTANT]
+====
+*100 bodů* (toto není překlep)
+====
+
+== Přiřazení semestrálních prací
+
+Úlohy budou studentům přiřazeny během třetího výukového týdne.
+
+////
+* link:https://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/acsjakub.exe[acsjakub]
+////

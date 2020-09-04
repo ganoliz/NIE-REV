@@ -1,0 +1,7 @@
+﻿
+= Semestral works
+:toc:
+:imagesdir: ../../media
+
+* xref:crackme.adoc[Crackme]
+* xref:keygen.adoc[Keygen]

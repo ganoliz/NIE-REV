@@ -16,7 +16,7 @@ In the remaining time, we will study the differences between a 32bit and a 64bit
 . Locate the `main` function.
 * Notice that our `main` function does not use the `RBP` register at all. How is that possible?
 * Why are arguments saved on the stack at the very beginning of the function?
-* Identify the function's prologue. The remainder of the first basic block represents the beginning of the function's body. Explain the meaning of its instructions and propose how they would change if we were studying a 32bit program instead. Try to find out which instruction is responsible for clearing the top 32 bits of the `RAX` register.
+* Identify the function's prologue. The remainder of the first basic block represents the beginning of the function's body. Explain the meaning of its instructions and propose how they would change if we were studying a 32bit program instead. Using a debugger, try to find out which instruction is responsible for clearing the top 32 bits of the `RAX` register.
 * Identify the function's epilogue. Show how its instructions rlate to the instructions of the prologue.
 * Try to estimate the meaning of the functions called from `main`. You don't need to study the functions themselves, in most cases you will find your information simply by looking at the function's arguments or observing the program's behavior at runtime.
 . Locate some Windows API calls. From the lecture we know that Windows API is usually called with the `__stdcall` convention. Compare the calls to API functions with the calls to native C functions in our program. How do you explain your observations?

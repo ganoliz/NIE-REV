@@ -1,0 +1,78 @@
+﻿
+= Keygen
+:toc:
+:imagesdir: ../../media
+
+The goal of this task is to gain experience with analysing a complex application. The application itself contains very few obfuscations, the most of its complexity is caused by the fact that you need to understand the application as a whole.
+
+All students analyze the same application. Your task is to reverse engineer a 64-bit binary and find out a serial number that will satisfy the requirements of the application. After that you will create a generator for these serial numbers. That will be made easier by the fact that the application already contains an almost complete generator (the developer forgot to remove it properly from the released version of the application), it's just not activated and is missing certain information need for it to function.
+
+* link:{imagesdir}/sp1.zip[Download]
+
+You may submit your solution at any time during the semester, even after having completed the exam.
+
+[IMPORTANT]
+====
+Caution! My evaluation of your submission will take some time. Please take that into account as well as the deadlines inherent to signing up for the exam!
+====
+
+== Requirements for a correct solution
+
+In addition to the general requirements listed at the Evaluation page, your solution should contain:
+
+Obsahem úplného řešení by kromě obecných požadavků uvedených na stránce hodnocení mělo být:
+
+* A working serial number.
+* Explanation of how this serial number is formed (i.e. which information is stored within it and how it is encoded).
+* Guideline on entering the serial number into the application (see notes below).
+* Source code for an application that will generate a new serial number based on the user's input. Your generator should provide default values which will cause it to generate a serial number accepted by the unmodified application.
+* Executable code of your generator.
+
+== Grading scheme
+
+[IMPORTANT]
+====
+*20 points*
+====
+
+== Notes
+
+=== Difficulty of the task
+
+This task is more difficult than the others, in the main part for the following reasons:
+
+* The application is much larger than the others and contains a number of interconnected components which need to be understood as a whole. The other tasks focus on rather limited code segments which can be analyzed separately and in a fairly similar manner. Furthermore, they always contain weak spots which can be used to short-circuit the analysis. Keygen, on the other hand, is difficult to break until you understand it completely.
+* All other tasks use 32bit code. While an analysis of 64bit code is not all that much difficult, still, some constructs look different. That makes the code look strange and unusual, which tends to slow down the analyst.
+* Tools for analyzing 64bit code are more difficult to find and usually are not as mature.
+* The `SerialNumber64.dll` library used by the `Code64.exe` application does not export symbol names. Instead, the symbols are imported using their ordinal number. That means that you can't use the symbol names to understand the symbols, you need to deduce the meaning from the actual code.
+* The application contains at least one error which will prevent its correct function in the standard environment. You will recognize the error and the way it can be fixed easily from the code; in this case, you are permitted to modify the application.
+
+In spite of all that, it is possible to solve this task. It's not even all that difficult. But you need to understand that the beginning will be slow. Don't get discouraged that you seemingly can't get anywhere at all -- this task is a rather accurate model of reality in that for a long time it will seem that you are not making absolutely any progress and then when you are ready to give up suddenly it will all fall together and you will complete the task very quickly.
+
+=== Compatibility
+
+In order to keep the task solvable we had to use weaker cryptographic primitives. Unfortunately, in newer versions of the `BCRYPT.DLL` library Microsoft introduced code which will consider such a use an error and will refure to perform the requested tasks. Due to that the task is no longer compatible with the current version of operating systems; you need to use older versions.
+
+It's not known precisely which versions work and which don't. We know that Windows 10 version 1910 is not compatible and we know that version 1903 is not compatible once late spring/early summer updates are installed (libssh2 encountered a link:https://github.com/libssh2/libssh2/issues/388#issuecomment-516918145[similar issue] at the time). Older versions of Windows probably work, but it is possible they also received an update which prevents Keygen from running properly. We recommend that you use non-updated Windows 7 or 8 in a virtual environment, or Windows 10 in the version available in our tutorial images.
+
+=== Hints
+
+[NOTE]
+====
+The application contains a trivial anti-debugging protection. It's likely you will need to remove it. There are no other obfuscations.
+====
+
+[TIP]
+====
+The process of verification as well as generation of the serial number is rather complex and involves several functions from the BCRYPT.DLL library (https://msdn.microsoft.com/en-us/library/windows/desktop/aa833130(v=vs.85).aspx[CNG Cryptographic Primitive Functions]). Analyze only the code of the `Code64.exe` and/or `SerialNumber64.dll` files, the other modules used are standard and their documentation is available. Don't get scared when you find out which functions are being used -- the input into the serial number is much shorter than it appears at a first glance.
+====
+
+[TIP]
+====
+The `SerialNumber64.dll` library contains the code for serial number generation. Find the function, discover what's needed to enable its full functionality, add it and use the function to generate a serial number valid at least until the end of the semester. You could also implement your own generator, but that would be significantly more difficult.
+====
+
+[TIP]
+====
+Finding the best way to solve the task is up to you, of course, but you may find it useful to start just like during the tutorials. Later on you will encounter a block which seemingly can't be overcome. Once you do, switch your focus to the key generator component, get it to work and generate some serial number. Then return back to the place where you couldn't continue and see what happens to your serial number there.
+====

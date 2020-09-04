@@ -9,7 +9,7 @@ We have compiled the following sample. The compilation took place in Visual Stud
 
 * link:{imagesdir}/cv02.zip[Download]
 
-Note that the beginning of the main function contains a software breakpoint instruction (`INT3`, opcode `CC`) for your convenience. Under normal circumstances this instruction causes the program to crash, or more accurately, an exception to be raised; but if a debugger is attached, it pops up, stopping the program at this instruction and allowing us to continue with debugging. Load the program into IDA Free and run it by pressing the F9 key. The program may stop in various places, not just this instruction. If the program stops at address beginning with `7xxxxxxx` (an address within a system library), continue with F9 until it stops in program code at address `401357`.
+Note that the beginning of the main function contains a software breakpoint instruction (`INT3`, opcode `CC`) for your convenience. Under normal circumstances this instruction causes the program to crash, or more accurately, an exception to be raised; but if a debugger is attached, it pops up, stopping the program at this instruction and allowing us to continue with debugging. Load the program into IDA Free and run it by pressing the kbd:[F9] key. The program may stop in various places, not just this instruction. If the program stops at address beginning with `7xxxxxxx` (an address within a system library), continue with kbd:[F9] until it stops in program code at address `401357`.
 
 Breakpoint in the library:
 
@@ -21,7 +21,7 @@ image::cv2obr02a.png[]
 
 == Prologue, Epilogue
 
-First we examine the prologue of a common function. Switch IDA to IDA View-A (if you see a diagram with code blocks, press spacebar to switch to a list of code). Type `g` and enter `401259` to jump to that address or scroll in the window until you see it. Notice a function call at address `401040`:
+First we examine the prologue of a common function. Switch IDA to IDA View-A (if you see a diagram with code blocks, press spacebar to switch to a list of code). Press kbd:[G] and enter `401259` to jump to that address or scroll in the window until you see it. Notice a function call at address `401040`:
 
 image::cv2obr03.jpg[]
 
@@ -114,11 +114,11 @@ The function restores the stack, sets the `trylevel` and sets the result (in the
 
 == Variables
 
-If we look at address `401364`, we can find a section where local variables are assigned. Using the `h` key, you can change the representation from decimal into hexadecimal and vice versa. Using the `k` key you can switch between the IDA representation and the offset representation -- `[EBP+arg_4]` changes into `[EBP+0ch]`, etc.
+If we look at address `401364`, we can find a section where local variables are assigned. Using the kbd:[H] key, you can change the representation from decimal into hexadecimal and vice versa. Using the kbd:[K] key you can switch between the IDA representation and the offset representation -- `[EBP+arg_4]` changes into `[EBP+0ch]`, etc.
 
 image::cv2obr18.jpg[]
 
-There are two `DWORD` variables and two `BYTE` variables. We can rename them from `var_8` to, e.g., `DWORD1` by using the `n` key.
+There are two `DWORD` variables and two `BYTE` variables. We can rename them from `var_8` to, e.g., `DWORD1` by using the kbd:[N] key.
 
 image::cv2obr19.jpg[]
 
@@ -130,7 +130,7 @@ image::cv2obr21.jpg[]
 
 The address `EBP-38h` is then used as an argument of the function at `401240`.
 
-If we look into this function (hit the `Enter` key on its address, or double click on it), we can find that that the address in argument (i.e. `EBP-38h` in the previous stack frame) is used as `[REG]`, `[REG+4]`, `[REG+5]`, etc. We can deduct from that that the argument of the fuction `401240` is a pointer to a structure, which is a local variable in the previous stack frame. The size of the structure is important only for the compiler and the compiled code does not contain this information, unless it is used e.g. for memory allocation by means of the `sizeof(structure)`. Its size can only be guessed from the content of the `401240` function, but we can't be certain that we got it right.
+If we look into this function (hit the kbd:[Enter] key on its address, or double click on it), we can find that that the address in argument (i.e. `EBP-38h` in the previous stack frame) is used as `[REG]`, `[REG+4]`, `[REG+5]`, etc. We can deduct from that that the argument of the fuction `401240` is a pointer to a structure, which is a local variable in the previous stack frame. The size of the structure is important only for the compiler and the compiled code does not contain this information, unless it is used e.g. for memory allocation by means of the `sizeof(structure)`. Its size can only be guessed from the content of the `401240` function, but we can't be certain that we got it right.
 
 image::cv2obr22.jpg[]
 
@@ -158,7 +158,7 @@ image::cv2obr27.jpg[]
 
 Now we can see the meaning of all parameters that are passed to the `CreateFileA` function. We can deduce that this function creates a file. But beware that the `CreateFile` name is a little bit misleading, since the function is commonly used to open a file -- or even a completely different type of object -- for reading.
 
-IDA is clever enough to annotate the code for us and we can further help it by choosing constants (enums) from a list. Click at the 40000000h value in the dwDesiredAccess line and hit the `m` key. You should be able to select `GENERIC_WRITE` from the list. You can do the same thing for file attributes (`FILE_ATTRIBUTES_NORMAL`) and for the create mode (`CREATE_ALWAYS`).
+IDA is clever enough to annotate the code for us and we can further help it by choosing constants (enums) from a list. Click at the 40000000h value in the dwDesiredAccess line and hit the kbd:[M] key. You should be able to select `GENERIC_WRITE` from the list. You can do the same thing for file attributes (`FILE_ATTRIBUTES_NORMAL`) and for the create mode (`CREATE_ALWAYS`).
 
 image::cv2obr28.jpg[]
 
@@ -168,7 +168,7 @@ Examine the following piece of code:
 
 image::cv2obr29.jpg[]
 
-If we look at the string used, we can make a guess that it looks like a `printf` formatting string. Indeed, if we examine the function at `401100` and functions this function calls more thoroughly, we can find a call to `__stdio_common_vsprintf` at `4010A9`. The documentation tells us what are the expected types of variables (the conversion specifiers in the printf string such as %d is an `int`, %u `unsigned int`, etc.) and we can use this information to rectify signedness and type information for our local variables. The string also provides us with an idea of how we could rename (via the `n` key) our local variables. Ultimately we obtain:
+If we look at the string used, we can make a guess that it looks like a `printf` formatting string. Indeed, if we examine the function at `401100` and functions this function calls more thoroughly, we can find a call to `__stdio_common_vsprintf` at `4010A9`. The documentation tells us what are the expected types of variables (the conversion specifiers in the printf string such as %d is an `int`, %u `unsigned int`, etc.) and we can use this information to rectify signedness and type information for our local variables. The string also provides us with an idea of how we could rename (via the kbd:[N] key) our local variables. Ultimately we obtain:
 
 [listing]
 ----
@@ -194,5 +194,5 @@ struct MyStructure {
 
 If you now look at source code carefully, you can discover that our analysis went wrong in a few cases.
 
-. The structure has 4 additional elements. These 4 integers were never referenced in the program, so they don't appear in the binary code and we do not know about them at all. We can, however, note that the `SUB ESP, imm` calculates with a proper length. Since this is a unoptimized build of the program, this (unnecessary) information still remains visible.
+. The structure has 4 additional `int` elements. These 4 fields were never referenced in the program, so they don't appear in the binary code and we do not know about them at all. We can, however, note that the `SUB ESP, imm` calculates with a proper length. Since this is a unoptimized build of the program, this (unnecessary) information still remains visible.
 . Compilation discards a lot of information (comments, structure boundaries, etc.). This makes any analysis imprecise. Despite this we can obtain a similar (rarely the same) source code as was found in the original, with the same relevant functionality.

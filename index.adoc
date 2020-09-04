@@ -1,5 +1,5 @@
 ﻿
-= MI-REV Reverzní inženýrství
+= NI-REV Reverzní inženýrství
 :toc:
 :imagesdir: ./media
 
@@ -20,13 +20,68 @@ Studenti budou v rámci předmětu seznámeni se základy reverzního inženýrs
 == Hodnocení
 
 * xref:hodnoceni.adoc[Podmínky absolvování předmětu]
-//* xref:semprace.adoc[Přiřazení semestrálních prací]
-* Přiřazení semestrálních prací
-** Semestrální práce budou studentům přiřazeny během třetího výukového týdne.
 * Průběžný stav bodů je uveden na webu https://grades.fit.cvut.cz[FIT klasifikace]. Ve vašem vlastním zájmu si kontrolujte hodnoty, které jsou tam uvedeny, a v případě zjištěných rozdílů mě kontaktujte, abych je opravil z "master" seznamu. Body na Klasifikaci jsou pouze orientační!
+
+=== Termíny odevzdání úloh
+
+[options="autowidth", cols=6*]
+|====
+<h| Úloha
+<h| Body
+<h| Zadáno
+<h| Deadline +
+Par.101
+<h| Deadline +
+Par.102
+<h| Deadline +
+Par.103
+
+| xref:labs/lab03.adoc[E-mail]
+| 5
+| 3. týden
+| TBA
+| TBA
+| TBA
+
+| xref:labs/lab04.adoc[IAT]
+| 5
+| 4. týden
+| TBA
+| TBA
+| TBA
+
+| xref:labs/lab05.adoc[Had]
+| 5
+| 5. týden
+| TBA
+| TBA
+| TBA
+
+| xref:projects/crackme.adoc[Crackme]
+| 35+
+| 3. týden
+| 14.2. 8:00
+| 14.2. 8:00
+| 14.2. 8:00
+
+| xref:projects/keygen.adoc[Keygen]
+| 20
+| 1. týden
+| 14.2. 8:00
+| 14.2. 8:00
+| 14.2. 8:00
+
+| xref:labs/lab13.adoc[Bonus]
+| 3
+| 4. týden
+| 14.2. 8:00
+| 14.2. 8:00
+| 14.2. 8:00
+|====
 
 == Změny v programu
 
+////
 * *7.-8.11.2019 (7. týden)*:
 ** Místo přednášky na *disassembling a obfuskace* bude mít Ing. Martin Jirkal z firmy ESET přednášku o *malware* (dle programu přednáška 7).
 ** Na cvičení bude místo přednášky na *malware* cvičení na *konzultace a 64bitový kód* (dle programu cvičení 7).
@@ -38,3 +93,14 @@ Studenti budou v rámci předmětu seznámeni se základy reverzního inženýrs
 ** Přednášku na téma *analýza malware* povede Ing. Jan Rubín z firmy Avast.
 ** link:{imagesdir}/lectures/rev08en.pdf[Přednáška].
 ** link:{imagesdir}/itsaunixsystem.zip[Crackme na vyzkoušení].
+////
+
+== Download
+
+Offline verzi materiálů si můžete stáhnout zde: https://kib-files.fit.cvut.cz/mi-rev/offline.zip[Download]
+
+Nástroje používané na cvičeních si můžete stáhnout zde: https://kib-files.fit.cvut.cz/mi-rev/nastroje/[Download]
+
+Runtime knihovny pro různé verze Visual Studia si můžete stáhnout zde: https://kib-files.fit.cvut.cz/mi-rev/vcredist/[Download]
+
+Úvodní přednášky a cvičení z BI-BEK, kde si vysvětlujeme základy assembleru, naleznete zde: https://kib-files.fit.cvut.cz/bi-bek/BIK01-prednasky_1_2_cviceni_1_2.mp4[Download]

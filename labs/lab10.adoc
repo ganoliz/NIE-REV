@@ -9,7 +9,7 @@ V tomto cvičení se seznámíme s metodami a nástroji, které dokáží vytvo�
 
 Pozn.: Návod se může lišit dle použitého packeru, v extrémních případech může být silně nedostatečný! (Themida packer apod.)
 
-. Spusťte zabalený soubor v debuggeru. Na rozdíl od původního nezabaleného souboru se nyní spouští rozbalovací rutina, na kterou ukazuje Entry Point (EP). Snažte se naleznout Original Entry Point (OEP) -- místo, kde by program prováděl svoji první instrukci, kdyby nebyl zabalený --, a na tomto místě zastavte debugger.
+. Spusťte zabalený soubor v debuggeru. Na rozdíl od původního nezabaleného souboru se nyní spouští rozbalovací rutina, na kterou ukazuje Entry Point (EP). Snažte se naleznout Original Entry Point (OEP) -- místo, kde by program prováděl svoji první instrukci, kdyby nebyl zabalený -- a na tomto místě zastavte debugger.
 . Vytvořte dump procesu. Můžete manuálně zkopírováním z RAM, ale je lepší použít jeden z mnoha programů na internetu. Často se používá LordPE, můžete využít i některý z novějších nástrojů -- Scylla (je i součástí x64dbg), InjDmp, atd.
 . Je možné, že data dumpnutého procesu nebudou pozičně sedět (na adrese `40162b` má být call, ale je tam něco jiného!). Důvodem je, že na sebe nesedí virtuální a fyzická adresa tak, jak mají. Buď můžete použít nástroj na rekonstrukci souboru (Scylla, PE tools, měl by to umět LordPE), nebo prostě změňte fyzickou adresu každé sekce tak, aby byla stejná jako virtuální adresa, a to samé udělejte s velikostmi sekcí. Tím zajistíte, že bude loader brát kód ze správné části vyrobeného fyzického souboru.
 . Dump má nastavený špatný EP a nemá správně vytvořenou IAT. Na opravu obojího lze použít nástroje na rekonstrukci IAT. Často se používá ImpRec, my v hodině využijeme nástroj Scylla integrovaný do x64dbg. Nástroje obecně fungují tak, že na vstupu dostanou (nebo automaticky naleznou) IAT běžícího procesu a podle této funkční IAT pak vytvoří novou sekci Import Directory v dumpovaném souboru.
@@ -18,7 +18,7 @@ Pozn.: Návod se může lišit dle použitého packeru, v extrémních případe
 
 * Některé dumpery vytvářejí dump, který není úplně vhodný na zpracování. Je to ojedinělé, ale stává se to. Pokud vše děláte správně a import reconstructor přesto nefunguje, často stačí změnit program na dump procesu z paměti.
 * Velká část nástrojů nedokáže vytvořit dump z procesu, který je v SUSPENDED stavu. Například u druhé úlohy, kde máte rozbalit injektovaný kód, je LordPE na vytvoření dumpu z procesu nevhodný. Je ale dostatečný, chcete-li soubor získat ještě před injektáží z injektovacího procesu.
-* Pokud vás zlobí ASLR, tak v hlavičce `IMAGE_OPTIONAL_HEADER` souboru změňte atribut `DllCharacteristics` tak, aby neobsahoval flag `IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE` (v některých nástrojích nazývaný též „DLL can move“).*
+* Pokud vás zlobí ASLR, tak v hlavičce `IMAGE_OPTIONAL_HEADER` souboru změňte atribut `DllCharacteristics` tak, aby neobsahoval flag `IMAGE_DLLCHARACTERISTICS_DYNAMIC_BASE` (v některých nástrojích nazývaný též "DLL can move").*
 
 === Návod pro x64dbg
 

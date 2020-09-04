@@ -11,17 +11,17 @@ Vaším úkolem je najít pro každý z programů vstup, který bude neupravený
 
 == Tipy pro použití programu IDA
 
-K základnímu pohybu po kódu slouží klávesy `ENTER` a `ESCAPE`. Pomocí `ENTER` můžete skočit na místo identifikované argumentem instrukce, pomocí `ESCAPE` se vrátíte na místo, odkud jste naposledy skočili klávesou `ENTER`. Klávesy lze používat i opakovaně, IDA si udržuje jejich historii.
+K základnímu pohybu po kódu slouží klávesy kbd:[Enter] a kbd:[Esc]. Pomocí kbd:[Enter] můžete skočit na místo identifikované argumentem instrukce, pomocí kbd:[Esc] se vrátíte na místo, odkud jste naposledy skočili klávesou kbd:[Enter]. Klávesy lze používat i opakovaně, IDA si udržuje jejich historii.
 
 Několika klávesami můžete přepínat mezi různými způsoby zobrazení čísel v argumentech instrukcí. Ve všech případech najeďte kurzorem na číslo, které chcete zobrazit v jiném tvaru, a potom stiskněte klávesu:
 
-* `H` -- přepíná mezi desítkovým a šestnáctkovým (hexadecimálním) vyjádřením čísla, tedy např. mezi `65` a `41h`.
-* `R` -- přepíná mezi číselným vyjádřením a odpovídajícím ASCII znakem, tedy např. mezi `41h` a `'A'`.
-* `M` -- přepíná mezi číslem a známou konstantou. Můžete si sami vytvořit vlastní konstanty v okně Enumerations (`SHIFT+F10`), kde napřed klávesou `INSERT` založíte výčet a následně do něj klávesou `N` přidáte konkrétní konstanty. Můžete také využít známých hodnot konstant z Windows API výběrem konstanty `<NEW>`, po jejímž použití IDA zobrazí seznam známých konstant s danou hodnotou.
-* `K` -- přepíná mezi symbolickým a číselným vyjádřením proměnných, tedy např. mezi `[EBP+hFile]` a `[EBP-4]`.
+* kbd:[H] -- přepíná mezi desítkovým a šestnáctkovým (hexadecimálním) vyjádřením čísla, tedy např. mezi `65` a `41h`.
+* kbd:[R] -- přepíná mezi číselným vyjádřením a odpovídajícím ASCII znakem, tedy např. mezi `41h` a `'A'`.
+* kbd:[M] -- přepíná mezi číslem a známou konstantou. Můžete si sami vytvořit vlastní konstanty v okně Enumerations (kbd:[Shift+F10]), kde napřed klávesou kbd:[Insert] založíte výčet a následně do něj klávesou kbd:[N] přidáte konkrétní konstanty. Můžete také využít známých hodnot konstant z Windows API výběrem konstanty `<NEW>`, po jejímž použití IDA zobrazí seznam známých konstant s danou hodnotou.
+* kbd:[K] -- přepíná mezi symbolickým a číselným vyjádřením proměnných, tedy např. mezi `[EBP+hFile]` a `[EBP-4]`.
 
-Pomocí klávesy `dvojtečka` resp. `středník` můžete do kódu vkládat komentáře. Komentář se vždy týká objektu, u kterého byl použit, přičemž středníkový komentář ("repeatable comment") se dále kopíruje do všech míst, které s okomentovaným objektem pracují (tzn. pokud nastavíte středníkový komentář k návěští, zobrazí se nejen u samotného návěští, ale i u všech skoků na toto návěští).
+Pomocí klávesy kbd:[:] resp. kbd:[;] můžete do kódu vkládat komentáře. Komentář se vždy týká objektu, u kterého byl použit, přičemž středníkový komentář ("repeatable comment") se dále kopíruje do všech míst, která s okomentovaným objektem pracují (tzn. pokud nastavíte středníkový komentář k návěští, zobrazí se nejen u samotného návěští, ale i u všech skoků na toto návěští).
 
-Klávesou `N` můžete pojmenovat symbol, na kterém je zrovna kurzor. Typicky se tato funkce používá pro pojmenování funkcí (např. z `sub_4011b0` tak uděláte `inicializace` s tím, že se tak nahradí všechny výskyty), návěští nebo proměnných (jsou-li vyjádřené symbolicky, tedy ve tvaru `[EBP+hFile]`).
+Klávesou kbd:[N] můžete pojmenovat symbol, na kterém je zrovna kurzor. Typicky se tato funkce používá pro pojmenování funkcí (např. z `sub_4011b0` tak uděláte `inicializace` s tím, že se tak nahradí všechny výskyty), návěští nebo proměnných (jsou-li vyjádřené symbolicky, tedy ve tvaru `[EBP+hFile]`).
 
-Velmi užitečná klávesa `X` vám umožňuje zobrazit cross-reference, tedy seznam míst, která se odkazují na právě vybraný symbol.
+Velmi užitečná klávesa kbd:[N] vám umožňuje zobrazit křížové odkazy (cross-reference), tedy seznam míst, která se odkazují na právě vybraný symbol.

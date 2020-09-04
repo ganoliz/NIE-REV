@@ -20,13 +20,51 @@ Students will get acquainted with the essentials of reverse engineering of compu
 == Evaluation
 
 * xref:hodnoceni.adoc[Requirements for passing the course]
-//* xref:semprace.adoc[Assignment of the semestral works]
-* Assignment of the semestral works
-** Semestral works will be assigned to the students during the third week of the semester.
 * The points awarded will be recorded at the https://grades.fit.cvut.cz[FIT grades] website. In your own interest, verify that you got the correct amount of points every time you get an e-mail from me. The points shown at Grades are just "for your information", the definitive value is in my private "master" list.
+
+=== Homework deadlines
+
+[options="autowidth", cols=4*]
+|====
+<h| Task
+<h| Points
+<h| Assigned
+<h| Deadline
+
+| xref:labs/lab03.adoc[E-mail]
+| 5
+| 3rd week
+| TBA
+
+| xref:labs/lab04.adoc[IAT]
+| 5
+| 4th week
+| TBA
+
+| xref:labs/lab05.adoc[Snake]
+| 5
+| 5th week
+| TBA
+
+| xref:projects/crackme.adoc[Crackme]
+| 35+
+| 3rd week
+| February 14, 8:00
+
+| xref:projects/keygen.adoc[Keygen]
+| 20
+| 1st week
+| February 14, 8:00
+
+| xref:labs/lab13.adoc[Bonus]
+| 3
+| 4th week
+| February 14, 8:00
+|====
 
 == Changes to the schedule
 
+////
 * *2019-11-07 (week 7)*:
 ** In place of the *disassembling and obfuscation* lecture Ing. Martin Jirkal from ESET will present a lecture on *malware* (regularly lecture no.7).
 ** In place of the *malware* tutorial we will have the *consultations and 64bit code* tutorial (regularly tutorial no.7).
@@ -38,3 +76,14 @@ Students will get acquainted with the essentials of reverse engineering of compu
 ** Ing. Jan Rubín from Avast will present a lecture on *malware analysis* (in Czech).
 ** link:{imagesdir}/lectures/rev08en.pdf[Slides].
 ** link:{imagesdir}/itsaunixsystem.zip[Crackme to try out].
+////
+
+== Downloads
+
+Offline version of these pages is available here: https://kib-files.fit.cvut.cz/mi-rev/offline.zip[Download]
+
+Tools used in tutorials can be downloaded here: https://kib-files.fit.cvut.cz/mi-rev/nastroje/[Download]
+
+Runtime libraries for various versions of Visual Studio can be downloaded here: https://kib-files.fit.cvut.cz/mi-rev/vcredist/[Download]
+
+//Úvodní přednášky a cvičení z BI-BEK, kde si vysvětlujeme základy assembleru, naleznete zde: https://kib-files.fit.cvut.cz/bi-bek/BIK01-prednasky_1_2_cviceni_1_2.mp4[Download]

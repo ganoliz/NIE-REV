@@ -1,0 +1,143 @@
+﻿
+= Crackme
+:toc:
+:imagesdir: ../media
+
+The goal of this semestral work is to gain experience with the commonly used obfuscation and anti-debugging techniques. It's composed of a series of simple GUI applications with progressively increasing complexity of their defenses against reverse analysis. Your task for each part is to find a password that will let you continue to the next part. Every part is protected by one password, though in some case there are multiple parts stored in the same executable.
+
+During the third week for the semester each student will receive a different application for analysis. Do not attempt to analyze other people's work, such a solution won't be accepted. Your submission should be your own work for the most part -- consultations are possible even in actual practice, but you will need to be able to solve your own work tasks on your own eventually.
+
+You may submit your solution at any time during the semester, even after having completed the exam, and you may submit partial solutions. I recommend that you quickly solve as many passwords as needed for the assessment, then take the exam and finally start improving your grade by cracking more passwords.
+
+[IMPORTANT]
+====
+Caution! My evaluation of your submission will take some time. Please take that into account as well as the deadlines inherent to signing up for the exam!
+====
+
+== Requirements for a correct solution
+
+For every password describe:
+
+* Which password is required for the next stage?
+* How should the user enter this password to get to the next stage?
+* How is the password stored in the application? If standard algorithms are used to hide it, name them!
+* Which obfuscation methods are used in this stage and how can we avoid them?
+* Which anti-debugging methods are used in this stage and how can we avoid them?
+* What was your approach to finding the password?
+
+The description can be very brief, e.g. it can take form of a bullet list, but it should be complete. Don't forget to list all discovered obfuscations and all anti-debugging techniques and provide names for all standard algorithms used to hide the password.
+
+[NOTE]
+====
+Partial submissions are permitted. If I am to evaluate it, however, it's necessary that the report contains sufficient information to allow me to determine how far did you get and to award you respective points. On the other hand, you don't need to create interesting characters and a gripping plot, it's perfectly fine to submit a bullet list. We are much more interested in the information found than the presentation.
+====
+
+[IMPORTANT]
+====
+Your solution must be functional with an unmodified application -- if a modification is required, the solution is not complete and if it is at all accepted, it will be penalized. It is perfectly fine to modify the application while studying it to facilitate the analysis, the "unmodified" requirement only applies to the ultimate solution.
+====
+
+[TIP]
+====
+All passwords take form of strings of ASCII characters. If you are getting strings of other characters, your analysis is incorrect.
+====
+
+== Grading scheme
+
+=== Password 1
+
+To get to the next stage you will need a simple fixed password. Finding it requires a basic understanding of GUI applications for Windows (see the xref:../labs/lab08.adoc[simple obfuscations] tutorial) and the ability to perform analysis of functions (xref:../labs/lab02.adoc[function analysis] tutorial).
+
+[IMPORTANT]
+====
+*5 points*
+====
+
+[NOTE]
+====
+A common error in this stage is that your solutions requires a modification of the application. That shows that the student stopped his analysis too early - if he or she continued with it, he or she would discover that this modification is not in fact necessary.
+====
+
+=== Password 2
+
+To get to the next stage you will need a random generated password which is protected by obfuscations. You will need to deal with obfuscations discussed in the xref:../labs/lab09.adoc[advanced obfuscation] tutorial.
+
+[IMPORTANT]
+====
+*10 points*
+====
+
+[NOTE]
+====
+Despite what your first glance might tell you, it is *not required* that you understand advanced techniques such as packed file reconstruction.
+====
+
+[NOTE]
+====
+A common error in this stage is that the student does not describe the encountered obfuscations. There are four basic obfuscations here and you should explain what they are, how they work and how you can remove them. The last part should also contain a brief discussion on why is this removal OK -- that is, how come the obfuscation disappears and the program still works.
+
+Another common error is not providing a name for the password-masking algorithm. You know (or should know, anyway) the algorithm, and if you rewrite into a C-like pseudocode, you will certainly recall its name.
+====
+
+=== Password 3
+
+This password is rather simple again, but it is hidden by a packer. You will need to deal with this protection, i.e. unpack the program in a way similar to that we tried in the xref:../labs/lab10.adoc[packed file reconstruction] tutorial.
+
+[IMPORTANT]
+====
+*10 points*
+====
+
+[NOTE]
+====
+If you use the manual approach demonstrated at the tutorial, I will want you to write instructions for repeating it, detailed enough so that a beginner in reverse engineering would be able to follow it. You should also encounter an issue which we did not see in the tutorial; you should make a note of this issue and explain why we don't care about it.
+
+Use an exising unpacking program is possible and in a way welcome (why should you perform manually what a machine can do for you?), but it will be penalized. The reason is that you are not getting experience with the manual solution. What would you do if the application was packed by a custom packer for which there is no unpacker? Such a scenario will certainly occur eventually, you should know what to do in such a case.
+====
+
+[TIP]
+====
+After you unpack the application, you will find that the password is still hidden behind an algorithm which you may not know from the school. It is, however, almost certain that you encountered this algorithm in practice. Also, we very briefly mentioned the algorithm in the link:https://courses.fit.cvut.cz/BIE-BEK[Secure code] course which is a prerequisite for this one.
+====
+
+=== Password 4
+
+The second editbox in this stage expects a generated random password hidden behind more advanced obfuscations. In discovering it, you will make use of the knowledge learned in the xref:../labs/lab11.adoc[antidebugging] tutorial.
+
+[IMPORTANT]
+====
+*10 points*
+====
+
+[NOTE]
+====
+The password-masking algorithm in this stage is an adaptation of an algorithm which is known to you. You should not only give a name to this algorithm, but also explain how it was modified.
+====
+
+=== Password 5
+
+This is an optional password which is not required to achieve 100% rating in this course. It is intended for people who want an extra challenge or for people which want to get back some of the points lost in the xref:keygen.adoc[Keygen] task, e.g. if they decided to skip that task altogether.
+
+The password is stored in the same binary as the previous two passwords but it is hidden very well. There are no new obfuscation techniques here, the difficulty lies in your ability to even find the place where the password is processed. To locate that, you will need a much more detailed analysis and a better understanding of the Win32 API (beyond what we learn in this course), or alternatively a better attention to detail and more imagination (the ability to think out-of-the-box).
+
+[IMPORTANT]
+====
+*10 points*
+====
+
+=== Password 6
+
+This password is located in a new binary which will get extracted after you've solved the fifth password. It's deviously masked by table obfucations and it's not expected that you'll even try to find it -- it's purpose is to demonstrate obfuscations you might encounter in real reverse-engineering work. If you have a prior experience in R.E., though, you may want to try to break this password because doing so will let you skip all the other tasks as well as the final exam. Also, you won't need to write nearly as much text -- with this password, it's sufficient that you write the password itself and briefly describe how you went about finding it.
+
+[IMPORTANT]
+====
+*100 points* (this is not a mistake)
+====
+
+== Semestral work assignment
+
+The assignments will be provided during the third week of the semester.
+
+////
+* link:https://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/acsjakub.exe[acsjakub]
+////

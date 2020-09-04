@@ -5,11 +5,13 @@
 
 == Introduction
 
-The aim of this exercise is to practice the PE file structure, particularly the symbol import tables (Import Table) and the table of addresses of imported symbols (Import Address Table, IAT). The structures are described in https://msdn.microsoft.com/en-us/library/windows/desktop/ms680313(v=vs.85).aspx[MSDN]. For a better understanding of them, it might be better to refer to one of the tutorials for writing Windows programs in assembler and/or cracking, for example http://web.archive.org/web/20190517161709/http://win32assembly.programminghorizon.com/pe-tut1.html[Iczelion's PE Tutorial 1: Overview of PE File Format] and http://web.archive.org/web/20190517161709/http://win32assembly.programminghorizon.com/pe-tut6.html[Iczelion's PE Tutorial 6: Import Table].
+The aim of this exercise is to practice the PE file structure, particularly the symbol import tables (Import Table) and the table of addresses of imported symbols (Import Address Table, IAT). The structures are described in https://msdn.microsoft.com/en-us/library/windows/desktop/ms680313(v=vs.85).aspx[MSDN]. For a better understanding of them, it might be better to refer to one of the tutorials for writing Windows programs in assembler and/or cracking, for example https://web.archive.org/web/20190517161709/http://win32assembly.programminghorizon.com/pe-tut1.html[Iczelion's PE Tutorial 1: Overview of PE File Format] and https://web.archive.org/web/20190517161709/http://win32assembly.programminghorizon.com/pe-tut6.html[Iczelion's PE Tutorial 6: Import Table]. You can find more detailed information about the PE file format in a very nice  http://www.pelib.com/resources/luevel.txt[artcile by Bernd Luevelsmeyer].
 
 A graphical representation of objects with which we will be working throughout this exercise:
 
 image::iat.jpg[]
+
+All structures described below are defined in the `windows.h` header file.
 
 == Finding the Import Address Table (IAT)
 
@@ -66,7 +68,7 @@ PIMAGE_IMPORT_DESCRIPTOR pImportDescriptorEnd = (PIMAGE_IMPORT_DESCRIPTOR)(((BYT
 
 The end of the array can also be recognized by the fact that the last valid element has the value of the `Characteristics` field set to `NULL`. A question: What if these two ways of determining the length are in conflict? Which test would let us determine which option takes priority (i.e., what the operating system does)?
 
-The `OriginalFirstThunk` field contains an RVA of the beginning of the array of structures `IMAGE_THUNK_DATA`; the array ends with an empty `IMAGE_THUNK_DATA` structure. This structure (`PIMAGE_THUNK_DATA`) is automatically mapped to one of the following structures, depending on whether this is a 32-bit or a 64-bit PE file:
+The `OriginalFirstThunk` field contains an RVA of the beginning of the array of structures `IMAGE_THUNK_DATA`; we can determine the size of the array thanks to the fact that the array ends with an empty `IMAGE_THUNK_DATA` structure. This structure (`PIMAGE_THUNK_DATA`) is automatically mapped to one of the following structures, depending on whether this is a 32-bit or a 64-bit PE file:
 
 [source,cpp]
 ----
@@ -124,7 +126,7 @@ If you liked this assignment, find a relationship of the `Hint` field and the Ex
 == Second homework
 
 * Points: *5*
-* Deadline: *2019-11-14, 16:00*
+* Deadline: *TBA*
 
 Your program compiled with MS Visual Studio typically depends on an external runtime library `MSVCRT12.DLL` (the version in the name may vary according to the compiler version, this name applies to Visual Studio 2013). This library contains functions `malloc`, `calloc`, `realloc`, and `free`. Write a program which will contains functions:
 
@@ -135,7 +137,12 @@ Your program compiled with MS Visual Studio typically depends on an external run
 * `MallocDebug_realloc`
 * `MallocDebug_free`
 
-The `MallocDebug_Init` function will find the IAT position of the `malloc`, `calloc`, `realloc`, and `free` functions and change (= patch) their addresses in the IAT to the addresses of `MallocDebug_malloc`, `MallocDebug_calloc`, `MallocDebug_realloc`, and `MallocDebug_free` respectively. These patched functions will create a record of the operation and its parameters (use a global fixed array, don't worry about multithreading support) on allocation and look up and remove (and complain if this failed) the record on deallocation. Then they will call the original function to actually perform the requested operation; note that you can't use e.g. `malloc` directly, you need to call a function pointer which you saved during `MallocDebug_Init`. This will provide us with an ability of logging memory allocation/deallocation operations. The `MallocDebug_Done` function will reset the IAT to its original state and report any non-freed memory blocks. Make sure to verify that these leaked blocks are reported correctly (e.g. by creating an intentional memory leak).
+The `MallocDebug_Init` function will find the IAT position of the `malloc`, `calloc`, `realloc`, and `free` functions and change (= patch) their addresses in the IAT to the addresses of `MallocDebug_malloc`, `MallocDebug_calloc`, `MallocDebug_realloc`, and `MallocDebug_free` respectively. These patched functions will create a record of the operation and its parameters (use a static global array of a fixed size, don't worry about multithreading support or dynamic allocation) on allocation and look up and remove (and complain if this failed) the record on deallocation. Then they will call the original function to actually perform the requested operation; note that you can't use e.g. `malloc` directly, you need to call a function pointer which you saved during `MallocDebug_Init`. This will provide us with an ability of logging memory allocation/deallocation operations. The `MallocDebug_Done` function will reset the IAT to its original state and report any non-freed memory blocks. Make sure to verify that these leaked blocks are reported correctly (e.g. by creating an intentional memory leak).
+
+[IMPORTANT]
+====
+If your compiled binary uses an embedded (static) runtime library rather than a dynamically loaded one, you won't be able to finish the homework. In that case you can use the `/MD` argument which will force the compiler to use the runtime in a shared library. Use CFF Explorer to verify that your application is importing memory functions from a DLL!
+====
 
 [TIP]
 ====
@@ -156,10 +163,25 @@ BOOL WINAPI VirtualProtect (
 
 [IMPORTANT]
 ====
+When processing the import directory, you don't need to support any other thunks than pointers to `IMAGE_IMPORT_BY_NAME`, but aside from that your code should be compatible with any import directory, including a malformed one. It's perfectly legitimate to emit a warning that the import directory is damaged and the application will terminate, but it's not acceptable if you simply crash on a memory access which you could have detected as incorrect by strictly following PE specifications.
+====
+
+[NOTE]
+====
+It's quite normal that an application imports one library multiple times. It can even import the same function multiple times!
+====
+
+[IMPORTANT]
+====
 It is *not* the purpose of this task to write a new memory manager. Quite the opposite, in fact -- we are modelling an attempt to monitor a program's behavior in a specific area, and it rather defeats the purpose if we drastically change the area. Your implementation should simply store the necessary logging data and then (or before that) call the original versions of the memory management functions.
 ====
 
 [IMPORTANT]
 ====
-Your implementation should adhere to the specification of the substituted functions. Study their documentation and make sure your solution works correctly for all boundary cases (and all use cases) the memory functions can reach.
+Your implementation should adhere to the specification of the substituted functions. Study their documentation and make sure your solution works correctly for all boundary cases (and all use cases) the memory functions can reach. A common error even in otherwise nice solutions is that the student did not properly handle all possible uses of memory functions -- `realloc` in particular has a lot of different uses.
+====
+
+[IMPORTANT]
+====
+Make sure your code works fine even if the `MallocDebug_Init` and `MallocDebug_Done` functions are called multiple times and in any order.
 ====

@@ -22,7 +22,7 @@ Analyze the attached application. Describe the obfuscation techniques used and m
 
 == Task 2
 
-Open the attached application in a debugger and try to reach the end -- meaning the end after all the obfuscations, not the first `exit` you encounter :-). You may also analyze the application in IDA Pro and document all obfuscations -- that may be preferable as you won't need to search for a particular version of Windows XP or Vista.
+Perform a static analysis of the attached application in IDA Pro. Describe the obfuscation techniques you encounter and modify the IDA database to make the code human-readable. We will make use of this readable code in two weeks because it will reveal the hidden antidebugging techniques. We will then be able to determine conditions required to make the application run in its entirety. (We may not be able to actually run the application because parts of it are heavily system-dependent.)
 
 * link:{imagesdir}/cv09b.zip[Download -- Win XP]
 * link:{imagesdir}/cv09b.vista.zip[Download -- Win Vista]
@@ -33,12 +33,12 @@ Open the attached application in a debugger and try to reach the end -- meaning 
 
 When removing obfuscations, you may find the following keyboard shortcuts useful:
 
-* `D` -- makes IDA interpret the selected line or block as data rather than code.
-* `C` -- makes IDA interpret the selected line or block as code rather than data.
-* `U` -- makes IDA forget what you said before and treat the selected line or block as it would without your interventions.
-* `P` -- tells IDA that the block should be considered a separate procedure.
-** This is very useful in case of obfuscated function -- then IDA usually only recognizes a prt of the function, up until the first obfuscation. After you've removed the obfuscation (e.g. by converting it to data or patching it out) you can ask IDA to regenerate the function.
-** Sometimes `P` alone won't be sufficient. In that case undefine (`U`) the function's first label (i.e. its name) and then use `P` on this label.
+* kbd:[D] -- makes IDA interpret the selected line or block as data rather than code.
+* kbd:[C] -- makes IDA interpret the selected line or block as code rather than data.
+* kbd:[U] -- makes IDA forget what you said before and treat the selected line or block as it would without your interventions.
+* kbd:[P] -- tells IDA that the block should be considered a separate procedure.
+** This is very useful in case of obfuscated function -- then IDA usually only recognizes a part of the function, up until the first obfuscation. After you've removed the obfuscation (e.g. by converting it to data or patching it out) you can ask IDA to regenerate the function.
+** Sometimes kbd:[P] alone won't be sufficient. In that case undefine (kbd:[U]) the function's first label (i.e. its name) and then use kbd:[P] on this label.
 
 [IMPORTANT]
 ====

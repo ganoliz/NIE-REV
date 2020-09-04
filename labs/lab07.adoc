@@ -3,7 +3,7 @@
 :imagesdir: ../media/labs/07
 :toc:
 
-Cvičení je primárně určeno pro konzultace vašich řešení domácích úloh, případně dalších témat týkajících se reverzního inženýrství. 
+Cvičení je primárně určeno pro konzultace vašich řešení domácích úloh, případně dalších témat týkajících se reverzního inženýrství.
 
 Ve zbylém čase se podíváme také na odlišnosti mezi 32bitovým a 64bitovým kódem. Využijeme k tomu jednoduchý 64bitový program link:{imagesdir}/cv07.zip[cv07.zip].
 
@@ -16,7 +16,7 @@ Ve zbylém čase se podíváme také na odlišnosti mezi 32bitovým a 64bitovým
 . Nalezněte funkci `main`.
 * Všimněte si, že funkce `main` vůbec nepoužívá registr `RBP`. Jak je to možné?
 * Proč se hned na začátku funkce ukládají argumenty na zásobník?
-* Identifikujte prolog funkce. Zbytek prvního základního bloku už reprezentuje začátek těla funkce. Vysvětlete smysl jednotlivých instrukcí a vysvětlete, jak by se lišily, pokud by byl program zkompilován jako 32bitový. Vyzkoušejte, která instrukce je zodpovědná za vynulování horních 32 bitů registru `RAX`.
+* Identifikujte prolog funkce. Zbytek prvního základního bloku už reprezentuje začátek těla funkce. Vysvětlete smysl jednotlivých instrukcí a vysvětlete, jak by se lišily, pokud by byl program zkompilován jako 32bitový. Vyzkoušejte v debuggeru, která instrukce je zodpovědná za vynulování horních 32 bitů registru `RAX`.
 * Identifikujte epilog funkce a ukažte, jak jeho instrukce odpovídají instrukcím z prologu.
 * Pokuste se odhadnout smysl jednotlivých funkcí volaných z funkce `main`. Nemusíte zkoumat přímo samotné funkce, ve většině případů se vám podaří informaci získat už jen z jejich argumentů, případně můžete pozorovat činnost programu při běhu.
 . Nalezněte některé volání API funkcí Windows. Z přednášky víme, že funkce z Windows API typicky používají volací konvenci `__stdcall`. Srovnejte způsob, jak jsou volány API funkce a vestavěné funkce našeho programu. Čím si vysvětlujete svá pozorování?
