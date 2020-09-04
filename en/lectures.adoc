@@ -11,37 +11,37 @@
 ^h| Download
 
 | 1.
-| 2019-09-26
+| 2020-09-25
 | Introduction to reverse engineering, stack analysis
 | link:{imagesdir}/rev01en.pdf[download]
 
 | 2.
-| 2019-10-10
+| 2020-10-09
 | Analysis of a program's flow
 | link:{imagesdir}/rev02en.pdf[download]
 
 | 3.
-| 2019-10-24
+| 2020-10-23
 | Analysis of C++ classes
 | link:{imagesdir}/rev03en.pdf[download]
 
 | 4.
-| 2019-11-07
+| 2020-11-06
 | Disassembling and obfuscation
 | link:{imagesdir}/rev04en.pdf[download]
 
 | 5.
-| 2019-11-21
+| 2020-11-20
 | Compiler recognition
 | link:{imagesdir}/rev05en.pdf[download]
 
 | 6.
-| 2019-12-05
+| 2020-12-04
 | Debugging and anti-debugging
 | link:{imagesdir}/rev06en.pdf[download]
 
 | 7.
-| 2019-12-19
+| 2020-12-18
 | Malware
 | link:{imagesdir}/rev07en.pdf[download]
 
