@@ -116,7 +116,7 @@ Algoritmus použitý pro skrytí tohoto hesla je adaptací algoritmu, který zn�
 
 === Heslo 5
 
-Toto je nepovinné heslo, které není nezbytné pro získání plného počtu bodů z předmětu. Je určeno jako bonus pro zájemce, případně jako částečná kompenzace za body, které jste mnohli získat v rámci úlohy xref:keygen.adoc[Keygen], pokud byste se rozhodli tuto úlohu vynechat.
+Toto je nepovinné heslo, které není nezbytné pro získání plného počtu bodů z předmětu. Je určeno jako bonus pro zájemce, případně jako částečná kompenzace za body, které jste mohli získat v rámci úlohy xref:keygen.adoc[Keygen], pokud byste se rozhodli tuto úlohu vynechat.
 
 Heslo se nachází ve stejné binárce jako předchozí dvě hesla, ale je velmi náročně skryté. Nepoužívá žádné nové techniky, jeho hlavní složitost spočívá v nalezení místa, kde se s heslem pracuje. K jeho odhalení je potřeba detailnější zkoumání programu a lepší porozumění Win32 API (nad rámec toho, co děláme v tomto předmětu), případně větší pozornost a představivost (schopnost myslet mimo vyjeté koleje).
 

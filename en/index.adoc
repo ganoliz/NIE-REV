@@ -17,6 +17,12 @@ Students will get acquainted with the essentials of reverse engineering of compu
 * Office: TH:A-1137
 * Consultations: As required, exact date and time to be determined through e-mail or personally at a lecture/tutorial.
 
+== Note about the Winter semester 2020/21
+
+Both lectures and tutorials for Reverse engineering will be presented physically in room T9:345 as per the regular timetable, at least in the beginning. While my personal preference in the current epidemiological situation is to keep all of my courses on-line to minimize risks (which is a recommended approach in Security after all), the small number of signed up students allows me to follow the faculty's recommendation to conduct the english-language courses in person rather than online. It remains to be seen how long will this approach remain viable.
+
+Note that this *will* be changed if the number of signed-up students exceeds 12.
+
 == Evaluation
 
 * xref:hodnoceni.adoc[Requirements for passing the course]

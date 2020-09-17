@@ -40,6 +40,43 @@ If a student achieves 50 or more points from the homeworks and the semestral wor
 
 Completing the exam does not close the classification. The student may keep submitting more tasks until the end of the semester, as long as the task deadline wasn't reached yet.
 
+== Modifications for the Winter semester 2020/21
+
+Due to the current epidemiological situation and its expected development, the following changes to the standard grading scheme will be applied to the Winter semester of 2020/21:
+
+=== Assessment
+
+The assessment parameters are not modified in any way.
+
+=== Exam
+
+At this moment, it is impossible to determine the properties of the exam exactly because it is not known how will the epidemiological situation evolve by the beginning of the exam period. I can, however, specify the possible alternatives as well as the criteria which will determine the selection of the final alternative.
+
+[NOTE]
+====
+The reason why I chose these variants is that I need to satisfy the purpose of the exam (i.e. verification that the student understands the issues of reverse engineering and had not, for example, had the homeworks or semestral works done by a third party) as much as possible while doing my best at ensuring an equal opportunity for everyone (i.e. by preventing cheating), and at the same time eliminate as much of the subjective influences of the oral exams as possible.
+====
+
+==== Alternative 1
+
+If it is, on January 4th, 2021, *not prohibited* (by the country, by CTU, or by FIT) to conduct personal meetings in the faculty's rooms, the exam will be performed in exactly the same fashion as usual.
+
+==== Alternative 2
+
+If it *is*, on January 4th, 2021, *prohibited*  (by the country, by CTU, or by FIT) to conduct personal meetings in the faculty's rooms, the exam will be modified in the following way. These modifications will be applied to all students without exception, regardless of any further developments of the epidemiological situation:
+
+* The exam will be performed online in MS Teams and will be oral only. As far as technical requirements are concerned, you will only need an internet connection stable enough to hold throughout the exam and a microphone.
+
+* The exam will take 10 minutes and will consist of one question. In order to minimize the risk of cheating, there won't be any preparatory period, the student will be expected to start answering straight away.
+
+* The exam will not be evaluated by points but in a binary way -- either a "success" or a "failure". In case of a failure, the student will be graded F, as if he or she received zero points in the normal exam. In case of a success, the student will be awarded as many points as to maintain the percentage rate from the semester (in other words, the points from the semester will be multiplied by 3/7 and mathematically rounded to an integer number).
+
+==== Alternative 3
+
+If at least one exam according to Alternative 1 takes place and then the changes in the epidemiological situation force us to switch to Alternative 2, the students who succeeded in Alternative 1 will be given a choice whether they want to keep the points they received in their written exam or whether they want to have their points recalculated as if they had taken the Alternative-2 exam and succeeded.
+
+Note that the change in the other direction will not happen. Once exams according to Alternative 2 start, there is no way back to Alternative 1 -- all future exams will be conducted according to Alternative 2 rules.
+
 == Evaluation scale
 
 Evaluation scale is according to the current https://www.cvut.cz/en/internal-ctu-regulations[Study and Examination Code for Students of CTU in Prague] (https://www.cvut.cz/sites/default/files/content/74c76d2e-7f4d-4cb1-ac28-b0765c7f88f2/en/20200624-study-and-examination-rules-for-students-of-ctu.pdf[PDF]).

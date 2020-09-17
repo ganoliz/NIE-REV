@@ -40,6 +40,43 @@ Získá-li student z domácích úloh a semestrálních prací celkem 50 nebo v�
 
 Složením zkoušky se *neuzavírá* klasifikace, student může až do konce semestru odevzdávat úlohy, jimž dosud neuplynul deadline.
 
+== Úpravy pro zimní semestr 2020/21
+
+V důsledku současné epidemiologické situace a jejího očekávaného vývoje stanovuji následující úpravy parametrů hodnocení pro zimní semestr 2020/21:
+
+=== Zápočet
+
+Parametry zápočtu se nemění.
+
+=== Zkouška
+
+V tuto chvíli nelze přesně určit, jak bude zkouška probíhat, protože není známo, jaká bude epidemiologická situace v průběhu zkouškového období. Jsou ale dopředu stanoveny následující varianty včetně kritérií, podle kterých bude konkrétní varianta vybrána.
+
+[NOTE]
+====
+Důvodem pro takto stanovené varianty je snaha zajistit v maximální možné míře dosažení účelu zkoušky (tzn. ověření, že student rozumí problematice reverzního inženýrství a například si nenechal domácí úlohy a semestrální práce vypracovat někým jiným) při dodržení rovných podmínek pro všechny (maximální omezení případných pokusů o podvádění), ale přitom co možná nejvíce eliminovat subjektivní vlivy a nemožnost dodatečného přezkoumání ústního zkoušení.
+====
+
+==== Varianta 1
+
+Pokud *nebude* ke dni 4.1.2021 zakázáno (státem, ČVUT nebo FITem) konat prezenční akce v prostorách fakulty, parametry zkoušky se nemění.
+
+==== Varianta 2
+
+Pokud *bude* ke dni 4.1.2021 zakázáno (státem, ČVUT nebo FITem) konat prezenční akce v prostorách fakulty, parametry zkoušky se mění následujícím způsobem, a to bez výjimky pro všechny studenty, nezávisle na tom, zda budou nebo nebudou prezenční akce umožněny později v průběhu zkouškového období:
+
+* Zkouška se bude konat online v prostředí MS Teams a bude ústní. Z technického vybavení je požadováno pouze natolik stabilní spojení, aby vydrželo po celou dobu zkoušky, a mikrofon.
+
+* Zkouška potrvá 10 minut a bude na ní položena jedna otázka z probrané látky. Z důvodu minimalizace pokusů o podvody nebude prostor pro přípravu, student na položenou otázku okamžitě odpovídá.
+
+* Zkouška nebude hodnocena body, ale binárně jako "úspěch" nebo "neúspěch". V případě neúspěchu bude student ohodnocen známkou F, jako kdyby v prezenční zkoušce získal 0 bodů. V případě úspěchu získá student za zkoušku tolik bodů, aby získal stejné procento z maximálního počtu, jako získal během semestru (jinými slovy, body ze semestru se vynásobí koeficientem 3/7 a matematicky zaokrouhlí na celé číslo).
+
+==== Varianta 3
+
+Pokud proběhne nejméně jeden zkouškový termín podle varianty 1 a následný vývoj epidemiologické situace vynutí přechod k variantě 2, budou mít studenti, kteří uspěli ve variantě 1, na výběr, jestli si přejí ponechat body získané ve variantě 1 a nebo jestli si nechají body ze zkoušky přepočítat, jako kdyby už od začátku zkouškového období probíhalo zkoušení podle varianty 2.
+
+Opačný směr není možný, jakmile jednou vstoupíme do varianty 2, tato varianta zůstane v platnosti pro všechny další zkouškové termíny.
+
 == Celkové hodnocení
 
 Hodnocení se řídí aktuálním https://www.cvut.cz/vnitrni-predpisy[Studijním a zkušebním řádem ČVUT] ( https://www.cvut.cz/sites/default/files/content/74c76d2e-7f4d-4cb1-ac28-b0765c7f88f2/cs/20200624-studijni-a-zkusebni-rad-pro-studenty-cvut-v-praze-iii-uplne-zneni-ucinnost-od-11-3-2020_0.pdf[PDF] ).
