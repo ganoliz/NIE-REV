@@ -1,0 +1,14 @@
+﻿
+= Current events: 2020-09-19
+:toc:
+:imagesdir: ../../media
+
+== 2020-09-19
+
+It didn't take even as long as I expected: Yesterday a new set of restrictions was declared, severely limiting, among other things, the possibility of direct face-to-face lectures and tutorials at universities. The CTU FIT responded by posting a new Dean's Directive which prohibits all students from entering the faculty's premises. Unfortunately, this means that our course will be conducted online, at least for the time being. If/when these restrictions are lifted, I will re-evaluate the feasibility of conducting real-life teaching sessions. Please bear with me in the meantime.
+
+== 2020-09-17
+
+Both lectures and tutorials for Reverse engineering will be presented physically in room T9:345 as per the regular timetable, at least in the beginning. While my personal preference in the current epidemiological situation is to keep all of my courses on-line to minimize risks (which is a recommended approach in Security after all), the small number of signed up students allows me to follow the faculty's recommendation to conduct the english-language courses in person rather than online. It remains to be seen how long will this approach remain viable.
+
+Note that this *will* be changed if the number of signed-up students exceeds 12.

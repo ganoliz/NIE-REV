@@ -5,6 +5,13 @@
 
 * xref:en/index.adoc[English version]
 
+== Aktuality
+
+[IMPORTANT]
+====
+Sledujte prosím aktuální informace k výuce na stránce xref:aktuality.adoc[Aktuality].
+====
+
 == Anotace
 
 Studenti budou v rámci předmětu seznámeni se základy reverzního inženýrství počítačového softwaru. Dále studenti získají znalosti o tom, jakým způsobem probíhá spouštění a inicializace programu, co se odehrává před a po volání funkce main. Studenti také pochopí, jakým způsobem je organizován spustitelný soubor, jak se propojuje s Knihovnami třetích stran. Další část předmětu bude věnována reverznímu inženýrství aplikací napsaných v C++. Studenti se také seznámi s principy disassemblerů a obfuskačními metodami. Dále se předmět bude věnovat nástrojům pro ladění (debuggerům): jak ladící nástroje pracují, jak probíhá ladění a také se seznámí s metodami, které mohou být použity k detekci ladících nástrojů. Jedna z přednášek pohovoří o aktuální scéně počítačového škodlivého kódu. Důraz předmětu je kladen na cvičení, na kterých budou studenti řešit prakticky orientované úlohy z reálného světa.
@@ -16,12 +23,6 @@ Studenti budou v rámci předmětu seznámeni se základy reverzního inženýrs
 * E-mail: mailto:josef.kokes@fit.cvut.cz[josef.kokes@fit.cvut.cz]
 * Kancelář: TH:A-1137
 * Konzultace: Podle potřeby, dohoda na termínu e-mailem nebo osobně na přednášce/cvičení.
-
-== Výuka v zimním semestru 2020/21
-
-Výuka předmětu Reverzní inženýrství bude v zimním semestru 2020/21 probíhat v online podobě, a to jak v případě přednášek, tak i cvičení. Důvodem je velmi nepříznivá epidemiologická situace v kombinaci s velkým počtem studentů, kvůli čemuž by při prezenční výuce neúměrně narůstalo riziko onemocnění některých účastníků, a to zejména během cvičení. Přitom koncepce předmětu umožňuje poměrně snadno převést výuku do online podoby, aniž by to na ni mělo větší negativní dopad.
-
-Za účelem minimalizace negativ online výuky jsem vypsal pravidelné konzultační hodiny na pátek večer (18:00-19:30), které budou probíhat prezenčně v bourací učebně T9:345. Samozřejmě zůstává možnost konzultací po e-mailu prakticky neustále, v menší míře také konzultace přes Teams (prosím, dohodněte si předem termín mailem).
 
 == Hodnocení
 

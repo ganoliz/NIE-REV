@@ -5,6 +5,13 @@
 
 * xref:../index.adoc[Česká verze]
 
+== Current events
+
+[IMPORTANT]
+====
+Please keep an eye on the current events in the course on the xref:aktuality.adoc[Current events] page.
+====
+
 == Annotation
 
 Students will get acquainted with the essentials of reverse engineering of computer software. They will learn how processes start and what happens before and after the main function is called. Students will understand how executable files are organized and how they interact with 3rd party libraries. Another part of the course is dedicated to reverse engineering of applications written in C++. Students will also understand principles of disassemblers and obfuscation techniques. A part of the course will also be dedicated to debuggers: how debuggers and debugging work and which methods can be used to detect it. One of the lectures will be dedicated to the latest trends on the computer malware scene. The focus of the course is on the seminars, where students will solve practically oriented tasks from the real world.

@@ -1,0 +1,15 @@
+﻿
+= Aktuality: 19.9.2020
+:toc:
+:imagesdir: ../media
+
+== 19.9.2020
+
+Tak prezenční výuka nevydržela ani tak dlouho, jak jsem očekával -- včera bylo oznámeno, že hygiena zakáže prezenční výuku na vysokých školách, na což zareagovalo vedení fakulty a prezenční výuku zrušilo obecně. Výuka tedy bude probíhat výhradně na Teams v kanálu předmětu.
+
+== 17.9.2020
+
+Výuka předmětu Reverzní inženýrství bude v zimním semestru 2020/21 probíhat v online podobě, a to jak v případě přednášek, tak i cvičení. Důvodem je velmi nepříznivá epidemiologická situace v kombinaci s velkým počtem studentů, kvůli čemuž by při prezenční výuce neúměrně narůstalo riziko onemocnění některých účastníků, a to zejména během cvičení. Přitom koncepce předmětu umožňuje poměrně snadno převést výuku do online podoby, aniž by to na ni mělo větší negativní dopad.
+
+Za účelem minimalizace negativ online výuky jsem vypsal pravidelné konzultační hodiny na pátek večer (18:00-19:30), které budou probíhat prezenčně v bourací učebně T9:345. Samozřejmě zůstává možnost konzultací po e-mailu prakticky neustále, v menší míře také konzultace přes Teams (prosím, dohodněte si předem termín mailem).
+
