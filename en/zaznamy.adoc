@@ -1,0 +1,13 @@
+﻿
+= Recordings
+:imagesdir: ../media/recordings
+
+== Winter semester 2021
+
+=== Lectures
+
+* Lecture 1: https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_1.mp4[Download]
+
+=== Tutorials
+
+* Tutorial 1: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_1.mp4[Download]
