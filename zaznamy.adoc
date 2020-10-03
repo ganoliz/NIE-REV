@@ -11,3 +11,4 @@
 === Cvičení
 
 * Cvičení 1: https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_1_paralelka_101.mp4[Paralelka 101] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_1_paralelka_102.mp4[Paralelka 102] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_1_paralelka_103.mp4[Paralelka 103]
+* Cvičení 2: https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_2_paralelka_101.mp4[Paralelka 101] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_2_paralelka_102.mp4[Paralelka 102] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_2_paralelka_103.mp4[Paralelka 103]
