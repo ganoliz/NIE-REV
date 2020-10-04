@@ -136,8 +136,13 @@ This password is located in a new binary which will get extracted after you've s
 
 == Semestral work assignment
 
+////
 The assignments will be provided during the third week of the semester.
+////
 
-////
-* link:https://users.fit.cvut.cz/~kokesjo1/MI-REV/sem.prace/acsjakub.exe[acsjakub]
-////
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/boulanat.exe[boulanat]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/chevrnic.exe[chevrnic]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/mauryfab.exe[mauryfab]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/mihalma5.exe[mihalma5]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/rousslou.exe[rousslou]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/steinda3.exe[steinda3]
