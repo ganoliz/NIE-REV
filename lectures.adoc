@@ -3,54 +3,62 @@
 :imagesdir: ./media/lectures
 
 
-[options="autowidth", cols=5*]
+[options="autowidth", cols=6*]
 |====
 <h| číslo
 <h| Datum
 <h| Téma
-^h| Download (EN)
-^h| Download (CZ)
+^h| Slajdy (EN)
+^h| Slajdy (CZ)
+^h| Video
 
 | 1.
 | 24.09.2020
 | Úvod do reverzního inženýrství, analýza zásobníku
 | link:{imagesdir}/rev01en.pdf[anglicky]
 | link:{imagesdir}/rev01cz.pdf[česky]
+| https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_1.mp4[video]
 
 | 2.
 | 08.10.2020
 | Analýza toku kódu
 | link:{imagesdir}/rev02en.pdf[anglicky]
 | link:{imagesdir}/rev02cz.pdf[česky]
+| --
 
 | 3.
 | 22.10.2020
 | Analýza tříd v C++
 | link:{imagesdir}/rev03en.pdf[anglicky]
 | link:{imagesdir}/rev03cz.pdf[česky]
+| --
 
 | 4.
 | 05.11.2020
 | Disassembling a obfuskace
 | link:{imagesdir}/rev04en.pdf[anglicky]
 | link:{imagesdir}/rev04cz.pdf[česky]
+| --
 
 | 5.
 | 19.11.2020
 | Rozpoznávání kompilátorů
 | link:{imagesdir}/rev05en.pdf[anglicky]
 | link:{imagesdir}/rev05cz.pdf[česky]
+| --
 
 | 6.
 | 03.12.2020
 | Debugging a anti-debugging
 | link:{imagesdir}/rev06en.pdf[anglicky]
 | link:{imagesdir}/rev06cz.pdf[česky]
+| --
 
 | 7.
 | 17.12.2020
 | Malware
 | link:{imagesdir}/rev07en.pdf[anglicky]
+| --
 | --
 
 |====

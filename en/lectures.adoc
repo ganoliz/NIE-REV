@@ -3,46 +3,54 @@
 :imagesdir: ../media/lectures
 
 
-[options="autowidth", cols=4*]
+[options="autowidth", cols=5*]
 |====
 <h| nr.
 <h| Date
 <h| Topic
-^h| Download
+^h| Slides
+^h| Video
 
 | 1.
 | 2020-09-25
 | Introduction to reverse engineering, stack analysis
-| link:{imagesdir}/rev01en.pdf[download]
+| link:{imagesdir}/rev01en.pdf[slides]
+| https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_1.mp4[video]
 
 | 2.
 | 2020-10-09
 | Analysis of a program's flow
-| link:{imagesdir}/rev02en.pdf[download]
+| link:{imagesdir}/rev02en.pdf[slides]
+| N/A
 
 | 3.
 | 2020-10-23
 | Analysis of C++ classes
-| link:{imagesdir}/rev03en.pdf[download]
+| link:{imagesdir}/rev03en.pdf[slides]
+| N/A
 
 | 4.
 | 2020-11-06
 | Disassembling and obfuscation
-| link:{imagesdir}/rev04en.pdf[download]
+| link:{imagesdir}/rev04en.pdf[slides]
+| N/A
 
 | 5.
 | 2020-11-20
 | Compiler recognition
-| link:{imagesdir}/rev05en.pdf[download]
+| link:{imagesdir}/rev05en.pdf[slides]
+| N/A
 
 | 6.
 | 2020-12-04
 | Debugging and anti-debugging
-| link:{imagesdir}/rev06en.pdf[download]
+| link:{imagesdir}/rev06en.pdf[slides]
+| N/A
 
 | 7.
 | 2020-12-18
 | Malware
-| link:{imagesdir}/rev07en.pdf[download]
+| link:{imagesdir}/rev07en.pdf[slides]
+| N/A
 
 |====
