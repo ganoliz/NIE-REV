@@ -15,3 +15,4 @@ You can find the original versions of the recordings at link:https://web.microso
 
 * Tutorial 1: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_1.mp4[Download]
 * Tutorial 2: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_2.mp4[Download]
+* Tutorial 3: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_3.mp4[Download]

@@ -3,6 +3,8 @@
 :imagesdir: ../../media/labs/03
 :toc:
 
+* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_3.mp4[Recording of the tutorial]
+
 == Recommendations
 
 Recommendations for reverse engineering will be demonstrated live.
