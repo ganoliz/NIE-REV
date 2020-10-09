@@ -24,7 +24,7 @@
 | Analýza toku kódu
 | link:{imagesdir}/rev02en.pdf[anglicky]
 | link:{imagesdir}/rev02cz.pdf[česky]
-| --
+| https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_2.mp4[video]
 
 | 3.
 | 22.10.2020

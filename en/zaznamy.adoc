@@ -4,11 +4,12 @@
 
 You can find the original versions of the recordings at link:https://web.microsoftstream.com/user/00b67c98-0fbe-4e9d-a6f0-e56354b2770a[Microsoft Stream].
 
-== Winter semester 2021
+== Winter semester 2020/21
 
 === Lectures
 
 * Lecture 1: https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_1.mp4[Download]
+* Lecture 2: https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_2.mp4[Download]
 
 === Tutorials
 

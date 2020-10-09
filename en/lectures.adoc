@@ -21,7 +21,7 @@
 | 2020-10-09
 | Analysis of a program's flow
 | link:{imagesdir}/rev02en.pdf[slides]
-| N/A
+| https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_2.mp4[video]
 
 | 3.
 | 2020-10-23
