@@ -47,7 +47,7 @@ Note that this *will* be changed if the number of signed-up students exceeds 12.
 | xref:labs/lab03.adoc[E-mail]
 | 5
 | 3rd week
-| TBA
+| November 6, 17:45
 
 | xref:labs/lab04.adoc[IAT]
 | 5
