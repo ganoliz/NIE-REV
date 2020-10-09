@@ -205,3 +205,4 @@ Toto heslo se nachází v nové binárce, kterou dostanete, pokud vyluštíte p�
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/vokouond.exe[vokouond]
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/voronond.exe[voronond]
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/zakjindr.exe[zakjindr]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/zurekmi1.exe[zurekmi1]
