@@ -3,6 +3,8 @@
 :imagesdir: ../media/labs/04
 :toc:
 
+* link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_4_paralelka_102.mp4[Záznam cvičení]
+
 == Úvod
 
 Cílem tohoto cvičení je procvičit strukturu PE souboru, zejména tabulky importu symbolů (Import Table) a tabulky adres importovaných symbolů (Import Address Table, IAT). Jednotlivé struktury jsou popsány na https://msdn.microsoft.com/en-us/library/windows/desktop/ms680313(v=vs.85).aspx[MSDN], pro lepší pochopení ale může být vhodnější využít některý z tutorialů pro psaní Windows programů v assembleru a/nebo pro crackování, např. https://web.archive.org/web/20190517161709/http://win32assembly.programminghorizon.com/pe-tut1.html[Iczelion's PE Tutorial 1: Overview of PE File Format] a https://web.archive.org/web/20190517161709/http://win32assembly.programminghorizon.com/pe-tut6.html[Iczelion's PE Tutorial 6: Import Table]. Detailní informace o formátu PE souboru si můžete přečíst také ve velmi pěkném http://www.pelib.com/resources/luevel.txt[popisu Bernda Luevelsmeyera].
@@ -127,9 +129,9 @@ Pokud by vás téma bavilo, zjistěte vztah položky `Hint` k Export Address Tab
 
 * Počet bodů: *5*
 * Termín odevzdání:
-** *TBA* (paralelka 101)
-** *TBA* (paralelka 102)
-** *TBA* (paralelka 103)
+** *19.11.2020 16:00* (paralelka 101)
+** *19.11.2020 17:45* (paralelka 102)
+** *19.11.2020 19:30* (paralelka 103)
 
 Váš program, zkompilovaný pomocí MS Visual Studio, typicky používá externí runtime ve formě knihovny `MSVCRT12.DLL` (verze ve jménu se může lišit podle verze kompilátoru, tento název platí pro Visual Studio 2013). Tato knihovna obsahuje funkce `malloc`, `calloc`, `realloc` a `free`. Napište program, který bude obsahovat funkce:
 
@@ -142,13 +144,13 @@ Váš program, zkompilovaný pomocí MS Visual Studio, typicky používá extern
 
 Funkce `MallocDebug_Init` najde v IAT pozici funkcí `malloc`, `calloc`, `realloc` a `free` a změní jejich adresu na adresy funkcí `MallocDebug_malloc`, `MallocDebug_calloc`, `MallocDebug_realloc` a `MallocDebug_free` (tzv. substituční funkce).
 
-Substituční funkce napište tak, aby si v okamžiku volání uložily záznam (stačí statické globální pole -- neřešíme konkurenční přístup více vláken ani podporu neomezeného množství alokací, stačí nám pevně dané maixmum) o tom, že se alokovala paměť, a o její velikosti. Uvolňující substituční funkce budou tento záznam opět rušit (a stěžovat si, pokud by měly zrušit neznámou nebo uz dříve zrušenou alokaci). Následně substituční funkce zavolají původní funkci, kterou substituují; pozor, nemůžete použít `malloc` -- využijte ukazatele uložené v rámci `MallocDebug_Init`. Získáme tedy schopnost logování paměťových alokačních/dealokačních operací.
+Substituční funkce napište tak, aby si v okamžiku volání uložily záznam (stačí statické globální pole -- neřešíme konkurenční přístup více vláken ani podporu neomezeného množství alokací, stačí nám pevně dané maximum) o tom, že se alokovala paměť, a o její velikosti. Uvolňující substituční funkce budou tento záznam opět rušit (a stěžovat si, pokud by měly zrušit neznámou nebo uz dříve zrušenou alokaci). Následně substituční funkce zavolají původní funkci, kterou substituují; pozor, nemůžete použít `malloc` -- využijte ukazatele uložené v rámci `MallocDebug_Init`. Získáme tedy schopnost logování paměťových alokačních/dealokačních operací.
 
 Funkce `MallocDebug_Done` vrátí IAT do původního stavu a vypíše případné zbytky tabulky, které budou považovány za memory leaky :). Nezapomeňte vhodně otestovat, že vrácené údaje odpovídají skutečnosti.
 
 [IMPORTANT]
 ====
-Pokud vámi zkompilovaný program nepoužívá externí runtime knihovnu, ale knihovnu staticky zakompilovanou přímo do spustitelného souboru, nebude úloha řešitelná. Můžete ale použít parametr `/MD`, kterým přimějete kompilátor k použití sdílené knihovny. Ověřte si v CFF Exploreru, že váš program importuje paměťové funkce!
+Pokud vámi zkompilovaný program nepoužívá externí runtime knihovnu ale knihovnu staticky zakompilovanou přímo do spustitelného souboru, nebude úloha řešitelná. Můžete ale použít parametr `/MD`, kterým přimějete kompilátor k použití sdílené knihovny. Ověřte si v CFF Exploreru, že váš program importuje paměťové funkce!
 ====
 
 [TIP]

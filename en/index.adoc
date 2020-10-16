@@ -52,7 +52,7 @@ Note that this *will* be changed if the number of signed-up students exceeds 12.
 | xref:labs/lab04.adoc[IAT]
 | 5
 | 4th week
-| TBA
+| November 20, 17:45
 
 | xref:labs/lab05.adoc[Snake]
 | 5
