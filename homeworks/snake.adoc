@@ -1,0 +1,36 @@
+﻿
+= 3. Had
+:imagesdir: ../media/labs/05
+:toc:
+
+* Počet bodů: *5*
+* Termín odevzdání:
+** *TBA* (paralelka 101)
+** *TBA* (paralelka 102)
+** *TBA* (paralelka 103)
+
+Analyzujte program `Had.exe` z archivu link:{imagesdir}/du3.zip[du3.zip].
+
+* Prozkoumejte program a nalezněte v něm konstruktory objektů a přiřazování VMT.
+** Ve výstupu uveďte konkrétní adresy konstruktorů i VMT.
+** Ujistěte se, že to, co jste našli, je opravdu konstruktor!
+* Z VMT zjistěte, kolik má která třída virtuálních metod.
+* Z RTTI zjistěte, jak se třídy jmenují a která VMT náleží které třídě.
+* Popište hierarchii tříd.
+** Zjistíte, že hierarchie vykazuje určité zvláštnosti. Upozorněte na tyto zvláštnosti a vysvětlete, co znamenají a jak k nim došlo (co je způsobilo). Vaše vysvětlení nemusí být nutně zcela přesné (z binárky nejde jednoduše určit, která z možných příčin je ta správná), ale mělo by být konzistentní s pozorovanými skutečnostmi.
+* *Bonus:* Upravte program tak, abyste měli 1000 životů. *2 body*
+
+[NOTE]
+====
+Had je sestaven se zapnutými optimalizacemi, což vede na ztrátu respektive přemístění některých informací, které jsme měli v úloze na cvičení dobře dostupné. Jde například o inlining konstruktorů. Jejich nalezení proto může být obtížnější -- ale zase ne o tolik.
+====
+
+[TIP]
+====
+Někteří studenti naráželi při řešení na problémy při spouštění Hada ve VirtualBoxu. Mohou za to rozdíly mezi tím, jak Had používá rozhraní DirectX, a tím, jak ho VirtualBox emuluje. Verze 5.2 s nainstalovanými Guest Additions a zapnutou 2D i 3D akcelerací se však zdá být plně funkční.
+====
+
+[IMPORTANT]
+====
+Použití vhodných nástrojů je samozřejmě vítáno, nestačí ale odevzdat pouhý výpis. Měli byste interpretovat, co vám nástroj zobrazil, a vyhodnotit, zda to odpovídá tomu, co byste u programu očekávali -- i nástroje mohou obsahovat chyby, potřebujeme umět posoudit, zda jsou výsledky reálné.
+====

@@ -38,20 +38,7 @@ Jsou živě demonstrována na cvičení.
 
 == Zadání 1. domácí úlohy
 
-* Počet bodů: *5*
-* Termín odevzdání:
-** *5.11. 16:00* (paralelka 101)
-** *5.11. 17:45* (paralelka 102)
-** *5.11. 19:30* (paralelka 103)
-
-Cílem úlohy je provést zpětnou analýzu souboru link:{imagesdir}/du1.zip[du1.zip] a přimět ho odeslat slušný e-mail cvičícímu. Program přijímá jako vstup konfigurační soubor, ten přiložený má ovšem nesprávnou strukturu i obsah. Analýzou programu zjistíte, jak má struktura souboru vypadat. Upravte konfigurační soubor tak, aby ho program interpretovat správně a aby cvičícímu poslal *slušný* e-mail. Při špatném formátu souboru může být odeslán neslušný e-mail, který není považován za správnou odpověď ;-).
-
-Až se vám podaří odeslat požadovaný e-mail, pošlete cvičícímu na školní adresu použitý konfigurační soubor (zabalený v ZIPu, aby určitě nedošlo k nepozorovanému pozměnění jeho struktury během přenosu mailem) spolu se stručným popisem vašeho postupu. Jen samotné odeslání slušného e-mailu není hodnoceno jako splnění úlohy.
-
-[IMPORTANT]
-====
-Samotný program `CrackMe01.exe` neměňte.
-====
+Informace o první domácí úloze naleznete na stránce xref:../homeworks/email.adoc[Email].
 
 == Zadání semestrálních prací
 

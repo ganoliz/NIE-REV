@@ -9,7 +9,7 @@
 
 [IMPORTANT]
 ====
-Please keep an eye on the current events in the course on the xref:aktuality.adoc[Current events] page.
+Please keep an eye on the current events in the course on the xref:current_info.adoc[Current events] page.
 ====
 
 == Annotation
@@ -32,7 +32,7 @@ Note that this *will* be changed if the number of signed-up students exceeds 12.
 
 == Evaluation
 
-* xref:hodnoceni.adoc[Requirements for passing the course]
+* xref:evaluation.adoc[Requirements for passing the course]
 * The points awarded will be recorded at the https://grades.fit.cvut.cz[FIT grades] website. In your own interest, verify that you got the correct amount of points every time you get an e-mail from me. The points shown at Grades are just "for your information", the definitive value is in my private "master" list.
 
 === Homework deadlines
@@ -44,17 +44,17 @@ Note that this *will* be changed if the number of signed-up students exceeds 12.
 <h| Assigned
 <h| Deadline
 
-| xref:labs/lab03.adoc[E-mail]
+| xref:homeworks/email.adoc[E-mail]
 | 5
 | 3rd week
 | November 6, 17:45
 
-| xref:labs/lab04.adoc[IAT]
+| xref:homeworks/iat.adoc[IAT]
 | 5
 | 4th week
 | November 20, 17:45
 
-| xref:labs/lab05.adoc[Snake]
+| xref:homeworks/snake.adoc[Snake]
 | 5
 | 5th week
 | TBA

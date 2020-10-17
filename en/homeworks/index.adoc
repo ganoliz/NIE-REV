@@ -1,0 +1,8 @@
+﻿
+= Homeworks
+:toc:
+:imagesdir: ../../media
+
+* xref:email.adoc[E-mail]
+* xref:iat.adoc[IAT]
+* xref:snake.adoc[Snake]

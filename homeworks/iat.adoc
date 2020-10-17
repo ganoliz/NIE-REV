@@ -1,0 +1,72 @@
+﻿
+= 2. Import Address Table
+:imagesdir: ../media/labs/04
+:toc:
+
+* Počet bodů: *5*
+* Termín odevzdání:
+** *19.11.2020 16:00* (paralelka 101)
+** *19.11.2020 17:45* (paralelka 102)
+** *19.11.2020 19:30* (paralelka 103)
+
+Váš program, zkompilovaný pomocí MS Visual Studio, typicky používá externí runtime ve formě knihovny `MSVCRT12.DLL` (verze ve jménu se může lišit podle verze kompilátoru, tento název platí pro Visual Studio 2013). Tato knihovna obsahuje funkce `malloc`, `calloc`, `realloc` a `free`. Napište program, který bude obsahovat funkce:
+
+* `MallocDebug_Init`
+* `MallocDebug_Done`
+* `MallocDebug_malloc`
+* `MallocDebug_calloc`
+* `MallocDebug_realloc`
+* `MallocDebug_free`
+
+Funkce `MallocDebug_Init` najde v IAT pozici funkcí `malloc`, `calloc`, `realloc` a `free` a změní jejich adresu na adresy funkcí `MallocDebug_malloc`, `MallocDebug_calloc`, `MallocDebug_realloc` a `MallocDebug_free` (tzv. substituční funkce).
+
+Substituční funkce napište tak, aby si v okamžiku volání uložily záznam (stačí statické globální pole -- neřešíme konkurenční přístup více vláken ani podporu neomezeného množství alokací, stačí nám pevně dané maximum) o tom, že se alokovala paměť, a o její velikosti. Uvolňující substituční funkce budou tento záznam opět rušit (a stěžovat si, pokud by měly zrušit neznámou nebo uz dříve zrušenou alokaci). Následně substituční funkce zavolají původní funkci, kterou substituují; pozor, nemůžete použít `malloc` -- využijte ukazatele uložené v rámci `MallocDebug_Init`. Získáme tedy schopnost logování paměťových alokačních/dealokačních operací.
+
+Funkce `MallocDebug_Done` vrátí IAT do původního stavu a vypíše případné zbytky tabulky, které budou považovány za memory leaky :). Nezapomeňte vhodně otestovat, že vrácené údaje odpovídají skutečnosti.
+
+[IMPORTANT]
+====
+Pokud vámi zkompilovaný program nepoužívá externí runtime knihovnu ale knihovnu staticky zakompilovanou přímo do spustitelného souboru, nebude úloha řešitelná. Můžete ale použít parametr `/MD`, kterým přimějete kompilátor k použití sdílené knihovny. Ověřte si v CFF Exploreru, že váš program importuje paměťové funkce!
+====
+
+[TIP]
+====
+*Zápis do IAT*
+
+IAT je obvykle chráněna proti zápisu. Aby do ní bylo možné zapisovat, je nutné nejprve použít např. funkci https://msdn.microsoft.com/en-us/library/windows/desktop/aa366898(v=vs.85).aspx[VirtualProtect] a daný paměťový segment odemknout pro zápis.
+
+[source,cpp]
+----
+BOOL WINAPI VirtualProtect (
+  (LPVOID) lpAddress,   // adresa bloku, jehož stav ochrany chceme měnit
+  (size_t) dwSize,      // velikost bloku
+  PAGE_READWRITE,       // příznaky ochrany bloku
+  (PDWORD)&dwOldProtect // stará hodnota příznaků
+);
+----
+====
+
+[IMPORTANT]
+====
+Při zpracování importního adresáře nemusíte řešit jiný obsah importního thunku než odkaz na `IMAGE_IMPORT_BY_NAME`, ale jinak musíte zpracovat libovolný, i poškozený importní adresář. Upozornit, že adresář je vadný, a ukončit program je legitimní, spadnout na neplatný přístup do paměti tam, kde jste to mohli zpracováním dle specifikace ošetřit, nikoliv.
+====
+
+[NOTE]
+====
+Je naprosto přípustné, aby program importoval stejnou knihovnu -- a klidně i stejnou funkci z ní -- několikrát.
+====
+
+[IMPORTANT]
+====
+Cílem této úlohy *není*, abyste si napsali vlastní paměťový manager. Naopak by to bylo na škodu -- simulujeme případ, že chceme monitorovat chování programu ve specifické situaci, a je tedy krajně nežádoucí do toho chování vnášet vlastní změny. Vaše implementace by měla zaznamenat údaje, které budete potřebovat, a potom (nebo před tím) zavolat originální verze paměťových funkcí.
+====
+
+[IMPORTANT]
+====
+Vaše implementace by měla odpovídat specifikaci zaměňovaných funkcí. Nastudujte si dokumentaci a ujistěte se, že vaše řešení bude fungovat pro všechny možné mezní stavy, do kterých se paměťové funkce mohou dostat! Velmi častá chyba i u jinak perfektních řešení je, že student nedokázal pokrýt všechna použití paměťových funkcí -- zejména `realloc` má velmi široké možnosti využití!
+====
+
+[IMPORTANT]
+====
+Počítejte s možností, že funkce `MallocDebug_Init` a `MallocDebug_Done` mohou být volány opakovaně a v libovolném pořadí.
+====

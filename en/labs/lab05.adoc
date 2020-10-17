@@ -144,34 +144,7 @@ link:{imagesdir}/cv05.zip[cv05.zip]
 
 == Third Homework
 
-* Points: *5*
-* Deadline: *TBA*
-
-Analyze the `Had.exe` ("Snake.exe") executable from archive link:{imagesdir}/du3.zip[du3.zip].
-
-* Examine the program and find all object constructors and VMT assignments.
-** List the actual addresses of the VMTs and constructors.
-** Make sure that the functions you found are actually constructors!
-* From VMTs discover the numbers of virtual methods for each class.
-* Find those class names and the class hierarchy from the RTTI information.
-* Describe the class hierarchy.
-** You will find that the hierarchy is a bit strange. List the strange parts and explain what is their meaning and what is the cause of them. Your explanation does not have to be completely accurate (from the binary, you can't easily decide which of several causes was the real one), but it should be consistent with the observed facts.
-* *Bonus:* Patch the program so that you have 1000 lives. *2 points*
-
-[NOTE]
-====
-Snake has been compiled with optimizations. That leads to a loss or redirection of some information which has been directly accessible in the tutorial's executable. For example, the constructors have been inlined. Finding them may be somewhat more difficult - but not too much.
-====
-
-[TIP]
-====
-Some students encountered issues when running Snake in Virtual Box. It was caused by an incomplete emulation of DirectX in Virtual Box. Version 5.2 with Guest Additions installed and 2D and 3D acceleration enabled seems to be fully functional, though.
-====
-
-[IMPORTANT]
-====
-I will be happy if you use tools to help you in this task, but you shouldn't submit just a tool's output. You should interpret the results of the tool and explain whether it matches what you would expect in a program of this type - even tools can contain errors and we need to be able to evaluate whether their results are reasonable.
-====
+You can read the details of the third homework on a xref:../homeworks/snake.adoc[separate page].
 
 == Bibliography
 

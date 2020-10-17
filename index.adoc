@@ -9,7 +9,7 @@
 
 [IMPORTANT]
 ====
-Sledujte prosím aktuální informace k výuce na stránce xref:aktuality.adoc[Aktuality].
+Sledujte prosím aktuální informace k výuce na stránce xref:current_info.adoc[Aktuality].
 ====
 
 == Anotace
@@ -26,7 +26,7 @@ Studenti budou v rámci předmětu seznámeni se základy reverzního inženýrs
 
 == Hodnocení
 
-* xref:hodnoceni.adoc[Podmínky absolvování předmětu]
+* xref:evaluation.adoc[Podmínky absolvování předmětu]
 * Průběžný stav bodů je uveden na webu https://grades.fit.cvut.cz[FIT klasifikace]. Ve vašem vlastním zájmu si kontrolujte hodnoty, které jsou tam uvedeny, a v případě zjištěných rozdílů mě kontaktujte, abych je opravil z "master" seznamu. Body na Klasifikaci jsou pouze orientační!
 
 === Termíny odevzdání úloh
@@ -43,21 +43,21 @@ Par.102
 <h| Deadline +
 Par.103
 
-| xref:labs/lab03.adoc[E-mail]
+| xref:homeworks/email.adoc[E-mail]
 | 5
 | 3. týden
 | 5.11. 16:00
 | 5.11. 17:45
 | 5.11. 19:30
 
-| xref:labs/lab04.adoc[IAT]
+| xref:homeworks/iat.adoc[IAT]
 | 5
 | 4. týden
 | 19.11. 16:00
 | 19.11. 17:45
 | 19.11. 19:30
 
-| xref:labs/lab05.adoc[Had]
+| xref:homeworks/snake.adoc[Had]
 | 5
 | 5. týden
 | TBA

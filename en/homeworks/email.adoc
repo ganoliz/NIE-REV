@@ -1,0 +1,16 @@
+﻿
+= 1. E-mail
+:imagesdir: ../../media/labs/03
+:toc:
+
+* Points: *5*
+* Deadline: *November 6, 17:45*
+
+The goal of this homework is to reverse engineer file link:{imagesdir}/du1.zip[du1.zip] and convince it to send an e-mail to the teacher. The program uses a configuration file, but the provided one is incorrect. By the time you finish analyzing the application, you will learn the correct structure and content of the configuration. Then create a file that will cause sending of a *polite* e-mail. If you make an error, an impolite e-mail might get sent -- but that is not considered a correct solution ;-).
+
+After you've managed to send the correct e-mail, send the teacher your config file (packed into ZIP, so that any modification by e-mail servers or clients can be detected) along with a brief description of your work (how you got this file). The polite e-mail itself is not a solution of the homework, it's just a notification for you that you got it right.
+
+[IMPORTANT]
+====
+Do not modify the `CrackMe01.exe` application.
+====
