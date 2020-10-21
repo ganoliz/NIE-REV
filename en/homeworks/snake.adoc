@@ -4,7 +4,7 @@
 :toc:
 
 * Points: *5*
-* Deadline: *TBA*
+* Deadline: *December 11, 17:45*
 
 Analyze the `Had.exe` ("Snake.exe") executable from archive link:{imagesdir}/du3.zip[du3.zip].
 

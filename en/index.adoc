@@ -57,7 +57,7 @@ Note that this *will* be changed if the number of signed-up students exceeds 12.
 | xref:homeworks/snake.adoc[Snake]
 | 5
 | 5th week
-| TBA
+| December 11, 19:30
 
 | xref:projects/crackme.adoc[Crackme]
 | 35+
