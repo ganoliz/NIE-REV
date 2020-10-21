@@ -1,7 +1,17 @@
 ﻿
-= Current events: 2020-09-19
+= Current events: 2020-10-21
 :toc:
 :imagesdir: ../../media
+
+== 2020-10-21
+
+The schedule is updated as shown below. This change is mandated partially by the current situation and partially by the fact that November 19 (9th week's Thursday) will be a taught according to the Monday's schedule so we will lose the czech lecture and tutorial, but I would like to keep the lectures and tutorials in sync between both language versions.
+
+* *6th tutorial* (xref:labs/lab06.adoc[Martin Jirkal's lecture on malware]) is postponed until November 20. It's unclear whether it will be presented by Mr. Jirkal or by myself, it depends on the then-current situation.
+* *7th tutorial* (xref:labs/lab07.adoc[consultations + 64bit code]) is moved ahead to the 6th week (October 30).
+* *8th tutorial* (xref:labs/lab08.adoc[simple obfuscations]) is moved ahead to the 7th week (November 6).
+* *9th tutorial* (xref:labs/lab09.adoc[advanced obfuscations]) is moved ahead to the 7th week (November 13).
+* The other tutorials remain in their regularly scheduled times, at least for now.
 
 == 2020-09-19
 

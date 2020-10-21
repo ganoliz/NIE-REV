@@ -88,6 +88,13 @@ Par.103
 
 == Změny v programu
 
+* *6. cvičení* (xref:labs/lab06.adoc[přednáška Martina Jirkala o malware]) se odsouvá na neurčito. Předpoklad je, že přednášky externích hostů budou provedeny na konci výukové části semestru nebo ve zkouškovém období (to pak ovšem ryze dobrovolně), pokud to bude možné.
+* *7. cvičení* (xref:labs/lab07.adoc[konzultace + 64bitový kód]) se přesouvá do 6. týdne (29.10.).
+* *8. cvičení* (xref:labs/lab08.adoc[jednoduché obfuskace]) se přesouvá do 7. týdne (5.11.).
+* *9. cvičení* (xref:labs/lab09.adoc[složitější obfuskace]) se přesouvá do 8. týdne (12.11.).
+* 19.11. výuka reverzního týdne odpadá, protože dle harmonogramu bude pondělí (náhrada za děkanský den 16.11.). *Pátá a šestá přednáška* se tak o dva týdny odsouvají (na 3.12. a 17.12.).
+* Ostatní cvičení budou prozatím ve standardně naplánované časy.
+
 ////
 * *7.-8.11.2019 (7. týden)*:
 ** Místo přednášky na *disassembling a obfuskace* bude mít Ing. Martin Jirkal z firmy ESET přednášku o *malware* (dle programu přednáška 7).
