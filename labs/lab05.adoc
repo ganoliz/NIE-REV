@@ -3,6 +3,8 @@
 :imagesdir: ../media/labs/05
 :toc:
 
+* link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_5_paralelka_101.mp4[Záznam cvičení]
+
 == Motivace
 
 Využívá-li program pro svoji činnost identifikaci typů za běhu (Run Time Type Identification, RTTI), což je v případě, že používá operátory `typeid` nebo `dynamic_cast`, obsahuje nutně informace, které mohou dobře posloužit reverznímu inženýrství. Cílem tohoto cvičení je ukázat si, jakým způsobem se volají virtuální funkce, jak s tím souvisí tabulka virtuálních metod, kde je uložena, a jak souvisí tato informace s informací o typech pro RTTI. Z typové informace budeme extrahovat název třídy a dále informaci o dědičnosti.

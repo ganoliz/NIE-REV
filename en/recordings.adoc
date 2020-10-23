@@ -10,6 +10,7 @@ You can find the original versions of the recordings at link:https://web.microso
 
 * Lecture 1: https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_1.mp4[Download]
 * Lecture 2: https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_2.mp4[Download]
+* Lecture 3: https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_3.mp4[Download]
 
 === Tutorials
 
@@ -17,3 +18,4 @@ You can find the original versions of the recordings at link:https://web.microso
 * Tutorial 2: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_2.mp4[Download]
 * Tutorial 3: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_3.mp4[Download]
 * Tutorial 4: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_4.mp4[Download]
+* Tutorial 5: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_5.mp4[Download]
