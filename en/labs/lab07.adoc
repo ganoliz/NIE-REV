@@ -3,6 +3,8 @@
 :imagesdir: ../../media/labs/07
 :toc:
 
+* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_7.mp4[Recording of the tutorial]
+
 This tutorial is primarily dedicated to consultations of your homeworks or other reverse-engineering related topics.
 
 In the remaining time, we will study the differences between a 32bit and a 64bit code. We will use a simple 64bit application link:{imagesdir}/cv07.zip[cv07.zip].
