@@ -38,7 +38,7 @@
 | Disassembling a obfuskace
 | link:{imagesdir}/rev04en.pdf[anglicky]
 | link:{imagesdir}/rev04cz.pdf[česky]
-| --
+| https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_4.mp4[video]
 
 | 5.
 | 19.11.2020

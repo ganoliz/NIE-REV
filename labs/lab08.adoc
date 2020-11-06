@@ -3,6 +3,8 @@
 :imagesdir: ../media/labs/08
 :toc:
 
+* link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_8_paralelka_102.mp4[Záznam cvičení]
+
 Předmětem cvičení je analýza programů s jednoduchou obfuskací.
 
 Programy, se kterými budeme pracovat, jsou dostupné zde: link:{imagesdir}/cv08.zip[cv08.zip]. Pro jejich spuštění budete potřebovat 32bitovou verzi https://www.microsoft.com/en-us/download/details.aspx?id=5555[Visual Studio 2010 Runtime].

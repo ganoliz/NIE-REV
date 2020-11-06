@@ -3,6 +3,8 @@
 :imagesdir: ../../media/labs/08
 :toc:
 
+* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_8.mp4[Recording of the tutorial]
+
 The purpose of this tutorial is to examine simple obfuscated binaries.
 
 Download the binaries for the analysis here: link:{imagesdir}/cv08.zip[cv08.zip]. In order to run them you will need a copy of the 32bit https://www.microsoft.com/en-us/download/details.aspx?id=5555[Visual Studio 2010 Redistributable] (Runtime DLLs).
