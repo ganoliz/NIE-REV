@@ -3,6 +3,8 @@
 :imagesdir: ../../media/labs/09
 :toc:
 
+* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_9.mp4[Recording of the tutorial]
+
 == Materials
 
 === Collaborative websites cataloguing tools and scripts applicable to reverse analysis

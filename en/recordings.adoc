@@ -23,3 +23,4 @@ You can find the original versions of the recordings at link:https://web.microso
 * Tutorial 6: postponed
 * Tutorial 7: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_7.mp4[Download]
 * Tutorial 8: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_8.mp4[Download]
+* Tutorial 9: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_9.mp4[Download]

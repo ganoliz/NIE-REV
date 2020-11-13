@@ -3,6 +3,8 @@
 :imagesdir: ../media/labs/09
 :toc:
 
+* link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_9_paralelka_101.mp4[Záznam cvičení]
+
 == Materiály
 
 === Kolaborativní weby sdružující nástroje a skripty na reverzování chráněných souborů
