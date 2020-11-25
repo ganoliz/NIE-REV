@@ -93,7 +93,11 @@ Par.103
 * *8. cvičení* (xref:labs/lab08.adoc[jednoduché obfuskace]) se přesouvá do 7. týdne (5.11.).
 * *9. cvičení* (xref:labs/lab09.adoc[složitější obfuskace]) se přesouvá do 8. týdne (12.11.).
 * 19.11. výuka reverzního inženýrství odpadá, protože dle harmonogramu bude pondělí (náhrada za děkanský den 16.11.). *Pátá a šestá přednáška* se tak o dva týdny odsouvají (na 3.12. a 17.12.).
-* Ostatní cvičení budou prozatím ve standardně naplánované časy.
+* 26.11. se bude konat *desáté cvičení* (unpacking).
+* 3.12. budou dvě přednášky -- v regulérním čase od 12:45 *dokončení čtvrté přednášky* (obfuskace) a *pátá přednáška* (identifikování kompilátoru a knihoven), v čase prvního cvičení od 14:30 bude *šestá přednáška* (debugging a antidebugging). Cvičení od 16:15 a od 18:00 budou věnována konzultacím, pokud o ně bude zájem.
+* 10.12. se bude konat *jedenácté cvičení* (antidebugging).
+* 17.12. bude *externí přednáška Martina Jirkala* na téma malware a *třinácté cvičení* (injekce kódu).
+* Pokud to bude jenom trochu možné, pokusím se o zkouškovém období uspořádat přednášku Jana Rubína na téma analýzy malware. Je to ale podmíněno možností ji uspořádat ve fyzické podobě, což je stále krajně nejisté -- zkoušky pravděpodobně bude možné fyzicky konat, protože je možné výrazně omezit počet lidí v místnosti, ale fyzická přednáška pro 40+ lidí se jeví jako velmi problematická.
 
 ////
 * *7.-8.11.2019 (7. týden)*:

@@ -81,7 +81,10 @@ Note that this *will* be changed if the number of signed-up students exceeds 12.
 * *7th tutorial* (xref:labs/lab07.adoc[consultations + 64bit code]) is moved ahead to the 6th week (October 30).
 * *8th tutorial* (xref:labs/lab08.adoc[simple obfuscations]) is moved ahead to the 7th week (November 6).
 * *9th tutorial* (xref:labs/lab09.adoc[advanced obfuscations]) is moved ahead to the 7th week (November 13).
-* The other tutorials remain in their regularly scheduled times, at least for now.
+* On November 20, we had a consultation tutorial with even more deobfuscation work. The *10th tutorial* (unpacking) will be done on November 27.
+* On December 4th, we will have the *6th lecture* (debugging and antidebugging) and the *11th tutorial* (also debugging and antidebugging).
+* On December 11th, we will have the *13th tutorial* (injection).
+* On December 18th, *Martin Jirkal from ESET* will give a lecture on malware. The topic of the tutorial, if any, is undecided as yet; if Mr. Jirkal is willing, perhaps he could demonstrate reverse engineering of high-level languages such as dotnet. Or we can end early and enjoy the Christmas instead of reverse engineering :-).
 
 ////
 * *2019-11-07 (week 7)*:
