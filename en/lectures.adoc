@@ -45,7 +45,7 @@
 | 2020-12-04
 | Debugging and anti-debugging
 | link:{imagesdir}/rev06en.pdf[slides]
-| N/A
+| https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_6.mp4[video]
 
 | 7.
 | 2020-12-18
