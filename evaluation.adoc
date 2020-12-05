@@ -34,7 +34,7 @@ Předmět je standardně zakončen zkouškou. Ta je písemná, v délce 75 minut
 
 Při zkoušce je povoleno používat pouze psací potřeby a dále papír přidělený zkoušejícím. Žádné jiné pomůcky nejsou povoleny. *Výslovně je zakázáno použití jakýchkoliv elektronických zařízení, a to po celou dobu pobytu studenta ve zkouškové místnosti.*
 
-Ze zkoušky lze získat až 30 bodů. Minimum pro získání známky jiné než "nedostatečně" je 15 bodů. Obsahově zkouška odpovídá látce z přednášek, cvičení i domácích úloh. Je tvořena šesti otevřenými otázkami zaměřenými zejména (ale ne výhradně) na teorii. Každá otázka je hodnocena 5 body.
+Ze zkoušky lze získat až 30 bodů. Minimum pro získání známky jiné než "nedostatečně" je 15 bodů. Obsahově zkouška odpovídá látce z přednášek, cvičení i domácích úloh. Je tvořena šesti otevřenými otázkami zaměřenými zejména (ale ne výhradně) na teorii. Každá otázka je hodnocena 5 body. Příklad zkouškové písemky je zde: link:{imagesdir}/exam-cz.pdf[Download].
 
 Získá-li student z domácích úloh a semestrálních prací celkem 50 nebo více bodů, může mu být zkouška prominuta, pokud o to prokazatelně (školním e-mailem) požádá zkoušejícího nejpozději do konce 3. týdne zkouškového období (24.1.2021) a současně se žádného zkouškového termínu nezúčastnil (účastí se rozumí i nedostavení se na zkoušku, na kterou byl student přihlášen). Prominutím zkoušky student získá známku odpovídající počtu bodů dosažených z domácích úloh a semestrálních prací.
 
