@@ -9,6 +9,13 @@ Při analýze programu narazíme na to, že program obsahuje několik ochran pro
 
 * link:{imagesdir}/cv11.zip[Download]
 
+[NOTE]
+====
+Analyzovaný program vytváří část kódu až v době běhu, ale nezajišťuje, aby použitá paměť byla spustitelná. Je proto potřeba pro něj vypnout DEP (Data Execution Prevention) tak, že spustíte `systempropertiesadvanced.exe`, na záložce `Upřesnit` v sekci `Výkon` zmáčknete tlačítko `Nastavení` a v novém okně na záložce `Zabránění spuštění dat` buď změníte režim na "Zapnout zabránění spuštění dat pouze pro důležité systémové programy a služby", nebo zařadíte aplikaci do seznamu výjimek. Druhá varianta je bezpečnější a také nevyžaduje restart, proto je preferována.
+
+image::cv11dep-cz.png[]
+====
+
 == Další anti-debuggingové techniky
 
 Vraťte se k druhé úloze z xref:lab09.adoc[cvičení na pokročilé obfuskace]. Deobfuskujte jeho kód a identifikujte jednotlivé anti-debuggingové techniky, které používá.

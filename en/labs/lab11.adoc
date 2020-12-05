@@ -11,6 +11,13 @@ During the analysis, we will discover that the program contains several anti-deb
 
 * link:{imagesdir}/cv11.zip[Download]
 
+[NOTE]
+====
+The analyzed application creates a part of its code during runtime. Unfortunately it does not mark the memory as executable. For this reason it requires that DEP (Data Execution Prevention) be turned off in the operating system; you can do that by running `systempropertiesadvanced.exe`, going to the `Advanced` tab, clicking on the `Settings` button in the `Performance` section`, and then in the new window on the `Data Execution Prevention` tab you can either "Turn off DEP for essential Windows programs and services only" or add the application to the exception list. The second option is more secure and does not require reboot, which makes it the preferred one.
+
+image::cv11dep-en.png[]
+====
+
 == More anti-debugging techniques
 
 Return to the second task of the xref:lab09.adoc[Advanced obfuscations tutorial]. Deobfuscate the code and identify the different anti-debugging techniques used.
