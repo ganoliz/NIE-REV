@@ -1,7 +1,15 @@
 ﻿
-= Current events: 2020-11-25
+= Current events: 2020-12-11
 :toc:
 :imagesdir: ../../media
+
+== 2020-12-11
+
+*In accordance with the Dean's Directive nr. 23/2020, the exam specifications from before the semester are modified in this way:*
+
+Due to the current state of the epidemics and the objective difficulties the students living abroad would face in coming to live exams this year, online exams (Alternative 2 of the xref:evaluation.adoc[Evaluation section]) are made available to all students who prefer them to live exams. A selection of online exam terms will be put up on KOS and the students can sign up for them instead of live exams. To maintain equal opportunities for everyone, the students who pass the live exam may choose to be graded as if they passed the online one, that is, the points awarded will be calculated based on the student's work throughout the semester.
+
+Note that while the grading scheme is different for the online and live exams, despite the Dean's Directive requirement to the contrary, it is done with the knowledge and approval of the department's head. The purpose of this is to achieve the goals of the Directive, specifically, equal conditions for everyone: Online exams cannot, due to their nature, provide the same level of control as the live exams, particularly in respect to the cheating opportunities. To minimize the impact of that, the grading of online exams is based on the student's work throughout the semester rather than their performance during the exam.
 
 == 2020-11-25
 

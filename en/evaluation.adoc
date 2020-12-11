@@ -57,6 +57,15 @@ At this moment, it is impossible to determine the properties of the exam exactly
 The reason why I chose these variants is that I need to satisfy the purpose of the exam (i.e. verification that the student understands the issues of reverse engineering and had not, for example, had the homeworks or semestral works done by a third party) as much as possible while doing my best at ensuring an equal opportunity for everyone (i.e. by preventing cheating), and at the same time eliminate as much of the subjective influences of the oral exams as possible.
 ====
 
+[IMPORTANT]
+====
+*In accordance with the Dean's Directive nr. 23/2020, the exam specifications from before the semester are modified in this way:*
+
+Due to the current state of the epidemics and the objective difficulties the students living abroad would face in coming to live exams this year, online exams (Alternative 2 below) are made available to all students who prefer them to live exams. A selection of online exam terms will be put up on KOS and the students can sign up for them instead of live exams. To maintain equal opportunities for everyone, the students who pass the live exam may choose to be graded as if they passed the online one, that is, the points awarded will be calculated based on the student's work throughout the semester.
+
+Note that while the grading scheme is different for the online and live exams, despite the Dean's Directive requirement to the contrary, it is done with the knowledge and approval of the department's head. The purpose of this is to achieve the goals of the Directive, specifically, equal conditions for everyone: Online exams cannot, due to their nature, provide the same level of control as the live exams, particularly in respect to the cheating opportunities. To minimize the impact of that, the grading of online exams is based on the student's work throughout the semester rather than their performance during the exam.
+====
+
 ==== Alternative 1
 
 If it is, on January 4th, 2021, *not prohibited* (by the country, by CTU, or by FIT) to conduct personal meetings in the faculty's rooms, the exam will be performed in exactly the same fashion as usual.

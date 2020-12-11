@@ -1,7 +1,15 @@
 ﻿
-= Aktuality: 25.11.2020
+= Aktuality: 11.12.2020
 :toc:
 :imagesdir: ../media
+
+== 11.12.2020
+
+*V souladu s metodickým pokynem děkana č. 23/2020 se dříve stanovené podmínky zkoušky mění následujícím způsobem:*
+
+V důsledku aktuálního stavu epidemie a objektivních potížích studentů žijících v zahraničí s účastí na prezenčních zkouškách je v tomto semestru online zkouška (Varianta 1 xref:evaluation.adoc[na stránce Hodnocení]) zpřístupněna jako volitelná možnost všem studentům. V KOSu bude vypsána sada termínů pro distanční zkoušky, na které se tito studenti mohou přihlásit namísto zkoušky prezenční. Pro zajištění stejných příležitostí pro všechny mohou ti studenti, kteří uspějí v prezenční zkoušce, požádat o její hodnocení dle parametrů zkoušky online, tzn. přepočítaným počtem bodů ze semestru.
+
+Pozn.: Přestože je toto hodnotící schéma odlišné pro online a prezenční zkoušky, navzdory metodickému pokynu děkana, bylo zvoleno s vědomím a souhlasem vedoucího katedry. Důvodem je snaha maximálně naplnit *cíle* pokynu, tedy zejména rovné podmínky pro všechny: Online zkoušky neumožňují takovou úroveň řízení jejich poctivého plnění jako zkoušky prezenční, a aby se minimalizovaly negativní dopady případného podvádění, je hodnocení online zkoušky založeno na výkonu studenta v průběhu celého semestru namísto okamžitého výkonu u zkoušky. Tento způsob hodnocení byl stanoven už před začátkem semestru a nemění se.
 
 == 25.11.2020
 

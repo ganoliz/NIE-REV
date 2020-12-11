@@ -57,6 +57,15 @@ V tuto chvíli nelze přesně určit, jak bude zkouška probíhat, protože nen�
 Důvodem pro takto stanovené varianty je snaha zajistit v maximální možné míře dosažení účelu zkoušky (tzn. ověření, že student rozumí problematice reverzního inženýrství a například si nenechal domácí úlohy a semestrální práce vypracovat někým jiným) při dodržení rovných podmínek pro všechny (maximální omezení případných pokusů o podvádění), ale přitom co možná nejvíce eliminovat subjektivní vlivy a nemožnost dodatečného přezkoumání ústního zkoušení.
 ====
 
+[IMPORTANT]
+====
+*V souladu s metodickým pokynem děkana č. 23/2020 se dříve stanovené podmínky zkoušky mění následujícím způsobem:*
+
+V důsledku aktuálního stavu epidemie a objektivních potížích studentů žijících v zahraničí s účastí na prezenčních zkouškách je v tomto semestru online zkouška (Varianta 1 níže) zpřístupněna jako volitelná možnost všem studentům. V KOSu bude vypsána sada termínů pro distanční zkoušky, na které se tito studenti mohou přihlásit namísto zkoušky prezenční. Pro zajištění stejných příležitostí pro všechny mohou ti studenti, kteří uspějí v prezenční zkoušce, požádat o její hodnocení dle parametrů zkoušky online, tzn. přepočítaným počtem bodů ze semestru.
+
+Pozn.: Přestože je toto hodnotící schéma odlišné pro online a prezenční zkoušky, navzdory metodickému pokynu děkana, bylo zvoleno s vědomím a souhlasem vedoucího katedry. Důvodem je snaha maximálně naplnit *cíle* pokynu, tedy zejména rovné podmínky pro všechny: Online zkoušky neumožňují takovou úroveň řízení jejich poctivého plnění jako zkoušky prezenční, a aby se minimalizovaly negativní dopady případného podvádění, je hodnocení online zkoušky založeno na výkonu studenta v průběhu celého semestru namísto okamžitého výkonu u zkoušky. Tento způsob hodnocení byl stanoven už před začátkem semestru a nemění se.
+====
+
 ==== Varianta 1
 
 Pokud *nebude* ke dni 4.1.2021 zakázáno (státem, ČVUT nebo FITem) konat prezenční akce v prostorách fakulty, parametry zkoušky se nemění.
