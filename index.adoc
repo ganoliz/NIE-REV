@@ -80,7 +80,7 @@ Par.103
 
 | xref:labs/lab13.adoc[Bonus]
 | 3
-| 4. týden
+| 13. týden
 | 14.2. 8:00
 | 14.2. 8:00
 | 14.2. 8:00

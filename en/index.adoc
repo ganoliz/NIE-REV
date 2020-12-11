@@ -71,7 +71,7 @@ Note that this *will* be changed if the number of signed-up students exceeds 12.
 
 | xref:labs/lab13.adoc[Bonus]
 | 3
-| 4th week
+| 12th week
 | February 14, 8:00
 |====
 
