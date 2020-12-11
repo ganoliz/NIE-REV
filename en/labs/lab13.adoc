@@ -3,6 +3,8 @@
 :imagesdir: ../../media/labs/13
 :toc:
 
+* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_13.mp4[Recording of the tutorial]
+
 The purpose of this exercise is to understand the process of injection. We will be injecting our own code into the `GUIToSteal.exe` process in order to get the ability to extract the value of the password written into the edit field.
 
 * link:{imagesdir}/cv13.zip[Download]

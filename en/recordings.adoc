@@ -27,4 +27,6 @@ You can find the original versions of the recordings at link:https://web.microso
 * Tutorial 8: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_8.mp4[Download]
 * Tutorial 9: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_9.mp4[Download part 1] https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_9_part_2.mp4[Download part 2]
 * Tutorial 10: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_10.mp4[Download]
-* Tutorial 11: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_11.mp4[Download]
+* Tutorial 11: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_11.mp4[Download part 1] https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_11_part_2.mp4[Download part 2]
+* Tutorial 12: postponed
+* Tutorial 13: https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_13.mp4[Download]
