@@ -52,6 +52,11 @@ Pro využití `LoadLibrary` triku výše dokonce nemusíte napsat vůbec žádn�
 . Nastavte breakpoint na zjištěnou adresu injektovaného kódu a spusťte proces.
 . Spusťte váš injektor.
 
+=== Demonstrační kódy
+
+* link:{imagesdir}/cv13.reseni.zip[Příklad řešení pomocí injektnutého vlákna]
+* link:{imagesdir}/cv13.reseni-dll.zip[Příklad řešení pomocí injektnuté DLL]
+
 == Zadání bonusové úlohy
 
 * Počet bodů: *3*

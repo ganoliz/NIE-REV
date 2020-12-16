@@ -54,6 +54,11 @@ When making use of the `LoadLibrary` trick above you can avoid writing assembler
 . Set a breakpoint at the address found in step 2 and let the process continue.
 . Run the injector.
 
+=== Example solutions
+
+* link:{imagesdir}/cv13.reseni.zip[Solution using an injected thread]
+* link:{imagesdir}/cv13.reseni-dll.zip[Solution using an injected DLL]
+
 == Bonus homework
 
 * Points: *3*
