@@ -3,6 +3,8 @@
 :imagesdir: ../../media/labs/12
 :toc:
 
+* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_12.mp4[Recording of the tutorial]
+
 Ing. Martin Jirkal will demonstrate techniques used for dotnet analysis.
 
 * link:{imagesdir}/cv12.pdf[Slides]

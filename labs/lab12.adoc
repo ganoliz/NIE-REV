@@ -3,6 +3,8 @@
 :imagesdir: ../media/labs/12
 :toc:
 
+* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_12.mp4[Záznam cvičení (anglická verze)]
+
 Ing. Martin Jirkal předvede postupy pro analýzu dotnetového kódu.
 
 * link:{imagesdir}/cv12.pdf[Prezentace]

@@ -51,6 +51,6 @@
 | 2020-12-18
 | Malware
 | link:{imagesdir}/rev07en.pdf[slides]
-| N/A
+| https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_7.mp4[video]
 
 |====

@@ -59,6 +59,6 @@
 | Malware
 | link:{imagesdir}/rev07en.pdf[anglicky]
 | --
-| --
+| https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_7.mp4[video]
 
 |====
