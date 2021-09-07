@@ -1,6 +1,6 @@
 course:
   code: NI-REV
-  altCodes: [ MI-REV, MI-REV.16, MIE-REV, MIE-REV.16 ]
+  altCodes: [ MI-REV, MI-REV.16, NIE-REV, MIE-REV, MIE-REV.16 ]
   name: Reverzní inženýrství
 language: cs
 navigation:
