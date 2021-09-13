@@ -1,43 +1,8 @@
 ﻿
-= Aktuality: 11.12.2020
+= Aktuality: 11.9.2021
 :toc:
 :imagesdir: ../media
 
-== 11.12.2020
+== 11.9.2021
 
-*V souladu s metodickým pokynem děkana č. 23/2020 se dříve stanovené podmínky zkoušky mění následujícím způsobem:*
-
-V důsledku aktuálního stavu epidemie a objektivních potížích studentů žijících v zahraničí s účastí na prezenčních zkouškách je v tomto semestru online zkouška (Varianta 1 xref:evaluation.adoc[na stránce Hodnocení]) zpřístupněna jako volitelná možnost všem studentům. V KOSu bude vypsána sada termínů pro distanční zkoušky, na které se tito studenti mohou přihlásit namísto zkoušky prezenční. Pro zajištění stejných příležitostí pro všechny mohou ti studenti, kteří uspějí v prezenční zkoušce, požádat o její hodnocení dle parametrů zkoušky online, tzn. přepočítaným počtem bodů ze semestru.
-
-Pozn.: Přestože je toto hodnotící schéma odlišné pro online a prezenční zkoušky, navzdory metodickému pokynu děkana, bylo zvoleno s vědomím a souhlasem vedoucího katedry. Důvodem je snaha maximálně naplnit *cíle* pokynu, tedy zejména rovné podmínky pro všechny: Online zkoušky neumožňují takovou úroveň řízení jejich poctivého plnění jako zkoušky prezenční, a aby se minimalizovaly negativní dopady případného podvádění, je hodnocení online zkoušky založeno na výkonu studenta v průběhu celého semestru namísto okamžitého výkonu u zkoušky. Tento způsob hodnocení byl stanoven už před začátkem semestru a nemění se.
-
-== 25.11.2020
-
-Plán přednášek a cvičení do konce roku byl aktualizován:
-
-* 3.12. budou dvě přednášky -- v regulérním čase od 12:45 *dokončení čtvrté přednášky* (obfuskace) a *pátá přednáška* (identifikování kompilátoru a knihoven), v čase prvního cvičení od 14:30 bude *šestá přednáška* (debugging a antidebugging). Cvičení od 16:15 a od 18:00 budou věnována konzultacím, pokud o ně bude zájem.
-* 10.12. se bude konat *jedenácté cvičení* (antidebugging).
-* 17.12. bude *externí přednáška Martina Jirkala* na téma malware a *třinácté cvičení* (injekce kódu).
-* Pokud to bude jenom trochu možné, pokusím se o zkouškovém období uspořádat přednášku Jana Rubína na téma analýzy malware. Je to ale podmíněno možností ji uspořádat ve fyzické podobě, což je stále krajně nejisté -- zkoušky pravděpodobně bude možné fyzicky konat, protože je možné výrazně omezit počet lidí v místnosti, ale fyzická přednáška pro 40+ lidí se jeví jako velmi problematická.
-
-== 21.10.2020
-
-Aktualizován program přednášek a cvičení vzhledem k aktuální situaci a harmonogramu:
-
-* *6. cvičení* (xref:labs/lab06.adoc[přednáška Martina Jirkala o malware]) se odsouvá na neurčito. Předpoklad je, že přednášky externích hostů budou provedeny na konci výukové části semestru nebo ve zkouškovém období (to pak ovšem ryze dobrovolně), pokud to bude možné.
-* *7. cvičení* (xref:labs/lab07.adoc[konzultace + 64bitový kód]) se přesouvá do 6. týdne (29.10.).
-* *8. cvičení* (xref:labs/lab08.adoc[jednoduché obfuskace]) se přesouvá do 7. týdne (5.11.).
-* *9. cvičení* (xref:labs/lab09.adoc[složitější obfuskace]) se přesouvá do 8. týdne (12.11.).
-* 19.11. výuka reverzního týdne odpadá, protože dle harmonogramu bude pondělí (náhrada za děkanský den 16.11.). *Pátá a šestá přednáška* se tak o dva týdny odsouvají (na 3.12. a 17.12.).
-* Ostatní cvičení budou prozatím ve standardně naplánované časy.
-
-== 19.9.2020
-
-Tak prezenční výuka nevydržela ani tak dlouho, jak jsem očekával -- včera bylo oznámeno, že hygiena zakáže prezenční výuku na vysokých školách, na což zareagovalo vedení fakulty a prezenční výuku zrušilo obecně. Výuka tedy bude probíhat výhradně na Teams v kanálu předmětu.
-
-== 17.9.2020
-
-Výuka předmětu Reverzní inženýrství bude v zimním semestru 2020/21 probíhat v online podobě, a to jak v případě přednášek, tak i cvičení. Důvodem je velmi nepříznivá epidemiologická situace v kombinaci s velkým počtem studentů, kvůli čemuž by při prezenční výuce neúměrně narůstalo riziko onemocnění některých účastníků, a to zejména během cvičení. Přitom koncepce předmětu umožňuje poměrně snadno převést výuku do online podoby, aniž by to na ni mělo větší negativní dopad.
-
-Za účelem minimalizace negativ online výuky jsem vypsal pravidelné konzultační hodiny na pátek večer (18:00-19:30), které budou probíhat prezenčně v bourací učebně T9:345. Samozřejmě zůstává možnost konzultací po e-mailu prakticky neustále, v menší míře také konzultace přes Teams (prosím, dohodněte si předem termín mailem).
-
+Výuka předmětu Reverzní inženýrství v zimním semestru 2021/22 by měla dle aktuálních informací probíhat živě. Pokud dojde ke zhoršení epidemiologické situace, může dojít k přesunu výuky do online prostředí MS Teams; v tom případě o této změně budu informovat na této stránce a také pomocí e-mailu z KOSu.

@@ -20,8 +20,6 @@ Caution! My evaluation of your submission will take some time. Please take that 
 
 In addition to the general requirements listed at the Evaluation page, your solution should contain:
 
-Obsahem úplného řešení by kromě obecných požadavků uvedených na stránce hodnocení mělo být:
-
 * A working serial number.
 * Explanation of how this serial number is formed (i.e. which information is stored within it and how it is encoded).
 * Guideline on entering the serial number into the application (see notes below).
@@ -51,9 +49,11 @@ In spite of all that, it is possible to solve this task. It's not even all that 
 
 === Compatibility
 
-In order to keep the task solvable we had to use weaker cryptographic primitives. Unfortunately, in newer versions of the `BCRYPT.DLL` library Microsoft introduced code which will consider such a use an error and will refure to perform the requested tasks. Due to that the task is no longer compatible with the current version of operating systems; you need to use older versions.
+In order to keep the task solvable we had to use weaker cryptographic primitives. Unfortunately, in newer versions of the `BCRYPT.DLL` library Microsoft introduced code which will consider such a use an error and will refuse to perform the requested tasks. Due to that the task is no longer compatible with the current version of operating systems; you need to use older versions.
 
 It's not known precisely which versions work and which don't. We know that Windows 10 version 1910 is not compatible and we know that version 1903 is not compatible once late spring/early summer updates are installed (libssh2 encountered a link:https://github.com/libssh2/libssh2/issues/388#issuecomment-516918145[similar issue] at the time). Older versions of Windows probably work, but it is possible they also received an update which prevents Keygen from running properly. We recommend that you use non-updated Windows 7 or 8 in a virtual environment, or Windows 10 in the version available in our tutorial images.
+
+The version provided by Microsoft for https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/[developer testing of Internet Exploreru] seems to work fine, just make sure it does not download and install any updates.
 
 === Hints
 

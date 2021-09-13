@@ -3,7 +3,7 @@
 :toc:
 :imagesdir: ../media
 
-The goal of this semestral work is to gain experience with the commonly used obfuscation and anti-debugging techniques. It's composed of a series of simple GUI applications with progressively increasing complexity of their defenses against reverse analysis. Your task for each part is to find a password that will let you continue to the next part. Every part is protected by one password, though in some case there are multiple parts stored in the same executable.
+The goal of this semestral work is to gain experience with commonly used obfuscation and anti-debugging techniques. It's composed of a series of simple GUI applications with progressively increasing complexity of their defenses against reverse analysis. Your task for each part is to find a password that will let you continue to the next part. Every part is protected with one password, but one binary may contain multiple parts.
 
 During the third week for the semester each student will receive a different application for analysis. Do not attempt to analyze other people's work, such a solution won't be accepted. Your submission should be your own work for the most part -- consultations are possible even in actual practice, but you will need to be able to solve your own work tasks on your own eventually.
 
@@ -20,8 +20,10 @@ For every password describe:
 
 * Which password is required for the next stage?
 * How should the user enter this password to get to the next stage?
-* How is the password stored in the application? If standard algorithms are used to hide it, name them!
+* How is the password stored in the application?
+** If standard algorithms are used to hide it, name them!
 * Which obfuscation methods are used in this stage and how can we avoid them?
+** Why is this avoidance possible, i.e. how come it does not change the behavior of the program?
 * Which anti-debugging methods are used in this stage and how can we avoid them?
 * What was your approach to finding the password?
 
@@ -29,7 +31,7 @@ The description can be very brief, e.g. it can take form of a bullet list, but i
 
 [NOTE]
 ====
-Partial submissions are permitted. If I am to evaluate it, however, it's necessary that the report contains sufficient information to allow me to determine how far did you get and to award you respective points. On the other hand, you don't need to create interesting characters and a gripping plot, it's perfectly fine to submit a bullet list. We are much more interested in the information found than the presentation.
+Partial submissions are permitted. If I am to evaluate them, however, it's necessary that the report contains sufficient information to allow me to determine how far did you get and to award you respective points. On the other hand, you don't need to create interesting characters and a gripping plot, it's perfectly fine to submit a bullet list. We are much more interested in the information found than the presentation.
 ====
 
 [IMPORTANT]
@@ -55,16 +57,16 @@ To get to the next stage you will need a simple fixed password. Finding it requi
 
 [NOTE]
 ====
-A common error in this stage is that your solutions requires a modification of the application. That shows that the student stopped his analysis too early - if he or she continued with it, he or she would discover that this modification is not in fact necessary.
+A common error in this stage is that your solutions requires a modification of the application. That shows that you stopped your analysis too early -- if you continued with it, you would discover that this modification is not in fact necessary.
 ====
 
 === Password 2
 
-To get to the next stage you will need a random generated password which is protected by obfuscations. You will need to deal with obfuscations discussed in the xref:../labs/lab09.adoc[advanced obfuscation] tutorial.
+To get to the next stage you will need a password which is protected by obfuscations. You will need to deal with obfuscations discussed in the xref:../labs/lab09.adoc[advanced obfuscation] tutorial.
 
 [IMPORTANT]
 ====
-*10 points*
+*5 points*
 ====
 
 [NOTE]
@@ -85,14 +87,14 @@ This password is rather simple again, but it is hidden by a packer. You will nee
 
 [IMPORTANT]
 ====
-*10 points*
+*5 points*
 ====
 
 [NOTE]
 ====
 If you use the manual approach demonstrated at the tutorial, I will want you to write instructions for repeating it, detailed enough so that a beginner in reverse engineering would be able to follow it. You should also encounter an issue which we did not see in the tutorial; you should make a note of this issue and explain why we don't care about it.
 
-Use an exising unpacking program is possible and in a way welcome (why should you perform manually what a machine can do for you?), but it will be penalized. The reason is that you are not getting experience with the manual solution. What would you do if the application was packed by a custom packer for which there is no unpacker? Such a scenario will certainly occur eventually, you should know what to do in such a case.
+Use of an exising unpacking program is possible and in a way welcome (why should you perform manually what a machine can do for you?), but it will be penalized. The reason is that you are not getting experience with the manual solution. What would you do if the application was packed by a custom packer for which there is no unpacker? Such a scenario will certainly occur eventually, you should know what to do in such a case.
 ====
 
 [TIP]
@@ -102,7 +104,7 @@ After you unpack the application, you will find that the password is still hidde
 
 === Password 4
 
-The second editbox in this stage expects a generated random password hidden behind more advanced obfuscations. In discovering it, you will make use of the knowledge learned in the xref:../labs/lab11.adoc[antidebugging] tutorial.
+The second editbox in this stage expects a password hidden behind more advanced obfuscations. In discovering it, you will make use of the knowledge learned in the xref:../labs/lab11.adoc[antidebugging] tutorial.
 
 [IMPORTANT]
 ====
@@ -136,13 +138,13 @@ This password is located in a new binary which will get extracted after you've s
 
 == Semestral work assignment
 
-////
 The assignments will be provided during the third week of the semester.
-////
 
+////
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/boulanat.exe[boulanat]
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/chevrnic.exe[chevrnic]
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/mauryfab.exe[mauryfab]
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/mihalma5.exe[mihalma5]
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/rousslou.exe[rousslou]
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/steinda3.exe[steinda3]
+////

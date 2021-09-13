@@ -3,13 +3,15 @@
 :imagesdir: ../media/labs/01
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_1_paralelka_103.mp4[Záznam cvičení]
+* link:https://kib-files.fit.cvut.cz/bi-bek/recordings/2021-cvic-01.mp4[Záznam cvičení]
 
 Cílem tohoto cvičení je seznámit se s ladícím nástrojem http://www.ollydbg.de/[OllyDbg], který bude dále používán při cvičeních, a seznámit se se strukturou zásobníku. Alternativně můžete použít nástroj https://developer.microsoft.com/en-us/windows/hardware/windows-driver-kit[WinDbg], který je silnější než OllyDbg, avšak na naučení je komplikovanější. Další možností je https://x64dbg.com/[x64dbg]. Pokud pracujete na platformách GNU/Linux anebo OS X, můžete použít gdb anebo lldb.
 
 == Stažení a instalace OllyDbg
 
-Stažení nástroje OllyDbg probíhá zdarma z webové stránky http://www.ollydbg.de/[http://www.ollydbg.de/]. K dispozici jsou verze 1.10 a 2.01. Doporučujeme stáhnout si 32bitovou verzi 2.01, protože jazyk symbolických instrukcí IA-32 je jednodušší než 64bitový x86_64. Instalace není třeba. Stačí ZIP soubor rozbalit.
+Stažení nástroje OllyDbg probíhá zdarma z webové stránky http://www.ollydbg.de/[http://www.ollydbg.de/]. K dispozici jsou verze 1.10 a 2.01. Doporučujeme stáhnout si 32bitovou verzi 2.01 (ne 2.00 z levého menu!), protože jazyk symbolických instrukcí IA-32 je jednodušší než 64bitový x86_64. Instalace není třeba. Stačí ZIP soubor rozbalit.
+
+Novější verze Windows 10 obsahují změnu, která poněkud interferuje s krokováním v OllyDbg. Projevuje se tak, že vás při načtení programu k debugování OllyDbg varuje, že někdo nečekaně změnil hodnoty debugovacích registrů. Mimo jiné se pak program nezastaví na svém vstupním bodu. Řešení je jednoduché: Otevřete nastavení (Options) a v sekci `Debugging` vypněte `Use HW breakpoints for stepping`.
 
 == První spuštění
 
@@ -60,6 +62,11 @@ image::cv01-obr09.png[]
 Poslední částí je okno zásobníku. Adresu vrcholu zásobníku obsahuje registr `ESP` (přesněji dvojice `SS` a `ESP`). Červená šipka v okně zásobníku ukazuje již zaplněná data a také směr, kterým budou hodnoty klesat při použití instrukce `PUSH`. Bude-li použita instrukce `PUSH` (ulož operand na zásobník), hodnota registru `ESP` klesne o velikost operandu a obsah okna se posune ve směru šipky dolů tak, že vložená hodnota bude první v pořadí na zásobníku. Při použití instrukce `POP` bude odebrán ze zásobníku první operand a hodnota registru `ESP` se zvýší o jeho velikost. Obsah okna se pak posune při šipce nahoru.
 
 image::cv01-obr10.png[]
+
+[TIP]
+====
+Stručný popis Intelovského assembleru si můžete přečíst https://www.cs.virginia.edu/~evans/cs216/guides/x86.html[zde] (link:{imagesdir}/x86.htm[lokální kopie]), poněkud odlišněji zaměřený a novější, ale určený pro 64bitové systémy, které nepoužíváme, a navíc v jiné notaci, popis Toma Doeppnera https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf[zde] (link:{imagesdir}/x64_cheatsheet.pdf[lokální kopie]). Referenčním zdrojem informací je pochopitelně https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-instruction-set-reference-manual-325383.pdf[Software Developer's Manual] od Intelu.
+====
 
 == Orientace v programu
 

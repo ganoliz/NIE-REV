@@ -3,6 +3,8 @@
 :imagesdir: ../media/labs/06
 :toc:
 
-Martin Jirkal z firmy ESET povede cvičení na téma malware.
-
 * https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_7.mp4[Záznam cvičení]
+
+[line-through]#Martin Jirkal z firmy ESET povede cvičení na téma malware.#
+
+Přednáška byla přesunuta do předmětu https://courses.fit.cvut.cz/BI-BEK[Bezpečný kód].

@@ -65,6 +65,9 @@ The simplest approach is to find the program code in memory and save it as one l
 [NOTE]
 ====
 In Windows 10 the just-in-time debugger behavior got changed. In the previous versions of Windows, if a processriased an unhandled exception, a window would be shown, giving the user a choice of what to do with the application, including running a debugger. In Windows 10, the application gets terminated automatically. I don't know how to return the original behavior, but we can enable the automatic activation of the just-in-time debugger: In the registry key `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug` (resp. `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug` for 32bit applications on 64bit Windows) change the value of `Auto` from `0` to `1`.
+
+
+You may also use the group policies to the same end: Run `gpedit.msc` and in the "Computer Configuration -> Administrative Templates -> Windows Components -> Windows Error Reporting" section change the "Prevent display of the user interface for critical errors" setting to Disabled.
 ====
 
 == Useful tools

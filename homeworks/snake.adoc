@@ -3,11 +3,11 @@
 :imagesdir: ../media/labs/05
 :toc:
 
-* Počet bodů: *5*
+* Počet bodů: *10*
 * Termín odevzdání:
-** *10.12.2020 16:00* (paralelka 101)
-** *10.12.2020 17:45* (paralelka 102)
-** *10.12.2020 19:30* (paralelka 103)
+** *9.12. 17:45* (paralelka 101)
+** *10.12. 17:45* (paralelka 102)
+** *10.12. 19:30* (paralelka 103)
 
 Analyzujte program `Had.exe` z archivu link:{imagesdir}/du3.zip[du3.zip].
 
@@ -17,8 +17,11 @@ Analyzujte program `Had.exe` z archivu link:{imagesdir}/du3.zip[du3.zip].
 * Z VMT zjistěte, kolik má která třída virtuálních metod.
 * Z RTTI zjistěte, jak se třídy jmenují a která VMT náleží které třídě.
 * Popište hierarchii tříd.
+** Součástí popisu by měla být i argumentace, co konkrétně v pozorovaných datech svědčí pro vámi zvolenou hierarchii a vylučuje hierarchie alternativní.
 ** Zjistíte, že hierarchie vykazuje určité zvláštnosti. Upozorněte na tyto zvláštnosti a vysvětlete, co znamenají a jak k nim došlo (co je způsobilo). Vaše vysvětlení nemusí být nutně zcela přesné (z binárky nejde jednoduše určit, která z možných příčin je ta správná), ale mělo by být konzistentní s pozorovanými skutečnostmi.
 * *Bonus:* Upravte program tak, abyste měli 1000 životů. *2 body*
+
+== Poznámky k úloze
 
 [NOTE]
 ====
@@ -27,7 +30,7 @@ Had je sestaven se zapnutými optimalizacemi, což vede na ztrátu respektive p�
 
 [TIP]
 ====
-Někteří studenti naráželi při řešení na problémy při spouštění Hada ve VirtualBoxu. Mohou za to rozdíly mezi tím, jak Had používá rozhraní DirectX, a tím, jak ho VirtualBox emuluje. Verze 5.2 s nainstalovanými Guest Additions a zapnutou 2D i 3D akcelerací se však zdá být plně funkční.
+Někteří studenti naráželi při řešení na problémy při spouštění Hada ve VirtualBoxu. Mohou za to rozdíly mezi tím, jak Had používá rozhraní DirectX, a tím, jak ho starší verze VirtualBoxu emulují. Verze 5.2 s nainstalovanými Guest Additions a zapnutou 2D i 3D akcelerací se však zdá být plně funkční.
 ====
 
 [IMPORTANT]

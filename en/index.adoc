@@ -1,5 +1,5 @@
 ﻿
-= MIE-REV Reverse Engineering
+= NIE-REV Reverse Engineering
 :toc:
 :imagesdir: ../media
 
@@ -7,10 +7,7 @@
 
 == Current events
 
-[IMPORTANT]
-====
 Please keep an eye on the current events in the course on the xref:current_info.adoc[Current events] page.
-====
 
 == Annotation
 
@@ -47,36 +44,39 @@ Note that this *will* be changed if the number of signed-up students exceeds 12.
 | xref:homeworks/email.adoc[E-mail]
 | 5
 | 3rd week
-| November 6, 17:45
+| November 4, 19:30
 
 | xref:homeworks/iat.adoc[IAT]
-| 5
+| 10
 | 4th week
-| November 20, 17:45
+| November 18, 19:30
 
 | xref:homeworks/snake.adoc[Snake]
-| 5
+| 10
 | 5th week
-| December 11, 19:30
+| December 9, 19:30
 
 | xref:projects/crackme.adoc[Crackme]
-| 35+
+| 25+
 | 3rd week
 | February 14, 8:00
 
 | xref:projects/keygen.adoc[Keygen]
 | 20
 | 1st week
-| February 14, 8:00
+| February 13, 8:00
 
 | xref:labs/lab13.adoc[Bonus]
 | 3
-| 12th week
-| February 14, 8:00
+| 13th week
+| February 13, 8:00
 |====
 
 == Changes to the schedule
 
+None specified yet.
+
+////
 * *6th tutorial* (xref:labs/lab06.adoc[Martin Jirkal's lecture on malware]) is postponed until November 20. It's unclear whether it will be presented by Mr. Jirkal or by myself, it depends on the then-current situation.
 * *7th tutorial* (xref:labs/lab07.adoc[consultations + 64bit code]) is moved ahead to the 6th week (October 30).
 * *8th tutorial* (xref:labs/lab08.adoc[simple obfuscations]) is moved ahead to the 7th week (November 6).
@@ -86,7 +86,6 @@ Note that this *will* be changed if the number of signed-up students exceeds 12.
 * On December 11th, we will have the *13th tutorial* (injection).
 * On December 18th, *Martin Jirkal from ESET* will give a lecture on malware. The topic of the tutorial, if any, is undecided as yet; if Mr. Jirkal is willing, perhaps he could demonstrate reverse engineering of high-level languages such as dotnet. Or we can end early and enjoy the Christmas instead of reverse engineering :-).
 
-////
 * *2019-11-07 (week 7)*:
 ** In place of the *disassembling and obfuscation* lecture Ing. Martin Jirkal from ESET will present a lecture on *malware* (regularly lecture no.7).
 ** In place of the *malware* tutorial we will have the *consultations and 64bit code* tutorial (regularly tutorial no.7).

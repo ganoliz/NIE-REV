@@ -3,11 +3,11 @@
 :imagesdir: ../media/labs/04
 :toc:
 
-* Počet bodů: *5*
+* Počet bodů: *10*
 * Termín odevzdání:
-** *19.11.2020 16:00* (paralelka 101)
-** *19.11.2020 17:45* (paralelka 102)
-** *19.11.2020 19:30* (paralelka 103)
+** *18.11. 17:45* (paralelka 101)
+** *19.11. 17:45* (paralelka 102)
+** *19.11. 19:30* (paralelka 103)
 
 Váš program, zkompilovaný pomocí MS Visual Studio, typicky používá externí runtime ve formě knihovny `MSVCRT12.DLL` (verze ve jménu se může lišit podle verze kompilátoru, tento název platí pro Visual Studio 2013). Tato knihovna obsahuje funkce `malloc`, `calloc`, `realloc` a `free`. Napište program, který bude obsahovat funkce:
 
@@ -20,9 +20,11 @@ Váš program, zkompilovaný pomocí MS Visual Studio, typicky používá extern
 
 Funkce `MallocDebug_Init` najde v IAT pozici funkcí `malloc`, `calloc`, `realloc` a `free` a změní jejich adresu na adresy funkcí `MallocDebug_malloc`, `MallocDebug_calloc`, `MallocDebug_realloc` a `MallocDebug_free` (tzv. substituční funkce).
 
-Substituční funkce napište tak, aby si v okamžiku volání uložily záznam (stačí statické globální pole -- neřešíme konkurenční přístup více vláken ani podporu neomezeného množství alokací, stačí nám pevně dané maximum) o tom, že se alokovala paměť, a o její velikosti. Uvolňující substituční funkce budou tento záznam opět rušit (a stěžovat si, pokud by měly zrušit neznámou nebo uz dříve zrušenou alokaci). Následně substituční funkce zavolají původní funkci, kterou substituují; pozor, nemůžete použít `malloc` -- využijte ukazatele uložené v rámci `MallocDebug_Init`. Získáme tedy schopnost logování paměťových alokačních/dealokačních operací.
+Substituční funkce napište tak, aby si uložily záznam (stačí statické globální pole -- neřešíme konkurenční přístup více vláken ani podporu neomezeného množství alokací, stačí nám pevně dané maximum) o tom, že se alokovala paměť, a o její velikosti. Uvolňující substituční funkce budou tento záznam opět rušit (a stěžovat si, pokud by měly zrušit neznámou nebo uz dříve zrušenou alokaci). Substituční funkce samozřejmě také zavolají původní funkci, kterou substituují; pozor, v tomto volání nemůžete použít Cčkovou funkci `malloc` -- využijte ukazatele uložené v rámci `MallocDebug_Init`. Získáme tak schopnost logování paměťových alokačních/dealokačních operací.
 
-Funkce `MallocDebug_Done` vrátí IAT do původního stavu a vypíše případné zbytky tabulky, které budou považovány za memory leaky :). Nezapomeňte vhodně otestovat, že vrácené údaje odpovídají skutečnosti.
+Funkce `MallocDebug_Done` vrátí IAT do původního stavu a vypíše případné zbytky tabulky, které budou považovány za memory leaky :). Nezapomeňte vhodně otestovat, že vrácené údaje odpovídají skutečnosti (např. vytvořením úmyslného leaku).
+
+== Řešení běžných problémů
 
 [IMPORTANT]
 ====
@@ -46,27 +48,34 @@ BOOL WINAPI VirtualProtect (
 ----
 ====
 
-[IMPORTANT]
+[TIP]
 ====
-Při zpracování importního adresáře nemusíte řešit jiný obsah importního thunku než odkaz na `IMAGE_IMPORT_BY_NAME`, ale jinak musíte zpracovat libovolný, i poškozený importní adresář. Upozornit, že adresář je vadný, a ukončit program je legitimní, spadnout na neplatný přístup do paměti tam, kde jste to mohli zpracováním dle specifikace ošetřit, nikoliv.
+https://courses.fit.cvut.cz/BI-BEK/media/lectures/bek02.pdf[Druhá přednáška] a https://courses.fit.cvut.cz/BI-BEK/labs/lab02.html[druhé cvičení] z BI-BEK vám může pomoci, pokud se ztratíte v kompilaci a linkování.
+====
+
+== Typické chyby
+
+[NOTE]
+====
+Při zpracování importního adresáře nemusíte řešit jiný obsah importního thunku než odkaz na `IMAGE_IMPORT_BY_NAME`, ale jinak musíte zpracovat libovolný, i poškozený, importní adresář. Upozornit, že adresář je vadný, a ukončit program je legitimní, spadnout na neplatný přístup do paměti tam, kde jste to mohli zpracováním dle specifikace ošetřit, nikoliv.
 ====
 
 [NOTE]
 ====
-Je naprosto přípustné, aby program importoval stejnou knihovnu -- a klidně i stejnou funkci z ní -- několikrát.
+Je naprosto přípustné, aby program importoval stejnou knihovnu -- a klidně i stejnou funkci z ní -- několikrát. Vaše řešení by s tím mělo počítat.
 ====
 
 [IMPORTANT]
 ====
-Cílem této úlohy *není*, abyste si napsali vlastní paměťový manager. Naopak by to bylo na škodu -- simulujeme případ, že chceme monitorovat chování programu ve specifické situaci, a je tedy krajně nežádoucí do toho chování vnášet vlastní změny. Vaše implementace by měla zaznamenat údaje, které budete potřebovat, a potom (nebo před tím) zavolat originální verze paměťových funkcí.
+Cílem této úlohy *není*, abyste si napsali vlastní paměťový manager. Naopak by to bylo na škodu -- simulujeme případ, že chceme monitorovat chování programu ve specifické situaci, je tedy krajně nežádoucí do toho chování vnášet vlastní změny. Vaše implementace by měla zaznamenat údaje, které budete potřebovat, a potom (nebo před tím) zavolat originální verze paměťových funkcí.
 ====
 
-[IMPORTANT]
+[NOTE]
 ====
 Vaše implementace by měla odpovídat specifikaci zaměňovaných funkcí. Nastudujte si dokumentaci a ujistěte se, že vaše řešení bude fungovat pro všechny možné mezní stavy, do kterých se paměťové funkce mohou dostat! Velmi častá chyba i u jinak perfektních řešení je, že student nedokázal pokrýt všechna použití paměťových funkcí -- zejména `realloc` má velmi široké možnosti využití!
 ====
 
-[IMPORTANT]
+[NOTE]
 ====
 Počítejte s možností, že funkce `MallocDebug_Init` a `MallocDebug_Done` mohou být volány opakovaně a v libovolném pořadí.
 ====

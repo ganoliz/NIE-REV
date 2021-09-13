@@ -3,92 +3,67 @@
 :toc:
 :imagesdir: ./media
 
-Hodnocení předmětu se skládá ze tří částí -- hodnocení domácích úloh (15 bodů), hodnocení semestrálních prací (20 a 35 bodů) a hodnocení zkoušky (30 bodů). Předmět je řádně ukončen získáním zápočtu a složením zkoušky.
+Hodnocení předmětu se skládá ze tří částí -- hodnocení domácích úloh (25 bodů), hodnocení semestrálních prací (20 a 25 bodů) a hodnocení zkoušky (30 bodů). Předmět je řádně ukončen získáním zápočtu a složením zkoušky.
 
 == Zápočet
 
-Zápočet student získá v případě, že dosáhne nejméně 30 bodů z domácích úloh a semestrálních prací.
+Zápočet student získá v případě, že dosáhne nejméně 35 bodů z domácích úloh a semestrálních prací.
 
 === Domácí úlohy
 
-Domácí úlohy jsou zadávány na cvičeních a jsou tvořeny třemi úlohami po 5 bodech, celkem tedy až 15 bodů. Úlohy se zabývají dílčími oblastmi probíranými na přednáškách a cvičeních -- porozumění assemblerovému kódu a základních řídících struktur, práce s Import Address Table a využití typové informace. *Úlohy se odevzdávají zásadně e-mailem cvičícímu a je přípustné i několikanásobné odevzdání* (např. pro doplnění chybějících částí nebo opravu chyb). Pro každou domácí úlohu je stanoven samostatný termín, ve kterém musí být odevzdána, standardně X týdnů od konce cvičení, na kterém byla úloha zadána (X se liší podle úlohy); rozhodným okamžikem je čas doručení zprávy do e-mailové schránky cvičícího. Úlohy odevzdané po uplynutí termínu *budou hodnoceny 0 body*, a to i v případě, že úloha vypracována byla a jen se ji nepodařilo včas doručit. Mohou však být využity pro rozhodnutí sporných případů. V případě doložených vážných důvodů může být termín stanoven individuálně.
+Domácí úlohy jsou zadávány na cvičeních a jsou tvořeny třemi úlohami za 5, 10 a 10 bodů, celkem tedy až 25 bodů. Úlohy se zabývají dílčími oblastmi probíranými na přednáškách a cvičeních -- porozumění assemblerovému kódu a základních řídících struktur, práce s Import Address Table a využití typové informace. *Úlohy se odevzdávají zásadně e-mailem cvičícímu a je přípustné i několikanásobné odevzdání* (např. pro doplnění chybějících částí nebo opravu chyb). Pro každou domácí úlohu je stanoven samostatný termín, ve kterém musí být odevzdána, standardně X týdnů od konce cvičení, na kterém byla úloha zadána (X se liší podle úlohy); rozhodným okamžikem je čas doručení zprávy do e-mailové schránky cvičícího. Úlohy odevzdané po uplynutí termínu *budou hodnoceny 0 body*, a to i v případě, že úloha vypracována byla a jen se ji nepodařilo včas doručit. Mohou však být využity pro rozhodnutí sporných případů. V případě doložených vážných důvodů může být termín stanoven individuálně.
 
 V případě mimořádně kvalitního řešení může cvičící přiznat studentovi bonusové body nad rámec stanovených limitů, dle kvality řešení. Na tyto body není nárok, jsou zcela v pravomoci cvičícího.
 
-Seznam úloh a jejich deadline je uveden na xref:index.adoc[hlavní stránce předmětu].
+Seznam úloh a jejich deadline je uveden na xref:index.adoc#_term%C3%ADny-odevzd%C3%A1n%C3%AD-%C3%BAloh[hlavní stránce předmětu].
 
 === Semestrální práce
 
-Semestrální práce se zabývají reverzním inženýrstvím existujících programů. Platí pro ně obdobná pravidla jako pro domácí úlohy s tím rozdílem, že termínem pro odevzdání je konec zkouškového období.
+Semestrální práce se zabývají reverzním inženýrstvím rozsáhlejších programů. Platí pro ně obdobná pravidla jako pro domácí úlohy s tím rozdílem, že termínem pro odevzdání je konec zkouškového období.
 
 Výsledkem semestrální práce by měl být *velmi stručný* popis vašeho postupu, popis hrubé struktury analyzovaného programu a jeho základních principů, popis obranných mechanismů, které program používá, včetně vysvětlení, jak je student překonával(a). Velmi důležité je také pojmenování algoritmů, které program používá pro skrytí klíčových informací -- ve všech případech jde o známé a běžně používané algoritmy, které byste určitě měli z dřívějšího studia znát.
 
 Semestrální práce jsou celkem dvě a jsou detailně popsané na samostatných stránkách:
 
-* xref:projects/crackme.adoc[Crackme] (35+ bodů)
+* xref:projects/crackme.adoc[Crackme] (25+ bodů)
 * xref:projects/keygen.adoc[Keygen] (20 bodů)
 
 == Zkouška
 
-Předmět je standardně zakončen zkouškou. Ta je písemná, v délce 75 minut, v případě podezření z neetického chování může být doplněna ústním dozkoušením. *Zúčastnit se zkoušky může pouze student, který už má zapsaný zápočet.*
+Předmět je standardně zakončen zkouškou. *Zúčastnit se jí může pouze student, který už má zapsaný zápočet.*
 
-Při zkoušce je povoleno používat pouze psací potřeby a dále papír přidělený zkoušejícím. Žádné jiné pomůcky nejsou povoleny. *Výslovně je zakázáno použití jakýchkoliv elektronických zařízení, a to po celou dobu pobytu studenta ve zkouškové místnosti.*
+Obsahově zkouška odpovídá látce z přednášek, cvičení i domácích úloh.
 
-Ze zkoušky lze získat až 30 bodů. Minimum pro získání známky jiné než "nedostatečně" je 15 bodů. Obsahově zkouška odpovídá látce z přednášek, cvičení i domácích úloh. Je tvořena šesti otevřenými otázkami zaměřenými zejména (ale ne výhradně) na teorii. Každá otázka je hodnocena 5 body. Příklad zkouškové písemky je zde: link:{imagesdir}/exam-cz.pdf[Download].
-
-Získá-li student z domácích úloh a semestrálních prací celkem 50 nebo více bodů, může mu být zkouška prominuta, pokud o to prokazatelně (školním e-mailem) požádá zkoušejícího nejpozději do konce 3. týdne zkouškového období (24.1.2021) a současně se žádného zkouškového termínu nezúčastnil (účastí se rozumí i nedostavení se na zkoušku, na kterou byl student přihlášen). Prominutím zkoušky student získá známku odpovídající počtu bodů dosažených z domácích úloh a semestrálních prací.
+Student si může zvolit, zda chce složit zkoušku prezenčně (preferovaný způsob) nebo distančně. Pozor, každá varianta má jiné hodnocení, které mimo jiné reflektuje spolehlivost daného způsobu zkoušení. Existuje i možnost zakončit předmět bez zkoušky za podmínek popsaných níže.
 
 Složením zkoušky se *neuzavírá* klasifikace, student může až do konce semestru odevzdávat úlohy, jimž dosud neuplynul deadline.
 
-== Úpravy pro zimní semestr 2020/21
+=== Prezenční zkouška
 
-V důsledku současné epidemiologické situace a jejího očekávaného vývoje stanovuji následující úpravy parametrů hodnocení pro zimní semestr 2020/21:
+Prezenční zkouška je písemná, v délce 75 minut, v případě podezření z neetického chování může být doplněna ústním dozkoušením. 
 
-=== Zápočet
+Při zkoušce je povoleno používat pouze psací potřeby a dále papír přidělený zkoušejícím. Žádné jiné pomůcky nejsou povoleny. *Výslovně je zakázáno použití jakýchkoliv elektronických zařízení, a to po celou dobu pobytu studenta ve zkouškové místnosti.*
 
-Parametry zápočtu se nemění.
+Ze zkoušky lze získat až 30 bodů. Minimum pro získání známky jiné než "nedostatečně" je 15 bodů. Je tvořena šesti otevřenými otázkami zaměřenými zejména (ale ne výhradně) na teorii. Každá otázka je hodnocena 5 body. Příklad zkouškové písemky je zde: link:{imagesdir}/exam-cz.pdf[Download].
 
-=== Zkouška
+=== Distanční zkouška
 
-V tuto chvíli nelze přesně určit, jak bude zkouška probíhat, protože není známo, jaká bude epidemiologická situace v průběhu zkouškového období. Jsou ale dopředu stanoveny následující varianty včetně kritérií, podle kterých bude konkrétní varianta vybrána.
+Distanční zkouška se koná online v prostředí MS Teams jako hlasový hovor dvou osob (zkoušející a zkoušený); obraz není z důvodu ochrany soukromí vyžadován. S předstihem budou přiděleny časové sloty, ve kterých se bude hovor konat.
+
+Online zkouška potrvá max. 20 minut a budou v ní zkoumány dva okruhy z probrané látky. Z důvodu minimalizace rizika podvodů nebude povolen čas na přípravu. Hodnocení zkoušky nebude stanoveno v podobě bodů ale pouze binárně jako "úspěch" nebo "neúspěch"; pro úspěch musí student otázky zodpovědět aspoň z poloviny dohromady (tedy i naprostý neúspěch u jedné otázky je možné kompenzovat vynikajícím výkonem u otázky druhé). V případě úspěšného složení zkoušky dostane student přiděleny body spočítané koeficientem z bodů získaných v rámci zápočtu (tzn. za zkoušku student získá 3/7 bodů, které získal z úloh).
 
 [NOTE]
 ====
-Důvodem pro takto stanovené varianty je snaha zajistit v maximální možné míře dosažení účelu zkoušky (tzn. ověření, že student rozumí problematice reverzního inženýrství a například si nenechal domácí úlohy a semestrální práce vypracovat někým jiným) při dodržení rovných podmínek pro všechny (maximální omezení případných pokusů o podvádění), ale přitom co možná nejvíce eliminovat subjektivní vlivy a nemožnost dodatečného přezkoumání ústního zkoušení.
+Důvodem pro takto stanovené hodnocení je snaha zajistit v maximální možné míře dosažení účelu zkoušky (tzn. ověření, že student rozumí probrané problematice) při dodržení co nejspravedlivějších podmínek pro všechny: Při distanční zkoušce není možné na jedné straně zamezit pokusům o podvádění a na druhé straně objektivně a přezkoumatelně ohodnotit kvalitu odpovědi. Binární hodnocení lze rozhodnout dosti objektivně a přepočet bodů ze semestru spolu s relativně malým podílem bodů ze zkoušky na celkovém hodnocení eliminuje příliš velké výkyvy, ať už způsobené podvodem nebo např. nervozitou či nezvykem na tento způsob zkoušení. Od dvou otázek si pak slibuji snížení stresu plynoucího z obav, že student zrovna tu jednu položenou otázku nebude vůbec znát.
 ====
 
-[IMPORTANT]
-====
-*V souladu s metodickým pokynem děkana č. 23/2020 se dříve stanovené podmínky zkoušky mění následujícím způsobem:*
+=== Zakončení předmětu bez zkoušky
 
-V důsledku aktuálního stavu epidemie a objektivních potížích studentů žijících v zahraničí s účastí na prezenčních zkouškách je v tomto semestru online zkouška (Varianta 1 níže) zpřístupněna jako volitelná možnost všem studentům. V KOSu bude vypsána sada termínů pro distanční zkoušky, na které se tito studenti mohou přihlásit namísto zkoušky prezenční. Pro zajištění stejných příležitostí pro všechny mohou ti studenti, kteří uspějí v prezenční zkoušce, požádat o její hodnocení dle parametrů zkoušky online, tzn. přepočítaným počtem bodů ze semestru.
-
-Pozn.: Přestože je toto hodnotící schéma odlišné pro online a prezenční zkoušky, navzdory metodickému pokynu děkana, bylo zvoleno s vědomím a souhlasem vedoucího katedry. Důvodem je snaha maximálně naplnit *cíle* pokynu, tedy zejména rovné podmínky pro všechny: Online zkoušky neumožňují takovou úroveň řízení jejich poctivého plnění jako zkoušky prezenční, a aby se minimalizovaly negativní dopady případného podvádění, je hodnocení online zkoušky založeno na výkonu studenta v průběhu celého semestru namísto okamžitého výkonu u zkoušky. Tento způsob hodnocení byl stanoven už před začátkem semestru a nemění se.
-====
-
-==== Varianta 1
-
-Pokud *nebude* ke dni 4.1.2021 zakázáno (státem, ČVUT nebo FITem) konat prezenční akce v prostorách fakulty, parametry zkoušky se nemění.
-
-==== Varianta 2
-
-Pokud *bude* ke dni 4.1.2021 zakázáno (státem, ČVUT nebo FITem) konat prezenční akce v prostorách fakulty, parametry zkoušky se mění následujícím způsobem, a to bez výjimky pro všechny studenty, nezávisle na tom, zda budou nebo nebudou prezenční akce umožněny později v průběhu zkouškového období:
-
-* Zkouška se bude konat online v prostředí MS Teams a bude ústní. Z technického vybavení je požadováno pouze natolik stabilní spojení, aby vydrželo po celou dobu zkoušky, a mikrofon.
-
-* Zkouška potrvá 10 minut a bude na ní položena jedna otázka z probrané látky. Z důvodu minimalizace pokusů o podvody nebude prostor pro přípravu, student na položenou otázku okamžitě odpovídá.
-
-* Zkouška nebude hodnocena body, ale binárně jako "úspěch" nebo "neúspěch". V případě neúspěchu bude student ohodnocen známkou F, jako kdyby v prezenční zkoušce získal 0 bodů. V případě úspěchu získá student za zkoušku tolik bodů, aby získal stejné procento z maximálního počtu, jako získal během semestru (jinými slovy, body ze semestru se vynásobí koeficientem 3/7 a matematicky zaokrouhlí na celé číslo).
-
-==== Varianta 3
-
-Pokud proběhne nejméně jeden zkouškový termín podle varianty 1 a následný vývoj epidemiologické situace vynutí přechod k variantě 2, budou mít studenti, kteří uspěli ve variantě 1, na výběr, jestli si přejí ponechat body získané ve variantě 1 a nebo jestli si nechají body ze zkoušky přepočítat, jako kdyby už od začátku zkouškového období probíhalo zkoušení podle varianty 2.
-
-Opačný směr není možný, jakmile jednou vstoupíme do varianty 2, tato varianta zůstane v platnosti pro všechny další zkouškové termíny.
+Získá-li student z domácích úloh a semestrálních prací celkem 50 nebo více bodů, může mu být zkouška prominuta, pokud o to prokazatelně (školním e-mailem) požádá zkoušejícího nejpozději do konce 3. týdne zkouškového období (23.1.2022) a současně se žádného zkouškového termínu nezúčastnil (účastí se rozumí i nedostavení se na zkoušku, na kterou byl student přihlášen). Prominutím zkoušky student získá známku odpovídající počtu bodů dosažených z domácích úloh a semestrálních prací. Zároveň tím ztrácí možnost zúčastnit se jiné varianty zkoušky.
 
 == Celkové hodnocení
 
-Hodnocení se řídí aktuálním https://www.cvut.cz/vnitrni-predpisy[Studijním a zkušebním řádem ČVUT] ( https://www.cvut.cz/sites/default/files/content/74c76d2e-7f4d-4cb1-ac28-b0765c7f88f2/cs/20200624-studijni-a-zkusebni-rad-pro-studenty-cvut-v-praze-iii-uplne-zneni-ucinnost-od-11-3-2020_0.pdf[PDF] ).
+Hodnocení se řídí aktuálním https://www.cvut.cz/vnitrni-predpisy[Studijním a zkušebním řádem ČVUT] ( https://www.cvut.cz/sites/default/files/content/74c76d2e-7f4d-4cb1-ac28-b0765c7f88f2/cs/20210910-studijni-a-zkusebni-rad-pro-studenty-cvut-v-praze-iv-uplne-zneni-ucinnost-od-20-9-2021.pdf[PDF] ).
 
 [options="autowidth", cols=3*]
 |====

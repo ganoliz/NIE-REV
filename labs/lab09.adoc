@@ -50,3 +50,7 @@ IDA až do verze 7.3 neobsahuje podporu pro vrácení posledního kroku (undo). 
 === Změny programu přímo v IDA
 
 V programu IDA můžete přímo měnit analyzovaný program nástroji v menu Patch. Pokud používáte verzi 5.0 Free, je toto menu standardně skryté, ale můžete ho zobrazit, pokud změníte konfigurační soubor `C:\Program Files (x86)\IDA Free\cfg\idagui.cfg`: otevřete soubor v editoru jako Administrátor a změňte řádek `ENABLE_PATCH_SUBMENU=NO` na `ENABLE_PATCH_SUBMENU=YES`. Po restartu IDA Free naleznete nové submenu Patch v menu Edit.
+
+== Doporučené další zdroje
+
+* https://www.youtube.com/watch?v=HlUe0TUHOIc[Repsych: Psychological Warfare in Reverse Engineering] (Chris Domas, DEF CON 23)

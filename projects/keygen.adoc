@@ -5,7 +5,7 @@
 
 Cílem této semestrální práce je, abyste si vyzkoušeli analýzu komplexnějšího programu. Program samotný je pouze minimálně chráněn proti analýze, hlavní složitost je skryta v tom, že je nutné program pochopit jako celek.
 
-Aplikace pro analýzu je společná pro všechny studenty. Cílem této práce je provést reverzní inženýrství souboru v 64bitové architektuře a zjistit, jaké zadat programu sériové číslo tak, aby byly splněny podmínky, které na něj program má. Druhou částí pak je vytvoření generátoru těchto sériových čísel, což je umožněno tím, že ve zkoumané aplikaci už stěžejní část generátoru existuje (programátor ji zapomněl kompletně odstranit), jen není aktivovaná a postrádá určité informace nutné pro její zprovoznění.
+Aplikace pro analýzu je společná pro všechny studenty. Cílem této práce je provést reverzní inženýrství souboru v 64bitové architektuře a zjistit, jaké zadat programu sériové číslo tak, aby byly splněny podmínky, které na něj program má. Druhou částí pak je vytvoření generátoru těchto sériových čísel, což je usnadněno tím, že ve zkoumané aplikaci už stěžejní část generátoru existuje (programátor ji zapomněl kompletně odstranit), jen není aktivovaná a postrádá určité informace nutné pro její zprovoznění.
 
 * link:{imagesdir}/sp1.zip[Download]
 
@@ -52,6 +52,8 @@ Přesto se dá úspěšně vyřešit, dokonce to ani není tak obtížné. Poč�
 Aby byla úloha řešitelná, je její použití kryptografie záměrně oslabeno. Bohužel v novějších verzích knihovny `BCRYPT.DLL` Microsoft provedl úpravu, která takto oslabenou kryptografii hodnotí jako chybu a skutečně pouze vrátí chybový kód, místo aby byla operace provedena. V důsledku toho není úloha kompatibilní s aktuálními verzemi operačních systémů, je potřeba použít starší verze.
 
 Které verze fungují není přesně známo. Víme, že ve Windows 10 verze 1910 už úloha funkční není, a zrovna tak není funkční verze 1903 s aktualizacemi z jara 2019 (jde o podobný problém, jako je popsaný link:https://github.com/libssh2/libssh2/issues/388#issuecomment-516918145[zde]). Starší verze Windows snad fungují, ale je možné, že některá z novějších aktualizací pro ně Keygen také zablokuje. Obecně doporučujeme pro spouštění Keygenu použít neaktualizované Windows 7 nebo 8 ve virtuálním prostředí, případně Windows 10 ve verzi, jak je nainstalována v diskových obrazech používaných na cvičeních.
+
+Fungovala nám https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/[verze pro testování Internet Exploreru] dostupná z webu Microsoftu, pohlídejte si ale, aby nedošlo k její aktualizaci.
 
 === Nápověda
 

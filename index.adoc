@@ -7,14 +7,11 @@
 
 == Aktuality
 
-[IMPORTANT]
-====
 Sledujte prosím aktuální informace k výuce na stránce xref:current_info.adoc[Aktuality].
-====
 
 == Anotace
 
-Studenti budou v rámci předmětu seznámeni se základy reverzního inženýrství počítačového softwaru. Dále studenti získají znalosti o tom, jakým způsobem probíhá spouštění a inicializace programu, co se odehrává před a po volání funkce main. Studenti také pochopí, jakým způsobem je organizován spustitelný soubor, jak se propojuje s Knihovnami třetích stran. Další část předmětu bude věnována reverznímu inženýrství aplikací napsaných v C++. Studenti se také seznámi s principy disassemblerů a obfuskačními metodami. Dále se předmět bude věnovat nástrojům pro ladění (debuggerům): jak ladící nástroje pracují, jak probíhá ladění a také se seznámí s metodami, které mohou být použity k detekci ladících nástrojů. Jedna z přednášek pohovoří o aktuální scéně počítačového škodlivého kódu. Důraz předmětu je kladen na cvičení, na kterých budou studenti řešit prakticky orientované úlohy z reálného světa.
+Studenti budou v rámci předmětu seznámeni se základy reverzního inženýrství počítačového softwaru. Dále studenti získají znalosti o tom, jakým způsobem probíhá spouštění a inicializace programu, co se odehrává před a po volání funkce main. Studenti také pochopí, jakým způsobem je organizován spustitelný soubor, jak se propojuje s Knihovnami třetích stran. Další část předmětu bude věnována reverznímu inženýrství aplikací napsaných v C++. Studenti se také seznámí s principy disassemblerů a obfuskačními metodami. Dále se předmět bude věnovat nástrojům pro ladění (debuggerům): jak ladící nástroje pracují, jak probíhá ladění a také se seznámí s metodami, které mohou být použity k detekci ladících nástrojů. Jedna z přednášek pohovoří o aktuální scéně počítačového škodlivého kódu. Důraz předmětu je kladen na cvičení, na kterých budou studenti řešit prakticky orientované úlohy z reálného světa.
 
 == Učitelé
 
@@ -46,48 +43,51 @@ Par.103
 | xref:homeworks/email.adoc[E-mail]
 | 5
 | 3. týden
-| 5.11. 16:00
+| 4.11. 17:45
 | 5.11. 17:45
 | 5.11. 19:30
 
 | xref:homeworks/iat.adoc[IAT]
-| 5
+| 10
 | 4. týden
-| 19.11. 16:00
+| 18.11. 17:45
 | 19.11. 17:45
 | 19.11. 19:30
 
 | xref:homeworks/snake.adoc[Had]
-| 5
+| 10
 | 5. týden
-| 10.12. 16:00
+| 9.12. 17:45
 | 10.12. 17:45
 | 10.12. 19:30
 
 | xref:projects/crackme.adoc[Crackme]
-| 35+
+| 25+
 | 3. týden
-| 14.2. 8:00
-| 14.2. 8:00
-| 14.2. 8:00
+| 13.2. 8:00
+| 13.2. 8:00
+| 13.2. 8:00
 
 | xref:projects/keygen.adoc[Keygen]
 | 20
 | 1. týden
-| 14.2. 8:00
-| 14.2. 8:00
-| 14.2. 8:00
+| 13.2. 8:00
+| 13.2. 8:00
+| 13.2. 8:00
 
 | xref:labs/lab13.adoc[Bonus]
 | 3
 | 13. týden
-| 14.2. 8:00
-| 14.2. 8:00
-| 14.2. 8:00
+| 13.2. 8:00
+| 13.2. 8:00
+| 13.2. 8:00
 |====
 
 == Změny v programu
 
+Aktuálně žádné.
+
+////
 * *6. cvičení* (xref:labs/lab06.adoc[přednáška Martina Jirkala o malware]) se odsouvá na neurčito. Předpoklad je, že přednášky externích hostů budou provedeny na konci výukové části semestru nebo ve zkouškovém období (to pak ovšem ryze dobrovolně), pokud to bude možné.
 * *7. cvičení* (xref:labs/lab07.adoc[konzultace + 64bitový kód]) se přesouvá do 6. týdne (29.10.).
 * *8. cvičení* (xref:labs/lab08.adoc[jednoduché obfuskace]) se přesouvá do 7. týdne (5.11.).
@@ -99,7 +99,6 @@ Par.103
 * 17.12. bude *externí přednáška Martina Jirkala* na téma malware a *třinácté cvičení* (injekce kódu).
 * Pokud to bude jenom trochu možné, pokusím se o zkouškovém období uspořádat přednášku Jana Rubína na téma analýzy malware. Je to ale podmíněno možností ji uspořádat ve fyzické podobě, což je stále krajně nejisté -- zkoušky pravděpodobně bude možné fyzicky konat, protože je možné výrazně omezit počet lidí v místnosti, ale fyzická přednáška pro 40+ lidí se jeví jako velmi problematická.
 
-////
 * *7.-8.11.2019 (7. týden)*:
 ** Místo přednášky na *disassembling a obfuskace* bude mít Ing. Martin Jirkal z firmy ESET přednášku o *malware* (dle programu přednáška 7).
 ** Na cvičení bude místo přednášky na *malware* cvičení na *konzultace a 64bitový kód* (dle programu cvičení 7).
@@ -121,4 +120,4 @@ Nástroje používané na cvičeních si můžete stáhnout zde: https://kib-fil
 
 Runtime knihovny pro různé verze Visual Studia si můžete stáhnout zde: https://kib-files.fit.cvut.cz/mi-rev/vcredist/[Download]
 
-Úvodní přednášky a cvičení z BI-BEK, kde si vysvětlujeme základy assembleru, naleznete zde: https://kib-files.fit.cvut.cz/bi-bek/BIK01-prednasky_1_2_cviceni_1_2.mp4[Download]
+//Úvodní přednášky a cvičení z BI-BEK, kde si vysvětlujeme základy assembleru, naleznete zde: https://kib-files.fit.cvut.cz/bi-bek/BIK01-prednasky_1_2_cviceni_1_2.mp4[Download]

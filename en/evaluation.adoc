@@ -3,19 +3,19 @@
 :toc:
 :imagesdir: ../media
 
-The evalution of the course consists of three parts -- evaluation of the homeworks (15 points), evaluation of the semestral works (20 and 35 points) and evaluation of the exam (30 points). The course is successfully completed by earning the assessment and by passing the exam.
+The evalution of the course consists of three parts -- evaluation of the homeworks (25 points), evaluation of the semestral works (20 and 25 points) and evaluation of the exam (30 points). The course is successfully completed by earning the assessment and by passing the exam.
 
 == Assessment
 
-The assessment is granted if the student gains a total of 30 or more points for homeworks and semestral works.
+The assessment is granted if the student gains a total of 35 or more points for homeworks and semestral works.
 
 === Homeworks
 
-The homeworks are assigned during the tutorials. They consist of three tasks worth 5 points each, 15 points in total. The homeworks ask the student to explore important topics discussed during lectures and tutorials -- the understanding of the assembler code and basic control structures, the work with Import Address Table and the use of type information. *The solutions are to be submitted exclusively through e-mail. It is permitted to submit multiple solutions for each task* (e.g. in order to add missing parts or fix errors in the earlier submissions). A deadline has been set for each task, usually X weeks since the end of the tutorial where the task has been assigned (where X depends on the task); the submission e-mail must reach the teacher's mailbox by the deadline. Tasks submitted after the deadline *are not eligible for any points*, even if the task had been completed and the student only failed to deliver it. They may, however, be used to resolve borderline cases. A deadline may be individually delayed if serious reasons are proven.
+The homeworks are assigned during the tutorials. They consist of three tasks worth 5, 10 and 10 points, 25 points in total. The homeworks ask the student to explore important topics discussed during lectures and tutorials -- the understanding of the assembler code and basic control structures, the use of Import Address Table and the use of type information. *The solutions are to be submitted exclusively through e-mail. It is permitted to submit multiple solutions for each task* (e.g. in order to add missing parts or fix errors in the earlier submissions). A deadline has been set for each task, usually X weeks since the end of the tutorial where the task had been assigned (where X depends on the task); the submission e-mail must reach the teacher's mailbox by the deadline. Tasks submitted after the deadline *are not eligible for any points*, even if the task had been completed and the student only failed to deliver it. They may, however, be used to resolve borderline cases. A deadline may be individually delayed if serious reasons are proven.
 
-In case of exceptional solutions the teacher may award bonus points in excess of standard values, depending on the quality of the solution. There points are solely in the province of the teacher, the student may not request them.
+In case of exceptional solutions the teacher may award bonus points in excess of standard values, depending on the quality of the solution. There points are solely in the province of the teacher, the student is not entitled to them.
 
-List of homeworks and their deadlines can be found at the xref:index.adoc[course's title page].
+List of homeworks and their deadlines can be found at the xref:index.adoc#_homework-deadlines[course's title page].
 
 === Semestral works
 
@@ -25,70 +25,45 @@ The solution of the semestral work should include a *very brief* description of 
 
 There are two semestral works, explained in detail at their respective pages:
 
-* xref:projects/crackme.adoc[Crackme] (35+ points)
+* xref:projects/crackme.adoc[Crackme] (25+ points)
 * xref:projects/keygen.adoc[Keygen] (20 points)
 
 == The Exam
 
-The course is concluded with a written exam 75 minutes long, which may be supplemented with an oral examination in case of a suspicion of an unethical behavior. *Only a student who has already been granted an assessment may take part in the exam.*
+The course is concluded with an exam. *Only a student who has already been granted an assessment may take part in the exam.*
+
+The content of the exam follows the information learned from lectures, tutorials and homeworks.
+
+Each student can choose his or her preferred way of taking the exam, live or online. Please be aware that the grading criteria differ for each variant. There is also an option of concluding the course without undergoing an exam, as detailed below.
+
+Completing the exam *does not* close the classification. The student may keep submitting more tasks until the end of the semester, as long as the task deadline wasn't reached yet.
+
+=== Live Exam
+
+The live exam is written, and takes 75 minutes. It may be supplemented with an oral examination in case of a suspicion of an unethical behavior.
 
 During the exam, only writing utensils and a paper (provided by the teacher) may be used. No other tools are permitted. *It is expressly forbidden to use any kind of an electronic device at any time when the student is present in the exam room.*
 
-The exam is worth 30 points. The minimum number of points required to get a grade better than "failed" is 15. The content of the exam follows the information learned from lectures, tutorials and homeworks. There are 6 open questions in the exam, focused mostly (but not exclusively) on the theory. Each question is worth 5 points. An example exam is here: link:{imagesdir}/exam-en.pdf[Download].
+The exam is worth 30 points. The minimum number of points required to get a grade better than "failed" is 15. There are 6 open questions in the exam, focused mostly (but not exclusively) on the theory. Each question is worth 5 points. An example exam is here: link:{imagesdir}/exam-en.pdf[Download].
 
-If a student achieves 50 or more points from the homeworks and the semestral works, he or she may opt to be excused from the exam, provided that he/she provably (using the school e-mail) requests so by the end of the third exam week (January 24th, 2021) and hasn't taken part in any of the previous exam terms ("taking part" includes subscribing for an exam and then not coming). If the student is excused, he/she gets the grade given by the number of points from the homeworks and the semestral works.
+=== Online Exam
 
-Completing the exam does not close the classification. The student may keep submitting more tasks until the end of the semester, as long as the task deadline wasn't reached yet.
+An online exam is conducted in MS Teams in the form of a one-on-one voice chat; video is not required in order to protect the privacy of everyone. Before the exam, you will be given a time slot in which the chat will take place.
 
-== Modifications for the Winter semester 2020/21
-
-Due to the current epidemiological situation and its expected development, the following changes to the standard grading scheme will be applied to the Winter semester of 2020/21:
-
-=== Assessment
-
-The assessment parameters are not modified in any way.
-
-=== Exam
-
-At this moment, it is impossible to determine the properties of the exam exactly because it is not known how will the epidemiological situation evolve by the beginning of the exam period. I can, however, specify the possible alternatives as well as the criteria which will determine the selection of the final alternative.
+The online exam will take 20 minutes at most and will consist of questions from two topics from the course. In order to minimize attempts at cheating there will be no time provided for preparation, the answers should start immediately. The evaluation of the answers will be binary, "success" or "failure", rather than 0-30 points; in order to succeed in the exam, the student will need to provide at least a 50 % answer overall (i.e. if he or she fails completely in one question, they can still pass if they answer the second one perfectly). In case of a success, the student will be awarded points calculated as 3/7 of the points received from the homeworks.
 
 [NOTE]
 ====
-The reason why I chose these variants is that I need to satisfy the purpose of the exam (i.e. verification that the student understands the issues of reverse engineering and had not, for example, had the homeworks or semestral works done by a third party) as much as possible while doing my best at ensuring an equal opportunity for everyone (i.e. by preventing cheating), and at the same time eliminate as much of the subjective influences of the oral exams as possible.
+The reason for this difference in live and online exams is that I want to achieve the goals of the exam (to verify that the student understands the studied topics) while keeping the conditions as fair for all students as possible: In an online exam, it is not possible to prevent cheating and at the same time it is very difficult if not impossible to objectively rate the answers given. The binary rating can be done objectively and the point calculation prevents random fluctuations in the student's performance, both due to cheating and due to nervousness or stress. Two questions are asked to reduce the fear on part of the student that they may fail one of the questions completely.
 ====
 
-[IMPORTANT]
-====
-*In accordance with the Dean's Directive nr. 23/2020, the exam specifications from before the semester are modified in this way:*
+=== Concluding the Course Without an Exam
 
-Due to the current state of the epidemics and the objective difficulties the students living abroad would face in coming to live exams this year, online exams (Alternative 2 below) are made available to all students who prefer them to live exams. A selection of online exam terms will be put up on KOS and the students can sign up for them instead of live exams. To maintain equal opportunities for everyone, the students who pass the live exam may choose to be graded as if they passed the online one, that is, the points awarded will be calculated based on the student's work throughout the semester.
-
-Note that while the grading scheme is different for the online and live exams, despite the Dean's Directive requirement to the contrary, it is done with the knowledge and approval of the department's head. The purpose of this is to achieve the goals of the Directive, specifically, equal conditions for everyone: Online exams cannot, due to their nature, provide the same level of control as the live exams, particularly in respect to the cheating opportunities. To minimize the impact of that, the grading of online exams is based on the student's work throughout the semester rather than their performance during the exam.
-====
-
-==== Alternative 1
-
-If it is, on January 4th, 2021, *not prohibited* (by the country, by CTU, or by FIT) to conduct personal meetings in the faculty's rooms, the exam will be performed in exactly the same fashion as usual.
-
-==== Alternative 2
-
-If it *is*, on January 4th, 2021, *prohibited*  (by the country, by CTU, or by FIT) to conduct personal meetings in the faculty's rooms, the exam will be modified in the following way. These modifications will be applied to all students without exception, regardless of any further developments of the epidemiological situation:
-
-* The exam will be performed online in MS Teams and will be oral only. As far as technical requirements are concerned, you will only need an internet connection stable enough to hold throughout the exam and a microphone.
-
-* The exam will take 10 minutes and will consist of one question. In order to minimize the risk of cheating, there won't be any preparatory period, the student will be expected to start answering straight away.
-
-* The exam will not be evaluated by points but in a binary way -- either a "success" or a "failure". In case of a failure, the student will be graded F, as if he or she received zero points in the normal exam. In case of a success, the student will be awarded as many points as to maintain the percentage rate from the semester (in other words, the points from the semester will be multiplied by 3/7 and mathematically rounded to an integer number).
-
-==== Alternative 3
-
-If at least one exam according to Alternative 1 takes place and then the changes in the epidemiological situation force us to switch to Alternative 2, the students who succeeded in Alternative 1 will be given a choice whether they want to keep the points they received in their written exam or whether they want to have their points recalculated as if they had taken the Alternative-2 exam and succeeded.
-
-Note that the change in the other direction will not happen. Once exams according to Alternative 2 start, there is no way back to Alternative 1 -- all future exams will be conducted according to Alternative 2 rules.
+If a student achieves 50 or more points from the homeworks and the semestral works, he or she may opt to be excused from the exam, provided that he/she provably (using the school e-mail) requests so by the end of the third exam week (January 23th, 2022) and hasn't taken part in any of the previous exam terms ("taking part" includes subscribing for an exam and then not coming). If the student is excused, he/she gets the grade given by the number of points from the homeworks and the semestral works and will not be allowed to take part in any other variant of the exam.
 
 == Evaluation scale
 
-Evaluation scale is according to the current https://www.cvut.cz/en/internal-ctu-regulations[Study and Examination Code for Students of CTU in Prague] (https://www.cvut.cz/sites/default/files/content/74c76d2e-7f4d-4cb1-ac28-b0765c7f88f2/en/20200624-study-and-examination-rules-for-students-of-ctu.pdf[PDF]).
+Evaluation scale is according to the current https://www.cvut.cz/en/legislation-and-study-regulations[Study and Examination Code for Students of CTU in Prague] (https://www.cvut.cz/sites/default/files/content/d1dc93cd-5894-4521-b799-c7e715d3c59e/en/20210308-study-and-examination-rules-for-students-at-ctu.pdf[PDF]).
 
 [options="autowidth", cols=3*]
 |====

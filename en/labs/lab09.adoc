@@ -51,3 +51,7 @@ Until version 7.3 IDA had no support for undo. By using the keys above (and many
 === Changing the executable in IDA
 
 You can perform changes to the program directly inside IDA Free. The patch menu is hidden by default in version 5.0. It is possible to show it but you'll need to change the configuration file located in `C:\Program Files (x86)\IDA Free\cfg\idagui.cfg`. Open the file as the Administrator and change the `ENABLE_PATCH_SUBMENU=NO` line into `ENABLE_PATCH_SUBMENU=YES`. Save and (re)launch IDA Free. Then you will find the Patch submenu in the Edit menu.
+
+== Recommended additional sources
+
+* https://www.youtube.com/watch?v=HlUe0TUHOIc[Repsych: Psychological Warfare in Reverse Engineering] (Chris Domas, DEF CON 23)

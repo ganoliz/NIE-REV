@@ -3,7 +3,7 @@
 :toc:
 :imagesdir: ../../media
 
-Cílem této semestrální práce je, abyste se prakticky seznámili s nejběžnějšími obfuskačními a antidebugovacími technikami. Je tvořena sérií jednoduchých prográmků s postupně rostoucí složitostí obrany proti analýze. Vaším úkolem je v každém z nich najít heslo, které vám umožní dostat se do další části. Každá část je chráněna jedním heslem, i když v některých případech nemusí nutně být každé heslo v samostatném programu.
+Cílem této semestrální práce je, abyste se prakticky seznámili s nejběžnějšími obfuskačními a antidebugovacími technikami. Je tvořena sérií jednoduchých prográmků s postupně rostoucí složitostí obrany proti analýze. Vaším úkolem je v každém z nich najít heslo, které vám umožní dostat se do další části. Každá část je chráněna jedním heslem, v jedné binárce může být uloženo i více částí.
 
 Aplikace na prozkoumání je pro každého studenta odlišná a bude mu přiřazena ve třetím výukovém týdnu. Zabývejte se pouze svojí aplikací, na řešení cizích prací nebude brán zřetel, s výjimkou opisování. Řešení by mělo být zejména vaší vlastní prací -- konzultace jsou i v praxi možné, ale sotva najdete někoho, kdo by vaše pracovní úkoly dlouhodobě řešil za vás.
 
@@ -20,8 +20,10 @@ Pro každé heslo popište:
 
 * Jaké heslo je požadováno pro vstup do další části?
 * Jak a kam má uživatel heslo do programu vložit, aby se dostal do další části programu?
-* V jaké podobě je heslo v programu uloženo? Používá-li program pro ukrytí hesla nějaké standardní algoritmy, pojmenujte je.
+* V jaké podobě je heslo v programu uloženo?
+** Používá-li program pro ukrytí hesla nějaké standardní algoritmy, pojmenujte je.
 * Jaké obfuskace program v dané části používá a jak se jim můžeme vyhnout?
+** Proč je toto vyhnutí legitimní, tedy nevede ke změně chování programu?
 * Jaké antidebugovací techniky program v dané části používá a jak se jim můžeme vyhnout?
 * Jaký byl váš postup pro získání hesla?
 
@@ -60,11 +62,11 @@ Pro postup do další části programu je potřeba jednoduché fixní heslo. Jeh
 
 === Heslo 2
 
-Pro postup do další části programu je potřeba generované náhodné heslo, které je skryté za obfuskacemi. Jeho nalezení vyžaduje schopnost odstranit obfuskace z cvičení na xref:../labs/lab09.adoc[složitější obfuskace].
+Pro postup do další části programu je potřeba heslo, které je skryté za obfuskacemi. Jeho nalezení vyžaduje schopnost odstranit obfuskace z cvičení na xref:../labs/lab09.adoc[složitější obfuskace].
 
 [IMPORTANT]
 ====
-*10 bodů*
+*5 bodů*
 ====
 
 [NOTE]
@@ -85,14 +87,14 @@ Toto heslo je opět spíše jednoduché, ale je skryté za použitým packerem. 
 
 [IMPORTANT]
 ====
-*10 bodů*
+*5 bodů*
 ====
 
 [NOTE]
 ====
 Pokud použijete ruční rozbalení podle cvičení, budu od vás chtít postup, který by dokázal reprodukovat i uživatel, který s reverzním inženýrstvím teprve začíná. Pravděpodobně také narazíte na jeden zádrhel, který jsme ve cvičení neviděli; ve vašem řešení byste na něj měli upozornit a vysvětlit, proč nám nevadí.
 
-Použití existujícího programu pro rozbalení je možné a svým způsobem vítané (proč dělat ručně něco, co za nás může udělat stroj?), ale bude penalizováno, protože se tak připravujete o zkušenost s tím, jak to dělat. Co kdyby byla úloha zabalena programem, ke kterému rozbalovací nástroj neexistuje? Taková situace určitě dříve nebo později nastane, měli byste vědět, co dělat v takovém případě.
+Použití existujícího programu pro rozbalení je možné a svým způsobem vítané (proč dělat ručně něco, co za nás může udělat stroj?), ale bude penalizováno, protože se tak připravujete o zkušenost s tím, jak to dělat vlastními silami. Co kdyby byla úloha zabalena programem, ke kterému rozbalovací nástroj neexistuje? Taková situace určitě dříve nebo později nastane, měli byste vědět, co dělat v takovém případě.
 ====
 
 [TIP]
@@ -102,7 +104,7 @@ Po rozbalení je heslo skryté pomocí algoritmu, který možná neznáte přím
 
 === Heslo 4
 
-Druhý editbox v programu očekává generované náhodné heslo, které je skryté za pokročilejšími obfuskacemi. Využijete v něm také znalosti získané ve cvičení na xref:../labs/lab11.adoc[antidebugging].
+Druhý editbox v programu očekává heslo, které je skryté za pokročilejšími obfuskacemi. Využijete v něm také znalosti získané ve cvičení na xref:../labs/lab11.adoc[antidebugging].
 
 [IMPORTANT]
 ====
@@ -136,10 +138,9 @@ Toto heslo se nachází v nové binárce, kterou dostanete, pokud vyluštíte p�
 
 == Přiřazení semestrálních prací
 
-////
 Úlohy budou studentům přiřazeny během třetího výukového týdne.
-////
 
+////
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/adamep10.exe[adamep10]
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/babakto1.exe[babakto1]
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/babusand.exe[babusand]
@@ -206,3 +207,4 @@ Toto heslo se nachází v nové binárce, kterou dostanete, pokud vyluštíte p�
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/voronond.exe[voronond]
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/zakjindr.exe[zakjindr]
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/zurekmi1.exe[zurekmi1]
+////

@@ -2,6 +2,7 @@ course:
   code: NI-REV
   altCodes: [ MI-REV, MI-REV.16, NIE-REV, MIE-REV, MIE-REV.16 ]
   name: Reverzní inženýrství
+semester: B212
 language: cs
 navigation:
   hiddenFiles:

@@ -6,10 +6,10 @@
 . xref:lab03.adoc[Recommendations and tools for reverse analysis]
 . xref:lab04.adoc[Import address table]
 . xref:lab05.adoc[Type information analysis]
-. xref:lab06.adoc[Jirkal -- Malware] -- moved to November 20
-. xref:lab07.adoc[Consultations, 64bit code] -- moved to October 30
-. xref:lab08.adoc[Simple obfuscation] -- moved to November 6
-. xref:lab09.adoc[Advanced obfuscation] -- moved to November 13
+. xref:lab06.adoc[Jirkal -- Malware]
+. xref:lab07.adoc[Consultations, 64bit code]
+. xref:lab08.adoc[Simple obfuscation]
+. xref:lab09.adoc[Advanced obfuscation]
 . xref:lab10.adoc[Packed file reconstruction]
 . xref:lab11.adoc[Anti-debugging]
 . xref:lab12.adoc[Jirkal -- .NET analysis]

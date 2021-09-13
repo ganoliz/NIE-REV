@@ -4,7 +4,7 @@
 :toc:
 
 * Points: *5*
-* Deadline: *November 6, 17:45*
+* Deadline: *November 4, 19:30*
 
 The goal of this homework is to reverse engineer file link:{imagesdir}/du1.zip[du1.zip] and convince it to send an e-mail to the teacher. The program uses a configuration file, but the provided one is incorrect. By the time you finish analyzing the application, you will learn the correct structure and content of the configuration. Then create a file that will cause sending of a *polite* e-mail. If you make an error, an impolite e-mail might get sent -- but that is not considered a correct solution ;-).
 
@@ -13,4 +13,9 @@ After you've managed to send the correct e-mail, send the teacher your config fi
 [IMPORTANT]
 ====
 Do not modify the `CrackMe01.exe` application.
+====
+
+[NOTE]
+====
+The sending of the e-mail will actually fail, because the `MailLibrary.dll` library uses an older version of the TLS protocol which is no longer accepted by the mail server. You don't need to worry about that -- if the program can reach the `MailSend` function just based on the instructions in the configuration file, your job is done.
 ====

@@ -13,52 +13,54 @@
 ^h| Video
 
 | 1.
-| 24.09.2020
+| 23.09.
 | Úvod do reverzního inženýrství, analýza zásobníku
 | link:{imagesdir}/rev01en.pdf[anglicky]
 | link:{imagesdir}/rev01cz.pdf[česky]
 | https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_1.mp4[video]
 
 | 2.
-| 08.10.2020
+| 07.10.
 | Analýza toku kódu
 | link:{imagesdir}/rev02en.pdf[anglicky]
 | link:{imagesdir}/rev02cz.pdf[česky]
 | https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_2.mp4[video]
 
 | 3.
-| 22.10.2020
+| 21.10.
 | Analýza tříd v C++
 | link:{imagesdir}/rev03en.pdf[anglicky]
 | link:{imagesdir}/rev03cz.pdf[česky]
 | https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_3.mp4[video]
 
 | 4.
-| 05.11.2020
+| 04.11.
 | Disassembling a obfuskace
 | link:{imagesdir}/rev04en.pdf[anglicky]
 | link:{imagesdir}/rev04cz.pdf[česky]
-| https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_4.mp4[část 1] https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_4_cast_2.mp4[část 2]
+| https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_4.mp4[video část 1] +
+https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_4_cast_2.mp4[video část 2]
 
 | 5.
-| 19.11.2020
+| 18.11.
 | Rozpoznávání kompilátorů
 | link:{imagesdir}/rev05en.pdf[anglicky]
 | link:{imagesdir}/rev05cz.pdf[česky]
 | https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_5.mp4[video]
 
 | 6.
-| 03.12.2020
+| 02.12.
+| Reverzní analýza malware +
+Jan Rubín, Avast
+| --
+| --
+| --
+
+| 7.
+| 16.12.
 | Debugging a anti-debugging
 | link:{imagesdir}/rev06en.pdf[anglicky]
 | link:{imagesdir}/rev06cz.pdf[česky]
 | https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_6.mp4[video]
-
-| 7.
-| 17.12.2020
-| Malware
-| link:{imagesdir}/rev07en.pdf[anglicky]
-| --
-| https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_7.mp4[video]
 
 |====

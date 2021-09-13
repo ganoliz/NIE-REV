@@ -5,7 +5,7 @@
 
 * Počet bodů: *5*
 * Termín odevzdání:
-** *5.11. 16:00* (paralelka 101)
+** *4.11. 17:45* (paralelka 101)
 ** *5.11. 17:45* (paralelka 102)
 ** *5.11. 19:30* (paralelka 103)
 
@@ -16,4 +16,9 @@ Až se vám podaří odeslat požadovaný e-mail, pošlete cvičícímu na škol
 [IMPORTANT]
 ====
 Samotný program `CrackMe01.exe` neměňte.
+====
+
+[NOTE]
+====
+Samotné odeslání e-mailu se ve skutečnosti nepodaří, protože knihovna `MailLibrary.dll` používá starší verzi protokolu TLS, která už není mailovým serverem akceptována. To nemusíte řešit -- jakmile se program jen na základě konfiguračního souboru dostane k použití funkce `MailSend`, je váš úkol splněn.
 ====

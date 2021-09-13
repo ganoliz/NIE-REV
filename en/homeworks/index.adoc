@@ -4,5 +4,5 @@
 :imagesdir: ../../media
 
 * xref:email.adoc[E-mail]
-* xref:iat.adoc[IAT]
+* xref:iat.adoc[Import Address Table]
 * xref:snake.adoc[Snake]

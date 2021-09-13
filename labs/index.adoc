@@ -6,10 +6,10 @@
 . xref:lab03.adoc[Doporučení a nástroje pro analýzu]
 . xref:lab04.adoc[Import address table]
 . xref:lab05.adoc[Analýza typové informace]
-. xref:lab06.adoc[Jirkal -- Malware] -- odloženo
-. xref:lab07.adoc[Konzultace, 64bitový kód] -- přesunuto na 29.10.
-. xref:lab08.adoc[Jednoduché obfuskace] -- přesunuto na 5.11.
-. xref:lab09.adoc[Pokročilé obfuskace] -- přesunuto na 12.11.
+. xref:lab06.adoc[Jirkal -- Malware]
+. xref:lab07.adoc[Konzultace, 64bitový kód]
+. xref:lab08.adoc[Jednoduché obfuskace]
+. xref:lab09.adoc[Pokročilé obfuskace]
 . xref:lab10.adoc[Rekonstrukce zabalených souborů]
 . xref:lab11.adoc[Anti-debugging]
 . xref:lab12.adoc[Jirkal -- analýza .NET]

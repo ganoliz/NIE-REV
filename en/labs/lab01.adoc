@@ -3,13 +3,15 @@
 :imagesdir: ../../media/labs/01
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_1.mp4[Recording of the tutorial]
+* link:https://kib-files.fit.cvut.cz/bi-bek/recordings/2021-tut-01.mp4[Recorded tutorial]
 
 The goal of this tutorial is to get to know the debugging tool http://www.ollydbg.de/[OllyDbg], which will be used in future tutorials, and understand the structure of the stack. You may also use the https://developer.microsoft.com/en-us/windows/hardware/windows-driver-kit[WinDbg] tool, which is more powerful than OllyDbg but also more difficult to learn. Another option is https://x64dbg.com/[x64dbg]. If you prefer GNU/Linux or OS X, you can use gdb or lldb.
 
 == Download and installation of OllyDbg
 
-You can download OllyDbg for free from http://www.ollydbg.de/[http://www.ollydbg.de/]. You can choose between versions 1.10 or 2.01. We recommend that you use version 2.01 in its 32-bit variant, because the IA-32 assembler is easier to understand than the 64bit x86_64. Installation is not needed, simply unpack the downloaded ZIP file.
+You can download OllyDbg for free from http://www.ollydbg.de/[http://www.ollydbg.de/]. You can choose between versions 1.10 or 2.01. We recommend that you use version 2.01 (not 2.00 from the left menu) in its 32-bit variant, because the IA-32 assembler is easier to understand than the 64bit x86_64. Installation is not needed, simply unpack the downloaded ZIP file.
+
+Newer versions of Windows 10 interfere with single-stepping in OllyDbg: You can recognize this by getting a warning on opening an application in OllyDbg that someone unexpectedly changed the values of the debugging registers. Also, the application will not stop at its entry point. The solution is simple: Open Options and in the `Debugging` section turn off `use HW breakpoints for stepping`.
 
 == First run
 
@@ -60,6 +62,11 @@ image::cv01-obr09.png[]
 The last subwindow displays the stack. The top of the stack is pointed to by register `ESP` (more exactly, by the pair `SS` and `ESP`). The red arrow shows data already put on the stack and also the direction these values will move if we use a `PUSH` instruction: Whenever `PUSH` (store an operand on the stack) is executed, the `ESP` value is decreased by the size of the operand and the subwindow's content will shift down so that the newly stored value will be at the top of the stack. When a `POP` instruction is executed, the first value of the stack is extracted and the `ESP` value is increased by its size. The subwindow content will then scroll up.
 
 image::cv01-obr10.png[]
+
+[TIP]
+====
+You can read a brief introduction to the Intel assembler https://www.cs.virginia.edu/~evans/cs216/guides/x86.html[here] (link:{imagesdir}/x86.htm[local copy]), a somewhat differently focused and newer, but intended for 64bit systems which we don't use and written in a different notation, description by Tom Doeppner https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf[here] (link:{imagesdir}/x64_cheatsheet.pdf[local copy]). The reference documentation is of course the https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-instruction-set-reference-manual-325383.pdf[Software Developer's Manual] from Intel.
+====
 
 == Moving around the program
 

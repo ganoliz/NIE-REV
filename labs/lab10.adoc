@@ -65,6 +65,9 @@ Nejjednodušší je, nalézt v paměti kód programu a ten uložit jako jeden ve
 [NOTE]
 ====
 Ve Windows 10 došlo ke změně v chování just-in-time debuggeru. V dřívějších verzích při chybě programu vyskočilo okno s dotazem, co se má stát, a jednou z možností bylo právě debugování chybujícího procesu. Ve Windows 10 se aplikace rovnou ukončí. Způsob, jak vyvolat původní chování, neznám, ale můžete zapnout automatickou aktivaci just-in-time debuggeru tak, že v registru `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AeDebug` (resp. `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\AeDebug` pro 32bitové programy na 64bitových Windows) změníte hodnotu položky `Auto` z `0` na `1`.
+
+Alternativně se dají k témuž použít lokální politiky: Spusťte `gpedit.msc` a v sekci "Konfigurace počítače -> Šablony pro správu ->
+  Součásti systému Windows -> Zasílání zpráv o chybách systému Windows" změňte položku "Zakázat zobrazení uživatelského rozhraní pro závažné chyby" na Zakázáno.
 ====
 
 == Vhodné nástroje

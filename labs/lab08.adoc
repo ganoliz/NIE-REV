@@ -26,4 +26,4 @@ Pomocí klávesy kbd:[:] resp. kbd:[;] můžete do kódu vkládat komentáře. K
 
 Klávesou kbd:[N] můžete pojmenovat symbol, na kterém je zrovna kurzor. Typicky se tato funkce používá pro pojmenování funkcí (např. z `sub_4011b0` tak uděláte `inicializace` s tím, že se tak nahradí všechny výskyty), návěští nebo proměnných (jsou-li vyjádřené symbolicky, tedy ve tvaru `[EBP+hFile]`).
 
-Velmi užitečná klávesa kbd:[N] vám umožňuje zobrazit křížové odkazy (cross-reference), tedy seznam míst, která se odkazují na právě vybraný symbol.
+Velmi užitečná klávesa kbd:[X] vám umožňuje zobrazit křížové odkazy (cross-reference), tedy seznam míst, která se odkazují na právě vybraný symbol.

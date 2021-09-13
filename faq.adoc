@@ -1,0 +1,56 @@
+﻿
+= Často kladené dotazy
+:toc:
+:imagesdir: ./media
+
+Zde naleznete odpovědi na některé běžné dotazy.
+
+== Přítomnost při výuce
+
+=== Musím chodit na přednášky?
+
+Docházka na přednášky je dobrovolná. xref:recordings.adoc[Záznamy přednášek] je docela dobře nahradí, rozdílů není mnoho. Připravíte se ovšem o možnost se rovnou živě zeptat na věci, které vám nejsou jasné nebo o kterých se chcete dozvědět více.
+
+=== Musím chodit na cvičení?
+
+Docházka na cvičení je dobrovolná, ale *velice* doporučená. xref:recordings.adoc[Záznamy cvičení] nejsou dostačující náhrada, stěžejní část práce na cvičení spočívá v tom, že se snažíte v daném čase vyluštit problém a sdílíte své zkušenosti s ostatními. Zatímco bez návštěvy přednášek se docela dobře obejdete, nepřítomnost na cvičeních se nahrazuje velice těžko.
+
+=== Můžu chodit na cvičení X, když jsem zapsaný(á) na cvičení Y?
+
+Při online výuce ANO bez výhrad.
+
+Při živé výuce ANO za předpokladu, že v místnosti budou volná místa. Pokud narazíme na kapacitu místnosti, tak oficiálně zapsaní studenti mají přednost.
+
+Ani v jednom z případů to nemusíte dopředu nijak hlásit, omlouvat se apod.
+
+Toto platí i pro anglická cvičení.
+
+== Hodnocení
+
+=== Musím vyřešit všechny úlohy ze cvičení?
+
+Ne. Cvičení jsou dobrovolná jak co do přítomnosti na nich, tak co do řešení úloh. Počítejte ale s tím, že každé cvičení a každá úloha vás má naučit důležitou součást reverzního inženýrství a pokud je přeskočíte, můžete narazit na potíže u úlohy následující.
+
+=== Musím odevzdat všechny úlohy?
+
+Ne. Požadavkem na úspěšné zakončení předmětu je, aby student získal požadovaný počet bodů. Na kterých úlohách je získá není stanoveno. Když na to přijde, pokud vyluštíte 6. heslo z Crackme, dostanete A, i kdybyste jinak v předmětu neudělali nic.
+
+=== Mohu úlohy odevzdávat po částech?
+
+Ano, a je to i doporučeno, pokud se na něčem zaseknete -- třeba vám pomohu se odzaseknout.
+
+=== Už mám složenou zkoušku, mohu ještě dodělat semestrální práci?
+
+Ano. U všech úloh je stanoven deadline, do kterého musí být odevzdány, a to je jediný omezující faktor. Složení nebo nesložení zkoušky faktor není, tudíž můžete odevzdávat i poté.
+
+== Nástroje
+
+=== Mohu dostat image učebnových počítačů?
+
+Bohužel ne. Image je postaven na operačním systému Microsoft Windows, který nelze takto šířit. Ostatní programy si můžete stáhnout https://kib-files.fit.cvut.cz/mi-rev/nastroje/[zde] nebo na jejich domovských stránkách, ale Windows šířit nesmíme.
+
+Rozhodně byste neměli zneužívat administrátorská práva, která v učebně máte, k tomu, abyste si image vytvářeli potají nelegálně sami.
+
+=== Mohu úlohy řešit v Linuxu?
+
+V zásadě ano, velká většina používaných programů buď přímo má Linuxovou verzi, nebo se aspoň dá spustit ve Wine. Může však být problém s debuggerem, tzn. budou se vám obtížně řešit úlohy vyžadující dynamickou analýzu (v zásadě cvičení 10 a 11 a semestrální práce Crackme od 3. hesla).

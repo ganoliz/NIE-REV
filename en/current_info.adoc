@@ -1,41 +1,8 @@
 ﻿
-= Current events: 2020-12-11
+= Current events: 2021-09-11
 :toc:
 :imagesdir: ../../media
 
-== 2020-12-11
+== 2021-09-11
 
-*In accordance with the Dean's Directive nr. 23/2020, the exam specifications from before the semester are modified in this way:*
-
-Due to the current state of the epidemics and the objective difficulties the students living abroad would face in coming to live exams this year, online exams (Alternative 2 of the xref:evaluation.adoc[Evaluation section]) are made available to all students who prefer them to live exams. A selection of online exam terms will be put up on KOS and the students can sign up for them instead of live exams. To maintain equal opportunities for everyone, the students who pass the live exam may choose to be graded as if they passed the online one, that is, the points awarded will be calculated based on the student's work throughout the semester.
-
-Note that while the grading scheme is different for the online and live exams, despite the Dean's Directive requirement to the contrary, it is done with the knowledge and approval of the department's head. The purpose of this is to achieve the goals of the Directive, specifically, equal conditions for everyone: Online exams cannot, due to their nature, provide the same level of control as the live exams, particularly in respect to the cheating opportunities. To minimize the impact of that, the grading of online exams is based on the student's work throughout the semester rather than their performance during the exam.
-
-== 2020-11-25
-
-The plan for lectures and tutorials till the end of the year has been updated:
-
-* On November 20, we had a consultation tutorial with even more deobfuscation work. The *10th tutorial* (unpacking) will be done on November 27.
-* On December 4th, we will have the *6th lecture* (debugging and antidebugging) and the *11th tutorial* (also debugging and antidebugging).
-* On December 11th, we will have the *13th tutorial* (injection).
-* On December 18th, *Martin Jirkal from ESET* will give a lecture on malware. The topic of the tutorial, if any, is undecided as yet; if Mr. Jirkal is willing, perhaps he could demonstrate reverse engineering of high-level languages such as dotnet. Or we can end early and enjoy the Christmas instead of reverse engineering :-).
-
-== 2020-10-21
-
-The schedule is updated as shown below. This change is mandated partially by the current situation and partially by the fact that November 19 (9th week's Thursday) will be a taught according to the Monday's schedule so we will lose the czech lecture and tutorial, but I would like to keep the lectures and tutorials in sync between both language versions.
-
-* *6th tutorial* (xref:labs/lab06.adoc[Martin Jirkal's lecture on malware]) is postponed until November 20. It's unclear whether it will be presented by Mr. Jirkal or by myself, it depends on the then-current situation.
-* *7th tutorial* (xref:labs/lab07.adoc[consultations + 64bit code]) is moved ahead to the 6th week (October 30).
-* *8th tutorial* (xref:labs/lab08.adoc[simple obfuscations]) is moved ahead to the 7th week (November 6).
-* *9th tutorial* (xref:labs/lab09.adoc[advanced obfuscations]) is moved ahead to the 7th week (November 13).
-* The other tutorials remain in their regularly scheduled times, at least for now.
-
-== 2020-09-19
-
-It didn't take even as long as I expected: Yesterday a new set of restrictions was declared, severely limiting, among other things, the possibility of direct face-to-face lectures and tutorials at universities. The CTU FIT responded by posting a new Dean's Directive which prohibits all students from entering the faculty's premises. Unfortunately, this means that our course will be conducted online, at least for the time being. If/when these restrictions are lifted, I will re-evaluate the feasibility of conducting real-life teaching sessions. Please bear with me in the meantime.
-
-== 2020-09-17
-
-Both lectures and tutorials for Reverse engineering will be presented physically in room T9:345 as per the regular timetable, at least in the beginning. While my personal preference in the current epidemiological situation is to keep all of my courses on-line to minimize risks (which is a recommended approach in Security after all), the small number of signed up students allows me to follow the faculty's recommendation to conduct the english-language courses in person rather than online. It remains to be seen how long will this approach remain viable.
-
-Note that this *will* be changed if the number of signed-up students exceeds 12.
+The lectures and tutorials for Reverse engineering in this semester will be presented live. Should the epidemiological situation take a turn to the worse, we may have to switch to an online presentation using MS Teams; I will notify you of this change both here and using an e-mail sent from KOS.

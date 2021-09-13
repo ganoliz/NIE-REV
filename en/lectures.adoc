@@ -12,45 +12,47 @@
 ^h| Video
 
 | 1.
-| 2020-09-25
+| Sep 23
 | Introduction to reverse engineering, stack analysis
 | link:{imagesdir}/rev01en.pdf[slides]
 | https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_1.mp4[video]
 
 | 2.
-| 2020-10-09
+| Oct 7
 | Analysis of a program's flow
 | link:{imagesdir}/rev02en.pdf[slides]
 | https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_2.mp4[video]
 
 | 3.
-| 2020-10-23
+| Oct 21
 | Analysis of C++ classes
 | link:{imagesdir}/rev03en.pdf[slides]
 | https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_3.mp4[video]
 
 | 4.
-| 2020-11-06
+| Nov 4
 | Disassembling and obfuscation
 | link:{imagesdir}/rev04en.pdf[slides]
-| https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_4.mp4[video part 1] https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_4_part_2.mp4[video part 2]
+| https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_4.mp4[video part 1] +
+https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_4_part_2.mp4[video part 2]
 
 | 5.
-| 2020-11-20
+| Nov 18
 | Compiler recognition
 | link:{imagesdir}/rev05en.pdf[slides]
 | https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_5.mp4[video]
 
 | 6.
-| 2020-12-04
+| Dec 2
+| Reverse Analysis of Malware +
+Jan Rubín, Avast
+| --
+| --
+
+| 7.
+| Dec 16
 | Debugging and anti-debugging
 | link:{imagesdir}/rev06en.pdf[slides]
 | https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_6.mp4[video]
-
-| 7.
-| 2020-12-18
-| Malware
-| link:{imagesdir}/rev07en.pdf[slides]
-| https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_7.mp4[video]
 
 |====

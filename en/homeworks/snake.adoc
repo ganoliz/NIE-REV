@@ -3,8 +3,8 @@
 :imagesdir: ../../media/labs/05
 :toc:
 
-* Points: *5*
-* Deadline: *December 11, 17:45*
+* Points: *10*
+* Deadline: *December 9, 19:30*
 
 Analyze the `Had.exe` ("Snake.exe") executable from archive link:{imagesdir}/du3.zip[du3.zip].
 
@@ -14,20 +14,23 @@ Analyze the `Had.exe` ("Snake.exe") executable from archive link:{imagesdir}/du3
 * From VMTs discover the numbers of virtual methods for each class.
 * Find those class names and the class hierarchy from the RTTI information.
 * Describe the class hierarchy.
+** In your description you should explain specifically which part of the data supports your hierarchy and prevents alternative hierarchies.
 ** You will find that the hierarchy is a bit strange. List the strange parts and explain what is their meaning and what is the cause of them. Your explanation does not have to be completely accurate (from the binary, you can't easily decide which of several causes was the real one), but it should be consistent with the observed facts.
 * *Bonus:* Patch the program so that you have 1000 lives. *2 points*
 
+== Notes
+
 [NOTE]
 ====
-Snake has been compiled with optimizations. That leads to a loss or redirection of some information which has been directly accessible in the tutorial's executable. For example, the constructors have been inlined. Finding them may be somewhat more difficult - but not too much.
+Snake was compiled with optimizations. That caused a loss or redirection of some information which had been directly accessible in the tutorial's executable. For example, the constructors were inlined. Finding them may be somewhat more difficult -- but not too much.
 ====
 
 [TIP]
 ====
-Some students encountered issues when running Snake in Virtual Box. It was caused by an incomplete emulation of DirectX in Virtual Box. Version 5.2 with Guest Additions installed and 2D and 3D acceleration enabled seems to be fully functional, though.
+Some students encountered issues when running Snake in Virtual Box. It was caused by an incomplete emulation of DirectX in old versions of Virtual Box. Version 5.2 with Guest Additions installed and 2D and 3D acceleration enabled seems to be fully functional, though.
 ====
 
 [IMPORTANT]
 ====
-I will be happy if you use tools to help you in this task, but you shouldn't submit just a tool's output. You should interpret the results of the tool and explain whether it matches what you would expect in a program of this type - even tools can contain errors and we need to be able to evaluate whether their results are reasonable.
+It's permitted to use tools to help you in this task, but you shouldn't submit just a tool's output. You should interpret the results of the tool and explain whether it matches what you would expect in a program of this type -- even tools can contain errors and we need to be able to evaluate whether their results are reasonable.
 ====
