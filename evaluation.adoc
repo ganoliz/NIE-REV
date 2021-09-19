@@ -78,19 +78,19 @@ hodnocení
 | výborně
 
 | B
-| 80 až 89.999
+| 80 až 89,999
 | velmi dobře
 
 | C
-| 70 až 79.999
+| 70 až 79,999
 | dobře
 
 | D
-| 60 až 69.999
+| 60 až 69,999
 | uspokojivě
 
 | E
-| 50 až 59.999
+| 50 až 59,999
 | dostatečně
 
 | F
