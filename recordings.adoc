@@ -4,6 +4,16 @@
 
 Původní verze záznamů můžete nalézt na link:https://web.microsoftstream.com/user/00b67c98-0fbe-4e9d-a6f0-e56354b2770a[Microsoft Stream].
 
+== Zimní semestr 2021/22
+
+=== Přednášky
+
+* Přednáška 1: https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_01.mp4[Download]
+
+=== Cvičení
+
+* Cvičení 1: https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_01_101.mp4[Paralelka 101 (jen zvuk)] https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_01_102.mp4[Paralelka 102]
+
 == Zimní semestr 2020/21
 
 === Přednášky

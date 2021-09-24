@@ -17,7 +17,7 @@
 | Úvod do reverzního inženýrství, analýza zásobníku
 | link:{imagesdir}/rev01en.pdf[anglicky]
 | link:{imagesdir}/rev01cz.pdf[česky]
-| https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_1.mp4[video]
+| https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_01.mp4[video]
 
 | 2.
 | 07.10.
