@@ -138,13 +138,21 @@ This password is located in a new binary which will get extracted after you've s
 
 == Semestral work assignment
 
+////
 The assignments will be provided during the third week of the semester.
+////
 
-////
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/boulanat.exe[boulanat]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/chevrnic.exe[chevrnic]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/mauryfab.exe[mauryfab]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/mihalma5.exe[mihalma5]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/rousslou.exe[rousslou]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/steinda3.exe[steinda3]
-////
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/barrenic.exe[barrenic]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/bassapau.exe[bassapau]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/coutaben.exe[coutaben]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/gattigab.exe[gattigab]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/goncasar.exe[goncasar]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/jankaaid.exe[jankaaid]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/jimengab.exe[jimengab]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/montefer.exe[montefer]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/olivebru.exe[olivebru]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/pocrepie.exe[pocrepie]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/reiteart.exe[reiteart]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/ustynart.exe[ustynart]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/vermakun.exe[vermakun]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/zorlumeh.exe[zorlumeh]
