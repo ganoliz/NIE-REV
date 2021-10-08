@@ -21,7 +21,7 @@
 | Oct 7
 | Analysis of a program's flow
 | link:{imagesdir}/rev02en.pdf[slides]
-| https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_2.mp4[video]
+| https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-lecture_02.mp4[video]
 
 | 3.
 | Oct 21
