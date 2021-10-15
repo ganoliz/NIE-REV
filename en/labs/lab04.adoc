@@ -3,7 +3,7 @@
 :imagesdir: ../../media/labs/04
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_4.mp4[Recording of the tutorial]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_04.mp4[Záznam cvičení]
 
 == Introduction
 
