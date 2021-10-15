@@ -50,7 +50,7 @@ BOOL WINAPI VirtualProtect (
 
 [TIP]
 ====
-https://courses.fit.cvut.cz/BI-BEK/media/lectures/bek02.pdf[Druhá přednáška] a https://courses.fit.cvut.cz/BI-BEK/labs/lab02.html[druhé cvičení] z BI-BEK vám může pomoci, pokud se ztratíte v kompilaci a linkování.
+https://courses.fit.cvut.cz/BI-BEK/media/lectures/bek02cz.pdf[Druhá přednáška] a https://courses.fit.cvut.cz/BI-BEK/labs/lab02.html[druhé cvičení] z BI-BEK vám může pomoci, pokud se ztratíte v kompilaci a linkování.
 ====
 
 == Typické chyby
