@@ -3,7 +3,7 @@
 :imagesdir: ../../media/labs/05
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_5.mp4[Recording of the tutorial]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_05.mp4[Záznam cvičení]
 
 == Motivation
 

@@ -12,6 +12,8 @@ You can find the original versions of the recordings at link:https://web.microso
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-lecture_01.mp4[Download]
 * Lecture 2:
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-lecture_02.mp4[Download]
+* Lecture 3:
+  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-lecture_03.mp4[Download]
 
 === Tutorials
 
@@ -23,6 +25,8 @@ You can find the original versions of the recordings at link:https://web.microso
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_03.mp4[Download]
 * Tutorial 4:
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_04.mp4[Download]
+* Tutorial 5:
+  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_05.mp4[Download]
 
 == Winter semester 2020/21
 

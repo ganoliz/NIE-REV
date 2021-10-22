@@ -31,7 +31,7 @@
 | Analýza tříd v C++
 | link:{imagesdir}/rev03en.pdf[anglicky]
 | link:{imagesdir}/rev03cz.pdf[česky]
-| https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_3.mp4[video]
+| https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_03.mp4[video]
 
 | 4.
 | 04.11.

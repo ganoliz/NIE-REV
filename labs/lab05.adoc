@@ -3,7 +3,7 @@
 :imagesdir: ../media/labs/05
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_5_paralelka_101.mp4[Záznam cvičení]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_05_101.mp4[Záznam cvičení]
 
 == Motivace
 
