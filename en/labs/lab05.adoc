@@ -3,7 +3,7 @@
 :imagesdir: ../../media/labs/05
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_05.mp4[Záznam cvičení]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_05.mp4[Recorded tutorial]
 
 == Motivation
 
@@ -138,7 +138,7 @@ typedef const struct _s_RTTIClassHierarchyDescriptor
 .Source: [4]
 image::rtti-layout.png[]
 
-== Practical excercise
+== Practical exercise
 
 Analyze the attached program and locate all class use in it. Identify the classes' virtual methods and by exploiting the type information stored in the files, name the classes and discover their hierarchy.
 

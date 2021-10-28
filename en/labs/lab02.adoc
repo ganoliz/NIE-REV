@@ -3,7 +3,7 @@
 :imagesdir: ../../media/labs/02
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_2.mp4[Recording of the tutorial]
+* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_2.mp4[Recorded tutorial]
 
 We will be using IDA Free to debug our programs. You can download it here: https://www.hex-rays.com/products/ida/support/download_freeware.shtml[https://www.hex-rays.com/products/ida/support/download_freeware.shtml].
 
