@@ -1,7 +1,19 @@
 ﻿
-= Current events: 2021-09-11
+= Current events: 2021-10-28
 :toc:
 :imagesdir: ../../media
+
+== 2021-10-28
+
+Given the fact that the national holiday canceled one of our tutorials, we will need to make the following adjustments:
+
+* Tutorial no. 6 (Malware lecture) is canceled. If you want to see it, please see the last year's recording, either in NIE-REV or in https://courses.fit.cvut.cz/BIE-BEK[BIE-BEK].
+* Tutorial no. 7 (consultations) will take place in the 10th week (November 25).
+* Tutorial no. 8 (simple obfuscations) will take place in the 7th week (November 4).
+* Tutorial no. 9 (advanced obfuscations) will take place in the 8th week (November 11).
+* Tutorial no. 10 (packed binaries) will take place in the 9th week (November 18).
+
+Lectures and all other tutorials will take place on the previously scheduled dates. This change allows us to place tutorials to immediately follow their respective lectures, which is great -- usually, the tutorials are shifted by a week (or in the worse case, precede the lectures).
 
 == 2021-09-11
 

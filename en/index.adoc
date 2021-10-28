@@ -74,23 +74,17 @@ Note that this *will* be changed if the number of signed-up students exceeds 12.
 
 == Changes to the schedule
 
+////
 None specified yet.
+////
+
+* Tutorial no. 6 (Malware lecture) is canceled.
+* Tutorial no. 7 (consultations) will take place in the 10th week (November 25).
+* Tutorial no. 8 (simple obfuscations) will take place in the 7th week (November 4).
+* Tutorial no. 9 (advanced obfuscations) will take place in the 8th week (November 11).
+* Tutorial no. 10 (packed binaries) will take place in the 9th week (November 18).
 
 ////
-* *6th tutorial* (xref:labs/lab06.adoc[Martin Jirkal's lecture on malware]) is postponed until November 20. It's unclear whether it will be presented by Mr. Jirkal or by myself, it depends on the then-current situation.
-* *7th tutorial* (xref:labs/lab07.adoc[consultations + 64bit code]) is moved ahead to the 6th week (October 30).
-* *8th tutorial* (xref:labs/lab08.adoc[simple obfuscations]) is moved ahead to the 7th week (November 6).
-* *9th tutorial* (xref:labs/lab09.adoc[advanced obfuscations]) is moved ahead to the 7th week (November 13).
-* On November 20, we had a consultation tutorial with even more deobfuscation work. The *10th tutorial* (unpacking) will be done on November 27.
-* On December 4th, we will have the *6th lecture* (debugging and antidebugging) and the *11th tutorial* (also debugging and antidebugging).
-* On December 11th, we will have the *13th tutorial* (injection).
-* On December 18th, *Martin Jirkal from ESET* will give a lecture on malware. The topic of the tutorial, if any, is undecided as yet; if Mr. Jirkal is willing, perhaps he could demonstrate reverse engineering of high-level languages such as dotnet. Or we can end early and enjoy the Christmas instead of reverse engineering :-).
-
-* *2019-11-07 (week 7)*:
-** In place of the *disassembling and obfuscation* lecture Ing. Martin Jirkal from ESET will present a lecture on *malware* (regularly lecture no.7).
-** In place of the *malware* tutorial we will have the *consultations and 64bit code* tutorial (regularly tutorial no.7).
-* *2019-11-14 (week 8)*:
-** In place of the *consultations and 64bit code* tutorial we will have a lecture on *disassembling and obfuscation* (regularly lecture no.4).
 * *2019-12-12 (week 12)*:
 ** Ing. Martin Jirkal will present a tutorial on *dotnet analysis* (in Czech).
 * *2019-12-19 (week 13)*:

@@ -85,27 +85,17 @@ Par.103
 
 == Změny v programu
 
+////
 Aktuálně žádné.
+////
+
+* Cvičení č. 6 (přednáška Malware) odpadá.
+* Cvičení č. 7 (konzultace) proběhne v 10. týdnu (25.-26.11.).
+* Cvičení č. 8 (jednoduché obfuskace) proběhne v 7. týdnu (4.-5.11.).
+* Cvičení č. 9 (složitější obfuskace) proběhne v 8. týdnu (11.-12.11.).
+* Cvičení č. 10 (pakované binárky) proběhne v 9. týdnu (18.-19.11.).
 
 ////
-* *6. cvičení* (xref:labs/lab06.adoc[přednáška Martina Jirkala o malware]) se odsouvá na neurčito. Předpoklad je, že přednášky externích hostů budou provedeny na konci výukové části semestru nebo ve zkouškovém období (to pak ovšem ryze dobrovolně), pokud to bude možné.
-* *7. cvičení* (xref:labs/lab07.adoc[konzultace + 64bitový kód]) se přesouvá do 6. týdne (29.10.).
-* *8. cvičení* (xref:labs/lab08.adoc[jednoduché obfuskace]) se přesouvá do 7. týdne (5.11.).
-* *9. cvičení* (xref:labs/lab09.adoc[složitější obfuskace]) se přesouvá do 8. týdne (12.11.).
-* 19.11. výuka reverzního inženýrství odpadá, protože dle harmonogramu bude pondělí (náhrada za děkanský den 16.11.). *Pátá a šestá přednáška* se tak o dva týdny odsouvají (na 3.12. a 17.12.).
-* 26.11. se bude konat *desáté cvičení* (unpacking).
-* 3.12. budou dvě přednášky -- v regulérním čase od 12:45 *dokončení čtvrté přednášky* (obfuskace) a *pátá přednáška* (identifikování kompilátoru a knihoven), v čase prvního cvičení od 14:30 bude *šestá přednáška* (debugging a antidebugging). Cvičení od 16:15 a od 18:00 budou věnována konzultacím, pokud o ně bude zájem.
-* 10.12. se bude konat *jedenácté cvičení* (antidebugging).
-* 17.12. bude *externí přednáška Martina Jirkala* na téma malware a *třinácté cvičení* (injekce kódu).
-* Pokud to bude jenom trochu možné, pokusím se o zkouškovém období uspořádat přednášku Jana Rubína na téma analýzy malware. Je to ale podmíněno možností ji uspořádat ve fyzické podobě, což je stále krajně nejisté -- zkoušky pravděpodobně bude možné fyzicky konat, protože je možné výrazně omezit počet lidí v místnosti, ale fyzická přednáška pro 40+ lidí se jeví jako velmi problematická.
-
-* *7.-8.11.2019 (7. týden)*:
-** Místo přednášky na *disassembling a obfuskace* bude mít Ing. Martin Jirkal z firmy ESET přednášku o *malware* (dle programu přednáška 7).
-** Na cvičení bude místo přednášky na *malware* cvičení na *konzultace a 64bitový kód* (dle programu cvičení 7).
-* *14.-15.11.2019 (8. týden)*:
-** Na cvičení bude místo cvičení na *konzultace a 64bitový kód* přednáška na *disassembling a obfuskace* (dle programu přednáška 4).
-* *12.-13.12.2019 (12. týden)*:
-** Ing. Martin Jirkal povede cvičení na téma *analýza kódů v dotnetu*.
 * *19.12.2019 (13. týden)*:
 ** Přednášku na téma *analýza malware* povede Ing. Jan Rubín z firmy Avast.
 ** link:{imagesdir}/lectures/rev08en.pdf[Přednáška].

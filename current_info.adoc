@@ -1,7 +1,19 @@
 ﻿
-= Aktuality: 11.9.2021
+= Aktuality: 28.10.2021
 :toc:
 :imagesdir: ../media
+
+== 28.10.2021
+
+S ohledem na proběhlý státní svátek a děkanský den, které nás připravily o jedno cvičení, ale zase nám více sblížily přednášky s cvičeními, proběhnou následující přesuny:
+
+* Cvičení č. 6 (přednáška Malware) odpadá. Můžete využít nahrávky z loňska, jak v předmětu NI-REV, tak v předmětu https://courses.fit.cvut.cz/BI-BEK[BI-BEK].
+* Cvičení č. 7 (konzultace) proběhne v 10. týdnu (25.-26.11.).
+* Cvičení č. 8 (jednoduché obfuskace) proběhne v 7. týdnu (4.-5.11.).
+* Cvičení č. 9 (složitější obfuskace) proběhne v 8. týdnu (11.-12.11.).
+* Cvičení č. 10 (pakované binárky) proběhne v 9. týdnu (18.-19.11.).
+
+Přednášky a také všechna ostatní cvičení proběhnou v původně naplánovaných časech. Výhodou tohoto přesunu je, že budeme moci ihned po příslušné přednášce navázat příslušným cvičením, zatímco normálně by cvičení bylo o týden posunuté.
 
 == 11.9.2021
 
