@@ -7,7 +7,7 @@
 
 The purpose of this tutorial is to examine simple obfuscated binaries.
 
-Download the binaries for the analysis here: link:{imagesdir}/cv08.zip[cv08.zip]. In order to run them you will need a copy of the 32bit https://www.microsoft.com/en-us/download/details.aspx?id=5555[Visual Studio 2010 Redistributable] (Runtime DLLs).
+Download the binaries for the analysis here: link:{imagesdir}/cv08.zip[cv08.zip]. In order to run them you will need a copy of the 32bit https://www.microsoft.com/en-us/download/details.aspx?id=5555[Visual Studio 2010 Redistributable] (Runtime DLLs, https://kib-files.fit.cvut.cz/mi-rev/vcredist/vc2010_10.0_x86.exe[local copy]).
 
 Your task is to find such an input that will be accepted by the unmodified programs. The analysis may require you to temporarily change a portion of the program, which is acceptable under the condition that your final solution will also function with an unmodified version. The (naïve) anti-debugging protection used can be circumvented even without patching the binary, as the binary and its algorithms are simple enough to be understood even with static analysis.
 
