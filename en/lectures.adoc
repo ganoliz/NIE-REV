@@ -33,7 +33,7 @@
 | Nov 4
 | Disassembling and obfuscation
 | link:{imagesdir}/rev04en.pdf[slides]
-| https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_4.mp4[video part 1] +
+| https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-lecture_04.mp4[video part 1] +
 https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_4_part_2.mp4[video part 2]
 
 | 5.

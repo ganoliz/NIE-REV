@@ -14,6 +14,8 @@ Původní verze záznamů můžete nalézt na link:https://web.microsoftstream.c
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_02.mp4[Download]
 * Přednáška 3:
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_03.mp4[Download]
+* Přednáška 4:
+  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_04.mp4[Download]
 
 === Cvičení
 
@@ -32,6 +34,11 @@ Původní verze záznamů můžete nalézt na link:https://web.microsoftstream.c
 * Cvičení 5:
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_05_101.mp4[Paralelka 101]
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_05_102.mp4[Paralelka 102]
+* Cvičení 6: odpadlo
+* Cvičení 7: odloženo
+* Cvičení 8:
+  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_08_101.mp4[Paralelka 101]
+  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_08_102.mp4[Paralelka 102]
 
 == Zimní semestr 2020/21
 
