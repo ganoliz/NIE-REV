@@ -38,15 +38,14 @@
 | Disassembling a obfuskace
 | link:{imagesdir}/rev04en.pdf[anglicky]
 | link:{imagesdir}/rev04cz.pdf[česky]
-| https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_04.mp4[video část 1] +
-https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_4_cast_2.mp4[video část 2]
+| https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_04.mp4[video]
 
 | 5.
 | 18.11.
 | Rozpoznávání kompilátorů
 | link:{imagesdir}/rev05en.pdf[anglicky]
 | link:{imagesdir}/rev05cz.pdf[česky]
-| https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_5.mp4[video]
+| https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_05.mp4[video]
 
 | 6.
 | 02.12.
