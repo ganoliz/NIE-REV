@@ -83,6 +83,8 @@ None specified yet.
 * Tutorial no. 8 (simple obfuscations) will take place in the 7th week (November 4).
 * Tutorial no. 9 (advanced obfuscations) will take place in the 8th week (November 11).
 * Tutorial no. 10 (packed binaries) will take place in the 9th week (November 18).
+* Tutorial no. 11 (anti-debugging) will take place in the 13th week (December 16).
+* Tutorial no. 13 (code injection) will take place in the 11th week (December 2).
 
 ////
 * *2019-12-12 (week 12)*:

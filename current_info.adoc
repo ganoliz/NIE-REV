@@ -1,7 +1,22 @@
 ﻿
-= Aktuality: 28.10.2021
+= Aktuality: 21.11.2021
 :toc:
-:imagesdir: ../media
+:imagesdir: ./media
+
+== 21.11.2021
+
+Připomínám (raději i sobě), že 2.12. nebude přednáška na debugování a antidebugování, ale přednáška Jana Rubína z firmy Avast o analýze malwaru s ukázkou. Přednáška na debugging bude až o dva týdny později, 16.12. V důsledku toho se jeví jako vhodné prohodit cvičení 11 a 13 tak, abyste nemuseli řešit úlohu na antidebugging předtím, než se dozvíte, jak vlastně antidebugging funguje. Souhrnně tedy:
+
+* 2.12.
+** Přednáška: **Analýza malware** (Jan Rubín, Avast). Pozor, přednáška se **nebude** ani streamovat ani nahrávat, bude pouze prezenční. Doporučuji nicméně na ni přijít, pokud to bude jen trochu možné, stojí za to.
+** Cvičení: xref:{imagesdir}/../labs/lab13.adoc[Injekce kódu]
+* 9.12.
+** Cvičení: xref:{imagesdir}/../labs/lab12.adoc[Analýza .NET] (Martin Jirkal, ESET)
+* 16.12.
+** Přednáška: xref:{imagesdir}/lectures/rev06cz.pdf[Debugging a anti-debugging]
+** Cvičení: xref:{imagesdir}/../labs/lab11.adoc[Anti-debugging]
+
+(Páteční cvičení budou pochopitelně o den později, než je uvedeno výše.)
 
 == 28.10.2021
 

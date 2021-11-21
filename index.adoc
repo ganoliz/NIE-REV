@@ -94,6 +94,8 @@ Aktuálně žádné.
 * Cvičení č. 8 (jednoduché obfuskace) proběhne v 7. týdnu (4.-5.11.).
 * Cvičení č. 9 (složitější obfuskace) proběhne v 8. týdnu (11.-12.11.).
 * Cvičení č. 10 (pakované binárky) proběhne v 9. týdnu (18.-19.11.).
+* Cvičení č. 11 (anti-debugging) proběhne v 13. týdnu (16.-17.12.).
+* Cvičení č. 13 (injekce) proběhne v 11. týdnu (2.-3.12.).
 
 ////
 * *19.12.2019 (13. týden)*:

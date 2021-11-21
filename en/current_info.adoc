@@ -1,7 +1,20 @@
 ﻿
-= Current events: 2021-10-28
+= Current events: 2021-11-21
 :toc:
-:imagesdir: ../../media
+:imagesdir: ../media
+
+== 2021-11-21
+
+Please allow me to bring to your attention (and to mine as well) that the next lecture (December 2nd) won't be on debugging and antidebugging. Instead a guest speaker Jan Rubín from Avast will talk about malware analysis, including a live example. The debugging lecture is postponed until the last week of the semester on December 16th. As a result it makes sense two switch the 11th and 13th tutorial so that you are not forced to solve an antidebugging task before learning about antidebugging. In other words the program for the next weeks is:
+
+* December 2nd:
+** Lecture: **Malware analysis** (Jan Rubín, Avast). Note that the lecture **will not** be recorded or streamed, it is intended for live presentation only. Please make sure to attend the lecture if at all possible, it is worth it.
+** Tutorial: xref:{imagesdir}/../en/labs/lab13.adoc[Code injection]
+* December 9th:
+** Tutorial: xref:{imagesdir}/../en/labs/lab12.adoc[.NET analysis] (Martin Jirkal, ESET)
+* December 16th:
+** Lecture: xref:{imagesdir}/lectures/rev06en.pdf[Debugging and anti-debugging]
+** Tutorial: xref:{imagesdir}/../en/labs/lab11.adoc[Anti-debugging]
 
 == 2021-10-28
 
