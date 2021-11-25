@@ -1,7 +1,11 @@
 ﻿
-= Aktuality: 21.11.2021
+= Aktuality: 25.11.2021
 :toc:
 :imagesdir: ./media
+
+== 25.11.2021
+
+Vypsal jsem v KOSu předtermíny prezenční zkoušky. Pro účast je požadován zápočet.
 
 == 21.11.2021
 

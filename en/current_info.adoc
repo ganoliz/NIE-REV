@@ -1,7 +1,11 @@
 ﻿
-= Current events: 2021-11-21
+= Current events: 2021-11-25
 :toc:
 :imagesdir: ../media
+
+== 2021-11-25
+
+In https://kos.cvut.cz[KOS], I put up the dates for the early exam. The exam is intended to be live and in order to sign up, you must have the assessment.
 
 == 2021-11-21
 
