@@ -37,7 +37,9 @@ Původní verze záznamů můžete nalézt na link:https://web.microsoftstream.c
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_05_101.mp4[Paralelka 101]
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_05_102.mp4[Paralelka 102]
 * Cvičení 6: odpadlo
-* Cvičení 7: odloženo
+* Cvičení 7:
+  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_07_101.mp4[Paralelka 101]
+  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_07_102.mp4[Paralelka 102]
 * Cvičení 8:
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_08_101.mp4[Paralelka 101]
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_08_102.mp4[Paralelka 102]

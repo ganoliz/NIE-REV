@@ -32,7 +32,8 @@ You can find the original versions of the recordings at link:https://web.microso
 * Tutorial 5:
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_05.mp4[Download]
 * Tutorial 6: Cancelled
-* Tutorial 7: Postponed
+* Tutorial 7:
+  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_07.mp4[Download]
 * Tutorial 8:
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_08.mp4[Download]
 * Tutorial 9:
