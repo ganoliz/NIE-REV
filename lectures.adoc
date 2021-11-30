@@ -49,9 +49,9 @@
 
 | 6.
 | 02.12.
-| Reverzní analýza malware +
-Jan Rubín, Avast
-| --
+| Reverzní analýza malware -- Jan Rubín, Avast +
+link:{imagesdir}/../itsaunixsystem.zip[Crackme na vyzkoušení]
+| link:{imagesdir}/rev08en.pdf[anglicky]
 | --
 | --
 

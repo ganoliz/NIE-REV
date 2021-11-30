@@ -97,12 +97,10 @@ Aktuálně žádné.
 * Cvičení č. 11 (anti-debugging) proběhne v 13. týdnu (16.-17.12.).
 * Cvičení č. 13 (injekce) proběhne v 11. týdnu (2.-3.12.).
 
-////
-* *19.12.2019 (13. týden)*:
+* *2.12.2021 (11. týden)*:
 ** Přednášku na téma *analýza malware* povede Ing. Jan Rubín z firmy Avast.
 ** link:{imagesdir}/lectures/rev08en.pdf[Přednáška].
 ** link:{imagesdir}/itsaunixsystem.zip[Crackme na vyzkoušení].
-////
 
 == Download
 

@@ -86,14 +86,10 @@ None specified yet.
 * Tutorial no. 11 (anti-debugging) will take place in the 13th week (December 16).
 * Tutorial no. 13 (code injection) will take place in the 11th week (December 2).
 
-////
-* *2019-12-12 (week 12)*:
-** Ing. Martin Jirkal will present a tutorial on *dotnet analysis* (in Czech).
-* *2019-12-19 (week 13)*:
-** Ing. Jan Rubín from Avast will present a lecture on *malware analysis* (in Czech).
+* *2019-12-02 (week 11)*:
+** Ing. Jan Rubín from Avast will present a lecture on *malware analysis*.
 ** link:{imagesdir}/lectures/rev08en.pdf[Slides].
 ** link:{imagesdir}/itsaunixsystem.zip[Crackme to try out].
-////
 
 == Downloads
 
