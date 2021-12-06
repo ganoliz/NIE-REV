@@ -1,7 +1,13 @@
 ﻿
-= Aktuality: 25.11.2021
+= Aktuality: 06.12.2021
 :toc:
 :imagesdir: ./media
+
+== 06.12.2021
+
+Martin Jirkal, který měl tento týden demonstrovat analýzu vysokoúrovňových jazyků, bohužel onemocněl Covidem, což znamená, že demonstrace zcela určitě nebude moci být provedena v živé podobě. Pokud bude vůbec možné ji letos realizovat, bude to pouze v online podobě. Jistější informace budu mít ve středu večer nebo ve čtvrtek ráno.
+
+Pokud by se cvičení konat nemohlo, chovejte se k němu prosím, jako kdyby odpadlo. Zájemci o analýzu vyšších jazyků mohou využít https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_12.mp4[nahrávky], kterou jsme vytvořili předloni pro anglickou verzi předmětu. Abyste však nebyli o cvičení úplně ochuzeni, budu dostupný jak online tak fyzicky v laboratoři, ale není plánovaný žádný konkrétní program -- cvičení bude ryze konzultační.
 
 == 25.11.2021
 
