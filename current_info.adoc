@@ -1,7 +1,11 @@
 ﻿
-= Aktuality: 06.12.2021
+= Aktuality: 09.12.2021
 :toc:
 :imagesdir: ./media
+
+== 09.12.2021
+
+Bohužel, podle očekávání musíme zrušit původně plánovanou formu cvičení 12 kvůli nemoci přednášejícího. Pokusím se ho zastoupit a ukázat aspoň základy, obávám se však, že to nebude příliš dobré, protože Dotnet skutečně není mojí specializací. Omluvte proto prosím sníženou kvalitu cvičení. Jinak samozřejmě budu k dispozici pro případné otázky, a to jak prezenčně v laboratoři, tak online.
 
 == 06.12.2021
 

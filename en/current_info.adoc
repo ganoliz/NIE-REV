@@ -1,7 +1,11 @@
 ﻿
-= Current events: 2021-12-06
+= Current events: 2021-12-09
 :toc:
 :imagesdir: ../media
+
+== 2021-12-09
+
+Unfortunately, the intended tutorial won't be done due to the illness of the lecturer, Martin Jirkal. I will try to show you the basics, but as it is not really my specialty, it will be very limited and probably not too good. Sorry about that. I will of course be ready for your questions, both live in the lab and online.
 
 == 2021-12-06
 
