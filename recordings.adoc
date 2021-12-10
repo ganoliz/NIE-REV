@@ -52,7 +52,9 @@ Původní verze záznamů můžete nalézt na link:https://web.microsoftstream.c
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_10_101.mp4[Paralelka 101]
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_10_102.mp4[Paralelka 102]
 * Cvičení 11: zatím neproběhlo
-* Cvičení 12: zatím neproběhlo
+* Cvičení 12:
+  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_12_101.mp4[Paralelka 101]
+  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_12_102.mp4[Paralelka 102]
 * Cvičení 13:
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_13_101.mp4[Paralelka 101]
   https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_13_102.mp4[Paralelka 102]

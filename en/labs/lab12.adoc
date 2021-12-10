@@ -3,7 +3,8 @@
 :imagesdir: ../../media/labs/12
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_12.mp4[Recording of the tutorial]
+* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_12.mp4[Recorded tutorial - Jirkal]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_12.mp4[Recorded tutorial - Kokeš]
 
 Ing. Martin Jirkal will demonstrate techniques used for dotnet analysis.
 
