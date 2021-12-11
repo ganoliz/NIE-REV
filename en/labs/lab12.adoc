@@ -12,7 +12,7 @@ Ing. Martin Jirkal will demonstrate techniques used for dotnet analysis.
 
 * link:{imagesdir}/cv12.pdf[Slides]
 
-We will use link:https://github.com/dnSpy/dnSpy/releases[dnSpy] (link:https://kib-files.fit.cvut.cz/mi-rev/nastroje/dnSpy-v6.1.8.zip[lokální kopie]) for both static and dynamic analysis. We will analyze the following samples:
+We will use link:https://github.com/dnSpy/dnSpy/releases[dnSpy] (link:https://kib-files.fit.cvut.cz/mi-rev/tools/dnSpy-v6.1.8.zip[lokální kopie]) for both static and dynamic analysis. We will analyze the following samples:
 
 * link:https://tinywall.pados.hu/download.php[TinyWall] application (link:{imagesdir}/tinywall.zip[unpacked]) -- no protections at all.
 * link:https://fork.dev/[Fork] application (link:{imagesdir}/fork.zip[unpacked]) -- the true content is packed inside and must be extracted first.
@@ -21,7 +21,7 @@ We will use link:https://github.com/dnSpy/dnSpy/releases[dnSpy] (link:https://ki
 
 == PDF analysis
 
-Analysis of PDF files can be done using several tools, one of the more popular ones is Didier Stevens' link:https://blog.didierstevens.com/programs/pdf-tools/[PDF Tools]. We will be using the graphical  link:http://sandsprite.com/blogs/index.php?pid=57&uid=7[PDF Stream Dumper] (link:https://kib-files.fit.cvut.cz/mi-rev/nastroje/PDFStreamDumper-v0.9.624.exe[local copy]) and the following sample:
+Analysis of PDF files can be done using several tools, one of the more popular ones is Didier Stevens' link:https://blog.didierstevens.com/programs/pdf-tools/[PDF Tools]. We will be using the graphical  link:http://sandsprite.com/blogs/index.php?pid=57&uid=7[PDF Stream Dumper] (link:https://kib-files.fit.cvut.cz/mi-rev/tools/PDFStreamDumper-v0.9.624.exe[local copy]) and the following sample:
 
 * link:{imagesdir}/pdfmalware.zip[PDF malware]. Caution! This is a live malware, do not open it in a regular PDF reader! The password to the archive is `infected`.
 

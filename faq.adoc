@@ -47,7 +47,7 @@ Ano. U všech úloh je stanoven deadline, do kterého musí být odevzdány, a t
 
 === Mohu dostat image učebnových počítačů?
 
-Bohužel ne. Image je postaven na operačním systému Microsoft Windows, který nelze takto šířit. Ostatní programy si můžete stáhnout link:https://kib-files.fit.cvut.cz/mi-rev/nastroje/[zde] nebo na jejich domovských stránkách, ale Windows šířit nesmíme.
+Bohužel ne. Image je postaven na operačním systému Microsoft Windows, který nelze takto šířit. Ostatní programy si můžete stáhnout link:https://kib-files.fit.cvut.cz/mi-rev/tools/[zde] nebo na jejich domovských stránkách, ale Windows šířit nesmíme.
 
 Rozhodně byste neměli zneužívat administrátorská práva, která v učebně máte, k tomu, abyste si image vytvářeli potají nelegálně sami.
 

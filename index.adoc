@@ -106,7 +106,7 @@ Aktuálně žádné.
 
 Offline verzi materiálů si můžete stáhnout zde: link:https://kib-files.fit.cvut.cz/mi-rev/offline.zip[Download]
 
-Nástroje používané na cvičeních si můžete stáhnout zde: link:https://kib-files.fit.cvut.cz/mi-rev/nastroje/[Download]
+Nástroje používané na cvičeních si můžete stáhnout zde: link:https://kib-files.fit.cvut.cz/mi-rev/tools/[Download]
 
 Runtime knihovny pro různé verze Visual Studia si můžete stáhnout zde: link:https://kib-files.fit.cvut.cz/mi-rev/vcredist/[Download]
 

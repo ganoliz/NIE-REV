@@ -95,7 +95,7 @@ None specified yet.
 
 Offline version of these pages is available here: link:https://kib-files.fit.cvut.cz/mi-rev/offline.zip[Download]
 
-Tools used in tutorials can be downloaded here: link:https://kib-files.fit.cvut.cz/mi-rev/nastroje/[Download]
+Tools used in tutorials can be downloaded here: link:https://kib-files.fit.cvut.cz/mi-rev/tools/[Download]
 
 Runtime libraries for various versions of Visual Studio can be downloaded here: link:https://kib-files.fit.cvut.cz/mi-rev/vcredist/[Download]
 

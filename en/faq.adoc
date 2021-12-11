@@ -45,7 +45,7 @@ Yes. Every task has a deadline, but that's the only limiting factor for its subm
 
 === Can I get the computer image from the lab?
 
-Unfortunately, no. The image is based on the Microsoft Windows operating system which can't be legally copied in this way. The other tools can be downloaded from link:https://kib-files.fit.cvut.cz/mi-rev/nastroje/[here] or their homepages, but we are not allowed to distribute Windows.
+Unfortunately, no. The image is based on the Microsoft Windows operating system which can't be legally copied in this way. The other tools can be downloaded from link:https://kib-files.fit.cvut.cz/mi-rev/tools/[here] or their homepages, but we are not allowed to distribute Windows.
 
 You should definitely not abuse the administrative privileges you are given in the lab to surreptitiously create the images on your own.
 
