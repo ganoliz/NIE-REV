@@ -3,7 +3,7 @@
 :imagesdir: ../../media/labs/10
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_10.mp4[Recorded tutorial]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/tutorial_10.mp4[Recorded tutorial]
 
 In this tutorial we will understand the methods and tools for dumping a computer memory and then reconstructing the dump in such a way as to make it runnable (and analyzable).
 

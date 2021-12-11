@@ -4,7 +4,7 @@
 :toc:
 
 * link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2020/en/tutorial_12.mp4[Recorded tutorial - Jirkal]
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_12.mp4[Recorded tutorial - Kokeš]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/tutorial_12.mp4[Recorded tutorial - Kokeš]
 
 == .NET analysis
 

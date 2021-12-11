@@ -3,7 +3,7 @@
 :imagesdir: ../../media/labs/08
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_08.mp4[Recorded tutorial]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/tutorial_08.mp4[Recorded tutorial]
 
 The purpose of this tutorial is to examine simple obfuscated binaries.
 

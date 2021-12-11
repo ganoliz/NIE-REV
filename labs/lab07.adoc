@@ -3,8 +3,8 @@
 :imagesdir: ../media/labs/07
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_07_101.mp4[Záznam cvičení] - konzultace + 64bit úloha
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_07_102.mp4[Záznam cvičení] - konzultace
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/cviceni_07_101.mp4[Záznam cvičení] - konzultace + 64bit úloha
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/cviceni_07_102.mp4[Záznam cvičení] - konzultace
 
 Cvičení je primárně určeno pro konzultace vašich řešení domácích úloh, případně dalších témat týkajících se reverzního inženýrství.
 

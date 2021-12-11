@@ -3,7 +3,7 @@
 :imagesdir: ../../media/labs/13
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_13.mp4[Recorded tutorial]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/tutorial_13.mp4[Recorded tutorial]
 
 The purpose of this exercise is to understand the process of injection. We will be injecting our own code into the `GUIToSteal.exe` process in order to get the ability to extract the value of the password written into the edit field.
 

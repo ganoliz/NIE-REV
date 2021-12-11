@@ -3,7 +3,7 @@
 :imagesdir: ../media/labs/02
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_02_102.mp4[Záznam cvičení]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/cviceni_02_102.mp4[Záznam cvičení]
 
 K ladění programu budeme v rámci hodiny používat program IDA v její free verzi, kterou si můžete stáhnout na adrese link:https://www.hex-rays.com/products/ida/support/download_freeware.shtml[link:https://www.hex-rays.com/products/ida/support/download_freeware.shtml].
 

@@ -3,7 +3,7 @@
 :imagesdir: ../media/labs/04
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_04_101.mp4[Záznam cvičení]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/cviceni_04_101.mp4[Záznam cvičení]
 
 == Úvod
 

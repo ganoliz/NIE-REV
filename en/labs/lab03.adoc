@@ -3,7 +3,7 @@
 :imagesdir: ../../media/labs/03
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_03.mp4[Recorded tutorial]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/tutorial_03.mp4[Recorded tutorial]
 
 == Recommendations
 

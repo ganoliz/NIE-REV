@@ -3,7 +3,7 @@
 :imagesdir: ../media/labs/10
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_10_101.mp4[Záznam cvičení]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/cviceni_10_101.mp4[Záznam cvičení]
 
 V tomto cvičení se seznámíme s metodami a nástroji, které dokáží vytvořit dump z paměti počítače a tento dump pak rekonstruovat tak, aby byl spustitelný (a analyzovatelný).
 
