@@ -3,7 +3,7 @@
 :imagesdir: ../../media/labs/06
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_7.mp4[Recording of the tutorial]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2020/en/lecture_07.mp4[Recorded tutorial]
 
 [line-through]#Martin Jirkal from ESET will discuss current information regarding malware.#
 

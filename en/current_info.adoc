@@ -11,7 +11,7 @@ Unfortunately, the intended tutorial won't be done due to the illness of the lec
 
 Unfortunately, Martin Jirkal, who should have demonstrated the analysis of high level languages this week, contracted Covid and as a result certainly can't give his presentation live. If he can give it at all, it will be online. I will have a more definite information Wednesday evening or Thursday morning.
 
-If the tutorial couldn't be done, please consider it cancelled. You can find the recording of the presentation link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_12.mp4[here]. I will, of course, be available for you at the scheduled time both online and live in the lab, but there's no planned content -- the tutorial will be questions-and-answers only.
+If the tutorial couldn't be done, please consider it cancelled. You can find the recording of the presentation link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2020/en/tutorial_12.mp4[here]. I will, of course, be available for you at the scheduled time both online and live in the lab, but there's no planned content -- the tutorial will be questions-and-answers only.
 
 == 2021-11-25
 

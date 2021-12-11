@@ -3,7 +3,7 @@
 :imagesdir: ../media/labs/06
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_7.mp4[Záznam cvičení]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2020/cz/prednaska_07.mp4[Záznam cvičení]
 
 [line-through]#Martin Jirkal z firmy ESET povede cvičení na téma malware.#
 
