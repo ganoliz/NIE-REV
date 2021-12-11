@@ -5,7 +5,7 @@
 
 * link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_02_102.mp4[Záznam cvičení]
 
-K ladění programu budeme v rámci hodiny používat program IDA v její free verzi, kterou si můžete stáhnout na adrese https://www.hex-rays.com/products/ida/support/download_freeware.shtml[https://www.hex-rays.com/products/ida/support/download_freeware.shtml].
+K ladění programu budeme v rámci hodiny používat program IDA v její free verzi, kterou si můžete stáhnout na adrese link:https://www.hex-rays.com/products/ida/support/download_freeware.shtml[link:https://www.hex-rays.com/products/ida/support/download_freeware.shtml].
 
 Byl zkompilován následující ukázkový případ. Kompilace proběhla ve Visual Studio 2015, v release verzi, s vypnutým ASLR (`/DYNAMICBASE:OFF`), optimalizací (`/Ob0`) a nastavením multi-byte character set.
 
@@ -154,7 +154,7 @@ image::cv2obr26.jpg[]
 
 == API
 
-Podívejme se teď do funkce `401140`. Nejdříve si všimněme, že funkce přijímá jako argument stejnou strukturu, jakou jsme analyzovali v předchozí funkci. Ve funkci nás na první pohled zaujmou odkazy na dvě Windows API funkce, `CreateFileA` a `WriteFile`. Zaměřme se nejprve na funkci `CreateFileA`. Přečtěte si dokumentaci na https://msdn.microsoft.com/en-us/library/windows/desktop/aa363858%28v=vs.85%29.aspx[MSDN] a potom budeme pokračovat v analýze kódu.
+Podívejme se teď do funkce `401140`. Nejdříve si všimněme, že funkce přijímá jako argument stejnou strukturu, jakou jsme analyzovali v předchozí funkci. Ve funkci nás na první pohled zaujmou odkazy na dvě Windows API funkce, `CreateFileA` a `WriteFile`. Zaměřme se nejprve na funkci `CreateFileA`. Přečtěte si dokumentaci na link:https://msdn.microsoft.com/en-us/library/windows/desktop/aa363858%28v=vs.85%29.aspx[MSDN] a potom budeme pokračovat v analýze kódu.
 
 image::cv2obr27.jpg[]
 

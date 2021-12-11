@@ -53,7 +53,7 @@ In order to keep the task solvable we had to use weaker cryptographic primitives
 
 It's not known precisely which versions work and which don't. We know that Windows 10 version 1910 is not compatible and we know that version 1903 is not compatible once late spring/early summer updates are installed (libssh2 encountered a link:https://github.com/libssh2/libssh2/issues/388#issuecomment-516918145[similar issue] at the time). Older versions of Windows probably work, but it is possible they also received an update which prevents Keygen from running properly. We recommend that you use non-updated Windows 7 or 8 in a virtual environment, or Windows 10 in the version available in our tutorial images.
 
-The version provided by Microsoft for https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/[developer testing of Internet Exploreru] seems to work fine, just make sure it does not download and install any updates.
+The version provided by Microsoft for link:https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/[developer testing of Internet Exploreru] seems to work fine, just make sure it does not download and install any updates.
 
 === Hints
 
@@ -64,7 +64,7 @@ The application contains a trivial anti-debugging protection. It's likely you wi
 
 [TIP]
 ====
-The process of verification as well as generation of the serial number is rather complex and involves several functions from the BCRYPT.DLL library (https://msdn.microsoft.com/en-us/library/windows/desktop/aa833130(v=vs.85).aspx[CNG Cryptographic Primitive Functions]). Analyze only the code of the `Code64.exe` and/or `SerialNumber64.dll` files, the other modules used are standard and their documentation is available. Don't get scared when you find out which functions are being used -- the input into the serial number is much shorter than it appears at a first glance.
+The process of verification as well as generation of the serial number is rather complex and involves several functions from the BCRYPT.DLL library (link:https://msdn.microsoft.com/en-us/library/windows/desktop/aa833130(v=vs.85).aspx[CNG Cryptographic Primitive Functions]). Analyze only the code of the `Code64.exe` and/or `SerialNumber64.dll` files, the other modules used are standard and their documentation is available. Don't get scared when you find out which functions are being used -- the input into the serial number is much shorter than it appears at a first glance.
 ====
 
 [TIP]

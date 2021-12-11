@@ -7,7 +7,7 @@
 
 Předmětem cvičení je analýza programů s jednoduchou obfuskací.
 
-Programy, se kterými budeme pracovat, jsou dostupné zde: link:{imagesdir}/cv08.zip[cv08.zip]. Pro jejich spuštění budete potřebovat 32bitovou verzi https://www.microsoft.com/en-us/download/details.aspx?id=5555[Visual Studio 2010 Runtime] (https://kib-files.fit.cvut.cz/mi-rev/vcredist/vc2010_10.0_x86.exe[lokální kopie]).
+Programy, se kterými budeme pracovat, jsou dostupné zde: link:{imagesdir}/cv08.zip[cv08.zip]. Pro jejich spuštění budete potřebovat 32bitovou verzi link:https://www.microsoft.com/en-us/download/details.aspx?id=5555[Visual Studio 2010 Runtime] (link:https://kib-files.fit.cvut.cz/mi-rev/vcredist/vc2010_10.0_x86.exe[lokální kopie]).
 
 Vaším úkolem je najít pro každý z programů vstup, který bude neupraveným programem přijat. Může se stát, že budete v zájmu usnadnění analýzy potřebovat některá místa programů dočasně upravit -- to je přípustné, ale pouze za předpokladu, že vámi nalezené řešení bude následně fungovat i v neupravených programech. Lze se však obejít i bez úprav: použitou ochranu proti reverzování lze snadno obejít i bez úprav programu, navíc algoritmy jsou natolik jednoduché, že je lze snadno pochopit i pomocí statické analýzy.
 

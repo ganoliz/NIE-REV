@@ -9,8 +9,8 @@
 
 === Collaborative websites cataloguing tools and scripts applicable to reverse analysis
 
-* https://tuts4you.com/[www.tuts4you.com]
-* http://www.woodmann.com/collaborative/tools/index.php/Category:RCE_Tools[www.woodmann.com]
+* link:https://tuts4you.com/[www.tuts4you.com]
+* link:http://www.woodmann.com/collaborative/tools/index.php/Category:RCE_Tools[www.woodmann.com]
 
 === An anti-debugging reference
 
@@ -53,4 +53,4 @@ You can perform changes to the program directly inside IDA Free. The patch menu 
 
 == Recommended additional sources
 
-* https://www.youtube.com/watch?v=HlUe0TUHOIc[Repsych: Psychological Warfare in Reverse Engineering] (Chris Domas, DEF CON 23)
+* link:https://www.youtube.com/watch?v=HlUe0TUHOIc[Repsych: Psychological Warfare in Reverse Engineering] (Chris Domas, DEF CON 23)

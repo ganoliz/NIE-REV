@@ -56,7 +56,7 @@ By far the simplest approach involves using UPX itself to unpack the file, as UP
 
 We want to study a program which uses a special injection technique called hollowing to mask its behavior: The program loads a completely innocent and preferably inconspicuous application (e.g. svchost.exe or iexplore.exe), but before this application even starts, it removes all original code and injects its own code. Then it starts the application. The user will see the metadata for the original (hollowed) application, but inside the malicious code is running.
 
-You can read more about this technique at https://www.trustwave.com/Resources/SpiderLabs-Blog/Analyzing-Malware-Hollow-Processes/[Analyzing Malware Hollow Processes] (link:{imagesdir}/hollow.mht[local copy]).
+You can read more about this technique at link:https://www.trustwave.com/Resources/SpiderLabs-Blog/Analyzing-Malware-Hollow-Processes/[Analyzing Malware Hollow Processes] (link:{imagesdir}/hollow.mht[local copy]).
 
 In our tutorial, the application is split into two parts: `CV11-injector.exe` is a tool for performing the injection into another process and `data.bin` is the payload to be injected. An analysis of this application would be trivial, because we already have a runnable executable on disk and can load it into a debugger directly. We will, however, simulate a situation when this is not the case -- the data may be compressed and encrypted inside the injection application, which decrypts and unpacks it in memory and then injects it into the victim process. We, of course, need the runnable version.
 
@@ -72,9 +72,9 @@ You may also use the group policies to the same end: Run `gpedit.msc` and in the
 
 == Useful tools
 
-* http://woodmann.com/collaborative/tools/images/Bin_LordPE_2010-6-29_3.9_LordPE_1.41_Deluxe_b.zip[LordPE] -- a popular tool for PE file manipulation and for memory dumping.
-* https://tuts4you.com/download.php?view.3503[Scylla Imports Reconstructor] -- a tool for IAT reconstruction.
-* https://www.aldeid.com/wiki/PEiD[PEiD] -- a tool for packer detection.
-* http://processhacker.sourceforge.net/[Process Hacker] -- an alternative for Process Explorer.
-* https://hooked-on-mnemonics.blogspot.com/p/injdmp.html[InjDmp] -- a very nice dumping tool.
-* https://x64dbg.com[x64dbg] -- an excellent debugger; includes the Scylla Imports Reconstruction plugin.
+* link:http://woodmann.com/collaborative/tools/images/Bin_LordPE_2010-6-29_3.9_LordPE_1.41_Deluxe_b.zip[LordPE] -- a popular tool for PE file manipulation and for memory dumping.
+* link:https://tuts4you.com/download.php?view.3503[Scylla Imports Reconstructor] -- a tool for IAT reconstruction.
+* link:https://www.aldeid.com/wiki/PEiD[PEiD] -- a tool for packer detection.
+* link:http://processhacker.sourceforge.net/[Process Hacker] -- an alternative for Process Explorer.
+* link:https://hooked-on-mnemonics.blogspot.com/p/injdmp.html[InjDmp] -- a very nice dumping tool.
+* link:https://x64dbg.com[x64dbg] -- an excellent debugger; includes the Scylla Imports Reconstruction plugin.

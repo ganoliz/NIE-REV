@@ -5,11 +5,11 @@
 
 * link:https://kib-files.fit.cvut.cz/bi-bek/recordings/2021-tut-01.mp4[Recorded tutorial]
 
-The goal of this tutorial is to get to know the debugging tool http://www.ollydbg.de/[OllyDbg], which will be used in future tutorials, and understand the structure of the stack. You may also use the https://developer.microsoft.com/en-us/windows/hardware/windows-driver-kit[WinDbg] tool, which is more powerful than OllyDbg but also more difficult to learn. Another option is https://x64dbg.com/[x64dbg]. If you prefer GNU/Linux or OS X, you can use gdb or lldb.
+The goal of this tutorial is to get to know the debugging tool link:http://www.ollydbg.de/[OllyDbg], which will be used in future tutorials, and understand the structure of the stack. You may also use the link:https://developer.microsoft.com/en-us/windows/hardware/windows-driver-kit[WinDbg] tool, which is more powerful than OllyDbg but also more difficult to learn. Another option is link:https://x64dbg.com/[x64dbg]. If you prefer GNU/Linux or OS X, you can use gdb or lldb.
 
 == Download and installation of OllyDbg
 
-You can download OllyDbg for free from http://www.ollydbg.de/[http://www.ollydbg.de/]. You can choose between versions 1.10 or 2.01. We recommend that you use version 2.01 (not 2.00 from the left menu) in its 32-bit variant, because the IA-32 assembler is easier to understand than the 64bit x86_64. Installation is not needed, simply unpack the downloaded ZIP file.
+You can download OllyDbg for free from link:http://www.ollydbg.de/[link:http://www.ollydbg.de/]. You can choose between versions 1.10 or 2.01. We recommend that you use version 2.01 (not 2.00 from the left menu) in its 32-bit variant, because the IA-32 assembler is easier to understand than the 64bit x86_64. Installation is not needed, simply unpack the downloaded ZIP file.
 
 Newer versions of Windows 10 interfere with single-stepping in OllyDbg: You can recognize this by getting a warning on opening an application in OllyDbg that someone unexpectedly changed the values of the debugging registers. Also, the application will not stop at its entry point. The solution is simple: Open Options and in the `Debugging` section turn off `use HW breakpoints for stepping`.
 
@@ -39,7 +39,7 @@ Basic registers. The IA-32 architecture provides 9 basic 32bit registers called 
 
 image::cv01-obr04.png[]
 
-The flags register, segment registers and the LastError result. The flags register EFL contains bit flags `C` (Carry), `P` (Parity), `A` (Half-Carry), `Z` (Zero), `S` (Sign), `T` (Trace), `D` (Direction) and `O` (Overflow). Even though the register's full value is visible, the individual registers are "extracted" for better readability. Next we see 6 segment registers `CS`, `DS`, `ES`, `FS`, `GS` and `SS`. In the flat 32bit addressing mode, these segment registers remain constant throughout the execution of the program. Finally, we can see the error code `LastErr`, which is a per-thread global code of the last WinAPI error -- it's not a CPU register! Instead, it's a value returned by the Win32 API function https://msdn.microsoft.com/en-us/library/windows/desktop/ms679360(v=vs.85).aspx"[GetLastError()], and it's similar to the C variable `errno`.
+The flags register, segment registers and the LastError result. The flags register EFL contains bit flags `C` (Carry), `P` (Parity), `A` (Half-Carry), `Z` (Zero), `S` (Sign), `T` (Trace), `D` (Direction) and `O` (Overflow). Even though the register's full value is visible, the individual registers are "extracted" for better readability. Next we see 6 segment registers `CS`, `DS`, `ES`, `FS`, `GS` and `SS`. In the flat 32bit addressing mode, these segment registers remain constant throughout the execution of the program. Finally, we can see the error code `LastErr`, which is a per-thread global code of the last WinAPI error -- it's not a CPU register! Instead, it's a value returned by the Win32 API function link:https://msdn.microsoft.com/en-us/library/windows/desktop/ms679360(v=vs.85).aspx"[GetLastError()], and it's similar to the C variable `errno`.
 
 image::cv01-obr05.png[]
 
@@ -65,7 +65,7 @@ image::cv01-obr10.png[]
 
 [TIP]
 ====
-You can read a brief introduction to the Intel assembler https://www.cs.virginia.edu/~evans/cs216/guides/x86.html[here] (link:{imagesdir}/x86.htm[local copy]), a somewhat differently focused and newer, but intended for 64bit systems which we don't use and written in a different notation, description by Tom Doeppner https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf[here] (link:{imagesdir}/x64_cheatsheet.pdf[local copy]). The reference documentation is of course the https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-instruction-set-reference-manual-325383.pdf[Software Developer's Manual] from Intel.
+You can read a brief introduction to the Intel assembler link:https://www.cs.virginia.edu/~evans/cs216/guides/x86.html[here] (link:{imagesdir}/x86.htm[local copy]), a somewhat differently focused and newer, but intended for 64bit systems which we don't use and written in a different notation, description by Tom Doeppner link:https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf[here] (link:{imagesdir}/x64_cheatsheet.pdf[local copy]). The reference documentation is of course the link:https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-instruction-set-reference-manual-325383.pdf[Software Developer's Manual] from Intel.
 ====
 
 == Moving around the program

@@ -9,8 +9,8 @@
 
 === Kolaborativní weby sdružující nástroje a skripty na reverzování chráněných souborů
 
-* https://tuts4you.com/[www.tuts4you.com]
-* http://www.woodmann.com/collaborative/tools/index.php/Category:RCE_Tools[www.woodmann.com]
+* link:https://tuts4you.com/[www.tuts4you.com]
+* link:http://www.woodmann.com/collaborative/tools/index.php/Category:RCE_Tools[www.woodmann.com]
 
 === Dokument popisující různé anti-debug techniky
 
@@ -53,4 +53,4 @@ V programu IDA můžete přímo měnit analyzovaný program nástroji v menu Pat
 
 == Doporučené další zdroje
 
-* https://www.youtube.com/watch?v=HlUe0TUHOIc[Repsych: Psychological Warfare in Reverse Engineering] (Chris Domas, DEF CON 23)
+* link:https://www.youtube.com/watch?v=HlUe0TUHOIc[Repsych: Psychological Warfare in Reverse Engineering] (Chris Domas, DEF CON 23)

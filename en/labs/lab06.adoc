@@ -3,9 +3,9 @@
 :imagesdir: ../../media/labs/06
 :toc:
 
-* https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_7.mp4[Recording of the tutorial]
+* link:https://kib-files.fit.cvut.cz/mi-rev/MIE-lecture_7.mp4[Recording of the tutorial]
 
 [line-through]#Martin Jirkal from ESET will discuss current information regarding malware.#
 
-The lecture was moved to the https://courses.fit.cvut.cz/BIE-BEK[Secure Code] course.
+The lecture was moved to the link:https://courses.fit.cvut.cz/BIE-BEK[Secure Code] course.
 

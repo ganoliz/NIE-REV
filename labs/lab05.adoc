@@ -150,8 +150,8 @@ Informace o třetí domácí úloze naleznete na stránce xref:../homeworks/snak
 
 == Literatura
 
-. Igorsk: Reversing Microsoft Visual C++ Part II: Classes, Methods and RTTI. http://www.openrce.org/articles/full_view/23[Available online], 2006.
-. Microsoft Corp.: rttidata.h: http://read.pudn.com/downloads10/sourcecode/os/41823/WINCEOS/COREOS/CORE/CORELIBC/CRTW32/RTTI/rttidata.h__.htm[Available online].
-. Passion wu128: rtti.h: https://m.blog.csdn.net/blog/passion_wu128/38511957[Available online], 2014.
-. Cyril Cattiaux, Kevin Szkudlapski: Visual C++ RTTI Inspection. https://blog.quarkslab.com/visual-c-rtti-inspection.html[Available online], 2013.
-. Paul Vincent Sabanal, Mark Vincent Yason: Reversing C++: https://www.blackhat.com/presentations/bh-dc-07/Sabanal_Yason/Presentation/bh-dc-07-Sabanal_Yason.pdf[Available online], 2007.
+. Igorsk: Reversing Microsoft Visual C++ Part II: Classes, Methods and RTTI. link:http://www.openrce.org/articles/full_view/23[Available online], 2006.
+. Microsoft Corp.: rttidata.h: link:http://read.pudn.com/downloads10/sourcecode/os/41823/WINCEOS/COREOS/CORE/CORELIBC/CRTW32/RTTI/rttidata.h__.htm[Available online].
+. Passion wu128: rtti.h: link:https://m.blog.csdn.net/blog/passion_wu128/38511957[Available online], 2014.
+. Cyril Cattiaux, Kevin Szkudlapski: Visual C++ RTTI Inspection. link:https://blog.quarkslab.com/visual-c-rtti-inspection.html[Available online], 2013.
+. Paul Vincent Sabanal, Mark Vincent Yason: Reversing C++: link:https://www.blackhat.com/presentations/bh-dc-07/Sabanal_Yason/Presentation/bh-dc-07-Sabanal_Yason.pdf[Available online], 2007.

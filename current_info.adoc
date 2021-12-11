@@ -11,7 +11,7 @@ Bohužel, podle očekávání musíme zrušit původně plánovanou formu cviče
 
 Martin Jirkal, který měl tento týden demonstrovat analýzu vysokoúrovňových jazyků, bohužel onemocněl Covidem, což znamená, že demonstrace zcela určitě nebude moci být provedena v živé podobě. Pokud bude vůbec možné ji letos realizovat, bude to pouze v online podobě. Jistější informace budu mít ve středu večer nebo ve čtvrtek ráno.
 
-Pokud by se cvičení konat nemohlo, chovejte se k němu prosím, jako kdyby odpadlo. Zájemci o analýzu vyšších jazyků mohou využít https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_12.mp4[nahrávky], kterou jsme vytvořili předloni pro anglickou verzi předmětu. Abyste však nebyli o cvičení úplně ochuzeni, budu dostupný jak online tak fyzicky v laboratoři, ale není plánovaný žádný konkrétní program -- cvičení bude ryze konzultační.
+Pokud by se cvičení konat nemohlo, chovejte se k němu prosím, jako kdyby odpadlo. Zájemci o analýzu vyšších jazyků mohou využít link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_12.mp4[nahrávky], kterou jsme vytvořili předloni pro anglickou verzi předmětu. Abyste však nebyli o cvičení úplně ochuzeni, budu dostupný jak online tak fyzicky v laboratoři, ale není plánovaný žádný konkrétní program -- cvičení bude ryze konzultační.
 
 == 25.11.2021
 
@@ -36,7 +36,7 @@ Připomínám (raději i sobě), že 2.12. nebude přednáška na debugování a
 
 S ohledem na proběhlý státní svátek a děkanský den, které nás připravily o jedno cvičení, ale zase nám více sblížily přednášky s cvičeními, proběhnou následující přesuny:
 
-* Cvičení č. 6 (přednáška Malware) odpadá. Můžete využít nahrávky z loňska, jak v předmětu NI-REV, tak v předmětu https://courses.fit.cvut.cz/BI-BEK[BI-BEK].
+* Cvičení č. 6 (přednáška Malware) odpadá. Můžete využít nahrávky z loňska, jak v předmětu NI-REV, tak v předmětu link:https://courses.fit.cvut.cz/BI-BEK[BI-BEK].
 * Cvičení č. 7 (konzultace) proběhne v 10. týdnu (25.-26.11.).
 * Cvičení č. 8 (jednoduché obfuskace) proběhne v 7. týdnu (4.-5.11.).
 * Cvičení č. 9 (složitější obfuskace) proběhne v 8. týdnu (11.-12.11.).

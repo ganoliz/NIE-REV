@@ -30,7 +30,7 @@ Note that this *will* be changed if the number of signed-up students exceeds 12.
 == Evaluation
 
 * xref:evaluation.adoc[Requirements for passing the course]
-* The points awarded will be recorded at the https://grades.fit.cvut.cz[FIT grades] website. In your own interest, verify that you got the correct amount of points every time you get an e-mail from me. The points shown at Grades are just "for your information", the definitive value is in my private "master" list.
+* The points awarded will be recorded at the link:https://grades.fit.cvut.cz[FIT grades] website. In your own interest, verify that you got the correct amount of points every time you get an e-mail from me. The points shown at Grades are just "for your information", the definitive value is in my private "master" list.
 
 === Homework deadlines
 
@@ -93,10 +93,10 @@ None specified yet.
 
 == Downloads
 
-Offline version of these pages is available here: https://kib-files.fit.cvut.cz/mi-rev/offline.zip[Download]
+Offline version of these pages is available here: link:https://kib-files.fit.cvut.cz/mi-rev/offline.zip[Download]
 
-Tools used in tutorials can be downloaded here: https://kib-files.fit.cvut.cz/mi-rev/nastroje/[Download]
+Tools used in tutorials can be downloaded here: link:https://kib-files.fit.cvut.cz/mi-rev/nastroje/[Download]
 
-Runtime libraries for various versions of Visual Studio can be downloaded here: https://kib-files.fit.cvut.cz/mi-rev/vcredist/[Download]
+Runtime libraries for various versions of Visual Studio can be downloaded here: link:https://kib-files.fit.cvut.cz/mi-rev/vcredist/[Download]
 
-//Úvodní přednášky a cvičení z BI-BEK, kde si vysvětlujeme základy assembleru, naleznete zde: https://kib-files.fit.cvut.cz/bi-bek/BIK01-prednasky_1_2_cviceni_1_2.mp4[Download]
+//Úvodní přednášky a cvičení z BI-BEK, kde si vysvětlujeme základy assembleru, naleznete zde: link:https://kib-files.fit.cvut.cz/bi-bek/BIK01-prednasky_1_2_cviceni_1_2.mp4[Download]

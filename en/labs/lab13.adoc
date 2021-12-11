@@ -13,8 +13,8 @@ The purpose of this exercise is to understand the process of injection. We will 
 
 In order to extract the editbox's text, you can use functions such as:
 
-* https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getdlgitemtexta[GetDlgItemText], or
-* https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getdlgitem[GetDlgItem] and https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowtexta[GetWindowText].
+* link:https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getdlgitemtexta[GetDlgItemText], or
+* link:https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getdlgitem[GetDlgItem] and link:https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowtexta[GetWindowText].
 
 They must be called from within the process which owns the window. We will use the injection technique to achieve that.
 
@@ -25,11 +25,11 @@ All of these function use the `HWND` data type, which identifies the window (the
 
 === Stealing the password
 
-. Find the application's window using https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-findwindowa[FindWindow] API. Use https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid[GetWindowThreadProcessId] to find the ID of the process which owns the window.
-. Get the process' handle using https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess[OpenProcess].
-. Allocate memory in this process using https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualallocex[VirtualAllocEx]. We can then use https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-writeprocessmemory[WriteProcessMemory] to write some data into this memory. Use the function to write a piece of code which will grab the password and pass it on to the caller (e.g. by writing it into a memory within the injected process, where it can later be read using https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory[ReadProcessMemory], writing it directly into the password stealer's memory using `WriteProcessMemory`, saving the password into a file or using a named pipe to send the password to the stealer).
-. When the code is ready, run it using https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread[CreateRemoteThread].
-. You will get the thread's handle. Wait until the thread completes by passing the handle to the https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject[WaitForSingleObject] API.
+. Find the application's window using link:https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-findwindowa[FindWindow] API. Use link:https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid[GetWindowThreadProcessId] to find the ID of the process which owns the window.
+. Get the process' handle using link:https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess[OpenProcess].
+. Allocate memory in this process using link:https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualallocex[VirtualAllocEx]. We can then use link:https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-writeprocessmemory[WriteProcessMemory] to write some data into this memory. Use the function to write a piece of code which will grab the password and pass it on to the caller (e.g. by writing it into a memory within the injected process, where it can later be read using link:https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory[ReadProcessMemory], writing it directly into the password stealer's memory using `WriteProcessMemory`, saving the password into a file or using a named pipe to send the password to the stealer).
+. When the code is ready, run it using link:https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread[CreateRemoteThread].
+. You will get the thread's handle. Wait until the thread completes by passing the handle to the link:https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject[WaitForSingleObject] API.
 
 [TIP]
 ====
@@ -38,7 +38,7 @@ Obviously, you can't inject just the code -- you also need to pass it some data.
 
 [IMPORTANT]
 ====
-Beware! You don't know which address you will get from `VirtualAllocEx`. That means that your code must either be location-independent, or you need to perform relocation manually. Probably the simplest solution to this problem, also considering the debugging needs you will probably have, is to write the actual code as a part of a standalone DLL, and inject only a tiny piece of code which will call https://docs.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya[LoadLibrary] with the name of your library: The library will be loaded into memory and relocated by the operating system. Its `DllMain` function will be called. You can perform all the necessary attack functionality there, then you can terminate the thread. Overall, that means the thread will only contain a handful of instructions which are easy to write in a position-independent way.
+Beware! You don't know which address you will get from `VirtualAllocEx`. That means that your code must either be location-independent, or you need to perform relocation manually. Probably the simplest solution to this problem, also considering the debugging needs you will probably have, is to write the actual code as a part of a standalone DLL, and inject only a tiny piece of code which will call link:https://docs.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya[LoadLibrary] with the name of your library: The library will be loaded into memory and relocated by the operating system. Its `DllMain` function will be called. You can perform all the necessary attack functionality there, then you can terminate the thread. Overall, that means the thread will only contain a handful of instructions which are easy to write in a position-independent way.
 ====
 
 [TIP]
@@ -69,7 +69,7 @@ Return to the xref:lab04.adoc[second homework]. We were trying to hack the IAT s
 === How to do it
 
 . Move the code which implements the `MallocDebug` functions into a new source file.
-. Add a `DllMain` function. It should call `MallocDebug_init` when attaching to a process and `MallocDebug_done` when detaching. The https://docs.microsoft.com/en-us/windows/win32/dlls/dllmain[MSDN documentation] shows how it can be done.
-. Compile this modified source code into a DLL library by using the linker parameter `/DLL`. You can find an example of doing that in the https://courses.fit.cvut.cz/BI-BEK/en/labs/lab02.html[second tutorial of BIE-BEK].
+. Add a `DllMain` function. It should call `MallocDebug_init` when attaching to a process and `MallocDebug_done` when detaching. The link:https://docs.microsoft.com/en-us/windows/win32/dlls/dllmain[MSDN documentation] shows how it can be done.
+. Compile this modified source code into a DLL library by using the linker parameter `/DLL`. You can find an example of doing that in the link:https://courses.fit.cvut.cz/BI-BEK/en/labs/lab02.html[second tutorial of BIE-BEK].
 . Create a simple injector. It will accept a path to a DLL file and a process ID (PID) as command line arguments. Using the `OpenProcess` API function, get a handle to the target process and then inject the library into it as described above.
 . Modify your memory function testing code so that the application waits for user confirmation before doing anything. Run the application, find its PID in Task manager and call the injector with the right arguments. You should now see that your logging code is working even though it's no longer a part of the monitored application itself.

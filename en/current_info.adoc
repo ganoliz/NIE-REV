@@ -11,11 +11,11 @@ Unfortunately, the intended tutorial won't be done due to the illness of the lec
 
 Unfortunately, Martin Jirkal, who should have demonstrated the analysis of high level languages this week, contracted Covid and as a result certainly can't give his presentation live. If he can give it at all, it will be online. I will have a more definite information Wednesday evening or Thursday morning.
 
-If the tutorial couldn't be done, please consider it cancelled. You can find the recording of the presentation https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_12.mp4[here]. I will, of course, be available for you at the scheduled time both online and live in the lab, but there's no planned content -- the tutorial will be questions-and-answers only.
+If the tutorial couldn't be done, please consider it cancelled. You can find the recording of the presentation link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_12.mp4[here]. I will, of course, be available for you at the scheduled time both online and live in the lab, but there's no planned content -- the tutorial will be questions-and-answers only.
 
 == 2021-11-25
 
-In https://kos.cvut.cz[KOS], I put up the dates for the early exam. The exam is intended to be live and in order to sign up, you must have the assessment.
+In link:https://kos.cvut.cz[KOS], I put up the dates for the early exam. The exam is intended to be live and in order to sign up, you must have the assessment.
 
 == 2021-11-21
 
@@ -34,7 +34,7 @@ Please allow me to bring to your attention (and to mine as well) that the next l
 
 Given the fact that the national holiday canceled one of our tutorials, we will need to make the following adjustments:
 
-* Tutorial no. 6 (Malware lecture) is canceled. If you want to see it, please see the last year's recording, either in NIE-REV or in https://courses.fit.cvut.cz/BIE-BEK[BIE-BEK].
+* Tutorial no. 6 (Malware lecture) is canceled. If you want to see it, please see the last year's recording, either in NIE-REV or in link:https://courses.fit.cvut.cz/BIE-BEK[BIE-BEK].
 * Tutorial no. 7 (consultations) will take place in the 10th week (November 25).
 * Tutorial no. 8 (simple obfuscations) will take place in the 7th week (November 4).
 * Tutorial no. 9 (advanced obfuscations) will take place in the 8th week (November 11).

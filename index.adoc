@@ -24,7 +24,7 @@ Studenti budou v rámci předmětu seznámeni se základy reverzního inženýrs
 == Hodnocení
 
 * xref:evaluation.adoc[Podmínky absolvování předmětu]
-* Průběžný stav bodů je uveden na webu https://grades.fit.cvut.cz[FIT klasifikace]. Ve vašem vlastním zájmu si kontrolujte hodnoty, které jsou tam uvedeny, a v případě zjištěných rozdílů mě kontaktujte, abych je opravil z "master" seznamu. Body na Klasifikaci jsou pouze orientační!
+* Průběžný stav bodů je uveden na webu link:https://grades.fit.cvut.cz[FIT klasifikace]. Ve vašem vlastním zájmu si kontrolujte hodnoty, které jsou tam uvedeny, a v případě zjištěných rozdílů mě kontaktujte, abych je opravil z "master" seznamu. Body na Klasifikaci jsou pouze orientační!
 
 === Termíny odevzdání úloh
 
@@ -104,10 +104,10 @@ Aktuálně žádné.
 
 == Download
 
-Offline verzi materiálů si můžete stáhnout zde: https://kib-files.fit.cvut.cz/mi-rev/offline.zip[Download]
+Offline verzi materiálů si můžete stáhnout zde: link:https://kib-files.fit.cvut.cz/mi-rev/offline.zip[Download]
 
-Nástroje používané na cvičeních si můžete stáhnout zde: https://kib-files.fit.cvut.cz/mi-rev/nastroje/[Download]
+Nástroje používané na cvičeních si můžete stáhnout zde: link:https://kib-files.fit.cvut.cz/mi-rev/nastroje/[Download]
 
-Runtime knihovny pro různé verze Visual Studia si můžete stáhnout zde: https://kib-files.fit.cvut.cz/mi-rev/vcredist/[Download]
+Runtime knihovny pro různé verze Visual Studia si můžete stáhnout zde: link:https://kib-files.fit.cvut.cz/mi-rev/vcredist/[Download]
 
-//Úvodní přednášky a cvičení z BI-BEK, kde si vysvětlujeme základy assembleru, naleznete zde: https://kib-files.fit.cvut.cz/bi-bek/BIK01-prednasky_1_2_cviceni_1_2.mp4[Download]
+//Úvodní přednášky a cvičení z BI-BEK, kde si vysvětlujeme základy assembleru, naleznete zde: link:https://kib-files.fit.cvut.cz/bi-bek/BIK01-prednasky_1_2_cviceni_1_2.mp4[Download]

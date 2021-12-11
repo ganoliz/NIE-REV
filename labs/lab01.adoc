@@ -5,11 +5,11 @@
 
 * link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_01_102.mp4[Záznam cvičení]
 
-Cílem tohoto cvičení je seznámit se s ladícím nástrojem http://www.ollydbg.de/[OllyDbg], který bude dále používán při cvičeních, a seznámit se se strukturou zásobníku. Alternativně můžete použít nástroj https://developer.microsoft.com/en-us/windows/hardware/windows-driver-kit[WinDbg], který je silnější než OllyDbg, avšak na naučení je komplikovanější. Další možností je https://x64dbg.com/[x64dbg]. Pokud pracujete na platformách GNU/Linux anebo OS X, můžete použít gdb anebo lldb.
+Cílem tohoto cvičení je seznámit se s ladícím nástrojem link:http://www.ollydbg.de/[OllyDbg], který bude dále používán při cvičeních, a seznámit se se strukturou zásobníku. Alternativně můžete použít nástroj link:https://developer.microsoft.com/en-us/windows/hardware/windows-driver-kit[WinDbg], který je silnější než OllyDbg, avšak na naučení je komplikovanější. Další možností je link:https://x64dbg.com/[x64dbg]. Pokud pracujete na platformách GNU/Linux anebo OS X, můžete použít gdb anebo lldb.
 
 == Stažení a instalace OllyDbg
 
-Stažení nástroje OllyDbg probíhá zdarma z webové stránky http://www.ollydbg.de/[http://www.ollydbg.de/]. K dispozici jsou verze 1.10 a 2.01. Doporučujeme stáhnout si 32bitovou verzi 2.01 (ne 2.00 z levého menu!), protože jazyk symbolických instrukcí IA-32 je jednodušší než 64bitový x86_64. Instalace není třeba. Stačí ZIP soubor rozbalit.
+Stažení nástroje OllyDbg probíhá zdarma z webové stránky link:http://www.ollydbg.de/[link:http://www.ollydbg.de/]. K dispozici jsou verze 1.10 a 2.01. Doporučujeme stáhnout si 32bitovou verzi 2.01 (ne 2.00 z levého menu!), protože jazyk symbolických instrukcí IA-32 je jednodušší než 64bitový x86_64. Instalace není třeba. Stačí ZIP soubor rozbalit.
 
 Novější verze Windows 10 obsahují změnu, která poněkud interferuje s krokováním v OllyDbg. Projevuje se tak, že vás při načtení programu k debugování OllyDbg varuje, že někdo nečekaně změnil hodnoty debugovacích registrů. Mimo jiné se pak program nezastaví na svém vstupním bodu. Řešení je jednoduché: Otevřete nastavení (Options) a v sekci `Debugging` vypněte `Use HW breakpoints for stepping`.
 
@@ -39,7 +39,7 @@ Základní registry. Architektura IA-32 má celkem 9 základních 32bitových re
 
 image::cv01-obr04.png[]
 
-Registr příznaků, segmentové registry a chyba LastError. Registr příznaků EFL obsahuje příznaky `C` (Carry), `P` (Parity), `A` (Half-Carry), `Z` (Zero), `S` (Sign), `T` (Trace), `D` (Direction) a `O` (Overflow). Ač je hodnota registru viditelná i jako celek, jednotlivé příznaky jsou "vytaženy" pro přehlednost. Dále vidíme 6 segmentových registrů `CS`, `DS`, `ES`, `FS`, `GS` a `SS`. V 32bitovém lineárním adresovacím módu jsou segmentové registry konstantní po celou dobu běhu programu. Nakonec vidíme kód chyby `LastErr`, což je per-vlákno globální kód poslední chyby; nejde o registr, `LastErr` je hodnota, kterou vrací funkce https://msdn.microsoft.com/en-us/library/windows/desktop/ms679360(v=vs.85).aspx[GetLastError()] z Win32 API; jde o obdobu proměnné `errno` z C.
+Registr příznaků, segmentové registry a chyba LastError. Registr příznaků EFL obsahuje příznaky `C` (Carry), `P` (Parity), `A` (Half-Carry), `Z` (Zero), `S` (Sign), `T` (Trace), `D` (Direction) a `O` (Overflow). Ač je hodnota registru viditelná i jako celek, jednotlivé příznaky jsou "vytaženy" pro přehlednost. Dále vidíme 6 segmentových registrů `CS`, `DS`, `ES`, `FS`, `GS` a `SS`. V 32bitovém lineárním adresovacím módu jsou segmentové registry konstantní po celou dobu běhu programu. Nakonec vidíme kód chyby `LastErr`, což je per-vlákno globální kód poslední chyby; nejde o registr, `LastErr` je hodnota, kterou vrací funkce link:https://msdn.microsoft.com/en-us/library/windows/desktop/ms679360(v=vs.85).aspx[GetLastError()] z Win32 API; jde o obdobu proměnné `errno` z C.
 
 image::cv01-obr05.png[]
 
@@ -65,7 +65,7 @@ image::cv01-obr10.png[]
 
 [TIP]
 ====
-Stručný popis Intelovského assembleru si můžete přečíst https://www.cs.virginia.edu/~evans/cs216/guides/x86.html[zde] (link:{imagesdir}/x86.htm[lokální kopie]), poněkud odlišněji zaměřený a novější, ale určený pro 64bitové systémy, které nepoužíváme, a navíc v jiné notaci, popis Toma Doeppnera https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf[zde] (link:{imagesdir}/x64_cheatsheet.pdf[lokální kopie]). Referenčním zdrojem informací je pochopitelně https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-instruction-set-reference-manual-325383.pdf[Software Developer's Manual] od Intelu.
+Stručný popis Intelovského assembleru si můžete přečíst link:https://www.cs.virginia.edu/~evans/cs216/guides/x86.html[zde] (link:{imagesdir}/x86.htm[lokální kopie]), poněkud odlišněji zaměřený a novější, ale určený pro 64bitové systémy, které nepoužíváme, a navíc v jiné notaci, popis Toma Doeppnera link:https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf[zde] (link:{imagesdir}/x64_cheatsheet.pdf[lokální kopie]). Referenčním zdrojem informací je pochopitelně link:https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-instruction-set-reference-manual-325383.pdf[Software Developer's Manual] od Intelu.
 ====
 
 == Orientace v programu

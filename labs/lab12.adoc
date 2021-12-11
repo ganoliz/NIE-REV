@@ -11,19 +11,19 @@ Ing. Martin Jirkal předvede postupy pro analýzu dotnetového kódu.
 
 * link:{imagesdir}/cv12.pdf[Prezentace]
 
-Pro statickou i dynamickou analýzu souborů budeme používat nástroj https://github.com/dnSpy/dnSpy/releases[dnSpy] (https://kib-files.fit.cvut.cz/mi-rev/nastroje/dnSpy-v6.1.8.zip[lokální kopie]). Experimentovat budeme s následujícími vzorky:
+Pro statickou i dynamickou analýzu souborů budeme používat nástroj link:https://github.com/dnSpy/dnSpy/releases[dnSpy] (link:https://kib-files.fit.cvut.cz/mi-rev/nastroje/dnSpy-v6.1.8.zip[lokální kopie]). Experimentovat budeme s následujícími vzorky:
 
-* Aplikace https://tinywall.pados.hu/download.php[TinyWall] (link:{imagesdir}/tinywall.zip[rozbalená verze]) -- zcela bez ochran.
-* Aplikace https://fork.dev/[Fork] (link:{imagesdir}/fork.zip[rozbalená verze]) -- skutečný obsah je zapakovaný a je nutné ho rozbalit.
+* Aplikace link:https://tinywall.pados.hu/download.php[TinyWall] (link:{imagesdir}/tinywall.zip[rozbalená verze]) -- zcela bez ochran.
+* Aplikace link:https://fork.dev/[Fork] (link:{imagesdir}/fork.zip[rozbalená verze]) -- skutečný obsah je zapakovaný a je nutné ho rozbalit.
 * link:{imagesdir}/crackme.zip[Několik jednoduchých crackme].
 * link:{imagesdir}/malware.zip[Několik skutečných malware]. Pozor, jde o živé vzorky, v žádném případě je nespouštějte! Archív je zašifrovaný heslem `infected`.
 
 == Analýza PDF
 
-Pro analýzu PDF lze použít řadu nástrojů, oblíbený je například https://blog.didierstevens.com/programs/pdf-tools/[PDF Tools] Didiera Stevense. My pro demonstraci použijeme grafický http://sandsprite.com/blogs/index.php?pid=57&uid=7[PDF Stream Dumper] (https://kib-files.fit.cvut.cz/mi-rev/nastroje/PDFStreamDumper-v0.9.624.exe[lokální kopie]) a následující vzorek:
+Pro analýzu PDF lze použít řadu nástrojů, oblíbený je například link:https://blog.didierstevens.com/programs/pdf-tools/[PDF Tools] Didiera Stevense. My pro demonstraci použijeme grafický link:http://sandsprite.com/blogs/index.php?pid=57&uid=7[PDF Stream Dumper] (link:https://kib-files.fit.cvut.cz/mi-rev/nastroje/PDFStreamDumper-v0.9.624.exe[lokální kopie]) a následující vzorek:
 
 * link:{imagesdir}/pdfmalware.zip[PDF malware]. Pozor, jde o živý vzorek, nezobrazujte ho v normální PDF čtečce! Archív je zašifrovaný heslem `infected`.
 
 == Analýza VBS
 
-Matěj Havránek vytvořil v rámci své https://dspace.cvut.cz/handle/10467/94915[bakalářské práce] nástroj pro link:{imagesdir}/vbsdeobfuscator.zip[deobfuskaci skriptů v jazyku VBScript]. Součástí je také demonstrační skript (v podadresáři `demoSamples`), na kterém je možné fungování deobfuskátoru vyzkoušet.
+Matěj Havránek vytvořil v rámci své link:https://dspace.cvut.cz/handle/10467/94915[bakalářské práce] nástroj pro link:{imagesdir}/vbsdeobfuscator.zip[deobfuskaci skriptů v jazyku VBScript]. Součástí je také demonstrační skript (v podadresáři `demoSamples`), na kterém je možné fungování deobfuskátoru vyzkoušet.

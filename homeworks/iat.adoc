@@ -35,7 +35,7 @@ Pokud vámi zkompilovaný program nepoužívá externí runtime knihovnu ale kni
 ====
 *Zápis do IAT*
 
-IAT je obvykle chráněna proti zápisu. Aby do ní bylo možné zapisovat, je nutné nejprve použít např. funkci https://msdn.microsoft.com/en-us/library/windows/desktop/aa366898(v=vs.85).aspx[VirtualProtect] a daný paměťový segment odemknout pro zápis.
+IAT je obvykle chráněna proti zápisu. Aby do ní bylo možné zapisovat, je nutné nejprve použít např. funkci link:https://msdn.microsoft.com/en-us/library/windows/desktop/aa366898(v=vs.85).aspx[VirtualProtect] a daný paměťový segment odemknout pro zápis.
 
 [source,cpp]
 ----
@@ -50,7 +50,7 @@ BOOL WINAPI VirtualProtect (
 
 [TIP]
 ====
-https://courses.fit.cvut.cz/BI-BEK/media/lectures/bek02cz.pdf[Druhá přednáška] a https://courses.fit.cvut.cz/BI-BEK/labs/lab02.html[druhé cvičení] z BI-BEK vám může pomoci, pokud se ztratíte v kompilaci a linkování.
+link:https://courses.fit.cvut.cz/BI-BEK/media/lectures/bek02cz.pdf[Druhá přednáška] a link:https://courses.fit.cvut.cz/BI-BEK/labs/lab02.html[druhé cvičení] z BI-BEK vám může pomoci, pokud se ztratíte v kompilaci a linkování.
 ====
 
 == Typické chyby

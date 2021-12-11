@@ -9,80 +9,121 @@ Původní verze záznamů můžete nalézt na link:https://web.microsoftstream.c
 === Přednášky
 
 * Přednáška 1:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_01.mp4[Download]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_01.mp4[Download]
 * Přednáška 2:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_02.mp4[Download]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_02.mp4[Download]
 * Přednáška 3:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_03.mp4[Download]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_03.mp4[Download]
 * Přednáška 4:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_04.mp4[Download]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_04.mp4[Download]
 * Přednáška 5:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_05.mp4[Download]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-prednaska_05.mp4[Download]
 * Přednáška 6:
   nenahrávala se
 
 === Cvičení
 
 * Cvičení 1:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_01_101.mp4[Paralelka 101 (jen zvuk)]
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_01_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_01_101.mp4[Paralelka 101 (jen zvuk)]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_01_102.mp4[Paralelka 102]
 * Cvičení 2:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_02_101.mp4[Paralelka 101]
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_02_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_02_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_02_102.mp4[Paralelka 102]
 * Cvičení 3:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_03_101.mp4[Paralelka 101]
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_03_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_03_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_03_102.mp4[Paralelka 102]
 * Cvičení 4:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_04_101.mp4[Paralelka 101]
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_04_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_04_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_04_102.mp4[Paralelka 102]
 * Cvičení 5:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_05_101.mp4[Paralelka 101]
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_05_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_05_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_05_102.mp4[Paralelka 102]
 * Cvičení 6: odpadlo
 * Cvičení 7:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_07_101.mp4[Paralelka 101]
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_07_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_07_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_07_102.mp4[Paralelka 102]
 * Cvičení 8:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_08_101.mp4[Paralelka 101]
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_08_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_08_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_08_102.mp4[Paralelka 102]
 * Cvičení 9:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_09_101.mp4[Paralelka 101]
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_09_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_09_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_09_102.mp4[Paralelka 102]
 * Cvičení 10:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_10_101.mp4[Paralelka 101]
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_10_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_10_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_10_102.mp4[Paralelka 102]
 * Cvičení 11: zatím neproběhlo
 * Cvičení 12:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_12_101.mp4[Paralelka 101]
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_12_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_12_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_12_102.mp4[Paralelka 102]
 * Cvičení 13:
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_13_101.mp4[Paralelka 101]
-  https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_13_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_13_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NI-cviceni_13_102.mp4[Paralelka 102]
 
 == Zimní semestr 2020/21
 
 === Přednášky
 
-* Přednáška 1: https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_1.mp4[Download]
-* Přednáška 2: https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_2.mp4[Download]
-* Přednáška 3: https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_3.mp4[Download]
-* Přednáška 4: https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_4.mp4[Download část 1] https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_4_cast_2.mp4[Download část 2]
-* Přednáška 5: https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_5.mp4[Download]
-* Přednáška 6: https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_6.mp4[Download]
-* Přednáška 7: https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_7.mp4[Download]
+* Přednáška 1:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_1.mp4[Download]
+* Přednáška 2:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_2.mp4[Download]
+* Přednáška 3:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_3.mp4[Download]
+* Přednáška 4:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_4.mp4[Download část 1] link:https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_4_cast_2.mp4[Download část 2]
+* Přednáška 5:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_5.mp4[Download]
+* Přednáška 6:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_6.mp4[Download]
+* Přednáška 7:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-prednaska_7.mp4[Download]
 
 === Cvičení
 
-* Cvičení 1: https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_1_paralelka_101.mp4[Paralelka 101] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_1_paralelka_102.mp4[Paralelka 102] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_1_paralelka_103.mp4[Paralelka 103]
-* Cvičení 2: https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_2_paralelka_101.mp4[Paralelka 101] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_2_paralelka_102.mp4[Paralelka 102] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_2_paralelka_103.mp4[Paralelka 103]
-* Cvičení 3: https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_3_paralelka_101.mp4[Paralelka 101] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_3_paralelka_102.mp4[Paralelka 102] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_3_paralelka_103.mp4[Paralelka 103]
-* Cvičení 4: https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_4_paralelka_101.mp4[Paralelka 101] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_4_paralelka_102.mp4[Paralelka 102] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_4_paralelka_103.mp4[Paralelka 103]
-* Cvičení 5: https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_5_paralelka_101.mp4[Paralelka 101] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_5_paralelka_102.mp4[Paralelka 102] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_5_paralelka_103.mp4[Paralelka 103]
+* Cvičení 1:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_1_paralelka_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_1_paralelka_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_1_paralelka_103.mp4[Paralelka 103]
+* Cvičení 2:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_2_paralelka_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_2_paralelka_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_2_paralelka_103.mp4[Paralelka 103]
+* Cvičení 3:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_3_paralelka_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_3_paralelka_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_3_paralelka_103.mp4[Paralelka 103]
+* Cvičení 4:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_4_paralelka_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_4_paralelka_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_4_paralelka_103.mp4[Paralelka 103]
+* Cvičení 5:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_5_paralelka_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_5_paralelka_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_5_paralelka_103.mp4[Paralelka 103]
 * Cvičení 6: vizte přednášku 7
-* Cvičení 7: https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_7_paralelka_101.mp4[Paralelka 101] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_7_paralelka_102.mp4[Paralelka 102] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_7_paralelka_103.mp4[Paralelka 103]
-* Cvičení 8: https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_8_paralelka_101.mp4[Paralelka 101] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_8_paralelka_102.mp4[Paralelka 102] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_8_paralelka_103.mp4[Paralelka 103]
-* Cvičení 9: https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_9_paralelka_101.mp4[Paralelka 101] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_9_paralelka_102.mp4[Paralelka 102] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_9_paralelka_103.mp4[Paralelka 103]
-* Cvičení 10: https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_10_paralelka_101.mp4[Paralelka 101] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_10_paralelka_102.mp4[Paralelka 102] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_10_paralelka_103.mp4[Paralelka 103]
-* Cvičení 11: https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_11_paralelka_101.mp4[Paralelka 101] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_11_paralelka_102.mp4[Paralelka 102] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_11_paralelka_103.mp4[Paralelka 103]
-* Cvičení 12: letos odpadlo, je pouze https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_12.mp4[anglická verze]
-* Cvičení 13: https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_13_paralelka_101.mp4[Paralelka 101] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_13_paralelka_102.mp4[Paralelka 102] https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_13_paralelka_103.mp4[Paralelka 103]
+* Cvičení 7:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_7_paralelka_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_7_paralelka_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_7_paralelka_103.mp4[Paralelka 103]
+* Cvičení 8:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_8_paralelka_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_8_paralelka_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_8_paralelka_103.mp4[Paralelka 103]
+* Cvičení 9:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_9_paralelka_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_9_paralelka_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_9_paralelka_103.mp4[Paralelka 103]
+* Cvičení 10:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_10_paralelka_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_10_paralelka_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_10_paralelka_103.mp4[Paralelka 103]
+* Cvičení 11:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_11_paralelka_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_11_paralelka_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_11_paralelka_103.mp4[Paralelka 103]
+* Cvičení 12: letos odpadlo, je pouze
+  link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_12.mp4[anglická verze]
+* Cvičení 13:
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_13_paralelka_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_13_paralelka_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/NI-cviceni_13_paralelka_103.mp4[Paralelka 103]

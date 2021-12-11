@@ -56,7 +56,7 @@ Nejjednodušší by samozřejmě bylo soubor rozbalit přímo pomocí UPX, kter�
 
 Chceme prozkoumat program, který používá speciální injektační techniku, tzv. hollowing, pro zamaskování své činnosti: Program načte to paměti zcela neškodnou a pokud možno nenápadnou aplikaci (např. svchost.exe nebo iexplore.exe), ale ještě před jejím spuštěním z ní zcela odstraní původní kód a načte do ní kód svůj. Poté aplikaci spustí. Uživatel pak vidí pouze data odpovídající původní aplikaci, ve skutečnosti se ale provádí kód malwaru.
 
-Bližší informace o technice naleznete na stránce https://www.trustwave.com/Resources/SpiderLabs-Blog/Analyzing-Malware-Hollow-Processes/[Analyzing Malware Hollow Processes] (link:{imagesdir}/hollow.mht[lokální kopie]).
+Bližší informace o technice naleznete na stránce link:https://www.trustwave.com/Resources/SpiderLabs-Blog/Analyzing-Malware-Hollow-Processes/[Analyzing Malware Hollow Processes] (link:{imagesdir}/hollow.mht[lokální kopie]).
 
 V naší úloze je program pro jednoduchost rozdělen na dvě části: `CV11-injector.exe` je nástroj, který provádí injektáž do jiného procesu. `data.bin` je kód, který bude injektovaný. Analýza tohoto kódu je pak ovšem triviální -- rovnou ho máme na disku, stačí ho načíst do debuggeru. Opět zde ale simulujeme případ, kdy takovýto luxus nemáme -- data se nachází zkomprimovaná a zašifrovaná někde uvnitř injektážní aplikace, která je napřed v paměti rozbalí a potom vloží do nového procesu. My je ovšem potřebujeme pro další analýzu dostat na disk ve spustitelné podobě.
 
@@ -72,9 +72,9 @@ Alternativně se dají k témuž použít lokální politiky: Spusťte `gpedit.m
 
 == Vhodné nástroje
 
-* http://woodmann.com/collaborative/tools/images/Bin_LordPE_2010-6-29_3.9_LordPE_1.41_Deluxe_b.zip[LordPE] -- oblíbený nástroj pro úpravu PE souborů a pro dump z paměti.
-* https://tuts4you.com/download.php?view.3503[Scylla Imports Reconstructor] -- nástroj pro rekonstrukci IAT v binárním souboru.
-* https://www.aldeid.com/wiki/PEiD[PEiD] -- nástroj pro detekci packerů.
-* http://processhacker.sourceforge.net/[Process Hacker] -- alternativa pro Process Explorer.
-* https://hooked-on-mnemonics.blogspot.com/p/injdmp.html[InjDmp] -- velmi pěkný nástroj na dumpování procesů.
-* https://x64dbg.com[x64dbg] -- výborný debugger, včetně pluginu Scylla Imports Reconstruction.
+* link:http://woodmann.com/collaborative/tools/images/Bin_LordPE_2010-6-29_3.9_LordPE_1.41_Deluxe_b.zip[LordPE] -- oblíbený nástroj pro úpravu PE souborů a pro dump z paměti.
+* link:https://tuts4you.com/download.php?view.3503[Scylla Imports Reconstructor] -- nástroj pro rekonstrukci IAT v binárním souboru.
+* link:https://www.aldeid.com/wiki/PEiD[PEiD] -- nástroj pro detekci packerů.
+* link:http://processhacker.sourceforge.net/[Process Hacker] -- alternativa pro Process Explorer.
+* link:https://hooked-on-mnemonics.blogspot.com/p/injdmp.html[InjDmp] -- velmi pěkný nástroj na dumpování procesů.
+* link:https://x64dbg.com[x64dbg] -- výborný debugger, včetně pluginu Scylla Imports Reconstruction.

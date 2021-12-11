@@ -53,7 +53,7 @@ Aby byla úloha řešitelná, je její použití kryptografie záměrně oslaben
 
 Které verze fungují není přesně známo. Víme, že ve Windows 10 verze 1910 už úloha funkční není, a zrovna tak není funkční verze 1903 s aktualizacemi z jara 2019 (jde o podobný problém, jako je popsaný link:https://github.com/libssh2/libssh2/issues/388#issuecomment-516918145[zde]). Starší verze Windows snad fungují, ale je možné, že některá z novějších aktualizací pro ně Keygen také zablokuje. Obecně doporučujeme pro spouštění Keygenu použít neaktualizované Windows 7 nebo 8 ve virtuálním prostředí, případně Windows 10 ve verzi, jak je nainstalována v diskových obrazech používaných na cvičeních.
 
-Fungovala nám https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/[verze pro testování Internet Exploreru] dostupná z webu Microsoftu, pohlídejte si ale, aby nedošlo k její aktualizaci.
+Fungovala nám link:https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/[verze pro testování Internet Exploreru] dostupná z webu Microsoftu, pohlídejte si ale, aby nedošlo k její aktualizaci.
 
 === Nápověda
 
@@ -64,7 +64,7 @@ Aplikace obsahuje triviální ochranu proti ladění, kterou nejspíš budete mu
 
 [TIP]
 ====
-Ověřování sériového čísla i jeho generování jsou poměrně složité a zahrnují použití několika funkcí z knihovny `BCRYPT.DLL` https://msdn.microsoft.com/en-us/library/windows/desktop/aa833130(v=vs.85).aspx[CNG Cryptographic Primitive Functions]. Analyzujte jen kód ze souborů `Code64.exe` a/nebo `SerialNumber64.dll`, další použité moduly jsou standardní a jejich dokumentaci snadno naleznete. Nelekněte se, až zjistíte, co se z knihovny používá a k čemu. Vstup do sériového čísla je kratší než na první pohled vypadá.
+Ověřování sériového čísla i jeho generování jsou poměrně složité a zahrnují použití několika funkcí z knihovny `BCRYPT.DLL` link:https://msdn.microsoft.com/en-us/library/windows/desktop/aa833130(v=vs.85).aspx[CNG Cryptographic Primitive Functions]. Analyzujte jen kód ze souborů `Code64.exe` a/nebo `SerialNumber64.dll`, další použité moduly jsou standardní a jejich dokumentaci snadno naleznete. Nelekněte se, až zjistíte, co se z knihovny používá a k čemu. Vstup do sériového čísla je kratší než na první pohled vypadá.
 ====
 
 [TIP]

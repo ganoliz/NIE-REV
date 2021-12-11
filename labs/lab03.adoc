@@ -11,30 +11,30 @@ Jsou živě demonstrována na cvičení.
 
 == Nástroje dostupné zdarma
 
-* *API Monitor* -- nástroj pro sledování API volání programu. Lze sledovat i jednotlivé funkce nebo jejich logické skupiny. http://www.rohitab.com[Homepage].
-* *CFF Explorer* -- nástroj pro analýzu a úpravu PE souborů. https://www.ntcore.com/exsuite.php[Homepage].
-* *Dependency Walker* -- nástroj pro analýzu především importních a exportních tabulek PE souborů. Podporuje jak statickou, tak dynamickou analýzu. https://www.dependencywalker.com/[Homepage].
-* *ExeInfoPE* -- nástroj pro identifikaci kompilátoru použitého pro vytvoření PE souboru. http://www.exeinfo.xn.pl[Homepage].
-* *Ghidra* -- disassembler a dekompilátor od NSA. https://www.nsa.gov/resources/everyone/ghidra/[Homepage].
-* *HxD* -- Hex editor s možností úpravy RAM a disku po sektorech. https://mh-nexus.de/en/hxd/[Homepage].
-* *IDA Free* -- interaktivní disassembler pro reverzní inženýrství. Tato verze neobsahuje dekompilátor, ale je zdarma! https://www.hex-rays.com/products/ida/support/download_freeware.shtml[Homepage].
-* *Process Explorer* -- nástroj pro detailní monitorování procesů. Značně rozšířená verze Windows Task Manageru. https://technet.microsoft.com/cs-cz/sysinternals/bb896653.aspx[Homepage].
-* *Process Hacker* -- další nástroj pro detailní monitorování procesů podobný Process Exploreru, ale s některými pěknými možnostmi navíc. https://processhacker.sourceforge.io/[Homepage]
-* *Process Monitor* -- nástroj pro monitorování chování procesu -- přístupu k registrům, souborovému systému, atd. https://technet.microsoft.com/cs-cz/sysinternals/bb896645.aspx[Homepage].
-* *Regshot* -- nástroj pro monitorování změn registrů. https://sourceforge.net/projects/regshot/[Homepage].
-* *Resource Hacker* -- nástroj pro zkoumání a úpravy obsahu `.rsrc` sekce PE souborů. http://www.angusj.com/resourcehacker/[Homepage].
-* *RetDec* -- disassembler a dekompilátor od Avastu. https://github.com/avast/retdec/releases[Homepage].
-* *Strings* -- nástroj pro extrakci všeho, co se tváří jako textový řetězec. Vhodné pro prvotní analýzu. https://technet.microsoft.com/en-us/sysinternals/bb897439.aspx[Homepage].
-* *X64Dbg* -- debugger pro 32 i 64bitové programy. https://x64dbg.com/[Homepage].
+* *API Monitor* -- nástroj pro sledování API volání programu. Lze sledovat i jednotlivé funkce nebo jejich logické skupiny. link:http://www.rohitab.com[Homepage].
+* *CFF Explorer* -- nástroj pro analýzu a úpravu PE souborů. link:https://www.ntcore.com/exsuite.php[Homepage].
+* *Dependency Walker* -- nástroj pro analýzu především importních a exportních tabulek PE souborů. Podporuje jak statickou, tak dynamickou analýzu. link:https://www.dependencywalker.com/[Homepage].
+* *ExeInfoPE* -- nástroj pro identifikaci kompilátoru použitého pro vytvoření PE souboru. link:http://www.exeinfo.xn.pl[Homepage].
+* *Ghidra* -- disassembler a dekompilátor od NSA. link:https://www.nsa.gov/resources/everyone/ghidra/[Homepage].
+* *HxD* -- Hex editor s možností úpravy RAM a disku po sektorech. link:https://mh-nexus.de/en/hxd/[Homepage].
+* *IDA Free* -- interaktivní disassembler pro reverzní inženýrství. Tato verze neobsahuje dekompilátor, ale je zdarma! link:https://www.hex-rays.com/products/ida/support/download_freeware.shtml[Homepage].
+* *Process Explorer* -- nástroj pro detailní monitorování procesů. Značně rozšířená verze Windows Task Manageru. link:https://technet.microsoft.com/cs-cz/sysinternals/bb896653.aspx[Homepage].
+* *Process Hacker* -- další nástroj pro detailní monitorování procesů podobný Process Exploreru, ale s některými pěknými možnostmi navíc. link:https://processhacker.sourceforge.io/[Homepage]
+* *Process Monitor* -- nástroj pro monitorování chování procesu -- přístupu k registrům, souborovému systému, atd. link:https://technet.microsoft.com/cs-cz/sysinternals/bb896645.aspx[Homepage].
+* *Regshot* -- nástroj pro monitorování změn registrů. link:https://sourceforge.net/projects/regshot/[Homepage].
+* *Resource Hacker* -- nástroj pro zkoumání a úpravy obsahu `.rsrc` sekce PE souborů. link:http://www.angusj.com/resourcehacker/[Homepage].
+* *RetDec* -- disassembler a dekompilátor od Avastu. link:https://github.com/avast/retdec/releases[Homepage].
+* *Strings* -- nástroj pro extrakci všeho, co se tváří jako textový řetězec. Vhodné pro prvotní analýzu. link:https://technet.microsoft.com/en-us/sysinternals/bb897439.aspx[Homepage].
+* *X64Dbg* -- debugger pro 32 i 64bitové programy. link:https://x64dbg.com/[Homepage].
 
 == Komerční nástroje
 
-* *Hiew* -- programátorský hex editor s disassemblerem (i x64) a funkcemi pro reverzní inženýrství. http://www.hiew.ru/[Homepage].
-* *IDA Pro* -- interaktivní disassembler pro reverzní inženýrství. Rozsáhlá podpora architektur, pluginy atd. Dostupný je též dekompilační plugin Hexrays Decompiler pro převod kódu do C. Velmi drahý, ale velmi účinný. https://www.hex-rays.com[Homepage].
+* *Hiew* -- programátorský hex editor s disassemblerem (i x64) a funkcemi pro reverzní inženýrství. link:http://www.hiew.ru/[Homepage].
+* *IDA Pro* -- interaktivní disassembler pro reverzní inženýrství. Rozsáhlá podpora architektur, pluginy atd. Dostupný je též dekompilační plugin Hexrays Decompiler pro převod kódu do C. Velmi drahý, ale velmi účinný. link:https://www.hex-rays.com[Homepage].
 
 == Další užitečné zdroje
 
-* *The Decompilation Wiki* -- informace o dostupných dekompilátorech. http://www.program-transformation.org/Transform/DeCompilation[Homepage].
+* *The Decompilation Wiki* -- informace o dostupných dekompilátorech. link:http://www.program-transformation.org/Transform/DeCompilation[Homepage].
 
 == Zadání 1. domácí úlohy
 

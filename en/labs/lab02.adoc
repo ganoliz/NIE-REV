@@ -5,7 +5,7 @@
 
 * link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_2.mp4[Recorded tutorial]
 
-We will be using IDA Free to debug our programs. You can download it here: https://www.hex-rays.com/products/ida/support/download_freeware.shtml[https://www.hex-rays.com/products/ida/support/download_freeware.shtml].
+We will be using IDA Free to debug our programs. You can download it here: link:https://www.hex-rays.com/products/ida/support/download_freeware.shtml[link:https://www.hex-rays.com/products/ida/support/download_freeware.shtml].
 
 We have compiled the following sample. The compilation took place in Visual Studio 2015, in Release mode, with ASLR disabled (`/DYNAMICBASE:OFF`), optimization disabled (`/Ob0`) and with a Multibyte character set.
 
@@ -154,7 +154,7 @@ The fourth variable is also an integer but the jump instruction `JNB` is typical
 
 == API
 
-Let's look at function `401140`. Note that this function takes as argument the structure we have just analyzed. We can see that there are several calls to the Windows API, namely to `CreateFileA` and `WriteFile`. Let's start with the `CreateFileA` function first. You can look up its documentation in MSDN https://msdn.microsoft.com/en-us/library/windows/desktop/aa363858%28v=vs.85%29.aspx[here].
+Let's look at function `401140`. Note that this function takes as argument the structure we have just analyzed. We can see that there are several calls to the Windows API, namely to `CreateFileA` and `WriteFile`. Let's start with the `CreateFileA` function first. You can look up its documentation in MSDN link:https://msdn.microsoft.com/en-us/library/windows/desktop/aa363858%28v=vs.85%29.aspx[here].
 
 image::cv2obr27.jpg[]
 

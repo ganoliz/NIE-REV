@@ -32,7 +32,7 @@ If your compiled binary uses an embedded (static) runtime library rather than a 
 ====
 *Writing into the IAT*
 
-IAT is usually write-protected. In order to be able to write into it, you must use e.g. the https://msdn.microsoft.com/en-us/library/windows/desktop/aa366898(v=vs.85).aspx[VirtualProtect] API to unlock the page for writing.
+IAT is usually write-protected. In order to be able to write into it, you must use e.g. the link:https://msdn.microsoft.com/en-us/library/windows/desktop/aa366898(v=vs.85).aspx[VirtualProtect] API to unlock the page for writing.
 
 [source,cpp]
 ----
@@ -47,7 +47,7 @@ BOOL WINAPI VirtualProtect (
 
 [TIP]
 ====
-The https://courses.fit.cvut.cz/BI-BEK/media/lectures/bek02en.pdf[second lecture] and the https://courses.fit.cvut.cz/BI-BEK/en/labs/lab02.html[second tutorial] for BIE-BEK might be helpful if you get lost in the issues with compiling and linking.
+The link:https://courses.fit.cvut.cz/BI-BEK/media/lectures/bek02en.pdf[second lecture] and the link:https://courses.fit.cvut.cz/BI-BEK/en/labs/lab02.html[second tutorial] for BIE-BEK might be helpful if you get lost in the issues with compiling and linking.
 ====
 
 == Common Errors
