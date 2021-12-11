@@ -6,8 +6,25 @@
 * link:https://kib-files.fit.cvut.cz/mi-rev/MIE-tutorial_12.mp4[Recorded tutorial - Jirkal]
 * link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/NIE-tutorial_12.mp4[Recorded tutorial - Kokeš]
 
+== .NET analysis
+
 Ing. Martin Jirkal will demonstrate techniques used for dotnet analysis.
 
 * link:{imagesdir}/cv12.pdf[Slides]
-* link:{imagesdir}/cv12.zip[Files to be analyzed]
-* link:{imagesdir}/dnspy.zip[dnSpy] .NET decompiler
+
+We will use https://github.com/dnSpy/dnSpy/releases[dnSpy] (https://kib-files.fit.cvut.cz/mi-rev/nastroje/dnSpy-v6.1.8.zip[lokální kopie]) for both static and dynamic analysis. We will analyze the following samples:
+
+* https://tinywall.pados.hu/download.php[TinyWall] application (link:{imagesdir}/tinywall.zip[unpacked]) -- no protections at all.
+* https://fork.dev/[Fork] application (link:{imagesdir}/fork.zip[unpacked]) -- the true content is packed inside and must be extracted first.
+* link:{imagesdir}/crackme.zip[Several simple crackme's].
+* link:{imagesdir}/malware.zip[Several malware samples]. Caution! These are live malware files, do not run them under any circumstances! The password to the archive is `infected`.
+
+== PDF analysis
+
+Analysis of PDF files can be done using several tools, one of the more popular ones is Didier Stevens' https://blog.didierstevens.com/programs/pdf-tools/[PDF Tools]. We will be using the graphical  http://sandsprite.com/blogs/index.php?pid=57&uid=7[PDF Stream Dumper] (https://kib-files.fit.cvut.cz/mi-rev/nastroje/PDFStreamDumper-v0.9.624.exe[local copy]) and the following sample:
+
+* link:{imagesdir}/pdfmalware.zip[PDF malware]. Caution! This is a live malware, do not open it in a regular PDF reader! The password to the archive is `infected`.
+
+== VBS analysis
+
+In his https://dspace.cvut.cz/handle/10467/94915[bachelor thesis], Matěj Havránek created a tool for link:{imagesdir}/vbsdeobfuscator.zip[deobfuscation of scripts in VBScript]. It includes a demo script (in the `demoSamples` subdirectory) which you can use to try out how deobfuscation works.
