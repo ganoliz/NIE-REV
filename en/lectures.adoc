@@ -52,6 +52,6 @@ link:{imagesdir}/../itsaunixsystem.zip[Crackme to try out]
 | Dec 16
 | Debugging and anti-debugging
 | link:{imagesdir}/rev06en.pdf[slides]
-| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2020/en/lecture_06.mp4[video]
+| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/lecture_06.mp4[video]
 
 |====

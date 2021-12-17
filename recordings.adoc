@@ -19,7 +19,7 @@ Původní verze záznamů můžete nalézt na link:https://web.microsoftstream.c
 * Přednáška 5:
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/prednaska_05.mp4[Download]
 * Přednáška 6:
-  nenahrávala se
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/prednaska_06.mp4[Download]
 
 === Cvičení
 
@@ -51,7 +51,9 @@ Původní verze záznamů můžete nalézt na link:https://web.microsoftstream.c
 * Cvičení 10:
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/cviceni_10_101.mp4[Paralelka 101]
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/cviceni_10_102.mp4[Paralelka 102]
-* Cvičení 11: zatím neproběhlo
+* Cvičení 11:
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/cviceni_11_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/cviceni_11_102.mp4[Paralelka 102]
 * Cvičení 12:
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/cviceni_12_101.mp4[Paralelka 101]
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/cviceni_12_102.mp4[Paralelka 102]

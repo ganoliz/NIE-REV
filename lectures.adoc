@@ -60,6 +60,6 @@ link:{imagesdir}/../itsaunixsystem.zip[Crackme na vyzkoušení]
 | Debugging a anti-debugging
 | link:{imagesdir}/rev06en.pdf[anglicky]
 | link:{imagesdir}/rev06cz.pdf[česky]
-| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2020/cz/prednaska_06.mp4[video]
+| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/prednaska_06.mp4[video]
 
 |====

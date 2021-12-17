@@ -19,7 +19,7 @@ You can find the original versions of the recordings at link:https://web.microso
 * Lecture 5:
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/lecture_05.mp4[Download]
 * Lecture 6:
-  live only
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/lecture_06.mp4[Download]
 
 === Tutorials
 
@@ -42,7 +42,8 @@ You can find the original versions of the recordings at link:https://web.microso
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/tutorial_09.mp4[Download]
 * Tutorial 10:
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/tutorial_10.mp4[Download]
-* Tutorial 11: Upcoming
+* Tutorial 11:
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/tutorial_11.mp4[Download]
 * Tutorial 12
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/tutorial_12.mp4[Download]
 * Tutorial 13:
