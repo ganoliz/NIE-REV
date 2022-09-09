@@ -9,7 +9,7 @@ The goal of this tutorial is to get to know the debugging tool link:http://www.o
 
 == Download and installation of OllyDbg
 
-You can download OllyDbg for free from link:http://www.ollydbg.de/[link:http://www.ollydbg.de/]. You can choose between versions 1.10 or 2.01. We recommend that you use version 2.01 (not 2.00 from the left menu) in its 32-bit variant, because the IA-32 assembler is easier to understand than the 64bit x86_64. Installation is not needed, simply unpack the downloaded ZIP file.
+You can download OllyDbg for free from link:http://www.ollydbg.de/[http://www.ollydbg.de/]. You can choose between versions 1.10 or 2.01. We recommend that you use version 2.01 (not 2.00 from the left menu) in its 32-bit variant, because the IA-32 assembler is easier to understand than the 64bit x86_64. Installation is not needed, simply unpack the downloaded ZIP file.
 
 Newer versions of Windows 10 interfere with single-stepping in OllyDbg: You can recognize this by getting a warning on opening an application in OllyDbg that someone unexpectedly changed the values of the debugging registers. Also, the application will not stop at its entry point. The solution is simple: Open Options and in the `Debugging` section turn off `use HW breakpoints for stepping`.
 

@@ -3,7 +3,7 @@
 :toc:
 :imagesdir: ../media
 
-The evalution of the course consists of three parts -- evaluation of the homeworks (25 points), evaluation of the semestral works (20 and 25 points) and evaluation of the exam (30 points). The course is successfully completed by earning the assessment and by passing the exam.
+The evalution of the course consists of three parts -- evaluation of the homeworks (20 points), evaluation of the semestral works (20 and 30 points) and evaluation of the exam (30 points). The course is successfully completed by earning the assessment and by passing the exam.
 
 == Assessment
 
@@ -11,11 +11,17 @@ The assessment is granted if the student gains a total of 35 or more points for 
 
 === Homeworks
 
-The homeworks are assigned during the tutorials. They consist of three tasks worth 5, 10 and 10 points, 25 points in total. The homeworks ask the student to explore important topics discussed during lectures and tutorials -- the understanding of the assembler code and basic control structures, the use of Import Address Table and the use of type information. *The solutions are to be submitted exclusively through e-mail. It is permitted to submit multiple solutions for each task* (e.g. in order to add missing parts or fix errors in the earlier submissions). A deadline has been set for each task, usually X weeks since the end of the tutorial where the task had been assigned (where X depends on the task); the submission e-mail must reach the teacher's mailbox by the deadline. Tasks submitted after the deadline *are not eligible for any points*, even if the task had been completed and the student only failed to deliver it. They may, however, be used to resolve borderline cases. A deadline may be individually delayed if serious reasons are proven.
+The homeworks are assigned during the tutorials. They consist of three tasks worth 5, 10 and 5 points, 20 points in total. The homeworks ask the student to explore important topics discussed during lectures and tutorials -- the understanding of the assembler code and basic control structures, the use of Import Address Table and the use of type information. *The solutions are to be submitted exclusively through e-mail. It is permitted to submit multiple solutions for each task* (e.g. in order to add missing parts or fix errors in the earlier submissions). A deadline has been set for each task, usually X weeks since the end of the tutorial where the task had been assigned (where X depends on the task); the submission e-mail must reach the teacher's mailbox by the deadline. Tasks submitted after the deadline *are not eligible for any points*, even if the task had been completed and the student only failed to deliver it. They may, however, be used to resolve borderline cases. A deadline may be individually delayed if serious reasons are proven.
 
 In case of exceptional solutions the teacher may award bonus points in excess of standard values, depending on the quality of the solution. There points are solely in the province of the teacher, the student is not entitled to them.
 
-List of homeworks and their deadlines can be found at the xref:index.adoc#_homework-deadlines[course's title page].
+In case of bugs in the submitted solutions the awarded points may be decreased, up to and including zero points in total for a given task. Please make use of the rather long submission deadlines and the possibility of resubmitting your solution to fix any discovered errors.
+
+The list of homeworks and their deadlines can be found at the xref:index.adoc#_homework-deadlines[course's title page], here's just a list:
+
+* xref:homeworks/email.adoc[E-mail] (5 pt.)
+* xref:homeworks/iat.adoc[Import Table] (10 pt.)
+* xref:homeworks/snake.adoc[Snake] (5 pt.)
 
 === Semestral works
 
@@ -25,7 +31,7 @@ The solution of the semestral work should include a *very brief* description of 
 
 There are two semestral works, explained in detail at their respective pages:
 
-* xref:projects/crackme.adoc[Crackme] (25+ points)
+* xref:projects/crackme.adoc[Crackme] (30+ points)
 * xref:projects/keygen.adoc[Keygen] (20 points)
 
 == The Exam
@@ -42,7 +48,7 @@ Completing the exam *does not* close the classification. The student may keep su
 
 The live exam is written, and takes 75 minutes. It may be supplemented with an oral examination in case of a suspicion of an unethical behavior.
 
-During the exam, only writing utensils and a paper (provided by the teacher) may be used. No other tools are permitted. *It is expressly forbidden to use any kind of an electronic device at any time when the student is present in the exam room.*
+During the exam, only writing utensils and a paper (provided by the teacher) may be used. No other tools are permitted. *It is expressly forbidden to use any kind of an electronic device at any time as long as the student is present in the exam room.*
 
 The exam is worth 30 points. The minimum number of points required to get a grade better than "failed" is 15. There are 6 open questions in the exam, focused mostly (but not exclusively) on the theory. Each question is worth 5 points. An example exam is here: link:{imagesdir}/exam-en.pdf[Download].
 
@@ -52,6 +58,8 @@ An online exam is conducted in MS Teams in the form of a one-on-one voice chat; 
 
 The online exam will take 20 minutes at most and will consist of questions from two topics from the course. In order to minimize attempts at cheating there will be no time provided for preparation, the answers should start immediately. The evaluation of the answers will be binary, "success" or "failure", rather than 0-30 points; in order to succeed in the exam, the student will need to provide at least a 50 % answer overall (i.e. if he or she fails completely in one question, they can still pass if they answer the second one perfectly). In case of a success, the student will be awarded points calculated as 3/7 of the points received from the homeworks.
 
+If you submit more homeworks after you had completed the exam, your exam points will be recalculated according to the current amount of points from the homeworks.
+
 [NOTE]
 ====
 The reason for this difference in live and online exams is that I want to achieve the goals of the exam (to verify that the student understands the studied topics) while keeping the conditions as fair for all students as possible: In an online exam, it is not possible to prevent cheating and at the same time it is very difficult if not impossible to objectively rate the answers given. The binary rating can be done objectively and the point calculation prevents random fluctuations in the student's performance, both due to cheating and due to nervousness or stress. Two questions are asked to reduce the fear on part of the student that they may fail one of the questions completely.
@@ -59,11 +67,11 @@ The reason for this difference in live and online exams is that I want to achiev
 
 === Concluding the Course Without an Exam
 
-If a student achieves 50 or more points from the homeworks and the semestral works, he or she may opt to be excused from the exam, provided that he/she provably (using the school e-mail) requests so by the end of the third exam week (January 23th, 2022) and hasn't taken part in any of the previous exam terms ("taking part" includes subscribing for an exam and then not coming). If the student is excused, he/she gets the grade given by the number of points from the homeworks and the semestral works and will not be allowed to take part in any other variant of the exam.
+If a student achieves 50 or more points from the homeworks and the semestral works, he or she may opt to be excused from the exam, provided that he/she provably (using the school e-mail) requests so by the end of the third exam week (January 22nd, 2023) and hasn't taken part in any of the previous exam terms ("taking part" includes subscribing for an exam and then not coming). If the student is excused, he/she gets the grade given by the number of points from the homeworks and the semestral works and will not be allowed to take part in any other variant of the exam.
 
 == Evaluation scale
 
-Evaluation scale is according to the current https://www.cvut.cz/en/legislation-and-study-regulations[Study and Examination Code for Students of CTU in Prague] (https://www.cvut.cz/sites/default/files/content/d1dc93cd-5894-4521-b799-c7e715d3c59e/en/20210308-study-and-examination-rules-for-students-at-ctu.pdf[PDF]).
+Evaluation scale is according to the current link:https://www.cvut.cz/en/legislation-and-study-regulations[Study and Examination Code for Students of CTU in Prague] (link:https://www.cvut.cz/sites/default/files/content/d1dc93cd-5894-4521-b799-c7e715d3c59e/en/20210922-study-and-examination-rules-for-students-at-ctu.pdf[PDF]).
 
 [options="autowidth", cols=3*]
 |====

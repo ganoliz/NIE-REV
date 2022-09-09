@@ -3,11 +3,11 @@
 :imagesdir: ../media/labs/05
 :toc:
 
-* Počet bodů: *10*
+* Počet bodů: *5*
 * Termín odevzdání:
-** *9.12. 17:45* (paralelka 101)
-** *10.12. 17:45* (paralelka 102)
-** *10.12. 19:30* (paralelka 103)
+** *08.12. 19:30* (paralelka 101)
+** *09.12. 17:45* (paralelka 102)
+** *09.12. 19:30* (paralelka 103)
 
 Analyzujte program `Had.exe` z archivu link:{imagesdir}/du3.zip[du3.zip].
 

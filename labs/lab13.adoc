@@ -62,7 +62,7 @@ Pro využití `LoadLibrary` triku výše dokonce nemusíte napsat vůbec žádn�
 == Zadání bonusové úlohy
 
 * Počet bodů: *3*
-* Termín odevzdání: *14. února 8:00* (všechny paralelky)
+* Termín odevzdání: *13.02.2022 8:00* (všechny paralelky)
 
 Vraťte se ke xref:lab04.adoc[druhé domácí úloze]. V ní jsme řešili, jak pomocí úpravy IAT změnit volání paměťových funkcí tak, aby se napřed zavolal náš logovací kód a teprve potom bylo řízení předáno původním funkcím. To nám umožnilo jednoduše sledovat alokace, ale bohužel jenom přímo v našem programu. S technikou injekce ovšem dokážeme úlohu snadno adaptovat tak, aby byla použitelná i pro cizí programy.
 

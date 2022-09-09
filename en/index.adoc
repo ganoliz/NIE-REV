@@ -2,12 +2,18 @@
 = NIE-REV Reverse Engineering
 :toc:
 :imagesdir: ../media
+:lectdir: ../media/lectures
+:labdir: ./labs
 
 * xref:../index.adoc[Česká verze]
 
 == Current events
 
+[.noclear]
+[IMPORTANT]
+====
 Please keep an eye on the current events in the course on the xref:current_info.adoc[Current events] page.
+====
 
 == Annotation
 
@@ -21,16 +27,10 @@ Students will get acquainted with the essentials of reverse engineering of compu
 * Office: TH:A-1137
 * Consultations: As required, exact date and time to be determined through e-mail or personally at a lecture/tutorial.
 
-== Note about the Winter semester 2020/21
-
-Both lectures and tutorials for Reverse engineering will be presented physically in room T9:345 as per the regular timetable, at least in the beginning. While my personal preference in the current epidemiological situation is to keep all of my courses on-line to minimize risks (which is a recommended approach in Security after all), the small number of signed up students allows me to follow the faculty's recommendation to conduct the english-language courses in person rather than online. It remains to be seen how long will this approach remain viable.
-
-Note that this *will* be changed if the number of signed-up students exceeds 12.
-
 == Evaluation
 
 * xref:evaluation.adoc[Requirements for passing the course]
-* The points awarded will be recorded at the link:https://grades.fit.cvut.cz[FIT grades] website. In your own interest, verify that you got the correct amount of points every time you get an e-mail from me. The points shown at Grades are just "for your information", the definitive value is in my private "master" list.
+* The points awarded will be recorded at the link:https://grades.fit.cvut.cz[FIT grades] website. In your own interest, verify that you got the correct amount of points every time you receive an evaluation e-mail from me. The points shown at Grades are just "for your information", the definitive value is in my private "master" list.
 
 === Homework deadlines
 
@@ -44,52 +44,119 @@ Note that this *will* be changed if the number of signed-up students exceeds 12.
 | xref:homeworks/email.adoc[E-mail]
 | 5
 | 3rd week
-| November 4, 19:30
+| November 4, 16:00
 
 | xref:homeworks/iat.adoc[IAT]
 | 10
-| 4th week
-| November 18, 19:30
+| 5th week
+| November 25, 16:00
 
 | xref:homeworks/snake.adoc[Snake]
-| 10
-| 5th week
-| December 9, 19:30
+| 5
+| 7th week
+| December 9, 16:00
 
 | xref:projects/crackme.adoc[Crackme]
-| 25+
+| 30+
 | 3rd week
-| February 14, 8:00
+| February 19, 8:00
 
 | xref:projects/keygen.adoc[Keygen]
 | 20
 | 1st week
-| February 13, 8:00
+| February 19, 8:00
 
 | xref:labs/lab13.adoc[Bonus]
 | 3
 | 13th week
-| February 13, 8:00
+| February 19, 8:00
 |====
 
-== Changes to the schedule
+== Schedule
+
+[options="autowidth", cols=4]
+|====
+<h| Week
+<h| Date
+<h| Lecture
+<h| Tutorial
+
+| 1.
+| September 22 and 23
+| link:{lectdir}/rev01en.pdf[Lecture 1]
+| xref:{labdir}/lab01.adoc[Tutorial 1]
+
+| 2.
+| September 29 and 30
+| --
+| xref:{labdir}/lab02.adoc[Tutorial 2]
+
+| 3.
+| October 6 and 7
+| link:{lectdir}/rev02en.pdf[Lecture 2]
+| xref:{labdir}/lab03.adoc[Tutorial 3]
+
+| 4.
+| October 13 and 14
+| --
+| --
+
+| 5.
+| October 20 and 21
+| link:{lectdir}/rev03en.pdf[Lecture 3]
+| xref:{labdir}/lab04.adoc[Tutorial 4]
+
+| 6.
+| October 27 and 28
+| --
+| --
+
+| 7.
+| November 3 and 4
+| link:{lectdir}/rev04en.pdf[Lecture 4]
+| xref:{labdir}/lab05.adoc[Tutorial 5]
+
+| 8.
+| November 10 and 11
+| --
+| xref:{labdir}/lab08.adoc[Tutorial 8]
+
+| 9.
+| **TUESDAY November 15**
+| --
+| xref:{labdir}/lab09.adoc[Tutorial 9]
+
+| 10.
+| November 24 and 25
+| --
+| xref:{labdir}/lab10.adoc[Tutorial 10]
+
+| 11.
+| December 1 and 2
+| link:{lectdir}/rev04en.pdf[Lecture 4] +
+link:{lectdir}/rev05en.pdf[Lecture 5]
+| xref:{labdir}/lab13.adoc[Tutorial 13]
+
+| 12.
+| December 8 and 9
+| --
+| xref:{labdir}/lab12.adoc[Tutorial 12]
+
+| 13.
+| December 15 and 16
+| link:{lectdir}/rev06en.pdf[Lecture 6]
+| xref:{labdir}/lab11.adoc[Tutorial 11]
+
+|====
+
+(Reasons for these shifts are explained in the xref:current_info.adoc#_important-changes-to-the-regular-schedule[first current event].)
 
 ////
-None specified yet.
-////
-
-* Tutorial no. 6 (Malware lecture) is canceled.
-* Tutorial no. 7 (consultations) will take place in the 10th week (November 25).
-* Tutorial no. 8 (simple obfuscations) will take place in the 7th week (November 4).
-* Tutorial no. 9 (advanced obfuscations) will take place in the 8th week (November 11).
-* Tutorial no. 10 (packed binaries) will take place in the 9th week (November 18).
-* Tutorial no. 11 (anti-debugging) will take place in the 13th week (December 16).
-* Tutorial no. 13 (code injection) will take place in the 11th week (December 2).
-
 * *2019-12-02 (week 11)*:
 ** Ing. Jan Rubín from Avast will present a lecture on *malware analysis*.
 ** link:{imagesdir}/lectures/rev08en.pdf[Slides].
 ** link:{imagesdir}/itsaunixsystem.zip[Crackme to try out].
+////
 
 == Downloads
 
@@ -98,5 +165,3 @@ Offline version of these pages is available here: link:https://kib-files.fit.cvu
 Tools used in tutorials can be downloaded here: link:https://kib-files.fit.cvut.cz/mi-rev/tools/[Download]
 
 Runtime libraries for various versions of Visual Studio can be downloaded here: link:https://kib-files.fit.cvut.cz/mi-rev/vcredist/[Download]
-
-//Úvodní přednášky a cvičení z BI-BEK, kde si vysvětlujeme základy assembleru, naleznete zde: link:https://kib-files.fit.cvut.cz/bi-bek/BIK01-prednasky_1_2_cviceni_1_2.mp4[Download]

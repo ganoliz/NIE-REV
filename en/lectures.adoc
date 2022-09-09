@@ -12,44 +12,37 @@
 ^h| Video
 
 | 1.
-| Sep 23
+| Sep 22
 | Introduction to reverse engineering, stack analysis
 | link:{imagesdir}/rev01en.pdf[slides]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/lecture_01.mp4[video]
 
 | 2.
-| Oct 7
+| Oct 6
 | Analysis of a program's flow
 | link:{imagesdir}/rev02en.pdf[slides]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/lecture_02.mp4[video]
 
 | 3.
-| Oct 21
+| Oct 20
 | Analysis of C++ classes
 | link:{imagesdir}/rev03en.pdf[slides]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/lecture_03.mp4[video]
 
 | 4.
-| Nov 4
+| Nov 3
 | Disassembling and obfuscation
 | link:{imagesdir}/rev04en.pdf[slides]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/lecture_04.mp4[video]
 
 | 5.
-| Nov 18
+| Dec 1
 | Compiler recognition
 | link:{imagesdir}/rev05en.pdf[slides]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/lecture_05.mp4[video]
 
 | 6.
-| Dec 2
-| Reverse Analysis of Malware -- Jan Rubín, Avast +
-link:{imagesdir}/../itsaunixsystem.zip[Crackme to try out]
-| link:{imagesdir}/rev08en.pdf[slides]
-| --
-
-| 7.
-| Dec 16
+| Dec 15
 | Debugging and anti-debugging
 | link:{imagesdir}/rev06en.pdf[slides]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/lecture_06.mp4[video]

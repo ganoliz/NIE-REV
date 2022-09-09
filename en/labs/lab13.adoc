@@ -62,7 +62,7 @@ When making use of the `LoadLibrary` trick above you can avoid writing assembler
 == Bonus homework
 
 * Points: *3*
-* Deadline: *February 14, 8:00*
+* Deadline: *2022-13-02, 8:00*
 
 Return to the xref:lab04.adoc[second homework]. We were trying to hack the IAT so that instead of calling memory functions, the application would call our replacement functions which would log the data and then call the original memory functions. That allowed us to simply monitor memory allocations, but unfortunately only directly within the program. Using the injection technique, however, we can modify the code so that it will work even with other applications.
 

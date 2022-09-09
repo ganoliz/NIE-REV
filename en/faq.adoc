@@ -39,7 +39,7 @@ Yes, and if you get stuck at something, it's the best thing to do -- I might hel
 
 === I have already done my exam, can I still submit the semestral works?
 
-Yes. Every task has a deadline, but that's the only limiting factor for its submission. Whether you did or did not visit the exam is immaterial.
+Yes. Every task has a deadline, but that's the only limiting factor for its submission. Whether you did or did not complete the exam is immaterial.
 
 == Tools
 
@@ -52,3 +52,12 @@ You should definitely not abuse the administrative privileges you are given in t
 === Can I solve the tasks in Linux?
 
 For the most part, yes --- a vast majority of the tools we are using either has a Linux version or can be run in Wine. You might encounter difficulties with a debugger, though, which would be a handicap in trying to solve tasks intended for dynamic analysis (tutorials 10 and 11 and the semestral work Crackme starting with the 3rd password).
+
+== Others
+
+=== The Lab
+
+Our tutorials take place in room T9:345, the so-called Destruction Lab. Keep in mind that it's a very dangerous room because all users have full administrative access to all computers -- this makes it very simple to install any kind of malware on these computers. Please take the necessary precautions:
+
+* Before you use any computer in the lab, restart it, make sure it boots from the network and choose the Install Image option. Select the image you want to use and let it install, then restart the computer again and let it boot from the hard drive.
+* Never ever enter any passwords when using the lab's computers, unless you want to make that password public. If, for example, you need to use a password to be able to download the study materials, don't -- download the offline version at some secure computer and bring it to the lab on a flashdisk.

@@ -2,12 +2,18 @@
 = NI-REV Reverzní inženýrství
 :toc:
 :imagesdir: ./media
+:lectdir: ./media/lectures
+:labdir: ./labs
 
 * xref:en/index.adoc[English version]
 
 == Aktuality
 
+[.noclear]
+[IMPORTANT]
+====
 Sledujte prosím aktuální informace k výuce na stránce xref:current_info.adoc[Aktuality].
+====
 
 == Anotace
 
@@ -43,64 +49,159 @@ Par.103
 | xref:homeworks/email.adoc[E-mail]
 | 5
 | 3. týden
-| 4.11. 17:45
-| 5.11. 17:45
-| 5.11. 19:30
+| 03.11. 19:30
+| 04.11. 17:45
+| 04.11. 19:30
 
 | xref:homeworks/iat.adoc[IAT]
 | 10
-| 4. týden
-| 18.11. 17:45
-| 19.11. 17:45
-| 19.11. 19:30
+| 5. týden
+| 24.11. 19:30
+| 25.11. 17:45
+| 25.11. 19:30
 
 | xref:homeworks/snake.adoc[Had]
-| 10
-| 5. týden
-| 9.12. 17:45
-| 10.12. 17:45
-| 10.12. 19:30
+| 5
+| 7. týden
+| 08.12. 19:30
+| 09.12. 17:45
+| 09.12. 19:30
 
 | xref:projects/crackme.adoc[Crackme]
-| 25+
+| 30+
 | 3. týden
-| 13.2. 8:00
-| 13.2. 8:00
-| 13.2. 8:00
+| 19.02. 8:00
+| 19.02. 8:00
+| 19.02. 8:00
 
 | xref:projects/keygen.adoc[Keygen]
 | 20
 | 1. týden
-| 13.2. 8:00
-| 13.2. 8:00
-| 13.2. 8:00
+| 19.02. 8:00
+| 19.02. 8:00
+| 19.02. 8:00
 
 | xref:labs/lab13.adoc[Bonus]
 | 3
 | 13. týden
-| 13.2. 8:00
-| 13.2. 8:00
-| 13.2. 8:00
+| 19.02. 8:00
+| 19.02. 8:00
+| 19.02. 8:00
 |====
 
-== Změny v programu
+== Plán výuky
+
+[options="autowidth", cols=6]
+|====
+<h| Týden
+<h| Datum
+<h| Přednáška
+<h| Cvičení par. 101
+<h| Cvičení par. 102
+<h| Cvičení par. 103
+
+| 1.
+| 22.09. a 23.09.
+| link:{lectdir}/rev01cz.pdf[Přednáška 1]
+| xref:{labdir}/lab01.adoc[Cvičení 1]
+| xref:{labdir}/lab01.adoc[Cvičení 1]
+| xref:{labdir}/lab01.adoc[Cvičení 1]
+
+| 2.
+| 29.09. a 30.09.
+| --
+| xref:{labdir}/lab02.adoc[Cvičení 2]
+| xref:{labdir}/lab02.adoc[Cvičení 2]
+| xref:{labdir}/lab02.adoc[Cvičení 2]
+
+| 3.
+| 06.10. a 07.10.
+| link:{lectdir}/rev02cz.pdf[Přednáška 2]
+| xref:{labdir}/lab03.adoc[Cvičení 3]
+| xref:{labdir}/lab03.adoc[Cvičení 3]
+| xref:{labdir}/lab03.adoc[Cvičení 3]
+
+| 4.
+| 13.10. a 14.10.
+| --
+| xref:{labdir}/lab07.adoc[Cvičení 7]
+| --
+| --
+
+| 5.
+| 20.10. a 21.10.
+| link:{lectdir}/rev03cz.pdf[Přednáška 3]
+| xref:{labdir}/lab04.adoc[Cvičení 4]
+| xref:{labdir}/lab04.adoc[Cvičení 4]
+| xref:{labdir}/lab04.adoc[Cvičení 4]
+
+| 6.
+| 27.10. a 28.10.
+| --
+| xref:{labdir}/lab08.adoc[Cvičení 8]
+| --
+| --
+
+| 7.
+| 03.11. a 04.11.
+| link:{lectdir}/rev04cz.pdf[Přednáška 4]
+| xref:{labdir}/lab05.adoc[Cvičení 5]
+| xref:{labdir}/lab05.adoc[Cvičení 5]
+| xref:{labdir}/lab05.adoc[Cvičení 5]
+
+| 8.
+| 10.11. a 11.11.
+| --
+| xref:{labdir}/lab09.adoc[Cvičení 9]
+| xref:{labdir}/lab08.adoc[Cvičení 8]
+| xref:{labdir}/lab08.adoc[Cvičení 8]
+
+| 9.
+| **ÚTERÝ 15.11.**
+| --
+| --
+| xref:{labdir}/lab09.adoc[Cvičení 9]
+| xref:{labdir}/lab09.adoc[Cvičení 9]
+
+| 10.
+| 24.11. a 25.11.
+| --
+| xref:{labdir}/lab10.adoc[Cvičení 10]
+| xref:{labdir}/lab10.adoc[Cvičení 10]
+| xref:{labdir}/lab10.adoc[Cvičení 10]
+
+| 11.
+| 01.12. a 02.12.
+| link:{lectdir}/rev04cz.pdf[Přednáška 4] +
+link:{lectdir}/rev05cz.pdf[Přednáška 5]
+| xref:{labdir}/lab13.adoc[Cvičení 13]
+| xref:{labdir}/lab13.adoc[Cvičení 13]
+| xref:{labdir}/lab13.adoc[Cvičení 13]
+
+| 12.
+| 08.12. a 09.12.
+| --
+| xref:{labdir}/lab12.adoc[Cvičení 12]
+| xref:{labdir}/lab12.adoc[Cvičení 12]
+| xref:{labdir}/lab12.adoc[Cvičení 12]
+
+| 13.
+| 15.12. a 16.12.
+| link:{lectdir}/rev06cz.pdf[Přednáška 6]
+| xref:{labdir}/lab11.adoc[Cvičení 11]
+| xref:{labdir}/lab11.adoc[Cvičení 11]
+| xref:{labdir}/lab11.adoc[Cvičení 11]
+
+|====
+
+(Důvody jsou vysvětleny v xref:current_info.adoc#_d%C5%AFle%C5%BEit%C3%A9-zm%C4%9Bny-proti-standardn%C3%ADmu-harmonogramu[první aktualitě].)
 
 ////
-Aktuálně žádné.
-////
-
-* Cvičení č. 6 (přednáška Malware) odpadá.
-* Cvičení č. 7 (konzultace) proběhne v 10. týdnu (25.-26.11.).
-* Cvičení č. 8 (jednoduché obfuskace) proběhne v 7. týdnu (4.-5.11.).
-* Cvičení č. 9 (složitější obfuskace) proběhne v 8. týdnu (11.-12.11.).
-* Cvičení č. 10 (pakované binárky) proběhne v 9. týdnu (18.-19.11.).
-* Cvičení č. 11 (anti-debugging) proběhne v 13. týdnu (16.-17.12.).
-* Cvičení č. 13 (injekce) proběhne v 11. týdnu (2.-3.12.).
-
 * *2.12.2021 (11. týden)*:
 ** Přednášku na téma *analýza malware* povede Ing. Jan Rubín z firmy Avast.
 ** link:{imagesdir}/lectures/rev08en.pdf[Přednáška].
 ** link:{imagesdir}/itsaunixsystem.zip[Crackme na vyzkoušení].
+////
 
 == Download
 
@@ -109,5 +210,3 @@ Offline verzi materiálů si můžete stáhnout zde: link:https://kib-files.fit.
 Nástroje používané na cvičeních si můžete stáhnout zde: link:https://kib-files.fit.cvut.cz/mi-rev/tools/[Download]
 
 Runtime knihovny pro různé verze Visual Studia si můžete stáhnout zde: link:https://kib-files.fit.cvut.cz/mi-rev/vcredist/[Download]
-
-//Úvodní přednášky a cvičení z BI-BEK, kde si vysvětlujeme základy assembleru, naleznete zde: link:https://kib-files.fit.cvut.cz/bi-bek/BIK01-prednasky_1_2_cviceni_1_2.mp4[Download]

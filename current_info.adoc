@@ -1,49 +1,40 @@
 ﻿
-= Aktuality: 09.12.2021
+= Aktuality: 09.09.2022
 :toc:
 :imagesdir: ./media
 
-== 09.12.2021
+== 09.09.2022
 
-Bohužel, podle očekávání musíme zrušit původně plánovanou formu cvičení 12 kvůli nemoci přednášejícího. Pokusím se ho zastoupit a ukázat aspoň základy, obávám se však, že to nebude příliš dobré, protože Dotnet skutečně není mojí specializací. Omluvte proto prosím sníženou kvalitu cvičení. Jinak samozřejmě budu k dispozici pro případné otázky, a to jak prezenčně v laboratoři, tak online.
+Stránky předmětu byly aktualizovány pro nadcházející semestr.
 
-== 06.12.2021
+Výuka předmětu Reverzní inženýrství v zimním semestru 2021/22 by měla dle aktuálních informací probíhat živě. Pokud dojde ke zhoršení epidemiologické a/nebo energetické situace, může dojít k přesunu výuky do online prostředí MS Teams; v tom případě o této změně budu informovat na této stránce a také pomocí e-mailu z KOSu.
 
-Martin Jirkal, který měl tento týden demonstrovat analýzu vysokoúrovňových jazyků, bohužel onemocněl Covidem, což znamená, že demonstrace zcela určitě nebude moci být provedena v živé podobě. Pokud bude vůbec možné ji letos realizovat, bude to pouze v online podobě. Jistější informace budu mít ve středu večer nebo ve čtvrtek ráno.
+=== Důležité změny proti standardnímu harmonogramu:
 
-Pokud by se cvičení konat nemohlo, chovejte se k němu prosím, jako kdyby odpadlo. Zájemci o analýzu vyšších jazyků mohou využít link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2020/en/tutorial_12.mp4[nahrávky], kterou jsme vytvořili předloni pro anglickou verzi předmětu. Abyste však nebyli o cvičení úplně ochuzeni, budu dostupný jak online tak fyzicky v laboratoři, ale není plánovaný žádný konkrétní program -- cvičení bude ryze konzultační.
+Základní fakta:
 
-== 25.11.2021
+* Z důležitých osobních důvodů bohužel musím zrušit výuku v pátek 14.10.
+* V pátek 28.10. je státní svátek.
+* Ve čtvrtek 17.11. je také státní svátek.
+* V pátek 18.11. je děkanský den, výuka se přesouvá na úterý 15.11.
 
-Vypsal jsem v KOSu předtermíny prezenční zkoušky. Pro účast je požadován zápočet.
+To pro nás znamená ztrátu jedné přednášky a dvou cvičení. Pro minimalizaci škod a zajištění maximální kompatibility mezi cvičeními jsem se rozhodl toto vyřešit následujícím způsobem:
 
-== 21.11.2021
+* Ve čtvrtek 13.10. provedeme cvičení 7.
+* Ve čtvrtek 20.10. a v pátek 21.10. provedeme cvičení 4.
+* Ve čtvrtek 27.10. provedeme cvičení 8 pro paralelku 101.
+* Ve čtvrtek 03.11. a v pátek 04.11. provedeme cvičení 5.
+* Ve čtvrtek 10.11. provedeme cvičení 9 pro paralelku 101.
+* V pátek 11.11. provedeme cvičení 8 pro paralelky 102 a 103.
+* V úterý 15.11. provedeme cvičení 9 pro paralelky 102 a 103.
 
-Připomínám (raději i sobě), že 2.12. nebude přednáška na debugování a antidebugování, ale přednáška Jana Rubína z firmy Avast o analýze malwaru s ukázkou. Přednáška na debugging bude až o dva týdny později, 16.12. V důsledku toho se jeví jako vhodné prohodit cvičení 11 a 13 tak, abyste nemuseli řešit úlohu na antidebugging předtím, než se dozvíte, jak vlastně antidebugging funguje. Souhrnně tedy:
+To znamená, že ve výsledku odpadne cvičení 6 (které už stejně bylo přesunuto do předmětu BI-BEK) a pro velkou část z vás cvičení 7 (které je tak jako tak z větší části míněno jako konzultační a zbývající čas je vyplněn vcelku okrajovou problematikou toho, jak by mohl vypadat 64bitový kód) a ostatní cvičení se posunou.
 
-* 2.12.
-** Přednáška: **Analýza malware** (Jan Rubín, Avast). Pozor, přednáška se **nebude** ani streamovat ani nahrávat, bude pouze prezenční. Doporučuji nicméně na ni přijít, pokud to bude jen trochu možné, stojí za to.
-** Cvičení: xref:{imagesdir}/../labs/lab13.adoc[Injekce kódu]
-* 9.12.
-** Cvičení: xref:{imagesdir}/../labs/lab12.adoc[Analýza .NET] (Martin Jirkal, ESET)
-* 16.12.
-** Přednáška: xref:{imagesdir}/lectures/rev06cz.pdf[Debugging a anti-debugging]
-** Cvičení: xref:{imagesdir}/../labs/lab11.adoc[Anti-debugging]
+Dále potřebujeme opravit desynchronizaci přednášek a cvičení kvůli tomu, že nám přednáška 17.11. odpadne a tím dojde k posunu přednášek 5 a 6 vůči odpovídajícím cvičením. To vyřešíme tak, že prohodíme cvičení 11 a 13, tedy:
 
-(Páteční cvičení budou pochopitelně o den později, než je uvedeno výše.)
+* Ve čtvrtek 01.12. a v pátek 02.12. provedeme přednášku 5 a cvičení 13.
+* Ve čtvrtek 15.12. a v pátek 16.12. provedeme přednášku 6 a cvičení 11.
 
-== 28.10.2021
+Ostatní dny proběhnou normálně.
 
-S ohledem na proběhlý státní svátek a děkanský den, které nás připravily o jedno cvičení, ale zase nám více sblížily přednášky s cvičeními, proběhnou následující přesuny:
-
-* Cvičení č. 6 (přednáška Malware) odpadá. Můžete využít nahrávky z loňska, jak v předmětu NI-REV, tak v předmětu link:https://courses.fit.cvut.cz/BI-BEK[BI-BEK].
-* Cvičení č. 7 (konzultace) proběhne v 10. týdnu (25.-26.11.).
-* Cvičení č. 8 (jednoduché obfuskace) proběhne v 7. týdnu (4.-5.11.).
-* Cvičení č. 9 (složitější obfuskace) proběhne v 8. týdnu (11.-12.11.).
-* Cvičení č. 10 (pakované binárky) proběhne v 9. týdnu (18.-19.11.).
-
-Přednášky a také všechna ostatní cvičení proběhnou v původně naplánovaných časech. Výhodou tohoto přesunu je, že budeme moci ihned po příslušné přednášce navázat příslušným cvičením, zatímco normálně by cvičení bylo o týden posunuté.
-
-== 11.9.2021
-
-Výuka předmětu Reverzní inženýrství v zimním semestru 2021/22 by měla dle aktuálních informací probíhat živě. Pokud dojde ke zhoršení epidemiologické situace, může dojít k přesunu výuky do online prostředí MS Teams; v tom případě o této změně budu informovat na této stránce a také pomocí e-mailu z KOSu.
+Omlouvám se za komplexitu, ale lepší řešení mě nenapadlo. Na hlavní stránce předmětu je totéž snad vyjádřeno přehledněji xref:index.adoc#_pl%C3%A1n-v%C3%BDuky[v podobě tabulky].

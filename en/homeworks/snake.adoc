@@ -3,8 +3,8 @@
 :imagesdir: ../../media/labs/05
 :toc:
 
-* Points: *10*
-* Deadline: *December 9, 19:30*
+* Points: *5*
+* Deadline: *December 9, 16:00*
 
 Analyze the `Had.exe` ("Snake.exe") executable from archive link:{imagesdir}/du3.zip[du3.zip].
 

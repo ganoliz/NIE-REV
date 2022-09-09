@@ -23,7 +23,7 @@ Při živé výuce ANO za předpokladu, že v místnosti budou volná místa. Po
 
 Ani v jednom z případů to nemusíte dopředu nijak hlásit, omlouvat se apod.
 
-Toto platí i pro anglická cvičení.
+Toto platí i pro anglická cvičení, která jsou obvykle dost prázdná.
 
 == Hodnocení
 
@@ -54,3 +54,12 @@ Rozhodně byste neměli zneužívat administrátorská práva, která v učebně
 === Mohu úlohy řešit v Linuxu?
 
 V zásadě ano, velká většina používaných programů buď přímo má Linuxovou verzi, nebo se aspoň dá spustit ve Wine. Může však být problém s debuggerem, tzn. budou se vám obtížně řešit úlohy vyžadující dynamickou analýzu (v zásadě cvičení 10 a 11 a semestrální práce Crackme od 3. hesla).
+
+== Další
+
+=== Bourací učebna
+
+Naše cvičení probíhají v místnosti T9:345, tak zvané bourací učebně. Jde o velice nebezpečnou učebnu, protože v ní všichni mají administrátorská práva -- tudíž je velmi jednoduché v ní nastražit libovolný malware. Počítejte prosím s tím:
+
+* Předtím, než použijete libovolný počítač v učebně, ho restartujte a ze síťového bootovacího menu zvolte instalaci nového image. Vyberte image používaný pro výuku, nechte ho nainstalovat, potom počítač restartujte a nechte nabootovat z disku.
+* V žádném případě nezadávejte v učebně hesla, která nechcete sdílet s ostatními. Pokud například potřebujete pracovat s výukovými materiály, které jsou chráněné heslem, stáhněte si je na flashku a přineste si je na učebnový počítač takto offline.

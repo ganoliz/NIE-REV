@@ -5,9 +5,9 @@
 
 * Počet bodů: *10*
 * Termín odevzdání:
-** *18.11. 17:45* (paralelka 101)
-** *19.11. 17:45* (paralelka 102)
-** *19.11. 19:30* (paralelka 103)
+** *24.11. 19:30* (paralelka 101)
+** *25.11. 17:45* (paralelka 102)
+** *25.11. 19:30* (paralelka 103)
 
 Váš program, zkompilovaný pomocí MS Visual Studio, typicky používá externí runtime ve formě knihovny `MSVCRT12.DLL` (verze ve jménu se může lišit podle verze kompilátoru, tento název platí pro Visual Studio 2013). Tato knihovna obsahuje funkce `malloc`, `calloc`, `realloc` a `free`. Napište program, který bude obsahovat funkce:
 

@@ -138,21 +138,8 @@ This password is located in a new binary which will get extracted after you've s
 
 == Semestral work assignment
 
-////
 The assignments will be provided during the third week of the semester.
-////
 
+////
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/barrenic.zip[barrenic]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/bassapau.zip[bassapau]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/coutaben.zip[coutaben]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/gattigab.zip[gattigab]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/goncasar.zip[goncasar]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/jankaaid.zip[jankaaid]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/jimengab.zip[jimengab]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/montefer.zip[montefer]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/olivebru.zip[olivebru]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/pocrepie.zip[pocrepie]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/reiteart.zip[reiteart]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/ustynart.zip[ustynart]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/vermakun.zip[vermakun]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/zorlumeh.zip[zorlumeh]
+////
