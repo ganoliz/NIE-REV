@@ -158,10 +158,16 @@ link:{lectdir}/rev05en.pdf[Lecture 5]
 ** link:{imagesdir}/itsaunixsystem.zip[Crackme to try out].
 ////
 
-== Downloads
+== Online
 
 Offline version of these pages is available here: link:https://kib-files.fit.cvut.cz/mi-rev/offline.zip[Download]
 
 Tools used in tutorials can be downloaded here: link:https://kib-files.fit.cvut.cz/mi-rev/tools/[Download]
 
 Runtime libraries for various versions of Visual Studio can be downloaded here: link:https://kib-files.fit.cvut.cz/mi-rev/vcredist/[Download]
+
+The lectures and tutorials will be streamed live in MS Teams in channel **B221-NI-REV+NIE-REV**:
+
+* link:https://teams.microsoft.com/l/team/19%3aXfeIppTFUTEq8nrRsf_86yH5TgdyJSovsvwyQI3seSg1%40thread.tacv2/conversations?groupId=7deb2aa7-3e6d-4631-8a11-3ccb637467b2&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Link for the class]
+* link:https://teams.microsoft.com/l/channel/19%3ab9cd2e1fe119437f8b01a971a9f359f5%40thread.tacv2/Lectures?groupId=7deb2aa7-3e6d-4631-8a11-3ccb637467b2&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Lectures]
+* link:https://teams.microsoft.com/l/channel/19%3ac89d87bd94704cc6974c964a6c8ccc0f%40thread.tacv2/Tutorials?groupId=7deb2aa7-3e6d-4631-8a11-3ccb637467b2&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Tutorials]
