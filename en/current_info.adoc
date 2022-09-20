@@ -1,7 +1,18 @@
 ﻿
-= Current events: 2022-09-09
+= Current events: 2022-09-20
 :toc:
 :imagesdir: ../media
+
+== 2022-09-20
+
+Both guest lecturers confirmed their attendance. As a result, you can look forward to a talk about reverse engineering high-level code by Martin Jirkal (ESET) in the 12th-week's tutorial (on December 9th) and to a practical demonstration of the use of reverse engineering in malware analysis by Jan Rubín (Avast) in the 13th-week's lecture (December 15th).
+
+Please note that Jan Rubín does not want his lecture to be recorded, which means it will **only be available live** for the students present on it. Please make sure you have time to attend it -- it's worth it.
+
+In order to fit both lectures into the schedule, several modifications had to be made:
+
+* The sixth lecture (debugging and antidebugging) will be presented in the 11th-week tutorial.
+* The thirteenth tutorial (injection) will be canceled. You can still listen to it from the last year's recording and complete the bonus task if you want to.
 
 == 2022-09-09
 

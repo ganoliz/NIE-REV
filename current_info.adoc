@@ -1,7 +1,18 @@
 ﻿
-= Aktuality: 09.09.2022
+= Aktuality: 20.09.2022
 :toc:
 :imagesdir: ./media
+
+== 20.09.2022
+
+Oba externí přednášející potvrdili svoji účast. Můžete se tedy těšit na povídání o reverzní analýze vysokoúrovňového kódu na cvičeních od Martina Jirkala (ESET) ve 12. týdnu (8. a 9.12.) a na praktickou demonstraci uplatnění reverzního inženýrství při analýze malware od Jana Rubína (Avast) na přednášce ve 13. týdnu (15.12.).
+
+Speciálně upozorňuji, že Jan Rubín si nepřeje nahrávání a přednáška tedy bude provedena **pouze prezenčně**. Prosím, vyhraďte si na ni čas, stojí to za to.
+
+Aby se nám obě přednášky do předmětu vešly, musel jsem udělat následující přesuny:
+
+* Šestá přednáška (debugging a antidebugging) proběhne na cvičení v 11. týdnu.
+* Třinácté cvičení (injekce) se ruší. Nicméně zájemci o splnění jeho bonusové úlohy si ho mohou pustit ze záznamu.
 
 == 09.09.2022
 

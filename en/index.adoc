@@ -135,7 +135,7 @@ Students will get acquainted with the essentials of reverse engineering of compu
 | December 1 and 2
 | link:{lectdir}/rev04en.pdf[Lecture 4] +
 link:{lectdir}/rev05en.pdf[Lecture 5]
-| xref:{labdir}/lab13.adoc[Tutorial 13]
+| link:{lectdir}/rev06en.pdf[Lecture 6]
 
 | 12.
 | December 8 and 9
@@ -144,7 +144,8 @@ link:{lectdir}/rev05en.pdf[Lecture 5]
 
 | 13.
 | December 15 and 16
-| link:{lectdir}/rev06en.pdf[Lecture 6]
+| Guest lecture +
+by Jan Rubín
 | xref:{labdir}/lab11.adoc[Tutorial 11]
 
 |====
