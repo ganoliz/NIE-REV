@@ -15,7 +15,7 @@
 | Sep 22
 | Introduction to reverse engineering, stack analysis
 | link:{imagesdir}/rev01en.pdf[slides]
-| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/lecture_01.mp4[video]
+| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/lecture_01.mp4[video]
 
 | 2.
 | Oct 6

@@ -3,7 +3,7 @@
 :imagesdir: ../../media/labs/01
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/bi-bek/recordings/2021-tut-01.mp4[Recorded tutorial]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/tutorial_01.mp4[Recorded tutorial]
 
 The goal of this tutorial is to get to know the debugging tool link:http://www.ollydbg.de/[OllyDbg], which will be used in future tutorials, and understand the structure of the stack. You may also use the link:https://developer.microsoft.com/en-us/windows/hardware/windows-driver-kit[WinDbg] tool, which is more powerful than OllyDbg but also more difficult to learn. Another option is link:https://x64dbg.com/[x64dbg]. If you prefer GNU/Linux or OS X, you can use gdb or lldb.
 
