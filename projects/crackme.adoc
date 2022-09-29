@@ -66,7 +66,7 @@ Pro postup do další části programu je potřeba heslo, které je skryté za o
 
 [IMPORTANT]
 ====
-*5 bodů*
+*10 bodů*
 ====
 
 [NOTE]
