@@ -1,7 +1,11 @@
 ﻿
-= Current events: 2022-09-20
+= Current events: 2022-10-06
 :toc:
 :imagesdir: ../media
+
+== 2022-10-06
+
+The assignments for the xref:projects/crackme.adoc[semestral work Crackme] are now available for download.
 
 == 2022-09-20
 

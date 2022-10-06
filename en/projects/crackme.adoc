@@ -138,8 +138,17 @@ This password is located in a new binary which will get extracted after you've s
 
 == Semestral work assignment
 
-The assignments will be provided during the third week of the semester.
+Each student should only work with their own assignment.
+
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/desaljon.zip[desaljon]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/enardluc.zip[enardluc]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/epaleben.zip[epaleben]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/maniemar.zip[maniemar]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/ruskymin.zip[ruskymin]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/zemmimou.zip[zemmimou]
 
 ////
+The assignments will be provided during the third week of the semester.
+
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/barrenic.zip[barrenic]
 ////

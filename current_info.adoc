@@ -1,7 +1,11 @@
 ﻿
-= Aktuality: 20.09.2022
+= Aktuality: 06.10.2022
 :toc:
 :imagesdir: ./media
+
+== 06.10.2022
+
+Zadání xref:projects/crackme.adoc[semestrální práce Crackme] byla vygenerována a můžete na nich začít pracovat.
 
 == 20.09.2022
 
