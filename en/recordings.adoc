@@ -10,6 +10,8 @@ You can find the original versions of the recordings at link:https://web.microso
 
 * Lecture 1:
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/lecture_01.mp4[Download]
+* Lecture 2:
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/lecture_02.mp4[Download]
 
 === Tutorials
 
@@ -17,6 +19,8 @@ You can find the original versions of the recordings at link:https://web.microso
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/tutorial_01.mp4[Download]
 * Tutorial 2:
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/tutorial_02.mp4[Download]
+* Tutorial 3:
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/tutorial_03.mp4[Download]
 
 == Winter semester 2021/22
 

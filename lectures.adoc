@@ -24,7 +24,7 @@
 | Analýza toku kódu
 | link:{imagesdir}/rev02en.pdf[anglicky]
 | link:{imagesdir}/rev02cz.pdf[česky]
-| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/prednaska_02.mp4[video]
+| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/prednaska_02.mp4[video]
 
 | 3.
 | 20.10.
