@@ -8,6 +8,8 @@
 In response to some of the comments I received in the mini-survey (thank you for them!), I decided to modify a few things:
 
 * It will be possible to attend the online exam physically. That means, it will be conducted in exactly the same way as the online exam, at the same time and with the same grading scheme, except that it will take a form of a face-to-face chat in my office rather than that of a voice-chat in Teams.
+* In order to get a better continuity between the lectures and the tutorials, we will exchange the 4th and the 5th tutorial: The fifth tutorial will take place in the fifth week (October 21st) to follow after the lecture. The fourth tutorial will take place in the seventh week (November 4th).
+* Similarly, the deadlines for the second and the third homework will be exchanged: The homework on classes, assigned during the 5th tutorial, will have a deadline on November 25th. The homework on import address table, assigned during the 4th tutorial, will have a deadline on December 9th.
 
 I hope you find these changes useful. If you have any more suggestions, please keep them coming!
 

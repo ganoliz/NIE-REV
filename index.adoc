@@ -55,17 +55,17 @@ Par.103
 
 | xref:homeworks/iat.adoc[IAT]
 | 10
-| 5. týden
-| 24.11. 19:30
-| 25.11. 17:45
-| 25.11. 19:30
-
-| xref:homeworks/snake.adoc[Had]
-| 5
 | 7. týden
 | 08.12. 19:30
 | 09.12. 17:45
 | 09.12. 19:30
+
+| xref:homeworks/snake.adoc[Had]
+| 5
+| 5. týden
+| 24.11. 19:30
+| 25.11. 17:45
+| 25.11. 19:30
 
 | xref:projects/crackme.adoc[Crackme]
 | 30+
@@ -131,9 +131,9 @@ Par.103
 | 5.
 | 20.10. a 21.10.
 | link:{lectdir}/rev03cz.pdf[Přednáška 3]
-| xref:{labdir}/lab04.adoc[Cvičení 4]
-| xref:{labdir}/lab04.adoc[Cvičení 4]
-| xref:{labdir}/lab04.adoc[Cvičení 4]
+| xref:{labdir}/lab05.adoc[Cvičení 5]
+| xref:{labdir}/lab05.adoc[Cvičení 5]
+| xref:{labdir}/lab05.adoc[Cvičení 5]
 
 | 6.
 | 27.10. a 28.10.
@@ -145,9 +145,9 @@ Par.103
 | 7.
 | 03.11. a 04.11.
 | link:{lectdir}/rev04cz.pdf[Přednáška 4]
-| xref:{labdir}/lab05.adoc[Cvičení 5]
-| xref:{labdir}/lab05.adoc[Cvičení 5]
-| xref:{labdir}/lab05.adoc[Cvičení 5]
+| xref:{labdir}/lab04.adoc[Cvičení 4]
+| xref:{labdir}/lab04.adoc[Cvičení 4]
+| xref:{labdir}/lab04.adoc[Cvičení 4]
 
 | 8.
 | 10.11. a 11.11.

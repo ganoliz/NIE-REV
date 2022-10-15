@@ -48,13 +48,13 @@ Students will get acquainted with the essentials of reverse engineering of compu
 
 | xref:homeworks/iat.adoc[IAT]
 | 10
-| 5th week
-| November 25, 16:00
+| 7th week
+| December 9, 16:00
 
 | xref:homeworks/snake.adoc[Snake]
 | 5
-| 7th week
-| December 9, 16:00
+| 5th week
+| November 25, 16:00
 
 | xref:projects/crackme.adoc[Crackme]
 | 30+
@@ -104,7 +104,7 @@ Students will get acquainted with the essentials of reverse engineering of compu
 | 5.
 | October 20 and 21
 | link:{lectdir}/rev03en.pdf[Lecture 3]
-| xref:{labdir}/lab04.adoc[Tutorial 4]
+| xref:{labdir}/lab05.adoc[Tutorial 5]
 
 | 6.
 | October 27 and 28
@@ -114,7 +114,7 @@ Students will get acquainted with the essentials of reverse engineering of compu
 | 7.
 | November 3 and 4
 | link:{lectdir}/rev04en.pdf[Lecture 4]
-| xref:{labdir}/lab05.adoc[Tutorial 5]
+| xref:{labdir}/lab04.adoc[Tutorial 4]
 
 | 8.
 | November 10 and 11
