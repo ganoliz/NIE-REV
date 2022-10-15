@@ -198,3 +198,15 @@ Pokud se nyní podíváte na původní zdrojový kód, zjistíte, že několik i
 
 . Struktura měla další 4 `int` proměnné, které ale nikde v programu nebyly použité. Při alokaci lokálních proměnných s nimi ovšem bylo počítáno. Můžeme si ale všimnout, že instrukce `SUB ESP, imm` pracuje se správnou délkou -- to je důsledek použití neoptimizovaného buildu, ve kterém některé nadbytečné informace zůstávají viditelné.
 . Bohužel při kompilaci dochází k velké ztrátě informací, což způsobuje nepřesnosti při analýze. To nám ale nebrání analýzu provádět a i přes dílčí nepřesnosti bychom měli být schopní vytvořit funkční ekvivalent původního zdrojového kódu. Kód jako celek nebude identický s originálem, ale jeho relevantní funkčnost by měla být zachována.
+
+== Tipy pro použití programu IDA
+
+Klávesa kbd:[Mezera] slouží k přepínání mezi základními pohledy, zejména tedy mezi zobrazím v podobě grafu toku kódu a zobrazením v podobě assemblerového výpisu. Umožní také vyskočit z tzv. "Proximity view", který zachycuje vztahy mezi funkcemi.
+
+K základnímu pohybu po kódu slouží klávesy kbd:[Enter] a kbd:[Esc]. Pomocí kbd:[Enter] můžete skočit na místo identifikované argumentem instrukce, pomocí kbd:[Esc] se vrátíte na místo, odkud jste naposledy skočili klávesou kbd:[Enter]. Klávesy lze používat i opakovaně, IDA si udržuje jejich historii.
+
+Pomocí klávesy kbd:[:] resp. kbd:[;] můžete do kódu vkládat komentáře. Komentář se vždy týká objektu, u kterého byl použit, přičemž středníkový komentář ("repeatable comment") se dále kopíruje do všech míst, která s okomentovaným objektem pracují (tzn. pokud nastavíte středníkový komentář k návěští, zobrazí se nejen u samotného návěští, ale i u všech skoků na toto návěští).
+
+Klávesou kbd:[N] můžete pojmenovat symbol, na kterém je zrovna kurzor. Typicky se tato funkce používá pro pojmenování funkcí (např. z `sub_4011b0` tak uděláte `inicializace` s tím, že se tak nahradí všechny výskyty), návěští nebo proměnných (jsou-li vyjádřené symbolicky, tedy ve tvaru `[EBP+hFile]`).
+
+Velmi užitečná klávesa kbd:[X] vám umožňuje zobrazit křížové odkazy (cross-reference), tedy seznam míst, která se odkazují na právě vybraný symbol.

@@ -10,6 +10,9 @@ V reakci na komentáře, které jsem dostal k minianketě (díky za ně!) jsem s
 * Do možností zkoušky přidávám poměrně často žádanou variantu "osobní ústní". Bude provedena přesně tak, jak byl plán pro "online ústní", akorát budete mít možnost přijít na stanovený čas i fyzicky do mé kanceláře namísto připojení online.
 * V zájmu lepšího rozložení látky prohodíme 4. a 5. cvičení: Páté cvičení proběhne v pátém týdnu (20. a 21.10.) a bude tak bezprostředně navazovat na přednášku. Čtvrté cvičení proběhne v sedmém týdnu (3. a 4.11.).
 * Obdobně se prohodí deadliny pro druhou a třetí domácí úlohu: Úloha na třídy, zadaná na pátém cvičení, bude mít deadline 24. a 25.11., úloha na importní tabulku, zadaná na čtvrtém cvičení, bude mít deadline 8. a 9.12.
+* Z titulní stránky je nyní odkaz na materiály předmětu BI-BEK.
+* Ve druhém cvičení jsou uvedeny základní klávesové zkratky pro program IDA.
+* Ve druhé přednášce jsou nově uvedeny obrázky grafů toku kódu pro jednotlivé řídící struktury.
 
 Snad se vám to takto bude líbit. Pokud máte nějaké další návrhy, neváhejte je posílat i nadále!
 

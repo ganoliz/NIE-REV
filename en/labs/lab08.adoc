@@ -13,6 +13,8 @@ Your task is to find such an input that will be accepted by the unmodified progr
 
 == Tips for using IDA Free
 
+Key kbd:[Space] switches between the main views, in particular between the control flow graph and the assembler listing. It can also escape from the "Proximity view" which shows the relationships between functions.
+
 For a basic movement around the code you can use keys kbd:[Enter] and kbd:[Esc]. The kbd:[Enter] key will follow the argument of an instruction and jump to its address. The kbd:[Esc] key will return to the place from which you jumped using kbd:[Enter]. Since IDA maintains a list of these jumps, you can use these keys repeatedly to explore the code.
 
 Several keys allow you to change the way numbers in the instruction's arguments are displayed. Move the cursor to the number and press:

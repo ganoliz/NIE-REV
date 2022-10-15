@@ -198,3 +198,15 @@ If you now look at source code carefully, you can discover that our analysis wen
 
 . The structure has 4 additional `int` elements. These 4 fields were never referenced in the program, so they don't appear in the binary code and we do not know about them at all. We can, however, note that the `SUB ESP, imm` calculates with a proper length. Since this is a unoptimized build of the program, this (unnecessary) information still remains visible.
 . Compilation discards a lot of information (comments, structure boundaries, etc.). This makes any analysis imprecise. Despite this we can obtain a similar (rarely the same) source code as was found in the original, with the same relevant functionality.
+
+== Tips for using IDA Free
+
+Key kbd:[Space] switches between the main views, in particular between the control flow graph and the assembler listing. It can also escape from the "Proximity view" which shows the relationships between functions.
+
+For a basic movement around the code you can use keys kbd:[Enter] and kbd:[Esc]. The kbd:[Enter] key will follow the argument of an instruction and jump to its address. The kbd:[Esc] key will return to the place from which you jumped using kbd:[Enter]. Since IDA maintains a list of these jumps, you can use these keys repeatedly to explore the code.
+
+The kbd:[:] and kbd:[;] keys enable you to add your comments to the code. The comment is always tied to the object that was selected when pressing the key. The difference is that the semicolon-comment ("repeatable comment") is further shown everywhere the linked object is used (i.e. if you add a repeatable comment to a label, you will see that comment not only at that label, but also at all jumps to the label).
+
+You can use the kbd:[N] key to name the selected symbol. This is usually used to name functions (e.g. change `sub_4011b0` to `initFn`, replacing all occurrences of the former), labels or variables (provided that they are expressed symbolically, as in `[EBP+hFile]`).
+
+A very useful key kbd:[X] will display a list of cross-references, that is the list of places where the selected symbol is used.

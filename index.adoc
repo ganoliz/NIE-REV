@@ -217,3 +217,5 @@ Přednášky a svičení budou streamovány v prostředí MS Teams v týmu **B22
 * link:https://teams.microsoft.com/l/team/19%3aXfeIppTFUTEq8nrRsf_86yH5TgdyJSovsvwyQI3seSg1%40thread.tacv2/conversations?groupId=7deb2aa7-3e6d-4631-8a11-3ccb637467b2&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Odkaz na tým]
 * link:https://teams.microsoft.com/l/channel/19%3a549958df64924f5092af2801a1c14def%40thread.tacv2/P%25C5%2599edn%25C3%25A1%25C5%25A1ky?groupId=7deb2aa7-3e6d-4631-8a11-3ccb637467b2&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Přednášky]
 * link:https://teams.microsoft.com/l/channel/19%3aa8da5a40b38b463fa75e883d29aef93a%40thread.tacv2/Cvi%25C4%258Den%25C3%25AD?groupId=7deb2aa7-3e6d-4631-8a11-3ccb637467b2&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Cvičení]
+
+Chcete-li si připomenout nebo doplnit znalosti s předmětu Bezpečný kód, například záležitosti týkající se struktury `.exe` souboru, naleznete je na link:https://courses.fit.cvut.cz/BI-BEK/[Course Pages BI-BEK].
