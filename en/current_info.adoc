@@ -1,7 +1,15 @@
 ﻿
-= Current events: 2022-10-06
+= Current events: 2022-10-15
 :toc:
 :imagesdir: ../media
+
+== 2022-10-15
+
+In response to some of the comments I received in the mini-survey (thank you for them!), I decided to modify a few things:
+
+* It will be possible to attend the online exam physically. That means, it will be conducted in exactly the same way as the online exam, at the same time and with the same grading scheme, except that it will take a form of a face-to-face chat in my office rather than that of a voice-chat in Teams.
+
+I hope you find these changes useful. If you have any more suggestions, please keep them coming!
 
 == 2022-10-06
 

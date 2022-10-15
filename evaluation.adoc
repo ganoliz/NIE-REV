@@ -65,6 +65,8 @@ Pokud po složení zkoušky doodevzdáte další úlohy, budou body ze zkoušky 
 Důvodem pro takto stanovené hodnocení je snaha zajistit v maximální možné míře dosažení účelu zkoušky (tzn. ověření, že student rozumí probrané problematice) při dodržení co nejspravedlivějších podmínek pro všechny: Při distanční zkoušce není možné na jedné straně zamezit pokusům o podvádění a na druhé straně objektivně a přezkoumatelně ohodnotit kvalitu odpovědi. Binární hodnocení lze rozhodnout dosti objektivně a přepočet bodů ze semestru spolu s relativně malým podílem bodů ze zkoušky na celkovém hodnocení eliminuje příliš velké výkyvy, ať už způsobené podvodem nebo např. nervozitou či nezvykem na tento způsob zkoušení. Od dvou otázek si pak slibuji snížení stresu plynoucího z obav, že student zrovna tu jednu položenou otázku nebude vůbec znát.
 ====
 
+Na četné žádosti bude umožněna i varianta distanční zkoušky, na kterou se nebudete připojovat přes Teams, ale fyzicky. Přihlašujete se stále na konkrétní časový termín a v něm proběhne zkouška přesně podle parametrů uvedených výše, ale máte možnost přijít na něj osobně do kanceláře a zkouška proběhne formou face-to-face hovoru namísto voice-chatu.
+
 === Zakončení předmětu bez zkoušky
 
 Získá-li student z domácích úloh a semestrálních prací celkem 50 nebo více bodů, může mu být zkouška prominuta, pokud o to prokazatelně (školním e-mailem) požádá zkoušejícího nejpozději do konce 3. týdne zkouškového období (22.1.2023) a současně se žádného zkouškového termínu nezúčastnil (účastí se rozumí i nedostavení se na zkoušku, na kterou byl student přihlášen). Prominutím zkoušky student získá známku odpovídající počtu bodů dosažených z domácích úloh a semestrálních prací. Zároveň tím ztrácí možnost zúčastnit se jiné varianty zkoušky.

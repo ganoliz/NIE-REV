@@ -1,7 +1,15 @@
 ﻿
-= Aktuality: 06.10.2022
+= Aktuality: 15.10.2022
 :toc:
 :imagesdir: ./media
+
+== 15.10.2022
+
+V reakci na komentáře, které jsem dostal k minianketě (díky za ně!) jsem se rozhodl provést několik dílčích změn:
+
+* Do možností zkoušky přidávám poměrně často žádanou variantu "osobní ústní". Bude provedena přesně tak, jak byl plán pro "online ústní", akorát budete mít možnost přijít na stanovený čas i fyzicky do mé kanceláře namísto připojení online.
+
+Snad se vám to takto bude líbit. Pokud máte nějaké další návrhy, neváhejte je posílat i nadále!
 
 == 06.10.2022
 
