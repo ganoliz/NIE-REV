@@ -65,7 +65,7 @@ image::cv01-obr10.png[]
 
 [TIP]
 ====
-You can read a brief introduction to the Intel assembler link:https://www.cs.virginia.edu/~evans/cs216/guides/x86.html[here] (link:{imagesdir}/x86.htm[local copy]), a somewhat differently focused and newer, but intended for 64bit systems which we don't use and written in a different notation, description by Tom Doeppner link:https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf[here] (link:{imagesdir}/x64_cheatsheet.pdf[local copy]). The reference documentation is of course the link:https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-instruction-set-reference-manual-325383.pdf[Software Developer's Manual] from Intel.
+You can read a brief introduction to the Intel assembler link:https://www.cs.virginia.edu/~evans/cs216/guides/x86.html[here] (link:{imagesdir}/x86.htm[local copy]), a somewhat differently focused and newer, but intended for 64bit systems which we don't use and written in a different notation, description by Tom Doeppner link:https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf[here] (link:{imagesdir}/x64_cheatsheet.pdf[local copy]). Another cheat-sheet for 32bit systems from Nick Harbour link:https://forum.tuts4you.com/files/file/1841-win32-reverse-engineering-cheat-sheet/[here] (link:{imagesdir}/x86_cheatsheet.pdf[local copy]). The reference documentation is of course the link:https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-instruction-set-reference-manual-325383.pdf[Software Developer's Manual] from Intel.
 ====
 
 == Moving around the program

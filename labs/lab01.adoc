@@ -65,7 +65,7 @@ image::cv01-obr10.png[]
 
 [TIP]
 ====
-Stručný popis Intelovského assembleru si můžete přečíst link:https://www.cs.virginia.edu/~evans/cs216/guides/x86.html[zde] (link:{imagesdir}/x86.htm[lokální kopie]), poněkud odlišněji zaměřený a novější, ale určený pro 64bitové systémy, které nepoužíváme, a navíc v jiné notaci, popis Toma Doeppnera link:https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf[zde] (link:{imagesdir}/x64_cheatsheet.pdf[lokální kopie]). Referenčním zdrojem informací je pochopitelně link:https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-instruction-set-reference-manual-325383.pdf[Software Developer's Manual] od Intelu.
+Stručný popis Intelovského assembleru si můžete přečíst link:https://www.cs.virginia.edu/~evans/cs216/guides/x86.html[zde] (link:{imagesdir}/x86.htm[lokální kopie]), poněkud odlišněji zaměřený a novější, ale určený pro 64bitové systémy, které nepoužíváme, a navíc v jiné notaci, popis Toma Doeppnera link:https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf[zde] (link:{imagesdir}/x64_cheatsheet.pdf[lokální kopie]). Další cheat-sheet pro 32bitové systémy od Nicka Harboura link:https://forum.tuts4you.com/files/file/1841-win32-reverse-engineering-cheat-sheet/[zde] (link:{imagesdir}/x86_cheatsheet.pdf[lokální kopie]). Referenčním zdrojem informací je pochopitelně link:https://www.intel.com/content/dam/www/public/us/en/documents/manuals/64-ia-32-architectures-software-developer-instruction-set-reference-manual-325383.pdf[Software Developer's Manual] od Intelu.
 ====
 
 == Orientace v programu
