@@ -27,7 +27,7 @@
 | Oct 20
 | Analysis of C++ classes
 | link:{imagesdir}/rev03en.pdf[slides]
-| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/lecture_03.mp4[video]
+| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/lecture_03.mp4[video]
 
 | 4.
 | Nov 3
