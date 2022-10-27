@@ -35,6 +35,8 @@ Původní verze záznamů můžete nalézt na link:https://web.microsoftstream.c
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_05_103.mp4[Paralelka 103]
 * Cvičení 7:
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_07_101.mp4[Paralelka 101]
+* Cvičení 8:
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_08_101.mp4[Paralelka 101]
 
 == Zimní semestr 2021/22
 
