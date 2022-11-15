@@ -3,7 +3,7 @@
 :imagesdir: ../../media/labs/09
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/tutorial_09.mp4[Recorded tutorial]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/tutorial_09.mp4[Recorded tutorial]
 
 == Materials
 
