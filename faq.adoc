@@ -55,6 +55,10 @@ Rozhodně byste neměli zneužívat administrátorská práva, která v učebně
 
 V zásadě ano, velká většina používaných programů buď přímo má Linuxovou verzi, nebo se aspoň dá spustit ve Wine. Může však být problém s debuggerem, tzn. budou se vám obtížně řešit úlohy vyžadující dynamickou analýzu (v zásadě cvičení 10 a 11 a semestrální práce Crackme od 3. hesla).
 
+=== Maily mi neprochází antispamem, mohu úlohy poslat jinak?
+
+Ne. Odevzdání mailem je povinné, alternativy nejsou akceptovány. Vždy existuje způsob, jak antispam překonat. Můžete například své řešení zkomprimovat s heslem, aby do něj mailový server neviděl. Formát `.7z` je zde obzvláště vhodný, protože v něm lze zaheslovat i hlavičky a server neuvidí ani metadata souborů v archivu.
+
 == Další
 
 === Bourací učebna

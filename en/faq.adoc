@@ -53,6 +53,10 @@ You should definitely not abuse the administrative privileges you are given in t
 
 For the most part, yes --- a vast majority of the tools we are using either has a Linux version or can be run in Wine. You might encounter difficulties with a debugger, though, which would be a handicap in trying to solve tasks intended for dynamic analysis (tutorials 10 and 11 and the semestral work Crackme starting with the 3rd password).
 
+=== My e-mails are being blocked by antispam, can I submit my solutions in a different way?
+
+No. Submission by e-mail is the only permitted one, alternatives are not accepted. There is always a method for overcoming the antispam. You could, for example, compress and encrypt your solution, so that the mailserver cannot check the actual contents. The `.7z` file format is particularly suitable here as it can also encrypt the archive headers and the server won't be able to check even the file metadata.
+
 == Others
 
 === The Lab
