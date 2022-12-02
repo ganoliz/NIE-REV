@@ -39,12 +39,12 @@
 | Dec 1
 | Compiler recognition
 | link:{imagesdir}/rev05en.pdf[slides]
-| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/lecture_05.mp4[video]
+| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/lecture_05.mp4[video]
 
 | 6.
 | Dec 15
 | Debugging and anti-debugging
 | link:{imagesdir}/rev06en.pdf[slides]
-| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/lecture_06.mp4[video]
+| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/lecture_06.mp4[video]
 
 |====
