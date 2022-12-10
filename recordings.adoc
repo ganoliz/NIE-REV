@@ -59,6 +59,10 @@ Původní verze záznamů můžete nalézt na link:https://web.microsoftstream.c
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_10_101.mp4[Paralelka 101]
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_10_102.mp4[Paralelka 102]
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_10_103.mp4[Paralelka 103]
+* Cvičení 12:
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_12_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_12_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_12_103.mp4[Paralelka 103]
 
 == Zimní semestr 2021/22
 

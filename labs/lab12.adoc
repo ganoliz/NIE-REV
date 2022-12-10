@@ -3,7 +3,7 @@
 :imagesdir: ../media/labs/12
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/cviceni_12_102.mp4[Záznam cvičení]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_12_101.mp4[Záznam cvičení]
 
 == Analýza dotnet
 
