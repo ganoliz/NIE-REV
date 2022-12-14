@@ -1,7 +1,14 @@
 ﻿
-= Aktuality: 15.10.2022
+= Aktuality: 14.12.2022
 :toc:
 :imagesdir: ./media
+
+== 14.12.2022
+
+Materiály pro zítřejší přednášku Ing. Jana Rubína:
+
+** link:{imagesdir}/lectures/rev08en.pdf[Přednáška]
+** link:{imagesdir}/itsaunixsystem.zip[Crackme na vyzkoušení]
 
 == 15.10.2022
 

@@ -1,7 +1,14 @@
 ﻿
-= Current events: 2022-10-15
+= Current events: 2022-12-14
 :toc:
 :imagesdir: ../media
+
+== 2022-12-14
+
+Materials for the tomorrow's lecture by Jan Rubín:
+
+** link:{imagesdir}/lectures/rev08en.pdf[Lecture]
+** link:{imagesdir}/itsaunixsystem.zip[Crackme to try out]
 
 == 2022-10-15
 
