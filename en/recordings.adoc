@@ -39,6 +39,8 @@ You can find the original versions of the recordings at link:https://web.microso
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/tutorial_09.mp4[Download]
 * Tutorial 10:
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/tutorial_10.mp4[Download]
+* Tutorial 11:
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/tutorial_11.mp4[Download]
 * Tutorial 12:
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/tutorial_12.mp4[Download]
 
