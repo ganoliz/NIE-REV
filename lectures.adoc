@@ -13,42 +13,42 @@
 ^h| Video
 
 | 1.
-| 22.09.
+| 25.09.
 | Úvod do reverzního inženýrství, analýza zásobníku
 | link:{imagesdir}/rev01en.pdf[anglicky]
 | link:{imagesdir}/rev01cz.pdf[česky]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/prednaska_01.mp4[video]
 
 | 2.
-| 06.10.
+| 09.10.
 | Analýza toku kódu
 | link:{imagesdir}/rev02en.pdf[anglicky]
 | link:{imagesdir}/rev02cz.pdf[česky]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/prednaska_02.mp4[video]
 
 | 3.
-| 20.10.
+| 23.10.
 | Analýza tříd v C++
 | link:{imagesdir}/rev03en.pdf[anglicky]
 | link:{imagesdir}/rev03cz.pdf[česky]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/prednaska_03.mp4[video]
 
 | 4.
-| 03.11.
+| 06.11.
 | Disassembling a obfuskace
 | link:{imagesdir}/rev04en.pdf[anglicky]
 | link:{imagesdir}/rev04cz.pdf[česky]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/prednaska_04.mp4[video]
 
 | 5.
-| 01.12.
+| 20.11.
 | Rozpoznávání kompilátorů
 | link:{imagesdir}/rev05en.pdf[anglicky]
 | link:{imagesdir}/rev05cz.pdf[česky]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/prednaska_05.mp4[video]
 
 | 6.
-| 15.12.
+| 18.12.
 | Debugging a anti-debugging
 | link:{imagesdir}/rev06en.pdf[anglicky]
 | link:{imagesdir}/rev06cz.pdf[česky]

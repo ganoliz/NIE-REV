@@ -1,72 +1,13 @@
 ﻿
-= Current events: 2022-12-14
+= Current events: 2023-09-09
 :toc:
 :imagesdir: ../media
 
-== 2022-12-14
+== 2023-09-09
 
-Materials for the tomorrow's lecture by Jan Rubín:
+Course materials updated for the upcoming semester.
 
-** link:{imagesdir}/lectures/rev08en.pdf[Lecture]
-** link:{imagesdir}/itsaunixsystem.zip[Crackme to try out]
+Several aspects are not definitely established yet and are likely to change. However, I do not want to delay publishing the other, definitive information, because of them.
 
-== 2022-10-15
-
-In response to some of the comments I received in the mini-survey (thank you for them!), I decided to modify a few things:
-
-* It will be possible to attend the online exam physically. That means, it will be conducted in exactly the same way as the online exam, at the same time and with the same grading scheme, except that it will take a form of a face-to-face chat in my office rather than that of a voice-chat in Teams.
-* In order to get a better continuity between the lectures and the tutorials, we will exchange the 4th and the 5th tutorial: The fifth tutorial will take place in the fifth week (October 21st) to follow after the lecture. The fourth tutorial will take place in the seventh week (November 4th).
-* Similarly, the deadlines for the second and the third homework will be exchanged: The homework on classes, assigned during the 5th tutorial, will have a deadline on November 25th. The homework on import address table, assigned during the 4th tutorial, will have a deadline on December 9th.
-* You can find a link to the Secure Code course materials from the main page.
-* The second tutorial now lists basic keyboard shortcuts for IDA.
-* The second lecture now contains control flow graph examples for the control structures discussed.
-
-I hope you find these changes useful. If you have any more suggestions, please keep them coming!
-
-== 2022-10-06
-
-The assignments for the xref:projects/crackme.adoc[semestral work Crackme] are now available for download.
-
-== 2022-09-20
-
-Both guest lecturers confirmed their attendance. As a result, you can look forward to a talk about reverse engineering high-level code by Martin Jirkal (ESET) in the 12th-week's tutorial (on December 9th) and to a practical demonstration of the use of reverse engineering in malware analysis by Jan Rubín (Avast) in the 13th-week's lecture (December 15th).
-
-Please note that Jan Rubín does not want his lecture to be recorded, which means it will **only be available live** for the students present on it. Please make sure you have time to attend it -- it's worth it.
-
-In order to fit both lectures into the schedule, several modifications had to be made:
-
-* The sixth lecture (debugging and antidebugging) will be presented in the 11th-week tutorial.
-* The thirteenth tutorial (injection) will be canceled. You can still listen to it from the last year's recording and complete the bonus task if you want to.
-
-== 2022-09-09
-
-The course materials were updated for the upcoming semester.
-
-The lectures and tutorials for Reverse engineering in this semester will be presented live. Should the epidemiological and/or energetical situation take a turn to the worse, we may have to switch to an online presentation using MS Teams; I will notify you of this change both here and using an e-mail sent from KOS.
-
-=== Important changes to the regular schedule
-
-Basic facts:
-
-* Due to important personal reasons, I am forced to cancel the tutorial on October 14th.
-* Friday, October 28th, is a national holiday.
-* Thursday, November 11th, is also a national holiday.
-* Friday, November 18th, is the Dean's Day and the tutorial is moved to Tuesday, November 15th.
-
-That means that we will lose one lecture and two tutorials. In order to minimize the damage, I decided to reorganize the tutorials in this way:
-
-* We will cover tutorial 4 on Friday, October 21st.
-* We will cover tutorial 5 on Friday, November 4th.
-* We will cover tutorial 8 on Friday, November 11th.
-* We will cover tutorial 9 on Tuesday, November 15th.
-
-That means that we will lose tutorial 6 (which is not really a part of this course anymore as we moved it to the prerequisite course BIE-BEK) and tutorial 7 (which is intended for consultations anyway, with the remaining spaced filled with not-really-that-important exploration of how the concepts we observe during the course change in a 64bit environment), and the other tutorials will be slightly shifted around.
-
-Furthermore, the national holiday of November 17th causes a desynchronization between the lectures and the tutorials -- lectures 5 and 6 will be delayed by two weeks which would affect the tutorials which depend on them. To fix that, we will exchange tutorials 11 and 13, that is:
-
-* We will cover tutorial 13 on Friday 2nd.
-* We will cover tutorial 11 on Friday 16th.
-
-All the other days will be done as per usual.
-
-I apologize for this overly complex rearrangement, but I couldn't figure out a better solution. You should find an easier-to-understand representation of the same thing xref:index.adoc#_schedule[in a table form] on the main page of the course.
+- The precise date of xref:labs/lab12.adoc[Martin Jirkal's 12th tutorial] is yet to be established.
+- The xref:projects/keygen.adoc[Keygen semestral work] will probably undergo a complete rewrite to overcome its compatibility issues.

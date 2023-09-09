@@ -5,9 +5,9 @@
 
 * Počet bodů: *5*
 * Termín odevzdání:
-** *24.11. 19:30* (paralelka 101)
-** *25.11. 17:45* (paralelka 102)
-** *25.11. 19:30* (paralelka 103)
+** *18.12. 16:00* (paralelka 101)
+** *18.12. 19:30* (paralelka 102)
+** *19.12. 19:30* (paralelka 103)
 
 Analyzujte program `Had.exe` z archivu link:{imagesdir}/du3.zip[du3.zip].
 
@@ -20,6 +20,7 @@ Analyzujte program `Had.exe` z archivu link:{imagesdir}/du3.zip[du3.zip].
 ** Součástí popisu by měla být i argumentace, co konkrétně v pozorovaných datech svědčí pro vámi zvolenou hierarchii a vylučuje hierarchie alternativní.
 ** Zjistíte, že hierarchie vykazuje určité zvláštnosti. Upozorněte na tyto zvláštnosti a vysvětlete, co znamenají a jak k nim došlo (co je způsobilo). Vaše vysvětlení nemusí být nutně zcela přesné (z binárky nejde jednoduše určit, která z možných příčin je ta správná), ale mělo by být konzistentní s pozorovanými skutečnostmi.
 * *Bonus:* Upravte program tak, abyste měli 1000 životů. *2 body*
+** Deadline pro bonus je do konce semestru (18.02.2024, 8:00).
 
 == Poznámky k úloze
 

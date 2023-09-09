@@ -4,7 +4,7 @@
 :toc:
 
 * Points: *10*
-* Deadline: *December 9, 16:00*
+* Deadline: *November 28, 17:45*
 
 Your program compiled with MS Visual Studio typically depends on an external runtime library such as `MSVCRT12.DLL` (the version in the name may vary according to the compiler version, this name applies to Visual Studio 2013). This library contains functions `malloc`, `calloc`, `realloc`, and `free`. Write a program which will contain functions:
 
@@ -52,6 +52,11 @@ The link:https://courses.fit.cvut.cz/BI-BEK/media/lectures/bek02en.pdf[second le
 
 == Common Errors
 
+[IMPORTANT]
+====
+The main output of the application is a notification of cases when the application incorrectly manages memory -- for example, it allocated some memory block but then failed to free it. On the other hand, we don't need a log of memory operations (it's not an error to have it, but on its own it is not a sufficient solution of the homework).
+====
+
 [NOTE]
 ====
 When processing the import directory, you don't need to support any other thunks than pointers to `IMAGE_IMPORT_BY_NAME`, but aside from that your code should be compatible with any import directory, including a malformed one. It's perfectly legitimate to emit a warning that the import directory is damaged and the application will terminate, but it's not acceptable if you simply crash on a memory access which you could have detected as incorrect by strictly following PE specifications.
@@ -75,4 +80,9 @@ Your implementation should adhere to the specification of the substituted functi
 [NOTE]
 ====
 Make sure your code works fine even if the `MallocDebug_Init` and `MallocDebug_Done` functions are called multiple times and in any order.
+====
+
+[NOTE]
+====
+Beware of code that you find online. First of all, if you do use a code that was created by someone else, you should properly cite the source. Furthermore, you are supposed to learn something about the IAT internals; using someone else's code doesn't help much in that regard. Finally, quite commonly such code works but is not correct. If you use that code, you will need to fix any bugs in it, and that will likely be more difficult than writing your own code from scratch.
 ====

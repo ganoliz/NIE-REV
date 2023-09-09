@@ -1,24 +1,76 @@
 ﻿
-= 7. Konzultace, 64bitový kód
+= 7. Injekce
 :imagesdir: ../media/labs/07
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_07_101.mp4[Záznam cvičení]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/cviceni_13_102.mp4[Záznam cvičení]
 
-Cvičení je primárně určeno pro konzultace vašich řešení domácích úloh, případně dalších témat týkajících se reverzního inženýrství.
+Cílem cvičení je injektovat proces `GUIToSteal.exe` vlastním kódem tak, aby bylo možné z procesu zkopírovat hodnotu hesla v editačním poli.
 
-Ve zbylém čase se podíváme také na odlišnosti mezi 32bitovým a 64bitovým kódem. Využijeme k tomu jednoduchý 64bitový program link:{imagesdir}/cv07.zip[cv07.zip].
+* link:{imagesdir}/cv07.zip[Download]
 
-. Otevřete program  v debuggeru.
-. Na začátku programu je volána funkce na offsetu `2268`. Pokuste se porozumět tomu, co dělá. Následně udělejte totéž v programu IDA Pro a srovnejte výhody a nevýhody obou přístupů.
-* Vysvětlete význam první instrukce.
-* Rozkreslete rámec zásobníku, identifikujte jednotlivé proměnné a jejich použití.
-* Jaký význam má konstanta `2B992DDFA232h`?
-* Kdybychom tuto funkci vůbec nezavolali (např. bychom nahradili `CALL` na začátku programu posloupností instrukcí `NOP`, co by se stalo? Fungoval by program stále? Nebo co by se v jeho činnosti změnilo?
-. Nalezněte funkci `main`.
-* Všimněte si, že funkce `main` vůbec nepoužívá registr `RBP`. Jak je to možné?
-* Proč se hned na začátku funkce ukládají argumenty na zásobník?
-* Identifikujte prolog funkce. Zbytek prvního základního bloku už reprezentuje začátek těla funkce. Vysvětlete smysl jednotlivých instrukcí a vysvětlete, jak by se lišily, pokud by byl program zkompilován jako 32bitový. Vyzkoušejte v debuggeru, která instrukce je zodpovědná za vynulování horních 32 bitů registru `RAX`.
-* Identifikujte epilog funkce a ukažte, jak jeho instrukce odpovídají instrukcím z prologu.
-* Pokuste se odhadnout smysl jednotlivých funkcí volaných z funkce `main`. Nemusíte zkoumat přímo samotné funkce, ve většině případů se vám podaří informaci získat už jen z jejich argumentů, případně můžete pozorovat činnost programu při běhu.
-. Nalezněte některé volání API funkcí Windows. Z přednášky víme, že funkce z Windows API typicky používají volací konvenci `__stdcall`. Srovnejte způsob, jak jsou volány API funkce a vestavěné funkce našeho programu. Čím si vysvětlujete svá pozorování?
+== Nápověda
+
+K získání textu z editačního pole můžete použít například funkce:
+
+* link:https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getdlgitemtexta[GetDlgItemText], nebo
+* link:https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getdlgitem[GetDlgItem] a link:https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowtexta[GetWindowText].
+
+Musíte je ovšem zavolat přímo z procesu, který okno spravuje. K tomu využijeme postup nazývaný injekce (Injection).
+
+[NOTE]
+====
+Všechny tyto funkce pracují s datovým typem `HWND`, který identifikuje okno (pojem okna není omezen pouze na fyzické okno, jak ho zná uživatel; i například tlačítko nebo políčko s heslem jsou okna). Datový typ `HWND` je `HANDLE` a jde obecně o identifikátor objektu. V některých případech může `Hxxx` být "maskovaným" ukazatelem (např. `HMODULE` je ukazatel `PIMAGE_DOS_HEADER`) -- obecně to ale neplatí.
+====
+
+=== Postup krádeže hesla
+
+. Nalezneme okno aplikace pomocí funkce link:https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-findwindowa[FindWindow] a funkcí link:https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowthreadprocessid[GetWindowThreadProcessId] zjistíme ID procesu, kterému patří.
+. Získáme handle procesu pomocí link:https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocess[OpenProcess].
+. Pomocí funkce link:https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-virtualallocex[VirtualAllocEx] můžeme v tomto procesu alokovat paměť, funkcí link:https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-writeprocessmemory[WriteProcessMemory] můžeme do takto alokované paměti zapsat naše data. Zapíšeme tedy kód, který zavolá některou z funkcí pro přečtení hesla a nějakým způsobem ho předá útočníkovi (může např. zapsat do dat, která si útočník alokoval a později je přečte pomocí link:https://docs.microsoft.com/en-us/windows/win32/api/memoryapi/nf-memoryapi-readprocessmemory[ReadProcessMemory], nebo můžeme pomocí `WriteProcessMemory` zapsat přímo do paměti útočníka; další možností je např. uložení hesla do souboru nebo využití pojmenované roury).
+. Když je vše připraveno, spustíme vytvořený kód pomocí funkce link:https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-createremotethread[CreateRemoteThread].
+. Počkáme, až náš kód doběhne, pomocí funkce link:https://docs.microsoft.com/en-us/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject[WaitForSingleObject], která dostane jako jeden z parametrů handle našeho vlákna.
+
+[TIP]
+====
+Nebude patrně stačit jen injektovat kód, budete mu také muset předat některá data. `CreateRemoteThread` umí předat spouštěnému vláknu jeden parametr -- může to tedy být ukazatel na nějakou vaši strukturu.
+====
+
+[IMPORTANT]
+====
+Pozor! Nevíte, jakou adresu vám `VirtualAllocEx` vrátí. Znamená to tedy buď napsat kód, který poběží na libovolné adrese, nebo se o úpravu jeho adres postarat vlastními silami. Asi nejjednodušší i z hlediska ladění je umístit vlastní výkonný kód do samostatného DLL a do procesu injektovat jen kratičký kód, který zavolá link:https://docs.microsoft.com/en-us/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibrarya[LoadLibrary] s potřebnými parametry: vaše knihovna bude načtena do paměti procesu, spustí se její funkce `DllMain`, kde můžete provést veškeré útočné činnosti, a potom vlákno ukončíte. Celé vlákno se tak bude skládat jen z několika málo strojových instrukcí, které lze snadno napsat tak, aby fungovaly vždy stejně bez ohledu na umístění v paměti.
+====
+
+[TIP]
+====
+Pro využití `LoadLibrary` triku výše dokonce nemusíte napsat vůbec žádný kód v assembleru, pokud si dobře prohlédnete specifikace funkcí `CreateRemoteThread` a `LoadLibrary`.
+====
+
+=== Ladění injektovaného procesu
+
+. Zastavte váš injektor před funkcí `CreateRemoteThread`.
+. Zjistěte adresu, kde se bude pouštět injektovaný thread (`lpStartAddress`).
+. Otevřete OllyDbg a připojte se na injektovaný proces.
+. Nastavte breakpoint na zjištěnou adresu injektovaného kódu a spusťte proces.
+. Spusťte váš injektor.
+
+=== Demonstrační kódy
+
+* link:{imagesdir}/cv07.reseni.zip[Příklad řešení pomocí injektnutého vlákna]
+* link:{imagesdir}/cv07.reseni-dll.zip[Příklad řešení pomocí injektnuté DLL]
+** Pozor, tento kód obsahuje chyby. Nepřebírejte ho jen tak, důkladně zvažte, co jednotlivé kroky mají dělat a co skutečně dělají.
+
+== Zadání bonusové úlohy
+
+* Počet bodů: *3*
+* Termín odevzdání: *18.02.2024 8:00* (všechny paralelky)
+
+Vraťte se ke xref:lab04.adoc[druhé domácí úloze]. V ní jsme řešili, jak pomocí úpravy IAT změnit volání paměťových funkcí tak, aby se napřed zavolal náš logovací kód a teprve potom bylo řízení předáno původním funkcím. To nám umožnilo jednoduše sledovat alokace, ale bohužel jenom přímo v našem programu. S technikou injekce ovšem dokážeme úlohu snadno adaptovat tak, aby byla použitelná i pro cizí programy.
+
+=== Základní postup
+
+. Přesuňte kód řešící implementaci `MallocDebug` funkcí do samostatného zdrojového souboru.
+. Doplňte `DllMain` funkci, která zavolá `MallocDebug_init` při připojení k procesu a `MallocDebug_done` při odpojení od něj. link:https://docs.microsoft.com/en-us/windows/win32/dlls/dllmain[Dokumentace na MSDN] to má přehledně popsané.
+. Sestavte z tohoto souboru DLL knihovnu použitím parametru `/DLL` při linkování. Příklad je uveden v link:https://courses.fit.cvut.cz/BI-BEK/labs/lab02.html[druhém cvičení BI-BEK].
+. Vytvořte jednoduchý injektor, který na příkazové řádce přijme cestu k DLL souboru a ID procesu (PID). Pomocí API funkce `OpenProcess` získáte k PID handle procesu a následně provedete injekci obdobně, jako bylo popsáno výše.
+. Upravte svůj kód pro testování paměťových funkcí tak, aby po spuštění programu počkal na potvrzení uživatele a teprve potom začal pracovat. Spusťte upravený program, ve Správci procesů zjistěte jeho PID a zavolejte injektor se správnými parametry. Profit!

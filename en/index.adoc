@@ -21,7 +21,7 @@ Students will get acquainted with the essentials of reverse engineering of compu
 
 == Teachers
 
-*Josef Kokeš*
+*Ing. Josef Kokeš, Ph.D.*
 
 * E-mail: mailto:josef.kokes@fit.cvut.cz[josef.kokes@fit.cvut.cz]
 * Office: TH:A-1137
@@ -44,35 +44,35 @@ Students will get acquainted with the essentials of reverse engineering of compu
 | xref:homeworks/email.adoc[E-mail]
 | 5
 | 3rd week
-| November 4, 16:00
+| November 7, 17:45
 
 | xref:homeworks/iat.adoc[IAT]
 | 10
-| 7th week
-| December 9, 16:00
+| 4th week
+| November 28, 17:45
 
 | xref:homeworks/snake.adoc[Snake]
 | 5
 | 5th week
-| November 25, 16:00
+| December 19, 17:45
 
 | xref:projects/crackme.adoc[Crackme]
 | 30+
 | 3rd week
-| February 19, 8:00
+| February 18, 8:00
 
 | xref:projects/keygen.adoc[Keygen]
 | 20
 | 1st week
-| February 19, 8:00
+| February 18, 8:00
 
-| xref:labs/lab13.adoc[Bonus]
+| xref:labs/lab07.adoc[Bonus]
 | 3
-| 13th week
-| February 19, 8:00
+| 7th week
+| February 18, 8:00
 |====
 
-== Schedule
+== Course schedule
 
 [options="autowidth", cols=4]
 |====
@@ -82,75 +82,74 @@ Students will get acquainted with the essentials of reverse engineering of compu
 <h| Tutorial
 
 | 1.
-| September 22 and 23
+| September 25 and 26
 | link:{lectdir}/rev01en.pdf[Lecture 1]
 | xref:{labdir}/lab01.adoc[Tutorial 1]
 
 | 2.
-| September 29 and 30
+| October 2 and 3
 | --
 | xref:{labdir}/lab02.adoc[Tutorial 2]
 
 | 3.
-| October 6 and 7
+| October 9 and 10
 | link:{lectdir}/rev02en.pdf[Lecture 2]
 | xref:{labdir}/lab03.adoc[Tutorial 3]
 
 | 4.
-| October 13 and 14
+| October 16 and 17
 | --
-| --
+| xref:{labdir}/lab04.adoc[Tutorial 4]
 
 | 5.
-| October 20 and 21
+| October 23 and 24
 | link:{lectdir}/rev03en.pdf[Lecture 3]
 | xref:{labdir}/lab05.adoc[Tutorial 5]
 
 | 6.
-| October 27 and 28
+| October 30 and 31
 | --
-| --
+| xref:{labdir}/lab06.adoc[Tutorial 6]
 
 | 7.
-| November 3 and 4
-| link:{lectdir}/rev04en.pdf[Lecture 4]
-| xref:{labdir}/lab04.adoc[Tutorial 4]
+| November 6 and 7
+| link:{lectdir}/rev04en.pdf[Lecture 4] +
+(first part)
+| xref:{labdir}/lab07.adoc[Tutorial 7]
 
 | 8.
-| November 10 and 11
+| November 13 and 14
 | --
 | xref:{labdir}/lab08.adoc[Tutorial 8]
 
 | 9.
-| **TUESDAY November 15**
-| --
+| November 20 and 21
+| link:{lectdir}/rev04en.pdf[Lecture 4] +
+link:{lectdir}/rev05en.pdf[Lecture 5]
 | xref:{labdir}/lab09.adoc[Tutorial 9]
 
 | 10.
-| November 24 and 25
+| November 27 and 28
 | --
 | xref:{labdir}/lab10.adoc[Tutorial 10]
 
 | 11.
-| December 1 and 2
-| link:{lectdir}/rev04en.pdf[Lecture 4] +
-link:{lectdir}/rev05en.pdf[Lecture 5]
-| link:{lectdir}/rev06en.pdf[Lecture 6]
-
-| 12.
-| December 8 and 9
-| --
-| xref:{labdir}/lab12.adoc[Tutorial 12]
-
-| 13.
-| December 15 and 16
+| December 4 and 5
 | Guest lecture +
 by Jan Rubín
 | xref:{labdir}/lab11.adoc[Tutorial 11]
 
-|====
+| 12.
+| December 11 and 12
+| --
+| xref:{labdir}/lab12.adoc[Tutorial 12]
 
-(Reasons for these shifts are explained in the xref:current_info.adoc#_important-changes-to-the-regular-schedule[first current event].)
+| 13.
+| December 18 and 19
+| link:{lectdir}/rev06en.pdf[Lecture 6]
+| xref:{labdir}/lab13.adoc[Tutorial 13]
+
+|====
 
 ////
 * *2019-12-02 (week 11)*:
@@ -169,8 +168,8 @@ Runtime libraries for various versions of Visual Studio can be downloaded here: 
 
 The lectures and tutorials will be streamed live in MS Teams in channel **B221-NI-REV+NIE-REV**:
 
-* link:https://teams.microsoft.com/l/team/19%3aXfeIppTFUTEq8nrRsf_86yH5TgdyJSovsvwyQI3seSg1%40thread.tacv2/conversations?groupId=7deb2aa7-3e6d-4631-8a11-3ccb637467b2&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Link for the class]
-* link:https://teams.microsoft.com/l/channel/19%3ab9cd2e1fe119437f8b01a971a9f359f5%40thread.tacv2/Lectures?groupId=7deb2aa7-3e6d-4631-8a11-3ccb637467b2&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Lectures]
-* link:https://teams.microsoft.com/l/channel/19%3ac89d87bd94704cc6974c964a6c8ccc0f%40thread.tacv2/Tutorials?groupId=7deb2aa7-3e6d-4631-8a11-3ccb637467b2&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Tutorials]
+* link:https://teams.microsoft.com/l/team/19%3aWOa1gsORhbp6Pw9QJLrIpPzC3KgUOHJxkzKYUKCsCVc1%40thread.tacv2/conversations?groupId=f34e63b1-c2c0-4954-a5c9-62e46fc8a03c&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Link for the team]
+* link:https://teams.microsoft.com/l/channel/19%3ac73c118eb67d462cbc4ac2944bbd3b86%40thread.tacv2/EN-Lectures?groupId=f34e63b1-c2c0-4954-a5c9-62e46fc8a03c&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Lectures]
+* link:https://teams.microsoft.com/l/channel/19%3a3bf6785f4543441ab144de8d45606c95%40thread.tacv2/EN-Tutorials?groupId=f34e63b1-c2c0-4954-a5c9-62e46fc8a03c&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Tutorials]
 
 If you'd like to look up some information from the Secure Code course, in particular the details regarding the `.exe` file structure, you will find the materials at the link:https://courses.fit.cvut.cz/BI-BEK/en/[Course Pages for BIE-BEK].

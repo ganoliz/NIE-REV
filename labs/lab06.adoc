@@ -1,10 +1,24 @@
 ﻿
-= 6. Martin Jirkal (ESET): Malware
+= 6. Konzultace, 64bitový kód
 :imagesdir: ../media/labs/06
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2020/cz/prednaska_07.mp4[Záznam cvičení]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_07_101.mp4[Záznam cvičení]
 
-[line-through]#Martin Jirkal z firmy ESET povede cvičení na téma malware.#
+Cvičení je primárně určeno pro konzultace vašich řešení domácích úloh, případně dalších témat týkajících se reverzního inženýrství.
 
-Přednáška byla přesunuta do předmětu link:https://courses.fit.cvut.cz/BI-BEK[Bezpečný kód].
+Ve zbylém čase se podíváme také na odlišnosti mezi 32bitovým a 64bitovým kódem. Využijeme k tomu jednoduchý 64bitový program link:{imagesdir}/cv06.zip[cv06.zip].
+
+. Otevřete program  v debuggeru.
+. Na začátku programu je volána funkce na offsetu `2268`. Pokuste se porozumět tomu, co dělá. Následně udělejte totéž v programu IDA Pro a srovnejte výhody a nevýhody obou přístupů.
+* Vysvětlete význam první instrukce.
+* Rozkreslete rámec zásobníku, identifikujte jednotlivé proměnné a jejich použití.
+* Jaký význam má konstanta `2B992DDFA232h`?
+* Kdybychom tuto funkci vůbec nezavolali (např. bychom nahradili `CALL` na začátku programu posloupností instrukcí `NOP`, co by se stalo? Fungoval by program stále? Nebo co by se v jeho činnosti změnilo?
+. Nalezněte funkci `main`.
+* Všimněte si, že funkce `main` vůbec nepoužívá registr `RBP`. Jak je to možné?
+* Proč se hned na začátku funkce ukládají argumenty na zásobník?
+* Identifikujte prolog funkce. Zbytek prvního základního bloku už reprezentuje začátek těla funkce. Vysvětlete smysl jednotlivých instrukcí a vysvětlete, jak by se lišily, pokud by byl program zkompilován jako 32bitový. Vyzkoušejte v debuggeru, která instrukce je zodpovědná za vynulování horních 32 bitů registru `RAX`.
+* Identifikujte epilog funkce a ukažte, jak jeho instrukce odpovídají instrukcím z prologu.
+* Pokuste se odhadnout smysl jednotlivých funkcí volaných z funkce `main`. Nemusíte zkoumat přímo samotné funkce, ve většině případů se vám podaří informaci získat už jen z jejich argumentů, případně můžete pozorovat činnost programu při běhu.
+. Nalezněte některé volání API funkcí Windows. Z přednášky víme, že funkce z Windows API typicky používají volací konvenci `__stdcall`. Srovnejte způsob, jak jsou volány API funkce a vestavěné funkce našeho programu. Čím si vysvětlujete svá pozorování?

@@ -69,11 +69,11 @@ Na četné žádosti bude umožněna i varianta distanční zkoušky, na kterou 
 
 === Zakončení předmětu bez zkoušky
 
-Získá-li student z domácích úloh a semestrálních prací celkem 50 nebo více bodů, může mu být zkouška prominuta, pokud o to prokazatelně (školním e-mailem) požádá zkoušejícího nejpozději do konce 3. týdne zkouškového období (22.1.2023) a současně se žádného zkouškového termínu nezúčastnil (účastí se rozumí i nedostavení se na zkoušku, na kterou byl student přihlášen). Prominutím zkoušky student získá známku odpovídající počtu bodů dosažených z domácích úloh a semestrálních prací. Zároveň tím ztrácí možnost zúčastnit se jiné varianty zkoušky.
+Získá-li student z domácích úloh a semestrálních prací celkem 50 nebo více bodů, může mu být zkouška prominuta, pokud o to prokazatelně (školním e-mailem) požádá zkoušejícího nejpozději do konce 3. týdne zkouškového období (21.1.2024) a současně se žádného zkouškového termínu nezúčastnil (účastí se rozumí i nedostavení se na zkoušku, na kterou byl student přihlášen). Prominutím zkoušky student získá známku odpovídající počtu bodů dosažených z domácích úloh a semestrálních prací. Zároveň tím ztrácí možnost zúčastnit se jiné varianty zkoušky.
 
 == Celkové hodnocení
 
-Hodnocení se řídí aktuálním link:https://www.cvut.cz/vnitrni-predpisy[Studijním a zkušebním řádem ČVUT] ( link:https://www.cvut.cz/sites/default/files/content/74c76d2e-7f4d-4cb1-ac28-b0765c7f88f2/cs/20211023-studijni-a-zkusebni-rad-pro-studenty-cvut-v-praze-iv-uplne-zneni-ucinnost-od-20-9-2021.pdf[PDF] ).
+Hodnocení se řídí aktuálním link:https://www.cvut.cz/vnitrni-predpisy[Studijním a zkušebním řádem ČVUT] ( link:https://www.cvut.cz/sites/default/files/content/74c76d2e-7f4d-4cb1-ac28-b0765c7f88f2/cs/20221021-studijni-a-zkusebni-rad-pro-studenty-cvut-v-praze-viii-uplne-zneni-ucinnost-od-29-10-2022.pdf[PDF] ).
 
 [options="autowidth", cols=3*]
 |====

@@ -5,9 +5,9 @@
 
 * Počet bodů: *10*
 * Termín odevzdání:
-** *08.12. 19:30* (paralelka 101)
-** *09.12. 17:45* (paralelka 102)
-** *09.12. 19:30* (paralelka 103)
+** *27.11. 16:00* (paralelka 101)
+** *27.11. 19:30* (paralelka 102)
+** *28.11. 19:30* (paralelka 103)
 
 Váš program, zkompilovaný pomocí MS Visual Studio, typicky používá externí runtime ve formě knihovny `MSVCRT12.DLL` (verze ve jménu se může lišit podle verze kompilátoru, tento název platí pro Visual Studio 2013). Tato knihovna obsahuje funkce `malloc`, `calloc`, `realloc` a `free`. Napište program, který bude obsahovat funkce:
 
@@ -55,6 +55,11 @@ link:https://courses.fit.cvut.cz/BI-BEK/media/lectures/bek02cz.pdf[Druhá předn
 
 == Typické chyby
 
+[IMPORTANT]
+====
+Hlavním výstupem programu je výpis případů, kdy aplikace pracuje s pamětí špatně -- např. alokovala nějaký paměťový blok a už ho nikdy neuvolnila. Naproti tomu nepotřebujeme výpis jednotlivých prováděných operací (není chybou ho mít, ale sám o sobě není dostačujícím řešením úlohy).
+====
+
 [NOTE]
 ====
 Při zpracování importního adresáře nemusíte řešit jiný obsah importního thunku než odkaz na `IMAGE_IMPORT_BY_NAME`, ale jinak musíte zpracovat libovolný, i poškozený, importní adresář. Upozornit, že adresář je vadný, a ukončit program je legitimní, spadnout na neplatný přístup do paměti tam, kde jste to mohli zpracováním dle specifikace ošetřit, nikoliv.
@@ -78,4 +83,9 @@ Vaše implementace by měla odpovídat specifikaci zaměňovaných funkcí. Nast
 [NOTE]
 ====
 Počítejte s možností, že funkce `MallocDebug_Init` a `MallocDebug_Done` mohou být volány opakovaně a v libovolném pořadí.
+====
+
+[NOTE]
+====
+Pozor na kód, který naleznete online. Za prvé, pokud použijete cizí kód, měli byste ho správně citovat. Za druhé, cílem úlohy je, naučit se něco o chování importní tabulky; pokud použijete cizí kód, tak vám to v dosažení tohoto cíle nepomůže. Za třetí, cizí kód mnohdy sice funguje, ale nefunguje zcela správně. Pokud ho budete chtít použít, budu od vás chtít opravit chyby, které obsahuje, a to bude pravděpodobně obtížnější, než když si napíšete svůj vlastní kód od nuly.
 ====

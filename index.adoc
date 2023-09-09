@@ -21,7 +21,7 @@ Studenti budou v rámci předmětu seznámeni se základy reverzního inženýrs
 
 == Učitelé
 
-*Josef Kokeš*
+*Ing. Josef Kokeš, Ph.D.*
 
 * E-mail: mailto:josef.kokes@fit.cvut.cz[josef.kokes@fit.cvut.cz]
 * Kancelář: TH:A-1137
@@ -49,47 +49,47 @@ Par.103
 | xref:homeworks/email.adoc[E-mail]
 | 5
 | 3. týden
-| 03.11. 19:30
-| 04.11. 17:45
-| 04.11. 19:30
+| 06.11. 16:00
+| 06.11. 19:30
+| 07.11. 19:30
 
 | xref:homeworks/iat.adoc[IAT]
 | 10
-| 7. týden
-| 08.12. 19:30
-| 09.12. 17:45
-| 09.12. 19:30
+| 4. týden
+| 27.11. 16:00
+| 27.11. 19:30
+| 28.11. 19:30
 
 | xref:homeworks/snake.adoc[Had]
 | 5
 | 5. týden
-| 24.11. 19:30
-| 25.11. 17:45
-| 25.11. 19:30
+| 18.12. 16:00
+| 18.12. 19:30
+| 19.12. 19:30
 
 | xref:projects/crackme.adoc[Crackme]
 | 30+
 | 3. týden
-| 19.02. 8:00
-| 19.02. 8:00
-| 19.02. 8:00
+| 18.02. 8:00
+| 18.02. 8:00
+| 18.02. 8:00
 
 | xref:projects/keygen.adoc[Keygen]
 | 20
 | 1. týden
-| 19.02. 8:00
-| 19.02. 8:00
-| 19.02. 8:00
+| 18.02. 8:00
+| 18.02. 8:00
+| 18.02. 8:00
 
-| xref:labs/lab13.adoc[Bonus]
+| xref:labs/lab07.adoc[Bonus: Injekce]
 | 3
-| 13. týden
-| 19.02. 8:00
-| 19.02. 8:00
-| 19.02. 8:00
+| 7. týden
+| 18.02. 8:00
+| 18.02. 8:00
+| 18.02. 8:00
 |====
 
-== Plán výuky
+== Časový plán výuky
 
 [options="autowidth", cols=6]
 |====
@@ -101,101 +101,100 @@ Par.103
 <h| Cvičení par. 103
 
 | 1.
-| 22.09. a 23.09.
+| 25.09. a 26.09.
 | link:{lectdir}/rev01cz.pdf[Přednáška 1]
 | xref:{labdir}/lab01.adoc[Cvičení 1]
 | xref:{labdir}/lab01.adoc[Cvičení 1]
 | xref:{labdir}/lab01.adoc[Cvičení 1]
 
 | 2.
-| 29.09. a 30.09.
+| 02.10. a 03.10.
 | --
 | xref:{labdir}/lab02.adoc[Cvičení 2]
 | xref:{labdir}/lab02.adoc[Cvičení 2]
 | xref:{labdir}/lab02.adoc[Cvičení 2]
 
 | 3.
-| 06.10. a 07.10.
+| 09.10. a 11.10.
 | link:{lectdir}/rev02cz.pdf[Přednáška 2]
 | xref:{labdir}/lab03.adoc[Cvičení 3]
 | xref:{labdir}/lab03.adoc[Cvičení 3]
 | xref:{labdir}/lab03.adoc[Cvičení 3]
 
 | 4.
-| 13.10. a 14.10.
+| 16.10. a 17.10.
 | --
-| xref:{labdir}/lab07.adoc[Cvičení 7]
-| --
-| --
+| xref:{labdir}/lab04.adoc[Cvičení 4]
+| xref:{labdir}/lab04.adoc[Cvičení 4]
+| xref:{labdir}/lab04.adoc[Cvičení 4]
 
 | 5.
-| 20.10. a 21.10.
+| 23.10. a 24.10.
 | link:{lectdir}/rev03cz.pdf[Přednáška 3]
 | xref:{labdir}/lab05.adoc[Cvičení 5]
 | xref:{labdir}/lab05.adoc[Cvičení 5]
 | xref:{labdir}/lab05.adoc[Cvičení 5]
 
 | 6.
-| 27.10. a 28.10.
+| 30.10. a 31.10.
 | --
-| xref:{labdir}/lab08.adoc[Cvičení 8]
-| --
-| --
+| xref:{labdir}/lab06.adoc[Cvičení 6]
+| xref:{labdir}/lab06.adoc[Cvičení 6]
+| xref:{labdir}/lab06.adoc[Cvičení 6]
 
 | 7.
-| 03.11. a 04.11.
-| link:{lectdir}/rev04cz.pdf[Přednáška 4]
-| xref:{labdir}/lab04.adoc[Cvičení 4]
-| xref:{labdir}/lab04.adoc[Cvičení 4]
-| xref:{labdir}/lab04.adoc[Cvičení 4]
+| 06.11. a 07.11.
+| link:{lectdir}/rev04cz.pdf[Přednáška 4] +
+(první část)
+| xref:{labdir}/lab07.adoc[Cvičení 7]
+| xref:{labdir}/lab07.adoc[Cvičení 7]
+| xref:{labdir}/lab07.adoc[Cvičení 7]
 
 | 8.
-| 10.11. a 11.11.
+| 13.11. a 14.11.
 | --
-| xref:{labdir}/lab09.adoc[Cvičení 9]
+| xref:{labdir}/lab08.adoc[Cvičení 8]
 | xref:{labdir}/lab08.adoc[Cvičení 8]
 | xref:{labdir}/lab08.adoc[Cvičení 8]
 
 | 9.
-| **ÚTERÝ 15.11.**
-| --
-| --
+| 20.11. a 21.11.
+| link:{lectdir}/rev04cz.pdf[Přednáška 4] +
+link:{lectdir}/rev05cz.pdf[Přednáška 5]
+| xref:{labdir}/lab09.adoc[Cvičení 9]
 | xref:{labdir}/lab09.adoc[Cvičení 9]
 | xref:{labdir}/lab09.adoc[Cvičení 9]
 
 | 10.
-| 24.11. a 25.11.
+| 27.11. a 28.11.
 | --
 | xref:{labdir}/lab10.adoc[Cvičení 10]
 | xref:{labdir}/lab10.adoc[Cvičení 10]
 | xref:{labdir}/lab10.adoc[Cvičení 10]
 
 | 11.
-| 01.12. a 02.12.
-| link:{lectdir}/rev04cz.pdf[Přednáška 4] +
-link:{lectdir}/rev05cz.pdf[Přednáška 5]
-| link:{lectdir}/rev06cz.pdf[Přednáška 6]
-| link:{lectdir}/rev06cz.pdf[Přednáška 6]
-| link:{lectdir}/rev06cz.pdf[Přednáška 6]
-
-| 12.
-| 08.12. a 09.12.
-| --
-| xref:{labdir}/lab12.adoc[Cvičení 12]
-| xref:{labdir}/lab12.adoc[Cvičení 12]
-| xref:{labdir}/lab12.adoc[Cvičení 12]
-
-| 13.
-| 15.12. a 16.12.
+| 04.12. a 05.12.
 | Přednáška +
 Jana Rubína
 | xref:{labdir}/lab11.adoc[Cvičení 11]
 | xref:{labdir}/lab11.adoc[Cvičení 11]
 | xref:{labdir}/lab11.adoc[Cvičení 11]
 
-|====
+| 12.
+| 11.12. a 12.12.
+| --
+| xref:{labdir}/lab12.adoc[Cvičení 12]
+| xref:{labdir}/lab12.adoc[Cvičení 12]
+| xref:{labdir}/lab12.adoc[Cvičení 12]
 
-(Důvody jsou vysvětleny v xref:current_info.adoc#_d%C5%AFle%C5%BEit%C3%A9-zm%C4%9Bny-proti-standardn%C3%ADmu-harmonogramu[první aktualitě].)
+| 13.
+| 18.12. a 19.12.
+| link:{lectdir}/rev06cz.pdf[Přednáška 6]
+| xref:{labdir}/lab13.adoc[Cvičení 13]
+| xref:{labdir}/lab13.adoc[Cvičení 13]
+| xref:{labdir}/lab13.adoc[Cvičení 13]
+
+|====
 
 ////
 * *2.12.2021 (11. týden)*:
@@ -214,8 +213,8 @@ Runtime knihovny pro různé verze Visual Studia si můžete stáhnout zde: link
 
 Přednášky a svičení budou streamovány v prostředí MS Teams v týmu **B221-NI-REV+NIE-REV**:
 
-* link:https://teams.microsoft.com/l/team/19%3aXfeIppTFUTEq8nrRsf_86yH5TgdyJSovsvwyQI3seSg1%40thread.tacv2/conversations?groupId=7deb2aa7-3e6d-4631-8a11-3ccb637467b2&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Odkaz na tým]
-* link:https://teams.microsoft.com/l/channel/19%3a549958df64924f5092af2801a1c14def%40thread.tacv2/P%25C5%2599edn%25C3%25A1%25C5%25A1ky?groupId=7deb2aa7-3e6d-4631-8a11-3ccb637467b2&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Přednášky]
-* link:https://teams.microsoft.com/l/channel/19%3aa8da5a40b38b463fa75e883d29aef93a%40thread.tacv2/Cvi%25C4%258Den%25C3%25AD?groupId=7deb2aa7-3e6d-4631-8a11-3ccb637467b2&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Cvičení]
+* link:https://teams.microsoft.com/l/team/19%3aWOa1gsORhbp6Pw9QJLrIpPzC3KgUOHJxkzKYUKCsCVc1%40thread.tacv2/conversations?groupId=f34e63b1-c2c0-4954-a5c9-62e46fc8a03c&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Odkaz na tým]
+* link:https://teams.microsoft.com/l/channel/19%3a6028610f024e454dae0df6b7f8106ec4%40thread.tacv2/CZ-P%25C5%2599edn%25C3%25A1%25C5%25A1ky?groupId=f34e63b1-c2c0-4954-a5c9-62e46fc8a03c&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Přednášky]
+* link:https://teams.microsoft.com/l/channel/19%3a926e89792d044541a317e3ae63ceff75%40thread.tacv2/CZ-Cvi%25C4%258Den%25C3%25AD?groupId=f34e63b1-c2c0-4954-a5c9-62e46fc8a03c&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Cvičení]
 
 Chcete-li si připomenout nebo doplnit znalosti s předmětu Bezpečný kód, například záležitosti týkající se struktury `.exe` souboru, naleznete je na link:https://courses.fit.cvut.cz/BI-BEK/[Course Pages BI-BEK].

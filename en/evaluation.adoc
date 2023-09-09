@@ -69,11 +69,11 @@ Due to the popular demand, you may even choose to physically attend the online e
 
 === Concluding the Course Without an Exam
 
-If a student achieves 50 or more points from the homeworks and the semestral works, he or she may opt to be excused from the exam, provided that he/she provably (using the school e-mail) requests so by the end of the third exam week (January 22nd, 2023) and hasn't taken part in any of the previous exam terms ("taking part" includes subscribing for an exam and then not coming). If the student is excused, he/she gets the grade given by the number of points from the homeworks and the semestral works and will not be allowed to take part in any other variant of the exam.
+If a student achieves 50 or more points from the homeworks and the semestral works, he or she may opt to be excused from the exam, provided that he/she provably (using the school e-mail) requests so by the end of the third exam week (January 21nd, 2024) and hasn't taken part in any of the previous exam terms ("taking part" includes subscribing for an exam and then not coming). If the student is excused, he/she gets the grade given by the number of points from the homeworks and the semestral works and will not be allowed to take part in any other variant of the exam.
 
 == Evaluation scale
 
-Evaluation scale is according to the current link:https://www.cvut.cz/en/legislation-and-study-regulations[Study and Examination Code for Students of CTU in Prague] (link:https://www.cvut.cz/sites/default/files/content/d1dc93cd-5894-4521-b799-c7e715d3c59e/en/20210922-study-and-examination-rules-for-students-at-ctu.pdf[PDF]).
+Evaluation scale is according to the current link:https://fit.cvut.cz/en/studies/information-service/office-of-study-affairs/regulations[Study and Examination Code for Students of CTU in Prague] (link:https://www.cvut.cz/sites/default/files/content/74c76d2e-7f4d-4cb1-ac28-b0765c7f88f2/en/20221024-8th-full-text-of-the-study-and-examination-rules.pdf[PDF]).
 
 [options="autowidth", cols=3*]
 |====

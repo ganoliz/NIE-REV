@@ -12,37 +12,37 @@
 ^h| Video
 
 | 1.
-| Sep 22
+| Sep 25
 | Introduction to reverse engineering, stack analysis
 | link:{imagesdir}/rev01en.pdf[slides]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/lecture_01.mp4[video]
 
 | 2.
-| Oct 6
+| Oct 9
 | Analysis of a program's flow
 | link:{imagesdir}/rev02en.pdf[slides]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/lecture_02.mp4[video]
 
 | 3.
-| Oct 20
+| Oct 23
 | Analysis of C++ classes
 | link:{imagesdir}/rev03en.pdf[slides]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/lecture_03.mp4[video]
 
 | 4.
-| Nov 3
+| Nov 6
 | Disassembling and obfuscation
 | link:{imagesdir}/rev04en.pdf[slides]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/lecture_04.mp4[video]
 
 | 5.
-| Dec 1
+| Nov 20
 | Compiler recognition
 | link:{imagesdir}/rev05en.pdf[slides]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/lecture_05.mp4[video]
 
 | 6.
-| Dec 15
+| Dec 18
 | Debugging and anti-debugging
 | link:{imagesdir}/rev06en.pdf[slides]
 | link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/lecture_06.mp4[video]
