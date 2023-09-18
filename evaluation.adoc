@@ -7,7 +7,7 @@ Hodnocení předmětu se skládá ze tří částí -- hodnocení domácích úl
 
 == Zápočet
 
-Zápočet student získá v případě, že dosáhne nejméně 35 bodů z domácích úloh a semestrálních prací.
+Zápočet student získá v případě, že dosáhne nejméně 35 bodů z domácích úloh, semestrálních prací a bonusů.
 
 === Domácí úlohy
 

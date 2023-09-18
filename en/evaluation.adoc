@@ -7,7 +7,7 @@ The evalution of the course consists of three parts -- evaluation of the homewor
 
 == Assessment
 
-The assessment is granted if the student gains a total of 35 or more points for homeworks and semestral works.
+The assessment is granted if the student gains a total of 35 or more points for homeworks, semestral works and bonuses.
 
 === Homeworks
 
