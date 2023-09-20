@@ -23,6 +23,8 @@ In the live form, YES as long as there's room in the lab. If the lab's capacity 
 
 In either case you don't need to inform me about the switch, send excuses etc. Just come when you will.
 
+Please note that the homework deadlines are always linked to the group that's marked in KOS, or to the first group of the week if you don't belong to any group.
+
 == Evaluation
 
 === Do I have to solve all tutorial tasks?
