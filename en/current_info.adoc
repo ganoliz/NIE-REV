@@ -1,7 +1,13 @@
 ﻿
-= Current events: 2023-09-09
+= Current events: 2023-09-20
 :toc:
 :imagesdir: ../media
+
+== 2023-09-20
+
+All external lecturers have confirmed their availability, which means the lecture and tutorial plan should be final (baring unforeseen circumstances).
+
+Please note that the Jan Rubín lecture (December 4th) will be live only, i.e. it won't be either streamed or recorded. Please allow for that in your plans so that you can attend it physically. It's worth it.
 
 == 2023-09-09
 

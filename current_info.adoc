@@ -1,7 +1,13 @@
 ﻿
-= Aktuality: 09.09.2023
+= Aktuality: 20.09.2023
 :toc:
 :imagesdir: ./media
+
+== 20.09.2023
+
+Všechny externí přednášející mám potvrzené, časový rozpis přednášek a cvičení by tak měl být finální (nedojde-li k žádným neobvyklým situacím).
+
+Prosím, počítejte s tím, že přednáška Jana Rubína (4.12.2023) bude téměř jistě pouze prezenční, tedy nebude ani streamována, ani nahrávána. Vyhraďte si pro ni čas na osobní přítomnost, stojí to za to.
 
 == 09.09.2023
 
