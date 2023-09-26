@@ -138,6 +138,9 @@ Toto heslo se nachází v nové binárce, kterou dostanete, pokud vyluštíte p�
 
 == Přiřazení semestrálních prací
 
+Úlohy budou studentům přiřazeny během třetího výukového týdne.
+
+////
 Každý student by měl řešit pouze své zadání, řešení cizích nebudou reflektována.
 
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/blazeda5.zip[blazeda5]
@@ -200,9 +203,4 @@ Každý student by měl řešit pouze své zadání, řešení cizích nebudou r
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/vojacvla.zip[vojacvla]
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/weissada.zip[weissada]
 * link:https://kib-files.fit.cvut.cz/mi-rev/crackme/zencamat.zip[zencamat]
-
-////
-Úlohy budou studentům přiřazeny během třetího výukového týdne.
-
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/balkoma1.zip[balkoma1]
 ////
