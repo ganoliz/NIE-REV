@@ -3,7 +3,7 @@
 :imagesdir: ../media/labs/01
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_01_102.mp4[Záznam cvičení]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/cz/cviceni_01_103.mp4[Záznam cvičení]
 
 Cílem tohoto cvičení je seznámit se s ladícím nástrojem link:http://www.ollydbg.de/[OllyDbg], který bude dále používán při cvičeních, a seznámit se se strukturou zásobníku. Alternativně můžete použít nástroj link:https://developer.microsoft.com/en-us/windows/hardware/windows-driver-kit[WinDbg], který je silnější než OllyDbg, avšak na naučení je komplikovanější. Další možností je link:https://x64dbg.com/[x64dbg]. Pokud pracujete na platformách GNU/Linux anebo OS X, můžete použít gdb anebo lldb.
 
