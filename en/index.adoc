@@ -166,7 +166,7 @@ Tools used in tutorials can be downloaded here: link:https://kib-files.fit.cvut.
 
 Runtime libraries for various versions of Visual Studio can be downloaded here: link:https://kib-files.fit.cvut.cz/mi-rev/vcredist/[Download]
 
-The lectures and tutorials will be streamed live in MS Teams in channel **B221-NI-REV+NIE-REV**:
+The lectures and tutorials will be streamed live in MS Teams in channel **B231-NI-REV+NIE-REV**:
 
 * link:https://teams.microsoft.com/l/team/19%3aWOa1gsORhbp6Pw9QJLrIpPzC3KgUOHJxkzKYUKCsCVc1%40thread.tacv2/conversations?groupId=f34e63b1-c2c0-4954-a5c9-62e46fc8a03c&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Link for the team]
 * link:https://teams.microsoft.com/l/channel/19%3ac73c118eb67d462cbc4ac2944bbd3b86%40thread.tacv2/EN-Lectures?groupId=f34e63b1-c2c0-4954-a5c9-62e46fc8a03c&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Lectures]

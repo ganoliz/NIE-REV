@@ -211,7 +211,7 @@ Nástroje používané na cvičeních si můžete stáhnout zde: link:https://ki
 
 Runtime knihovny pro různé verze Visual Studia si můžete stáhnout zde: link:https://kib-files.fit.cvut.cz/mi-rev/vcredist/[Download]
 
-Přednášky a svičení budou streamovány v prostředí MS Teams v týmu **B221-NI-REV+NIE-REV**:
+Přednášky a svičení budou streamovány v prostředí MS Teams v týmu **B231-NI-REV+NIE-REV**:
 
 * link:https://teams.microsoft.com/l/team/19%3aWOa1gsORhbp6Pw9QJLrIpPzC3KgUOHJxkzKYUKCsCVc1%40thread.tacv2/conversations?groupId=f34e63b1-c2c0-4954-a5c9-62e46fc8a03c&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Odkaz na tým]
 * link:https://teams.microsoft.com/l/channel/19%3a6028610f024e454dae0df6b7f8106ec4%40thread.tacv2/CZ-P%25C5%2599edn%25C3%25A1%25C5%25A1ky?groupId=f34e63b1-c2c0-4954-a5c9-62e46fc8a03c&tenantId=f345c406-5268-43b0-b19f-5862fa6833f8[Přednášky]
