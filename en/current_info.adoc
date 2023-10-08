@@ -1,7 +1,11 @@
 ﻿
-= Current events: 2023-09-20
+= Current events: 2023-10-08
 :toc:
 :imagesdir: ../media
+
+== 2023-10-08
+
+xref:projects/crackme.adoc[Crackme files assignments] have been completed. Please verify that you can download and extract your file; if you can't find your file or are getting an error message, contact me for a fix.
 
 == 2023-09-20
 

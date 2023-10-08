@@ -138,15 +138,32 @@ This password is located in a new binary which will get extracted after you've s
 
 == Semestral work assignment
 
-The assignments will be provided during the third week of the semester.
-
 ////
+The assignments will be provided during the third week of the semester.
+////
+
 Each student should only work with their own assignment.
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/desaljon.zip[desaljon]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/enardluc.zip[enardluc]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/epaleben.zip[epaleben]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/maniemar.zip[maniemar]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/ruskymin.zip[ruskymin]
-* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/zemmimou.zip[zemmimou]
-////
+[IMPORTANT]
+====
+While Crackmes are not malicious, they make use of techniques that are also commonly used by malware. It is possible that your security software will detect these techniques as malicious and will either warn you about these files or prevent their creation altogether. In that case, please use a virtual machine without an antivirus or someone else's machine with a less restrictive antimalware.
+====
+
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/bolljoha.zip[bolljoha]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/chiragui.zip[chiragui]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/chrislou.zip[chrislou]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/deliecha.zip[deliecha]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/desviale.zip[desviale]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/fredisyl.zip[fredisyl]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/graharic.zip[graharic]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/hadziarm.zip[hadziarm]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/hernathe.zip[hernathe]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/humbecel.zip[humbecel]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/kirscjaa.zip[kirscjaa]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/schlephi.zip[schlephi]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/simonalb.zip[simonalb]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/sladimur.zip[sladimur]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/straujea.zip[straujea]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/vahtsjoh.zip[vahtsjoh]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/vilardom.zip[vilardom]
+* link:https://kib-files.fit.cvut.cz/mi-rev/crackme/zhengya1.zip[zhengya1]

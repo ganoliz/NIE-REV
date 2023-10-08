@@ -1,7 +1,11 @@
 ﻿
-= Aktuality: 20.09.2023
+= Aktuality: 08.10.2023
 :toc:
 :imagesdir: ./media
+
+== 08.10.2023
+
+xref:projects/crackme.adoc[Zadání úlohy Crackme] byla přiřazena studentům. Prosím, ověřte si, že můžete stáhnout a rozbalit své zadání; v případě problémů mě prosím kontaktujte, abych to mohl opravit a úlohu vám zpřístupnit.
 
 == 20.09.2023
 
