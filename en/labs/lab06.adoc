@@ -3,7 +3,7 @@
 :imagesdir: ../../media/labs/06
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/en/tutorial_07.mp4[Recorded tutorial]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/en/tutorial_06.mp4[Recorded tutorial]
 
 This tutorial is primarily dedicated to consultations of your homeworks or other reverse-engineering related topics.
 

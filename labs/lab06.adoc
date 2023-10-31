@@ -3,7 +3,7 @@
 :imagesdir: ../media/labs/06
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_07_101.mp4[Záznam cvičení]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/cz/cviceni_06_101.mp4[Záznam cvičení]
 
 Cvičení je primárně určeno pro konzultace vašich řešení domácích úloh, případně dalších témat týkajících se reverzního inženýrství.
 
