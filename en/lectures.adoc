@@ -33,7 +33,7 @@
 | Nov 6
 | Disassembling and obfuscation
 | link:{imagesdir}/rev04en.pdf[slides]
-| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/lecture_04.mp4[video]
+| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/en/lecture_04.mp4[video]
 
 | 5.
 | Nov 20

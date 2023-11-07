@@ -3,7 +3,7 @@
 :imagesdir: ../media/labs/07
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2021/cz/cviceni_13_102.mp4[Záznam cvičení]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/cz/cviceni_07_101.mp4[Záznam cvičení]
 
 Cílem cvičení je injektovat proces `GUIToSteal.exe` vlastním kódem tak, aby bylo možné z procesu zkopírovat hodnotu hesla v editačním poli.
 
