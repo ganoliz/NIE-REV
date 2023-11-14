@@ -33,6 +33,8 @@ You can find the original versions of the recordings at link:https://web.microso
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/en/tutorial_06.mp4[Download]
 * Tutorial 7:
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/en/tutorial_07.mp4[Download]
+* Tutorial 8:
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/en/tutorial_08.mp4[Download]
 
 == Winter semester 2022/23
 
