@@ -39,7 +39,7 @@
 | Nov 20
 | Compiler recognition
 | link:{imagesdir}/rev05en.pdf[slides]
-| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/lecture_05.mp4[video]
+| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/en/lecture_05.mp4[video]
 
 | 6.
 | Dec 18

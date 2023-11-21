@@ -45,7 +45,7 @@
 | Rozpoznávání kompilátorů
 | link:{imagesdir}/rev05en.pdf[anglicky]
 | link:{imagesdir}/rev05cz.pdf[česky]
-| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/prednaska_05.mp4[video]
+| link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/cz/prednaska_05.mp4[video]
 
 | 6.
 | 18.12.

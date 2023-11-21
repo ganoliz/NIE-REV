@@ -16,6 +16,8 @@ Původní verze záznamů můžete nalézt na link:https://web.microsoftstream.c
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/cz/prednaska_03.mp4[Download]
 * Přednáška 4:
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/cz/prednaska_04.mp4[Download]
+* Přednáška 5:
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/cz/prednaska_05.mp4[Download]
 
 === Cvičení
 
@@ -51,6 +53,10 @@ Původní verze záznamů můžete nalézt na link:https://web.microsoftstream.c
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/cz/cviceni_08_101.mp4[Paralelka 101]
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/cz/cviceni_08_102.mp4[Paralelka 102]
   link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/cz/cviceni_08_103.mp4[Paralelka 103]
+* Cvičení 9:
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/cz/cviceni_09_101.mp4[Paralelka 101]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/cz/cviceni_09_102.mp4[Paralelka 102]
+  link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/cz/cviceni_09_103.mp4[Paralelka 103]
 
 == Zimní semestr 2022/23
 

@@ -3,7 +3,7 @@
 :imagesdir: ../media/labs/09
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_09_102.mp4[Záznam cvičení]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/cz/cviceni_09_101.mp4[Záznam cvičení]
 
 == Materiály
 
