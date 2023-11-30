@@ -1,7 +1,14 @@
 ﻿
-= Current events: 2023-10-08
+= Current events: 2023-11-30
 :toc:
 :imagesdir: ../media
+
+== 2023-11-30
+
+Materials for the Jan Rubin lecture on Monday:
+
+* link:{imagesdir}/lectures/rev08en.pdf[Lecture]
+* link:{imagesdir}/itsaunixsystem.zip[Crackme sample]
 
 == 2023-10-08
 
