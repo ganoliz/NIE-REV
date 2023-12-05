@@ -3,7 +3,7 @@
 :imagesdir: ../../media/labs/11
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/en/tutorial_11.mp4[Recorded tutorial]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/en/tutorial_11.mp4[Recorded tutorial]
 
 In this tutorial we will analyze the attached program which simply saves an image `picture.jpg` on the disk and then terminates.
 

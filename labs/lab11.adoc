@@ -3,7 +3,7 @@
 :imagesdir: ../media/labs/11
 :toc:
 
-* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2022/cz/cviceni_11_103.mp4[Záznam cvičení]
+* link:https://kib-files.fit.cvut.cz/mi-rev/recordings/2023/cz/cviceni_11_101.mp4[Záznam cvičení]
 
 Na tomto cvičení budeme analyzovat program odkazovaný níže. Tento program po svém spuštění uloží na disk obrázek `picture.jpg` a následně se ukončí.
 
