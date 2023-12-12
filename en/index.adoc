@@ -136,7 +136,7 @@ link:{lectdir}/rev05en.pdf[Lecture 5]
 | 11.
 | December 4 and 5
 | Guest lecture +
-by Jan Rubín
+link:{lectdir}/rev08en.pdf[by Jan Rubín]
 | xref:{labdir}/lab11.adoc[Tutorial 11]
 
 | 12.

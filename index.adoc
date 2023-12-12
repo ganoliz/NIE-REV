@@ -175,7 +175,7 @@ link:{lectdir}/rev05cz.pdf[Přednáška 5]
 | 11.
 | 04.12. a 05.12.
 | Přednáška +
-Jana Rubína
+link:{lectdir}/rev08en.pdf[Jana Rubína]
 | xref:{labdir}/lab11.adoc[Cvičení 11]
 | xref:{labdir}/lab11.adoc[Cvičení 11]
 | xref:{labdir}/lab11.adoc[Cvičení 11]
